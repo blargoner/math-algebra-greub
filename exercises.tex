@@ -6,9 +6,12 @@
 \newcommand{\R}{\mathbb{R}}
 
 \newcommand{\iso}{\cong}
+\renewcommand{\equiv}{\sim}
 
 \newcommand{\after}{\circ}
+\newcommand{\dsum}{\oplus}
 
+\newcommand{\gen}[1]{\langle#1\rangle}
 \newcommand{\pair}[2]{\langle#1,#2\rangle}
 
 \newarrow{Dashto}{}{dash}{}{dash}>
@@ -78,7 +81,7 @@ C(E)		&				&\rTo_{\varphi_*}	&				&C(F)			&				&
 \[f_{\lambda a+\mu b}-\lambda f_a-\mu f_b\qquad(a,b\in E\text{ and }\lambda,\mu\in\Gamma)\]
 Then \(\ker\pi_E=N(E)\).
 \end{enumerate}
-
+\end{exer}
 \begin{proof}\
 \begin{enumerate}
 \item[(i)] By Proposition~II, since \(i_X(X)\)~is a basis of~\(C(X)\).
@@ -130,7 +133,25 @@ is not zero in~\(C(E)\) because the pairs are unrelated elements (symbols) which
 
 In~(v), we see that \(\pi_E\)~just recalls the linear structure of~\(E\) that was forgotten in~\(C(E)\). In particular, \(C(E)/N(E)\iso E\). In other words, if you start with~\(E\), then forget about its linear structure, then recall that linear structure, you just get \(E\)~again.
 \end{rmk}
+
+\subsection*{\S~4}
+\begin{exer}[11]
+Let \(E\)~be a real vector space and \(E_1\)~a vector hyperplane in~\(E\) (that is, a subspace of codimension~\(1\)). Define an equivalence relation on \(E^1=E-E_1\) as follows: for \(x,y\in E^1\), \(x\equiv y\) if the segment
+\[x(t)=(1-t)x+ty\qquad(0\le t\le 1)\]
+is disjoint from~\(E_1\). Then there are precisely two equivalence classes.
 \end{exer}
+\begin{proof}
+Fix \(e\in E^1\) with \(E=E_1\dsum\gen{e}\) and define \(\alpha:E\to\R\) by \(x-\alpha(x)e\in E_1\) for all \(x\in E\). It is clear that \(\alpha\)~is linear, and \(x\in E_1\) if and only if \(\alpha(x)=0\). For \(x,y\in E^1\), it follows that \(x\equiv y\) if and only if
+\[0\ne\alpha(x(t))=\alpha((1-t)x+ty)=(1-t)\alpha(x)+t\alpha(y)\]
+for all \(0\le t\le 1\). But this is just equivalent to \(\alpha(x)\alpha(y)>0\).
+
+Now if \(x\in E^1\), then \(\alpha(x)\ne0\), so \(\alpha(x)^2>0\) and \(x\equiv x\). If \(x\equiv y\), then \(\alpha(y)\alpha(x)=\alpha(x)\alpha(y)>0\), so \(y\equiv x\). If also \(y\equiv z\), then \(\alpha(y)\alpha(z)>0\), so \(\alpha(x)\alpha(z)>0\) and \(x\equiv z\). In other words, this is indeed an equivalence relation.
+
+Note there are at least two equivalence classes since \(\alpha(e)=1\) and \(\alpha(-e)=-1\), so \(\alpha(e)\alpha(-e)=-1<0\) and \(e\not\equiv -e\). On the other hand, there are at most two classes since if \(x\in E^1\), then either \(\alpha(x)>0\) and \(x\equiv e\) or \(\alpha(x)<0\) and \(x\equiv -e\).
+\end{proof}
+\begin{rmk}
+This result shows that the hyperplane separates the vector space into two disjoint half-spaces.
+\end{rmk}
 
 % References
 \begin{thebibliography}{0}
