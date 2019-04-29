@@ -153,6 +153,33 @@ Note there are at least two equivalence classes since \(\alpha(e)=1\) and \(\alp
 This result shows that the hyperplane separates the vector space into two disjoint half-spaces.
 \end{rmk}
 
+\section*{Chapter~II}
+\subsection*{\S~4}
+\begin{rmk}
+The direct sum \(E\dsum F\) is a coproduct in the category of vector spaces in the following sense: if \(\varphi:E\to G\) and \(\psi:F\to G\) are linear maps, there is a unique linear map \(\chi:E\dsum F\to G\) such that \(\varphi=\chi\after i_E\) and \(\psi=\chi\after i_F\), where \(i_E\) and~\(i_F\) are the canonical injections:
+\begin{diagram}[nohug]
+E	&\rTo^{i_E}			&E\dsum F		&\lTo^{i_F}		&F\\
+	&\rdTo<{\varphi}	&\dDashto{\chi}	&\ldTo>{\psi}	&\\
+	&					&G				&				&
+\end{diagram}
+Indeed, \(\chi\)~is given by \(\chi(x+y)=\varphi(x)+\psi(y)\) for \(x\in E\), \(y\in F\). It is the unique linear map ``extending'' both \(\varphi\) and~\(\psi\). This property makes \(E\dsum F\) unique up to a unique isomorphism.
+
+Dually, \(E\dsum F\) is a product in the following sense: if \(\varphi:G\to E\) and \(\psi:G\to F\) are linear maps, there is a unique linear map \(\chi:G\to E\dsum F\) such that \(\varphi=\pi_E\after\chi\) and \(\psi=\pi_F\after\chi\):
+\begin{diagram}[nohug]
+	&					&G				&				&\\
+	&\ldTo<{\varphi}	&\dDashto{\chi}	&\rdTo>{\psi}	&\\
+E	&\lTo^{\pi_E}		&E\dsum F		&\rTo^{\pi_F}	&F
+\end{diagram}
+Indeed, \(\chi\)~is given by \(\chi(x)=\varphi(x)+\psi(x)\), and ``combines'' \(\varphi\) and~\(\psi\). This property also makes \(E\dsum F\) unique up to a unique isomorphism. An infinite direct sum is also a coproduct, but \emph{not} a product, essentially because it has no infinite sums of elements.
+
+In the proof of Proposition~I, \(\sigma\)~is the product map and \(\tau\)~is the coproduct map. If \(\varphi_1:E_1\to F_1\) and \(\varphi_2:E_2\to F_2\) are linear maps, then \(\varphi=\varphi_1\dsum\varphi_2\) is both a coproduct and product map:
+\begin{diagram}
+E_1				&\pile{\rTo\\\lTo}	&E_1\dsum E_2	&\pile{\lTo\\\rTo}	&E_2\\
+\dTo<{\varphi_1}&					&\dTo>{\varphi}	&					&\dTo>{\varphi_2}\\
+F_1				&\pile{\rTo\\\lTo}	&F_1\dsum F_2	&\pile{\lTo\\\rTo}	&F_2
+\end{diagram}
+\end{rmk}
+
 % References
 \begin{thebibliography}{0}
 \bibitem{greub} Greub, W. \textit{Linear Algebra}, 4th~ed. Springer, 1975.
