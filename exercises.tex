@@ -5,6 +5,7 @@
 
 \newcommand{\R}{\mathbb{R}}
 
+\newcommand{\from}{\leftarrow}
 \newcommand{\iso}{\cong}
 \renewcommand{\equiv}{\sim}
 
@@ -13,6 +14,9 @@
 
 \newcommand{\gen}[1]{\langle#1\rangle}
 \newcommand{\pair}[2]{\langle#1,#2\rangle}
+\newcommand{\sprod}[2]{\langle#1,#2\rangle}
+\newcommand{\oc}[1]{#1^{\perp}}
+\newcommand{\occ}[1]{#1^{\perp\perp}}
 
 \newarrow{Dashto}{}{dash}{}{dash}>
 
@@ -178,6 +182,17 @@ E_1				&\pile{\rTo\\\lTo}	&E_1\dsum E_2	&\pile{\lTo\\\rTo}	&E_2\\
 \dTo<{\varphi_1}&					&\dTo>{\varphi}	&					&\dTo>{\varphi_2}\\
 F_1				&\pile{\rTo\\\lTo}	&F_1\dsum F_2	&\pile{\lTo\\\rTo}	&F_2
 \end{diagram}
+\end{rmk}
+
+\subsection*{\S~5}
+\begin{rmk}
+Let \(E\)~be a vector space and \((x_{\alpha})_{\alpha\in A}\) be a basis of~\(E\). For each \(x\in E\), write \(x=\sum_{\alpha\in A}f_{\alpha}(x)x_{\alpha}\). Then \(f_{\alpha}\in L(E)\) for each \(\alpha\in A\). The function \(f_{\alpha}\) is called the \emph{\(\alpha\)-th coordinate functional} for the basis.
+
+Coordinate functionals can be used in an alternative proof of Proposition~IV. If \(E_1\)~is a subspace of~\(E\), let \(B_1\)~be a basis of~\(E_1\) and extend it to a basis \(B\) of~\(E\). For each \(x_{\alpha}\in B-B_1\), we have \(f_{\alpha}\in\oc{E_1}\). If \(x\in\occ{E_1}\), then \(f_{\alpha}(x)=\sprod{f_{\alpha}}{x}=0\) for all such \(\alpha\), so \(x\in E_1\). In other words, \(\occ{E_1}\subseteq E_1\).
+\end{rmk}
+
+\begin{rmk}
+For \(\varphi:E\to F\) a linear map, let \(L(\varphi):L(E)\from L(F)\) be the dual map given by \(L(\varphi)(f)=f\after\varphi\) (2.50). Then \(L\)~linearly embeds \(L(E,F)\) in \(L(L(F),L(E))\), by (2.43) and~(2.44). Also, \(L(\psi\after\varphi)=L(\varphi)\after L(\psi)\) and \(L(\iota_{E})=\iota_{L(E)}\). This shows that \(L\)~is a contravariant functor in the category of vector spaces. This functor preserves exactness of sequences (see~2.29), and finite direct sums, which are just (co)products in the category (see~2.30), among other things.
 \end{rmk}
 
 % References
