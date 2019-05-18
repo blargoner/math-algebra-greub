@@ -1,7 +1,7 @@
 % Notes and exercises from Linear Algebra by Greub
 % By John Peloquin
 \documentclass[letterpaper,12pt]{article}
-\usepackage{amsmath,amssymb,amsthm,enumitem,fourier,diagrams}
+\usepackage{amsmath,amssymb,amsthm,enumitem,fourier,diagrams,stmaryrd}
 
 \newcommand{\R}{\mathbb{R}}
 
@@ -36,7 +36,7 @@
 \maketitle
 
 \section*{Introduction}
-This document contains notes and exercises from~\cite{greub}. Unless otherwise stated, \(\Gamma\)~denotes a field of scalars.
+This document contains notes and exercises from~\cite{greub}. Unless otherwise stated, \(\Gamma\)~denotes a field of characteristic~\(0\).
 
 \section*{Chapter~I}
 \subsection*{\S~1}
@@ -193,6 +193,18 @@ Coordinate functionals can be used in an alternative proof of Proposition~IV. If
 
 \begin{rmk}
 For \(\varphi:E\to F\) a linear map, let \(L(\varphi):L(E)\from L(F)\) be the dual map given by \(L(\varphi)(f)=f\after\varphi\) (2.50). Then \(L\)~linearly embeds \(L(E,F)\) in \(L(L(F),L(E))\), by (2.43) and~(2.44). Also, \(L(\psi\after\varphi)=L(\varphi)\after L(\psi)\) and \(L(\iota_{E})=\iota_{L(E)}\). This shows that \(L\)~is a contravariant functor in the category of vector spaces. This functor preserves exactness of sequences (see~2.29), and finite direct sums, which are just (co)products in the category (see~2.30), among other things.
+\end{rmk}
+
+\section*{Chapter~III}
+\begin{rmk}
+Greub's notational choices in this chapter are insane.
+\end{rmk}
+
+\subsection*{\S~3}
+\begin{rmk}
+In section~3.13, note \((\alpha^{\mu}_{\nu})=M(\iota,\bar{x}_{\nu},x_{\mu})\) by~(3.22), \((\check{\alpha}^{\mu}_{\nu})=M(\iota,x_{\nu},\bar{x}_{\mu})\) by~(3.23), and \((\beta^{\varrho}_{\sigma})=M(\iota,\bar{x}^{*\varrho},x^{*\sigma})\) by~(3.24). It follows from~(3.4) that
+\[\bigl(\beta^{\mu}_{\nu}\bigr)=\bigl(\check{\alpha}^{\mu}_{\nu}\bigr)^*=\bigl(\bigl(\alpha^{\mu}_{\nu}\bigr)^{-1}\bigr)^*\]
+In other words, the matrix of the dual basis transformation \(x^{*\nu}\mapsto\bar{x}^{*\nu}\) in~\(E^*\) is the \emph{transpose} of the inverse of the matrix of the basis transformation \(x_{\nu}\mapsto\bar{x}_{\nu}\) in~\(E\), contrary to what the book says. It's easier to remember that the matrix of \(x^{*\nu}\mapsfrom\bar{x}^{*\nu}\) (arrow reversed!) is the transpose of the matrix of \(x_{\nu}\mapsto\bar{x}_{\nu}\).
 \end{rmk}
 
 % References
