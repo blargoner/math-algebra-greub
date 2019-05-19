@@ -197,7 +197,11 @@ For \(\varphi:E\to F\) a linear map, let \(L(\varphi):L(E)\from L(F)\) be the du
 
 \subsection*{\S~6}
 \begin{rmk}
-If \(E\)~has finite dimension, then every basis of the dual space \(E^*=L(E)\) is a dual basis. Indeed, if \(f_1,\ldots,f_n\) is a basis of~\(E^*\), let \(f_1^*,\ldots,f_n^*\) be the dual basis of \(E^{**}=L(L(E))\), so \(\sprod{f_i^*}{f_j}=\delta_{ij}\) by~(2.62). Let \(e_1,\ldots,e_n\in E\) be defined by \(\sprod{f_i^*}{f}=\sprod{f}{e_i}\) for all \(f\in E^*\) (see \S~5, problem~3). Then \(\sprod{f_j}{e_i}=\sprod{f_i^*}{f_j}=\delta_{ij}\), so \(f_1,\ldots,f_n\) is the dual basis of \(e_1,\ldots,e_n\).
+If \(E\)~has finite dimension, then every basis of a dual space~\(E^*\) is a dual basis. Indeed, if \(f_1,\ldots,f_n\) is a basis of~\(E^*\), let \(e_1,\ldots,e_n\) be its dual basis in~\(E\). Then \(\sprod{f_i}{e_j}=\delta_{ij}\) by~(2.62), so \(f_1,\ldots,f_n\) is the dual basis of \(e_1,\ldots,e_n\), again by~(2.62).
+
+Alternatively, with \(E^*=L(E)\), let \(f_1^*,\ldots,f_n^*\) be the dual basis of \(f_1,\ldots,f_n\) in \(E^{**}=L(L(E))\), so \(\sprod{f_j^*}{f_i}=\delta_{ij}\) by~(2.62). Let \(e_1,\ldots,e_n\in E\) be defined by \(\sprod{f_j^*}{f}=\sprod{f}{e_j}\) for all \(f\in E^*\) (see \S~5, problem~3). Then \(\sprod{f_i}{e_j}=\sprod{f_j^*}{f_i}=\delta_{ij}\), so \(f_1,\ldots,f_n\) is the dual basis of \(e_1,\ldots,e_n\).
+
+The first proof here uses the symmetry between \(E\) and~\(E^*\), while the second uses the natural isomorphism \(E\iso E^{**}\).
 \end{rmk}
 
 \section*{Chapter~III}
