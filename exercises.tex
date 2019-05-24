@@ -12,6 +12,7 @@
 \newcommand{\after}{\circ}
 \newcommand{\dsum}{\oplus}
 
+\newcommand{\delete}{\widehat}
 \newcommand{\gen}[1]{\langle#1\rangle}
 \newcommand{\pair}[2]{\langle#1,#2\rangle}
 \newcommand{\sprod}[2]{\langle#1,#2\rangle}
@@ -192,7 +193,7 @@ Coordinate functionals can be used in an alternative proof of Proposition~IV. If
 \end{rmk}
 
 \begin{rmk}
-For \(\varphi:E\to F\) a linear map, let \(L(\varphi):L(E)\from L(F)\) be the dual map given by \(L(\varphi)(f)=f\after\varphi\) (2.50). Then \(L\)~linearly embeds \(L(E,F)\) in \(L(L(F),L(E))\), by (2.43) and~(2.44). Also, \(L(\psi\after\varphi)=L(\varphi)\after L(\psi)\) and \(L(\iota_{E})=\iota_{L(E)}\). This shows that \(L\)~is a contravariant functor in the category of vector spaces. This functor preserves exactness of sequences (see~2.29), and finite direct sums, which are just (co)products in the category (see~2.30), among other things.
+For \(\varphi:E\to F\) a linear map, let \(L(\varphi):L(E)\from L(F)\) be the dual map given by \(L(\varphi)(f)=f\after\varphi\) (2.50). Then \(L\)~linearly embeds \(L(E;F)\) in \(L(L(F);L(E))\), by (2.43) and~(2.44). Also, \(L(\psi\after\varphi)=L(\varphi)\after L(\psi)\) and \(L(\iota_{E})=\iota_{L(E)}\). This shows that \(L\)~is a contravariant functor in the category of vector spaces. This functor preserves exactness of sequences (see~2.29), and finite direct sums, which are just (co)products in the category (see~2.30), among other things.
 \end{rmk}
 
 \subsection*{\S~6}
@@ -214,6 +215,49 @@ Greub's notational choices in this chapter are insane.
 In section~3.13, note \((\alpha^{\mu}_{\nu})=M(\iota,\bar{x}_{\nu},x_{\mu})\) by~(3.22), \((\check{\alpha}^{\mu}_{\nu})=M(\iota,x_{\nu},\bar{x}_{\mu})\) by~(3.23), and \((\beta^{\varrho}_{\sigma})=M(\iota,\bar{x}^{*\varrho},x^{*\sigma})\) by~(3.24). It follows from~(3.4) that
 \[\bigl(\beta^{\mu}_{\nu}\bigr)=\bigl(\check{\alpha}^{\mu}_{\nu}\bigr)^*=\bigl(\bigl(\alpha^{\mu}_{\nu}\bigr)^{-1}\bigr)^*\]
 In other words, the matrix of the dual basis transformation \(x^{*\nu}\mapsto\bar{x}^{*\nu}\) in~\(E^*\) is the \emph{transpose} of the inverse of the matrix of the basis transformation \(x_{\nu}\mapsto\bar{x}_{\nu}\) in~\(E\), contrary to what the book says. It's easier to remember that the matrix of \(x^{*\nu}\mapsfrom\bar{x}^{*\nu}\) (arrow reversed!) is the transpose of the matrix of \(x_{\nu}\mapsto\bar{x}_{\nu}\).
+\end{rmk}
+
+\section*{Chapter~IV}
+\subsection*{\S~1}
+\begin{rmk} To see why~(4.1) holds, observe by definition of~\(\tau(\sigma\Phi)\) that
+\[(\tau(\sigma\Phi))(x_1,\ldots,x_p)=(\sigma\Phi)(x_{\tau(1)},\ldots,x_{\tau(p)})\]
+Let \(y_i=x_{\tau(i)}\). Then by definition of \(\sigma\Phi\) and~\((\tau\sigma)\Phi\),
+\begin{align*}
+(\sigma\Phi)(x_{\tau(1)},\ldots,x_{\tau(p)})&=(\sigma\Phi)(y_1,\ldots,y_p)\\
+	&=\Phi(y_{\sigma(1)},\ldots,y_{\sigma(p)})\\
+	&=\Phi(x_{\tau(\sigma(1))},\ldots,x_{\tau(\sigma(p))})\\
+	&=\Phi(x_{(\tau\sigma)(1)},\ldots,x_{(\tau\sigma)(p)})\\
+	&=((\tau\sigma)\Phi)(x_1,\ldots,x_p)
+\end{align*}
+Therefore \(\tau(\sigma\Phi)=(\tau\sigma)\Phi\).
+\end{rmk}
+
+\begin{rmk}
+By Proposition~I(iii) and Proposition~II, a determinant function \(\Delta\ne 0\) ``determines'' linear independence in the sense that \(\Delta(x_1,\ldots,x_n)\ne0\) if and only if \(x_1,\ldots,x_n\) are linearly independent. By~(4.8), it follows that \(\det\varphi\) ``determines'' whether a linear transformation~\(\varphi\) preserves linear independence, i.e. whether or not \(\varphi\)~is invertible.
+\end{rmk}
+
+\begin{rmk}
+We provide an alternative proof of Proposition~IV. First note
+\[(-1)^{j-1}\Delta(x,x_1,\ldots,\delete{x_j},\ldots,x_n)=\Delta(x_1,\ldots,x,\ldots,x_n)\]
+where \(x\)~is in the \(j\)-th position on the right.\footnote{\(\delete{x_j}\)~denotes deletion of \(x_j\)~from the sequence on the left.} Therefore
+\[\sum_{j=1}^n(-1)^{j-1}\Delta(x,x_1,\ldots,\delete{x_j},\ldots,x_n)x_j=\Delta(x,x_2,\ldots,x_n)x_1+\cdots+\Delta(x_1,\ldots,x_{n-1},x)x_n\]
+Viewing this as a function of \(x_1,\ldots,x_n\) (that is, a set map from \(E^n\to L(E;E)\)), it is obviously multilinear and skew symmetric (by Proposition~I(ii)). Therefore if \(x_1,\ldots,x_n\) are linearly dependent, it is zero (by Proposition~I(iii)). If \(x_1,\ldots,x_n\) are linearly independent (and hence a basis), then viewing it as a function of~\(x\), its value at~\(x_i\) is just \(\Delta(x_1,\ldots,x_n)x_i\) (by Proposition~I(ii)), so it agrees on a basis with \(\Delta(x_1,\ldots,x_n)x\) and hence is equal to it.
+\end{rmk}
+
+
+\subsection*{\S~2}
+\begin{rmk}
+In section~4.6, we want a linear transformation~\(\psi\) with \(\psi\varphi=(\det\varphi)\iota\). We choose a basis \(x_1,\ldots,x_n\) in~\(E\) with \(\Delta(x_1,\ldots,x_n)=1\). Then we want
+\begin{align*}
+(\psi\varphi)x_i=\psi(\varphi x_i)&=(\det\varphi)x_i\\
+	&=(\det\varphi)\Delta(x_1,\ldots,x_n)x_i\\
+	&=\Delta(\varphi x_1,\ldots,\varphi x_n)x_i
+\end{align*}
+To achieve this, we define
+\[\psi(x)=\sum_{j=1}^n\Delta(\varphi x_1,\ldots,x,\ldots,\varphi x_n)x_j\]
+where \(x\)~is in the \(j\)-th position on the right. Then \(\psi\)~obviously satisfies the above properties, by multilinearity and skew symmetry of~\(\Delta\).
+
+To obtain~\(\psi\) in a ``coordinate-free''  manner (without choosing a basis), we observe that the construction on the right is skew symmetric and multilinear in \(x_1,\ldots,x_n\) when viewed as a mapping \(\Phi:E^n\to L(E;E)\). By the universal property of~\(\Delta\) (Proposition~III), there is a unique \(\psi\in L(E;E)\) satisfying the above. It is also seen to be independent of the choice of~\(\Delta\).
 \end{rmk}
 
 % References
