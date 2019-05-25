@@ -247,15 +247,15 @@ Viewing this as a function of \(x_1,\ldots,x_n\) (that is, a set map from \(E^n\
 
 \subsection*{\S~2}
 \begin{rmk}
-In section~4.6, we want a linear transformation~\(\psi\) with \(\psi\varphi=(\det\varphi)\iota\). We choose a basis \(x_1,\ldots,x_n\) in~\(E\) with \(\Delta(x_1,\ldots,x_n)=1\). Then we want
+In section~4.6, we want a linear transformation~\(\psi\) with \(\psi\varphi=(\det\varphi)\iota\). We can choose a basis \(x_1,\ldots,x_n\) in~\(E\) with \(\Delta(x_1,\ldots,x_n)=1\), for which we want
 \begin{align*}
 (\psi\varphi)x_i=\psi(\varphi x_i)&=(\det\varphi)x_i\\
 	&=(\det\varphi)\Delta(x_1,\ldots,x_n)x_i\\
 	&=\Delta(\varphi x_1,\ldots,\varphi x_n)x_i
 \end{align*}
-To achieve this, we define
+To obtain this, we can define
 \[\psi(x)=\sum_{j=1}^n\Delta(\varphi x_1,\ldots,x,\ldots,\varphi x_n)x_j\]
-where \(x\)~is in the \(j\)-th position on the right. Then \(\psi\)~obviously satisfies the above properties, by multilinearity and skew symmetry of~\(\Delta\).
+where \(x\)~is in the \(j\)-th position on the right.\footnote{See the remark on Proposition~IV above.} Then \(\psi\)~obviously satisfies the above properties, by multilinearity and skew symmetry of~\(\Delta\).
 
 To obtain~\(\psi\) in a ``coordinate-free''  manner (without choosing a basis), we observe that the construction on the right is skew symmetric and multilinear in \(x_1,\ldots,x_n\) when viewed as a mapping \(\Phi:E^n\to L(E;E)\). By the universal property of~\(\Delta\) (Proposition~III), there is a unique \(\psi\in L(E;E)\) satisfying the above. It is also seen to be independent of the choice of~\(\Delta\).
 \end{rmk}
