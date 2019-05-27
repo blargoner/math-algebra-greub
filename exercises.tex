@@ -11,6 +11,7 @@
 
 \newcommand{\after}{\circ}
 \newcommand{\dsum}{\oplus}
+\newcommand{\mult}{\cdot}
 
 \newcommand{\delete}{\widehat}
 \newcommand{\gen}[1]{\langle#1\rangle}
@@ -259,6 +260,29 @@ where \(x\)~is in the \(j\)-th position on the right.\footnote{See the remark on
 
 To obtain~\(\psi\) in a ``coordinate-free''  manner (without choosing a basis), we observe that the construction on the right is multilinear and skew symmetric in \(x_1,\ldots,x_n\) when viewed as a mapping \(\Phi:E^n\to L(E;E)\). By the universal property of~\(\Delta\) (Proposition~III), there is a unique \(\psi\in L(E;E)\) satisfying the above; this~\(\psi\) is also seen to be independent of the choice of~\(\Delta\).
 \end{rmk}
+
+\begin{exer}[2]
+Let \(\varphi:E\to E\) be linear with \(E_1\)~a stable subspace. If \(\varphi_1:E_1\to E_1\) and \(\overline{\varphi}:E/E_1\to E/E_1\) are the induced maps, then
+\[\det\varphi=\det\varphi_1\mult\det\overline{\varphi}\]
+\begin{proof}
+Let \(e_1,\ldots,e_n\) be a basis of~\(E\) where \(e_1,\ldots,e_p\) is a basis of~\(E_1\). Let \(\Delta\ne 0\) be a determinant function in~\(E\). First observe that
+\[\Delta_1(x_1,\ldots,x_p)=\Delta(x_1,\ldots,x_p,\varphi e_{p+1},\ldots,\varphi e_n)\tag{1}\]
+is a determinant function in~\(E_1\) and
+\[\Delta_2(\,\overline{x_{p+1}},\ldots,\overline{x_n}\,)=\Delta(e_1,\ldots,e_p,x_{p+1},\ldots,x_n)\tag{2}\]
+is a well-defined determinant function in~\(E/E_1\). Now
+\[\det\overline{\varphi}\mult\Delta_2(\,\overline{x_{p+1}},\ldots,\overline{x_n}\,)=\Delta_2(\,\overline{\varphi}\ \overline{x_{p+1}},\ldots,\overline{\varphi}\ \overline{x_n}\,)=\Delta_2(\,\overline{\varphi x_{p+1}},\ldots,\overline{\varphi x_n}\,)\tag{3}\]
+It follows from (2) and~(3) that
+\[\det\overline{\varphi}\mult\Delta(e_1,\ldots,e_p,x_{p+1},\ldots,x_n)=\Delta(e_1,\ldots,e_p,\varphi x_{p+1},\ldots,\varphi x_n)\tag{4}\]
+Now
+\begin{align*}
+\det\varphi\mult\Delta(e_1,\ldots,e_n)&=\Delta(\varphi e_1,\ldots,\varphi e_n)&&\\
+	&=\Delta_1(\varphi_1 e_1,\ldots,\varphi_1 e_p)&&\text{by~(1)}\\
+	&=\det\varphi_1\mult\Delta_1(e_1,\ldots,e_p)&&\\
+	&=\det\varphi_1\mult\det\overline{\varphi}\mult\Delta(e_1,\ldots,e_n)&&\text{by (1), (4)}
+\end{align*}
+Since \(\Delta(e_1,\ldots,e_n)\ne 0\), the result follows.
+\end{proof}
+\end{exer}
 
 % References
 \begin{thebibliography}{0}
