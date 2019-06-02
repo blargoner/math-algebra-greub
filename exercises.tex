@@ -9,6 +9,9 @@
 \newcommand{\iso}{\cong}
 \renewcommand{\equiv}{\sim}
 
+\DeclareMathOperator{\adj}{adj}
+\DeclareMathOperator{\cof}{cof}
+
 \newcommand{\after}{\circ}
 \newcommand{\dsum}{\oplus}
 \newcommand{\mult}{\cdot}
@@ -283,6 +286,17 @@ Now
 Since \(\Delta(e_1,\ldots,e_n)\ne 0\), the result follows.
 \end{proof}
 \end{exer}
+
+\section*{\S~5}
+
+\begin{rmk}
+Recall that the system (4.39) is equivalent to \(\varphi x=y\) where \(\varphi:\Gamma^n\to\Gamma^n\) is defined by \(M(\varphi)=(\alpha^j_k)=A\), \(x=(\xi^i)\), and \(y=(\eta^j)\). If \(\det A\ne0\), then \(\varphi\)~is invertible and
+\[x=\varphi^{-1}y=\frac{1}{\det A}\adj(\varphi)(y)\]
+It follows from the analysis of the adjoint matrix in section~4.13 that
+\[\xi^i=\frac{1}{\det A}\sum_j\cof(\alpha^j_i)\eta^j\]
+Moreover, it follows from~(4.38) that \(\sum_j\cof(\alpha^j_i)\eta^j=\det A_i\) where \(A_i\)~is the matrix obtained from~\(A\) by replacing the \(i\)-th row with~\(y\).\footnote{The cofactors of \(A_i\) and~\(A\) along the \(i\)-th row agree since \(A_i\) and~\(A\) agree on the other rows.} Therefore
+\[\xi^i=\frac{\det A_i}{\det A}\]
+\end{rmk}
 
 % References
 \begin{thebibliography}{0}
