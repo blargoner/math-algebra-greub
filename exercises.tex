@@ -264,6 +264,18 @@ where \(x\)~is in the \(j\)-th position on the right.\footnote{See the remark on
 To obtain~\(\psi\) in a ``coordinate-free''  manner (without choosing a basis), we observe that the construction on the right is multilinear and skew symmetric in \(x_1,\ldots,x_n\) when viewed as a mapping \(\Phi:E^n\to L(E;E)\). By the universal property of~\(\Delta\) (Proposition~III), there is a unique \(\psi\in L(E;E)\) satisfying the above; this~\(\psi\) is also seen to be independent of the choice of~\(\Delta\).
 \end{rmk}
 
+\begin{rmk}
+In section~4.7, observe that
+\[\Delta(x_1,\ldots,x_p,y_1,\ldots,y_q)\]
+induces a determinant function on~\(E_2\) when \(x_1,\ldots,x_p\in E\) are fixed, and induces a determinant function on~\(E_1\) when \(y_1,\ldots,y_q\in E\) are fixed. Now let \(a_1,\ldots,a_p\) be a basis of~\(E_1\), so \(a_1,\ldots,a_p,b_1,\ldots,b_q\) is a basis of~\(E\). Then by~(4.8),
+\begin{align*}
+\det\varphi\mult\Delta(a_1,\ldots,a_p,b_1,\ldots,b_q)&=\Delta(\varphi_1 a_1,\ldots,\varphi_1 a_p,\varphi_2 b_1,\ldots,\varphi_2 b_q)\\
+	&=\det\varphi_1\mult\Delta(a_1,\ldots,a_p,\varphi_2 b_1,\ldots,\varphi_2 b_q)\\
+	&=\det\varphi_1\mult\det\varphi_2\mult\Delta(a_1,\ldots,a_p,b_1,\ldots,b_q)
+\end{align*}
+Since \(\Delta(a_1,\ldots,a_p,b_1,\ldots,b_q)\ne0\), it follows that \(\det\varphi=\det\varphi_1\mult\det\varphi_2\).
+\end{rmk}
+
 \begin{exer}[2]
 Let \(\varphi:E\to E\) be linear with \(E_1\)~a stable subspace. If \(\varphi_1:E_1\to E_1\) and \(\overline{\varphi}:E/E_1\to E/E_1\) are the induced maps, then
 \[\det\varphi=\det\varphi_1\mult\det\overline{\varphi}\]
