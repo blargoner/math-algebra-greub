@@ -362,6 +362,39 @@ Moreover, it follows from~(4.38) that \(\sum_j\cof(\alpha^j_i)\eta^j=\det A_i\) 
 In subsection~4.14, \(\det B^j_i=\det S^j_i\) does \emph{not} follow from~(4.38), which only tells us that \(\det B^j_i=\det B^j_i\). However, it follows from~(4.16), or from our remarks in~\S~4 above.
 \end{rmk}
 
+\section*{\S~6}
+\begin{exer}[5]
+If \(\varphi_1:E_1\to E_1\) and \(\varphi_2:E_2\to E_2\) are linear, then
+\[\chi(\varphi_1\dsum\varphi_2)=\chi(\varphi_1)\mult\chi(\varphi_2)\]
+where \(\chi(\varphi)\)~denotes the characteristic polynomial of~\(\varphi\).
+\end{exer}
+\begin{proof}
+This follows from the result in subsection~4.7 and the fact that
+\[\varphi_1\dsum\varphi_2-\lambda\iota=(\varphi_1-\lambda\iota_{E_1})\dsum(\varphi_2-\lambda\iota_{E_2})\qedhere\]
+\end{proof}
+
+\begin{exer}[6]
+Let \(\varphi:E\to E\) be linear with \(E_1\)~a stable subspace. If \(\varphi_1:E_1\to E_1\) and \(\overline{\varphi}:E/E_1\to E/E_1\) are the induced maps, then
+\[\chi(\varphi)=\chi(\varphi_1)\mult\chi(\overline{\varphi})\]
+\end{exer}
+\begin{proof}
+This follows from problem~2 in \S~2, the fact that \(\varphi-\lambda\iota_E\) restricted to~\(E_1\) is just \(\varphi_1-\lambda\iota_{E_1}\), and \(\overline{\varphi-\lambda\iota_E}=\overline{\varphi}-\lambda\iota_{E/E_1}\).
+\end{proof}
+\begin{rmk}
+Taking \(E_1=\ker\varphi\), we have \(\chi(\varphi_1)=\chi(0_{E_1})=(-\lambda)^p\) where \(p=\dim E_1\), so \(\chi(\varphi)=(-\lambda)^p\chi(\overline{\varphi})\).
+\end{rmk}
+
+\begin{exer}[7]
+A linear map \(\varphi:E\to E\) is nilpotent if and only if \(\chi(\varphi)=(-\lambda)^n\).
+\end{exer}
+\begin{proof}
+If \(\varphi\)~is nilpotent, we proceed by induction on~\(k\) least such that \(\varphi^k=0\). If \(k=1\), the result is trivial. If \(k>1\), let \(E_1=\ker\varphi\) and \(\overline{\varphi}:E/E_1\to E/E_1\) the induced map. Then \(\overline{\varphi}^{k-1}=0\) since
+\[\overline{\varphi}^{k-1}(\overline{x})=\overline{\varphi^{k-1}}(\overline{x})=\overline{\varphi^{k-1}(x)}=0\]
+as \(\varphi^{k-1}(x)\in E_1\). By the induction hypothesis, \(\chi(\overline{\varphi})=(-\lambda)^{n-p}\) where \(p=\dim E_1\), so by the previous problem,
+\[\chi(\varphi)=(-\lambda)^p(-\lambda)^{n-p}=(-\lambda)^n\]
+Conversely, if \(\varphi\ne0\) and \(\chi(\varphi)=(-\lambda)^n\), then the constant term \(\det\varphi=0\), so \(p>0\) and by the previous problem \((-\lambda)^n=(-\lambda)^p\chi(\overline{\varphi})\), which implies \(\chi(\overline{\varphi})=(-\lambda)^{n-p}\). By induction, \(\overline{\varphi}\)~is nilpotent. If \(\overline{\varphi}^k=0\), then \(\varphi^{k+1}=0\), so \(\varphi\)~is nilpotent.
+\end{proof}
+
 % References
 \begin{thebibliography}{0}
 \bibitem{greub} Greub, W. \textit{Linear Algebra}, 4th~ed. Springer, 1975.
