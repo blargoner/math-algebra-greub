@@ -216,7 +216,7 @@ Greub's notational choices in this chapter are insane.
 
 \subsection*{\S~3}
 \begin{rmk}
-In section~3.13, note \((\alpha^{\mu}_{\nu})=M(\iota,\bar{x}_{\nu},x_{\mu})\) by~(3.22), \((\check{\alpha}^{\mu}_{\nu})=M(\iota,x_{\nu},\bar{x}_{\mu})\) by~(3.23), and \((\beta^{\varrho}_{\sigma})=M(\iota,\bar{x}^{*\varrho},x^{*\sigma})\) by~(3.24). It follows from~(3.4) that
+In subsection~3.13, note \((\alpha^{\mu}_{\nu})=M(\iota;\bar{x}_{\nu},x_{\mu})\) by~(3.22), \((\check{\alpha}^{\mu}_{\nu})=M(\iota;x_{\nu},\bar{x}_{\mu})\) by~(3.23), and \((\beta^{\varrho}_{\sigma})=M(\iota;\bar{x}^{*\varrho},x^{*\sigma})\) by~(3.24). It follows from~(3.4) that
 \[\bigl(\beta^{\mu}_{\nu}\bigr)=\bigl(\check{\alpha}^{\mu}_{\nu}\bigr)^*=\bigl(\bigl(\alpha^{\mu}_{\nu}\bigr)^{-1}\bigr)^*\]
 In other words, the matrix of the dual basis transformation \(x^{*\nu}\mapsto\bar{x}^{*\nu}\) in~\(E^*\) is the \emph{transpose} of the inverse of the matrix of the basis transformation \(x_{\nu}\mapsto\bar{x}_{\nu}\) in~\(E\), contrary to what the book says. It's easier to remember that the matrix of \(x^{*\nu}\mapsfrom\bar{x}^{*\nu}\) (arrow reversed!) is the transpose of the matrix of \(x_{\nu}\mapsto\bar{x}_{\nu}\).
 \end{rmk}
@@ -251,7 +251,7 @@ Viewing this as a function of \(x_1,\ldots,x_n\) (that is, a set map from \(E^n\
 
 \subsection*{\S~2}
 \begin{rmk}
-In section~4.6, we want a linear transformation~\(\psi\) with \(\psi\varphi=(\det\varphi)\iota\). We can choose a basis \(x_1,\ldots,x_n\) in~\(E\) with \(\Delta(x_1,\ldots,x_n)=1\), for which we want
+In subsection~4.6, we want a transformation~\(\psi\) with \(\psi\varphi=(\det\varphi)\iota\). We can choose a basis \(x_1,\ldots,x_n\) in~\(E\) with \(\Delta(x_1,\ldots,x_n)=1\), for which we want
 \begin{align*}
 (\psi\varphi)x_i=\psi(\varphi x_i)&=(\det\varphi)x_i\\
 	&=(\det\varphi)\Delta(x_1,\ldots,x_n)x_i\\
@@ -265,7 +265,7 @@ To obtain~\(\psi\) in a ``coordinate-free''  manner (without choosing a basis), 
 \end{rmk}
 
 \begin{rmk}
-In section~4.7, observe that
+In subsection~4.7, observe that
 \[\Delta(x_1,\ldots,x_p,y_1,\ldots,y_q)\]
 induces a determinant function on~\(E_2\) when \(x_1,\ldots,x_p\in E\) are fixed, and induces a determinant function on~\(E_1\) when \(y_1,\ldots,y_q\in E\) are fixed. Now let \(a_1,\ldots,a_p\) be a basis of~\(E_1\), so \(a_1,\ldots,a_p,b_1,\ldots,b_q\) is a basis of~\(E\). Then by~(4.8),
 \begin{align*}
@@ -324,7 +324,7 @@ Indeed, by~(4.26) the left side of~(2) is a determinant of the form
 J&\\
 *&B
 \end{vmatrix}\]
-where \(J\)~is the \(p\times p\) identity matrix and \(B=(\beta_i^j)\) with \(\beta_i^j=\sprod{e_j^*}{\varphi e_i}=\sprod{\varphi^* e_j^*}{e_i}\). However, since the determinant is multilinear in its rows,\footnote{See section~4.9, item~4.} it is equal to
+where \(J\)~is the \(p\times p\) identity matrix and \(B=(\beta_i^j)\) with \(\beta_i^j=\sprod{e_j^*}{\varphi e_i}=\sprod{\varphi^* e_j^*}{e_i}\). However, since the determinant is multilinear in its rows,\footnote{See subsection~4.9, item~4.} it is equal to
 \[\begin{vmatrix}
 J&\\
 &B
@@ -351,14 +351,14 @@ Indeed, by the above,
 \begin{rmk}
 Recall that the system (4.39) is equivalent to \(\varphi x=y\) where \(\varphi:\Gamma^n\to\Gamma^n\) is defined by \(M(\varphi)=(\alpha^j_k)=A\), \(x=(\xi^i)\), and \(y=(\eta^j)\). If \(\det A\ne0\), then \(\varphi\)~is invertible and
 \[x=\varphi^{-1}y=\frac{1}{\det A}\adj(\varphi)(y)\]
-It follows from the analysis of the adjoint matrix in section~4.13 that
+It follows from the analysis of the adjoint matrix in subsection~4.13 that
 \[\xi^i=\frac{1}{\det A}\sum_j\cof(\alpha^j_i)\eta^j\]
 Moreover, it follows from~(4.38) that \(\sum_j\cof(\alpha^j_i)\eta^j=\det A_i\) where \(A_i\)~is the matrix obtained from~\(A\) by replacing the \(i\)-th row with~\(y\).\footnote{The cofactors of \(A_i\) and~\(A\) along the \(i\)-th row agree since \(A_i\) and~\(A\) agree on the other rows.} Therefore
 \[\xi^i=\frac{\det A_i}{\det A}\]
 \end{rmk}
 
 \begin{rmk}
-In section~4.14, \(\det B^j_i=\det S^j_i\) does \emph{not} follow from~(4.38), which only tells us that \(\det B^j_i=\det B^j_i\). However, it follows from~(4.16), or from our remarks in~\S~4 above.
+In subsection~4.14, \(\det B^j_i=\det S^j_i\) does \emph{not} follow from~(4.38), which only tells us that \(\det B^j_i=\det B^j_i\). However, it follows from~(4.16), or from our remarks in~\S~4 above.
 \end{rmk}
 
 % References
