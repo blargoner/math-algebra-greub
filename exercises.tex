@@ -11,6 +11,7 @@
 
 \DeclareMathOperator{\adj}{adj}
 \DeclareMathOperator{\cof}{cof}
+\DeclareMathOperator{\tr}{tr}
 
 \newcommand{\after}{\circ}
 \newcommand{\dsum}{\oplus}
@@ -393,6 +394,19 @@ If \(\varphi\)~is nilpotent, we proceed by induction on~\(k\) least such that \(
 as \(\varphi^{k-1}(x)\in E_1\). By the induction hypothesis, \(\chi(\overline{\varphi})=(-\lambda)^{n-p}\) where \(p=\dim E_1\), so by the previous problem,
 \[\chi(\varphi)=(-\lambda)^p(-\lambda)^{n-p}=(-\lambda)^n\]
 Conversely, if \(\varphi\ne0\) and \(\chi(\varphi)=(-\lambda)^n\), then the constant term \(\det\varphi=0\), so \(p>0\) and by the previous problem \((-\lambda)^n=(-\lambda)^p\chi(\overline{\varphi})\), which implies \(\chi(\overline{\varphi})=(-\lambda)^{n-p}\). By induction, \(\overline{\varphi}\)~is nilpotent. If \(\overline{\varphi}^k=0\), then \(\varphi^{k+1}=0\), so \(\varphi\)~is nilpotent.
+\end{proof}
+
+\subsection*{\S~7}
+\begin{exer}[12]
+If \(\varphi_1:E_1\to E_1\) and \(\varphi_2:E_2\to E_2\), then
+\[\tr(\varphi_1\dsum\varphi_2)=\tr\varphi_1+\tr\varphi_2\]
+\end{exer}
+\begin{proof}
+Immediate since
+\[M(\varphi_1\dsum\varphi_2)=\begin{pmatrix}
+M(\varphi_1)&\\
+&M(\varphi_2)
+\end{pmatrix}\qedhere\]
 \end{proof}
 
 % References
