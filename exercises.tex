@@ -23,6 +23,7 @@
 \newcommand{\sprod}[2]{\langle#1,#2\rangle}
 \newcommand{\oc}[1]{#1^{\perp}}
 \newcommand{\occ}[1]{#1^{\perp\perp}}
+\newcommand{\opp}[1]{#1^{\mathrm{opp}}}
 
 \newarrow{Dashto}{}{dash}{}{dash}>
 
@@ -416,6 +417,29 @@ In~(4.68), if instead we define
 then \(\Delta_1\)~represents the original orientation in~\(E_1\). Indeed, in this case
 \[\Delta_1(e_1,\ldots,e_p)=\Delta(e_1,\ldots,e_p,e_{p+1},\ldots,e_n)=\Delta_2(e_{p+1},\ldots,e_n)>0\]
 \end{rmk}
+
+\section*{Chapter~V}
+\subsection*{\S~1}
+In the problems below, \(E\)~is a finite-dimensional vector space.
+\begin{exer}[12]
+The mapping
+\[\Phi:A(E;E)\to\opp{A(E^*;E^*)}\]
+defined by \(\varphi\mapsto\varphi^*\) is an algebra isomorphism.
+\end{exer}
+\begin{proof}
+\(\Phi\)~is a homomorphism by the results of chapter~II, subsection~2.25, and is an isomorphism since \(\varphi^{**}=\varphi\).
+\end{proof}
+
+\begin{exer}[16]
+Every algebra automorphism \(\Phi:A(E;E)\to A(E;E)\) is an \emph{inner} automorphism; that is, there exists \(\alpha\in GL(E)\) such that \(\Phi(\varphi)=\alpha\varphi\alpha^{-1}\) for all \(\varphi\in A(E;E)\).
+\end{exer}
+\begin{proof}
+First, observe that every basis~\((e_i)\) of~\(E\) induces a basis~\((\varphi_{ij})\) of~\(A(E;E)\) defined by \(\varphi_{ij}(e_k)=\delta_{jk}e_i\). This basis satisfies
+\[\varphi_{ij}\varphi_{lk}=\delta_{jl}\varphi_{ik}\qquad\text{and}\qquad\sum_i\varphi_{ii}=\iota\tag{1}\]
+Conversely, every basis satisfying these properties is induced by a basis of~\(E\) in this manner (see problem~14). Moreover, any two of these bases are conjugate to each other via the change of basis transformation between their inducing bases of~\(E\) (see problem~15).
+
+Now fix \((e_i)\) and~\((\varphi_{ij})\) as above. Since \(\Phi\)~is an automorphism, \((\Phi(\varphi_{ij}))\)~is also a basis of~\(A(E;E)\) which satisfies~(1), so there is \(\alpha\in GL(E)\) with \(\Phi(\varphi_{ij})=\alpha\varphi_{ij}\alpha^{-1}\) for all \(i,j\). It follows that \(\Phi(\varphi)=\alpha\varphi\alpha^{-1}\) for all \(\varphi\in A(E;E)\).
+\end{proof}
 
 % References
 \begin{thebibliography}{0}
