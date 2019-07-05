@@ -444,6 +444,27 @@ Now fix \((e_i)\) and~\((\varphi_{ij})\) as above. Since \(\Phi\)~is an automorp
 The result is also true for any nonzero endomorphism~\(\Phi\), since \(A(E;E)\)~is simple (see subsection~5.12).
 \end{rmk}
 
+\section*{Chapter~VI}
+\subsection*{\S~1}
+\begin{exer}[6]
+Let \(E,E^*\) and \(F,F^*\) be pairs of dual \(G\)-graded vector spaces and let \(\varphi:E\to F\) and \(\varphi^*:E^*\from F^*\) be dual linear maps. If \(\varphi\)~is homogeneous of degree~\(k\), then \(\varphi^*\)~is homogeneous of degree~\(-k\).
+\end{exer}
+\begin{proof}
+We have direct sum decompositions
+\[E=\sum_{m\in G}E_m\qquad E^*=\sum_{m\in G}E^{*m}\]
+and
+\[F=\sum_{n\in G}F_n\qquad F^*=\sum_{n\in G}F^{*n}\]
+where the pairs \(E_m,E^{*m}\) and \(F_n,F^{*n}\) are dual for all \(m,n\) under the restrictions of the scalar products between \(E,E^*\) and \(F,F^*\), respectively (see subsection~6.5). We also have \(\varphi E_m\subseteq F_{m+k}\) for all~\(m\). We must prove \(\varphi^* F^{*n}\subseteq E^{*n-k}\) for all~\(n\).
+
+Let \(y^*\in F^{*n}\) and \(x\in E\). Write \(x=\sum_m x_m\) where \(x_m\in E_m\). Then
+\[\sprod{\varphi^* y^*}{x}=\sprod{y^*}{\varphi x}=\sum_m\sprod{y^*}{\varphi x_m}=\sprod{y^*}{\varphi x_{n-k}}=\sprod{\varphi^* y^*}{x_{n-k}}\]
+which implies
+\[\sprod{\varphi^* y^*}{x-\pi_{n-k}x}=0\tag{1}\]
+where \(\pi_{n-k}:E\to E_{n-k}\) is the canonical projection. Now write \(\varphi^* y^*=\sum_m x^{*m}\) where \(x^{*m}\in E^{*m}\). We claim \(x^{*m}=0\) for all \(m\ne n-k\). Indeed, for \(m\ne n-k\) and \(x\in E_m\) we have \(\pi_{n-k}x=0\), so by~(1)
+\[\sprod{x^{*m}}{x}=\sum_p\sprod{x^{*p}}{x}=\sprod{\varphi^* y^*}{x}=0\]
+Therefore \(x^{*m}=0\). It follows that \(\varphi^* y^*=x^{*n-k}\in E^{*n-k}\), as desired.
+\end{proof}
+
 % References
 \begin{thebibliography}{0}
 \bibitem{greub} Greub, W. \textit{Linear Algebra}, 4th~ed. Springer, 1975.
