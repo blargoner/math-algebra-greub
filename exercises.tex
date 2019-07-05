@@ -13,6 +13,7 @@
 \DeclareMathOperator{\cof}{cof}
 \DeclareMathOperator{\tr}{tr}
 
+\newcommand{\sect}{\cap}
 \newcommand{\after}{\circ}
 \newcommand{\dsum}{\oplus}
 \newcommand{\mult}{\cdot}
@@ -463,6 +464,24 @@ which implies
 where \(\pi_{n-k}:E\to E_{n-k}\) is the canonical projection. Now write \(\varphi^* y^*=\sum_m x^{*m}\) where \(x^{*m}\in E^{*m}\). We claim \(x^{*m}=0\) for all \(m\ne n-k\). Indeed, for \(m\ne n-k\) and \(x\in E_m\) we have \(\pi_{n-k}x=0\), so by~(1)
 \[\sprod{x^{*m}}{x}=\sum_p\sprod{x^{*p}}{x}=\sprod{\varphi^* y^*}{x}=0\]
 Therefore \(x^{*m}=0\). It follows that \(\varphi^* y^*=x^{*n-k}\in E^{*n-k}\), as desired.
+\end{proof}
+
+\begin{exer}[8]
+Let \(E,E^*\) be a pair of almost finite dual \(G\)-graded vector spaces. If \(F\)~is a \(G\)-graded subspace of~\(E\), then \(\oc{F}\)~is a \(G\)-graded subspace of~\(E^*\) and \(\occ{F}=F\).
+\end{exer}
+\begin{proof}
+We have direct sums \(E=\sum_{m\in G}E_m\) and \(E^*=\sum_{m\in G}E^{*m}\) where the pairs \(E_m,E^{*m}\) are dual under the restrictions of the scalar product between \(E,E^*\) and \(\dim E_m=\dim E^{*m}<\infty\) for all~\(m\). By assumption, \(F=\sum_{m\in G}F\sect E_m\).
+We must prove
+\[\oc{F}=\sum_{m\in G}\oc{F}\sect E^{*m}\tag{1}\]
+Let \(x^*\in\oc{F}\) and write \(x^*=\sum_m x^{*m}\) where \(x^{*m}\in E^{*m}\). We claim \(x^{*n}\in\oc{F}\) for all~\(n\). Indeed, if \(x\in F\), write \(x=\sum_m x_m\) where \(x_m\in F\sect E_m\). Then
+\[\sprod{x^{*n}}{x}=\sum_m\sprod{x^{*n}}{x_m}=\sprod{x^{*n}}{x_n}=\sum_m\sprod{x^{*m}}{x_n}=\sprod{x^*}{x_n}=0\]
+This establishes~(1). By symmetry, we have
+\[\occ{F}=\sum_{m\in G}\occ{F}\sect E_m\tag{2}\]
+We claim \(\occ{F}\sect E_n\subseteq F\sect E_n\) for all~\(n\). To prove this, we first show
+\[\occ{F}\sect E_n\subseteq(F\sect E_n)^{\perp_n\perp_n}\tag{3}\]
+where \(\perp_n\)~is taken relative to the scalar product between \(E_n,E^{*n}\). Indeed, let \(x\in\occ{F}\sect E_n\) and \(x^*\in(F\sect E_n)^{\perp_n}\subseteq E^{*n}\). If \(y\in F\), write \(y=\sum_m y_m\) where \(y_m\in F\sect E_m\). Then
+\[\sprod{x^*}{y}=\sum_m\sprod{x^*}{y_m}=\sprod{x^*}{y_n}=0\]
+This implies \(x^*\in\oc{F}\), which implies \(\sprod{x^*}{x}=0\), which in turn implies~(3). Now \((F\sect E_n)^{\perp_n\perp_n}=F\sect E_n\) since \(\dim E_n<\infty\), which establishes the claim. Finally, it follows from~(2) that \(\occ{F}=F\).
 \end{proof}
 
 % References
