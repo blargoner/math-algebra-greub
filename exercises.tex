@@ -200,6 +200,15 @@ F_1				&\pile{\rTo\\\lTo}	&F_1\dsum F_2	&\pile{\lTo\\\rTo}	&F_2
 
 \subsection*{\S~5}
 \begin{rmk}
+If \(E,E^*\) and \(F,F^*\) are pairs of dual spaces and \(\varphi:E\to F\) is linear, then \(\varphi^*:E^*\from F^*\) is dual to~\(\varphi\) if and only if the following diagram commutes:
+\begin{diagram}
+F^*\times E&\rTo^{\varphi^*\times\iota_E}&E^*\times E\\
+\dTo<{\iota_{F^*}\times\varphi}&		&\dTo>{\sprod{\ }{\ }}\\
+F^*\times F&\rTo_{\sprod{\ }{\ }}&\Gamma
+\end{diagram}
+\end{rmk}
+
+\begin{rmk}
 Let \(E\)~be a vector space and \((x_{\alpha})_{\alpha\in A}\) be a basis of~\(E\). For each \(x\in E\), write \(x=\sum_{\alpha\in A}f_{\alpha}(x)x_{\alpha}\). Then \(f_{\alpha}\in L(E)\) for each \(\alpha\in A\). The function \(f_{\alpha}\) is called the \emph{\(\alpha\)-th coordinate functional} for the basis.
 
 Coordinate functionals can be used in an alternative proof of Proposition~IV. If \(E_1\)~is a subspace of~\(E\), let \(B_1\)~be a basis of~\(E_1\) and extend it to a basis \(B\) of~\(E\). For each \(x_{\alpha}\in B-B_1\), we have \(f_{\alpha}\in\oc{E_1}\). If \(x\in\occ{E_1}\), then \(f_{\alpha}(x)=\sprod{f_{\alpha}}{x}=0\) for all such \(\alpha\), so \(x\in E_1\). In other words, \(\occ{E_1}\subseteq E_1\).
