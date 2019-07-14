@@ -228,12 +228,21 @@ For \(\varphi:E\to F\) a linear map, let \(L(\varphi):L(E)\from L(F)\) be the du
 
 \subsection*{\S~6}
 \begin{rmk}
-If \(E\)~has finite dimension, then every basis of a dual space~\(E^*\) is a dual basis. Indeed, if \(f_1,\ldots,f_n\) is a basis of~\(E^*\), let \(e_1,\ldots,e_n\) be its dual basis in~\(E\). Then \(\sprod{f_i}{e_j}=\delta_{ij}\) by~(2.62), so \(f_1,\ldots,f_n\) is the dual basis of \(e_1,\ldots,e_n\), again by~(2.62).
+If \(E\)~is finite-dimensional, then every basis of a dual space~\(E^*\) is a dual basis. Indeed, if \(f_1,\ldots,f_n\) is a basis of~\(E^*\), let \(e_1,\ldots,e_n\) be its dual basis in~\(E\). Then \(\sprod{f_i}{e_j}=\delta_{ij}\) by~(2.62), so \(f_1,\ldots,f_n\) is the dual basis of \(e_1,\ldots,e_n\), again by~(2.62).
 
 Alternatively, with \(E^*=L(E)\), let \(f_1^*,\ldots,f_n^*\) be the dual basis of \(f_1,\ldots,f_n\) in \(E^{**}=L(L(E))\), so \(\sprod{f_j^*}{f_i}=\delta_{ij}\) by~(2.62). Let \(e_1,\ldots,e_n\in E\) be defined by \(\sprod{f_j^*}{f}=\sprod{f}{e_j}\) for all \(f\in E^*\) (see \S~5, problem~3). Then \(\sprod{f_i}{e_j}=\sprod{f_j^*}{f_i}=\delta_{ij}\), so \(f_1,\ldots,f_n\) is the dual basis of \(e_1,\ldots,e_n\).
 
 The first proof here uses the symmetry between \(E\) and~\(E^*\), while the second uses the natural isomorphism \(E\iso E^{**}\).
 \end{rmk}
+
+\begin{exer}[9]
+If \(E\) and~\(F\) are finite-dimensional, then the mapping
+\[\Phi:L(E;F)\to L(F^*;E^*)\]
+defined by \(\varphi\mapsto\varphi^*\) is a linear isomorphism.
+\end{exer}
+\begin{proof}
+By the remark in~\S~5 above, and the fact that \(\varphi^{**}=\varphi\).
+\end{proof}
 
 \section*{Chapter~III}
 \begin{rmk}
@@ -451,7 +460,7 @@ The mapping
 defined by \(\varphi\mapsto\varphi^*\) is an algebra isomorphism.
 \end{exer}
 \begin{proof}
-\(\Phi\)~is a homomorphism by the results of chapter~II, subsection~2.25, and is an isomorphism since \(\varphi^{**}=\varphi\).
+\(\Phi\)~is a linear isomorphism by problem 9 of chapter II, \S~6, and preserves products since \((\varphi\after\psi)^*=\psi^*\after\varphi^*\).
 \end{proof}
 
 \begin{exer}[16]
@@ -543,7 +552,7 @@ Let \(E,E^*\) be a pair of almost finite dual \(G\)-graded vector spaces. Then t
 defined by \(\varphi\mapsto\varphi^*\) is an algebra isomorphism.
 \end{exer}
 \begin{proof}
-The mapping is well defined by problems 6 and~10 of~\S~1, and is an isomorphism by problem~12 of chapter~V, \S~1.
+\(\Phi\)~is well defined by problems 6 and~10 of~\S~1, and is an isomorphism by problem~12 of chapter~V, \S~1.
 \end{proof}
 
 % References
