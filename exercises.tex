@@ -35,6 +35,7 @@
 
 \theoremstyle{remark}
 \newtheorem*{rmk}{Remark}
+\newtheorem*{warn}{Warning}
 
 % Meta
 \title{Notes and exercises from\\\textit{Linear Algebra}}
@@ -245,9 +246,14 @@ By the remark in~\S~5 above, and the fact that \(\varphi^{**}=\varphi\).
 \end{proof}
 
 \section*{Chapter~III}
-\begin{rmk}
-Greub's notational choices in this chapter are insane.
-\end{rmk}
+\begin{warn}
+Greub's notational choices in this chapter are insane. In particular, although he uses left-hand function notation (writing \(\varphi x\) instead of~\(x\varphi\), and \(\varphi\psi\) to mean \emph{\(\varphi\) after \(\psi\)}), and follows the usual ``row-by-column'' convention for matrix multiplication, his convention for the matrix of a linear mapping is the transpose of that normally used with left-hand notation. This has the following undesirable consequences:
+\begin{itemize}
+\item The matrix of the linear mapping naturally associated with a system of linear equations has the coefficients from each equation appear \emph{vertically in columns}.
+\item If \(M(x)\)~is the \emph{column vector} representing~\(x\), then \(M(\varphi x)=M(\varphi)^*M(x)\), and if \(M(x)\)~is the \emph{row vector} representing~\(x\), then \(M(\varphi x)=M(x)M(\varphi)\).
+\item \(M(\varphi\psi)=M(\psi)M(\varphi)\)
+\end{itemize}
+\end{warn}
 
 \subsection*{\S~3}
 \begin{rmk}
