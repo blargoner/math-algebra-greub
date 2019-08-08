@@ -489,7 +489,18 @@ then \(\Delta_1\)~represents the original orientation in~\(E_1\). Indeed, in thi
 
 \section*{Chapter~V}
 \subsection*{\S~1}
-In the problems below, \(E\)~is a finite-dimensional vector space.
+\begin{rmk}
+An algebra~\(A\) is a \emph{zero algebra} if \(xy=0\) for all \(x,y\in A\); this is equivalent to \(A^2=0\). As an example, \emph{the zero algebra} is the algebra \(A=0\). A zero algebra is unital if and only if it is the zero algebra.
+\end{rmk}
+
+\begin{rmk}
+Let \(\varphi:A\to B\) be a homomorphism of algebras. If \(A_1\)~is a subalgebra of~\(A\) and \(B_1\)~is a subalgebra of~\(B\) and \(\varphi(A_1)\subseteq B_1\), then the restriction \(\varphi_1:A_1\to B_1\) of~\(\varphi\) to \(A_1,B_1\) is a homomorphism.
+
+If \(A_1\) and~\(B_1\) are \emph{ideals}, then the induced linear map \(\overline{\varphi}:A/A_1\to B/B_1\) is also a homomorphism since
+\[\overline{\varphi}(\overline{x}\,\overline{y})=\overline{\varphi}(\overline{xy})=\overline{\varphi(xy)}=\overline{\varphi(x)\varphi(y)}=\overline{\varphi(x)}\,\overline{\varphi(y)}=\overline{\varphi}(\overline{x})\,\overline{\varphi}(\overline{y})\]
+\end{rmk}
+
+\noindent In the problems below, \(E\)~is a finite-dimensional vector space.
 \begin{exer}[12]
 The mapping
 \[\Phi:A(E;E)\to\opp{A(E^*;E^*)}\]
