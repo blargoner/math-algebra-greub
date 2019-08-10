@@ -528,8 +528,30 @@ The result is also true for any nonzero endomorphism~\(\Phi\), since \(A(E;E)\)~
 \section*{Chapter~VI}
 \subsection*{\S~1}
 \begin{rmk}
+The space of polynomials in one variable is positively graded by the degrees of monomials. More generally, the space of polynomials in \(p\)~variables is \(p\)-graded by the multidegrees of monomials.
+\end{rmk}
+
+\begin{rmk}
+If \(E=\sum_{k\in G}E_k\) is a \(G\)-graded space and \(F=\sum_{k\in G}F\sect E_k\) is a \(G\)-graded subspace, then \(E/F=\sum_{k\in G}E_k/(F\sect E_k)\) is the \(G\)-graded factor space.\footnote{See problem~2 in Chapter~II, \S~4.}
+\end{rmk}
+
+\begin{rmk}
 The zero map between two \(G\)-graded vector spaces is homogeneous of every degree. A nonzero homogeneous map has a unique degree.
 \end{rmk}
+
+\begin{rmk}
+Let \(E\) and~\(F\) be \(G\)-graded vector spaces. If \(\varphi:E\to F\) is linear and homogeneous of degree~\(k\) and \(\varphi x\) is homogeneous of degree~\(l\), then we may assume without loss of generality that \(x\)~is homogeneous of degree \(l-k\). Indeed, writing \(x=\sum_m x_m\) with \(\deg x_m=m\), we have \(\varphi x=\sum_m\varphi x_m\) with \(\deg(\varphi x_m)=m+k\). Since \(\deg(\varphi x)=l\), we must have \(\varphi x_m=0\) for \(m\ne l-k\), so \(\varphi x=\varphi x_{l-k}\).
+\end{rmk}
+
+\begin{rmk}
+If \(E\)~is a finite-dimensional \(G\)-graded vector space and \(\varphi:E\to E\) is linear and homogeneous with \(\deg\varphi\ne 0\), then \(\tr\varphi=0\).
+\end{rmk}
+\begin{proof}
+Write \(E=E_{k_1}\dsum\cdots\dsum E_{k_n}\) with \(k_i\in G\) and \(d_i=\dim E_{k_i}<\infty\). Let \((e_{ij})\)~be a basis of~\(E\) such that for each \(1\le i\le n\), \((e_{ij})\)~is a basis of~\(E_{k_i}\) for \(1\le j\le d_i\). Let \(\Delta\)~be a determinant function in~\(E\) with \(\Delta(e_{ij})=1\). Then
+\[\tr\varphi=\sum_{i,j}\Delta(e_{11},\ldots,e_{1d_1},\ldots,\varphi(e_{ij}),\ldots,e_{n1},\ldots,e_{n\,d_n})\]
+By assumption, \(\varphi(e_{ij})\in E_{k_l}\) for some \(l\ne i\), so each term in this sum is zero, and hence \(\tr\varphi=0\).
+\end{proof}
+\noindent As an example, formal differentiation in the space of polynomials of degree at most~\(n\) (graded by the degrees of monomials) is homogeneous of degree~\(-1\), so has zero trace. This is also obvious from its matrix representation with respect to the standard basis.
 
 \begin{exer}[6]
 Let \(E,E^*\) and \(F,F^*\) be pairs of dual \(G\)-graded vector spaces and let \(\varphi:E\to F\) and \(\varphi^*:E^*\from F^*\) be dual linear maps. If \(\varphi\)~is homogeneous of degree~\(k\), then \(\varphi^*\)~is homogeneous of degree~\(-k\).
@@ -569,16 +591,6 @@ This implies \(x^*\in\oc{F}\), which implies \(\sprod{x^*}{x}=0\), which in turn
 \end{proof}
 
 \subsection*{\S~2}
-\begin{rmk}
-If \(E\)~is a finite-dimensional \(G\)-graded vector space and \(\varphi:E\to E\) is linear and homogeneous with \(\deg\varphi\ne 0\), then \(\tr\varphi=0\).
-\end{rmk}
-\begin{proof}
-Write \(E=E_{k_1}\dsum\cdots\dsum E_{k_n}\) with \(k_i\in G\) and \(d_i=\dim E_{k_i}<\infty\). Let \((e_{ij})\)~be a basis of~\(E\) such that for each \(1\le i\le n\), \((e_{ij})\)~is a basis of~\(E_{k_i}\) for \(1\le j\le d_i\). Let \(\Delta\)~be a determinant function in~\(E\) with \(\Delta(e_{ij})=1\). Then
-\[\tr\varphi=\sum_{i,j}\Delta(e_{11},\ldots,e_{1d_1},\ldots,\varphi(e_{ij}),\ldots,e_{n1},\ldots,e_{n\,d_n})\]
-By assumption, \(\varphi(e_{ij})\in E_{k_l}\) for some \(l\ne i\), so each term in this sum is zero, and hence \(\tr\varphi=0\).
-\end{proof}
-\noindent As an example, formal differentiation in the space of polynomials of degree at most~\(n\) (graded by the degrees of monomials) is homogeneous of degree~\(-1\), so has zero trace. This is also obvious from its matrix representation with respect to the standard basis.
-
 \begin{exer}[1]
 Let \(A\)~be a \(G\)-graded algebra. If \(x\in A\) is an invertible element homogeneous of degree~\(k\), then \(x^{-1}\)~is homogeneous of degree~\(-k\). If \(A\)~is nonzero and positively graded, then \(k=0\).
 \end{exer}
