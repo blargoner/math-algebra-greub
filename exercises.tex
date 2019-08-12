@@ -619,6 +619,28 @@ defined by \(\varphi\mapsto\varphi^*\) is an algebra isomorphism.
 \(\Phi\)~is well defined by problems 6 and~10 of~\S~1, and is an isomorphism by problem~12 of chapter~V, \S~1.
 \end{proof}
 
+\section*{Chapter~VII}
+In this chapter, all vector spaces are real.
+
+\subsection*{\S~1}
+\begin{rmk}
+If \(E\)~is a finite-dimensional inner product space and \(E_1\)~is a subspace of~\(E\), then \(E\)~induces an inner product in~\(E/E_1\) by
+\[(\overline{x},\overline{y})=(x,y)\]
+where \(x,y\) are the unique representatives of \(\overline{x},\overline{y}\) in~\(\oc{E_1}\) (see problem~5).
+\end{rmk}
+\begin{proof}
+The only thing to check is bilinearity, which follows from the fact that \(\oc{E_1}\)~is a subspace of~\(E\).
+\end{proof}
+
+\begin{exer}[5]
+If \(E\)~is a finite-dimensional inner product space and \(E_1\)~is a subspace of~\(E\), then every element of~\(E/E_1\) has exactly one representative in~\(\oc{E_1}\).
+\end{exer}
+\begin{proof}
+By duality, \(\dim E=\dim E_1+\dim\oc{E_1}\), and by definiteness of the inner product, \(E_1\sect\oc{E_1}=0\), so \(E=E_1\dsum\oc{E_1}\). For \(x+E_1\in E/E_1\), let \(y=\pi(x)-x\) where \(\pi\)~is the canonical projection onto~\(\oc{E_1}\). Then \(y\in E_1\) so \(x+y\in x+E_1\) and \(x+y\in\oc{E_1}\), as desired. If \(z\in E_1\) and \(x+z\in\oc{E_1}\), then
+\[y-z=(y+x)-(x+z)\in E_1\sect\oc{E_1}=0\]
+so \(y=z\), establishing uniqueness.
+\end{proof}
+
 % References
 \begin{thebibliography}{0}
 \bibitem{greub} Greub, W. \textit{Linear Algebra}, 4th~ed. Springer, 1975.
