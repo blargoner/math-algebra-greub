@@ -26,6 +26,7 @@
 \newcommand{\oc}[1]{#1^{\perp}}
 \newcommand{\occ}[1]{#1^{\perp\perp}}
 \newcommand{\opp}[1]{#1^{\mathrm{opp}}}
+\newcommand{\iprod}[2]{(#1,#2)}
 
 \newarrow{Dashto}{}{dash}{}{dash}>
 
@@ -625,7 +626,7 @@ In this chapter, all vector spaces are real.
 \subsection*{\S~1}
 \begin{rmk}
 If \(E\)~is a finite-dimensional inner product space and \(E_1\)~is a subspace of~\(E\), then \(E\)~induces an inner product in~\(E/E_1\) by
-\[(\overline{x},\overline{y})=(x,y)\]
+\[\iprod{\overline{x}}{\overline{y}}=\iprod{x}{y}\]
 where \(x,y\) are the unique representatives of \(\overline{x},\overline{y}\) in~\(\oc{E_1}\) (see problem~5).
 \end{rmk}
 \begin{proof}
