@@ -28,6 +28,7 @@
 \newcommand{\opp}[1]{#1^{\mathrm{opp}}}
 \newcommand{\iprod}[2]{(#1,#2)}
 \newcommand{\norm}[1]{|#1|}
+\newcommand{\abs}[1]{|#1|}
 
 \newarrow{Dashto}{}{dash}{}{dash}>
 
@@ -665,6 +666,15 @@ and it follows that \(\varphi^{-1}=\varphi^*\). Conversely if \(\varphi^{-1}=\va
 so \(\varphi\)~preserves inner products.
 
 Such a~\(\varphi\) is called an \emph{orthogonal} transformation. Note \(\varphi\)~is orthogonal if and only if \(M(\varphi)\)~is an orthogonal matrix relative to an orthonormal basis.
+\end{rmk}
+
+\subsection*{\S~3}
+\begin{rmk}
+A normed determinant function~\(\Delta\) in an inner product space~\(E\) is called ``normed'' because \(\abs{\Delta(e_1,\ldots,e_n)}=1\) for any orthonormal basis \(e_1,\ldots,e_n\). If \(E\)~is oriented and \(\Delta\)~represents the orientation, then \(\Delta(e_1,\ldots,e_n)=1\) if \(e_1,\ldots,e_n\) is positive. By comparing (4.26) and~(7.23), we see that \emph{the normed determinant functions are precisely the self-dual determinant functions}.
+
+If \(\Delta_0\ne 0\) is a determinant function in~\(E\) and \(\Delta_0^*\)~is its dual, then \(\Delta_0^*=\alpha\Delta_0\) for some real number~\(\alpha\) by uniqueness of~\(\Delta_0\), so
+\[\alpha\Delta_0(x_1,\ldots,x_n)\Delta_0(y_1,\ldots,y_n)=\det(x_i,y_j)\qquad(x_i,y_i\in E)\]
+Substituting \(x_i=y_i=e_i\) shows that \(\alpha>0\). It follows that \(\Delta_1=\pm\sqrt{\alpha}\mult\Delta_0\) is a normed determinant function.
 \end{rmk}
 
 % References
