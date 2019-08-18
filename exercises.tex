@@ -18,6 +18,7 @@
 \newcommand{\after}{\circ}
 \newcommand{\dsum}{\oplus}
 \newcommand{\mult}{\cdot}
+\newcommand{\cross}{\times}
 
 \newcommand{\delete}{\widehat}
 \newcommand{\gen}[1]{\langle#1\rangle}
@@ -677,6 +678,14 @@ A normed determinant function~\(\Delta\) in an inner product space~\(E\) is call
 If \(\Delta_0\ne 0\) is a determinant function in~\(E\) and \(\Delta_0^*\)~is its dual, then \(\Delta_0^*=\alpha\Delta_0\) for some real number~\(\alpha\) by uniqueness of~\(\Delta_0\), so
 \[\alpha\Delta_0(x_1,\ldots,x_n)\Delta_0(y_1,\ldots,y_n)=\det(x_i,y_j)\qquad(x_i,y_i\in E)\]
 Substituting \(x_i=y_i=e_i\) shows that \(\alpha>0\). It follows that \(\Delta_1=\pm\sqrt{\alpha}\mult\Delta_0\) is a normed determinant function.
+\end{rmk}
+
+\begin{rmk}
+It follows from~(7.37) that if \(x\) and~\(y\) are linearly independent, then
+\[\norm{x\cross y}=\Delta(x,y,z)\]
+where \(z=(x\cross y)/\norm{x\cross y}\). Since \(z\)~is a unit vector orthogonal to \(x\) and~\(y\), it follows (subsection 7.15) that \(\Delta(x,y,z)\)~is just the area of the parallelogram determined by \(x\) and~\(y\). In other words,
+\[\norm{x\cross y}=\norm{x}\norm{y}\sin\theta\]
+where \(0\le\theta\le\pi\) is the angle between \(x\) and~\(y\). This last equation obviously still holds if \(x\) and~\(y\) are linearly dependent but nonzero.
 \end{rmk}
 
 % References
