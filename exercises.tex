@@ -688,6 +688,27 @@ where \(z=(x\cross y)/\norm{x\cross y}\). Since \(z\)~is a unit vector orthogona
 where \(0\le\theta\le\pi\) is the angle between \(x\) and~\(y\). This last equation obviously still holds if \(x\) and~\(y\) are linearly dependent but nonzero.
 \end{rmk}
 
+\begin{exer}[12]
+For vectors \(x_1,\ldots,x_p\),
+\[G(x_1,\ldots,x_p)\le\norm{x_1}^2\cdots\norm{x_p}^2\tag{1}\]
+Additionally
+\[\begin{vmatrix}
+a_{11}&\cdots&a_{1n}\\
+\vdots&\ddots&\vdots\\
+a_{n1}&\cdots&a_{nn}
+\end{vmatrix}^2\le\sum_{k=1}^n\abs{a_{1k}}^2\cdots\sum_{k=1}^n\abs{a_{nk}}^2\tag{2}\]
+\end{exer}
+\begin{proof}
+By induction with the ``base times height'' rule for volume (subsection 7.15), \(V(u_1,\ldots,u_p)\le 1\) for linearly independent \emph{unit} vectors \(u_1,\ldots,u_p\).
+
+Now if \(x_1,\ldots,x_p\) are linearly dependent, then \(G(x_1,\ldots,x_p)=0\) and (1)~holds trivially. Otherwise, setting \(u_i=x_i/\norm{x_i}\) we have
+\[\sqrt{G(x_1,\ldots,x_p)}=V(x_1,\ldots,x_p)=\norm{x_1}\cdots\norm{x_p}\mult V(u_1,\ldots,u_p)\le\norm{x_1}\cdots\norm{x_p}\]
+Squaring both sides yields~(1). Since the determinant of a matrix is a (normed) determinant function of the rows, (2)~follows.
+\end{proof}
+\begin{rmk}
+These results both simply express an upper bound for the volume of a parallelepiped in terms of the lengths of the edges.
+\end{rmk}
+
 % References
 \begin{thebibliography}{0}
 \bibitem{greub} Greub, W. \textit{Linear Algebra}, 4th~ed. Springer, 1975.
