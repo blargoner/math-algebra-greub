@@ -269,7 +269,7 @@ In other words, the matrix of the dual basis transformation \(x^{*\nu}\mapsto\ba
 \end{rmk}
 
 \begin{rmk}
-In subsection 3.13, we see that if a basis transformation is effected by~\(\tau\), then the corresponding \emph{coordinate} transformation is effected by~\(\tau^{-1}\). The coordinates of a vector are transformed ``exactly in the same way'' as the vectors of the dual basis only because of Greub's notational choices, which introduce transposition into matrix-vector multiplication (see the remarks above).
+In subsection 3.13, we see that if a basis transformation is effected by~\(\tau\), then the corresponding \emph{coordinate} transformation is effected by~\(\tau^{-1}\). The coordinates of a vector are transformed ``exactly in the same way'' as the vectors of the dual basis, despite the previous remark, because of Greub's notational choices, which introduce transposition into matrix-vector multiplication (see the remarks above).
 \end{rmk}
 
 \section*{Chapter~IV}
@@ -629,7 +629,7 @@ In this chapter, all vector spaces are real.
 
 \subsection*{\S~1}
 \begin{rmk}
-The Riesz representation theorem shows that for a finite-dimensional \emph{inner product space}~\(E\), there is a \emph{natural} isomorphism between \(E\) and its dual space~\(L(E)\) given by \(x\mapsto\iprod{x}{-}\). This is unlike for a finite-dimensional vector space, where the isomorphism is in general non-natural.
+The Riesz representation theorem shows that for a finite-dimensional \emph{inner product space}~\(E\), there is a \emph{natural} isomorphism between \(E\) and its dual space~\(L(E)\) given by \(x\mapsto\iprod{x}{-}\). This is unlike for a finite-dimensional vector space, where the isomorphism is in general non-natural, and means we may naturally \emph{identify} a vector with its dual vector.
 \end{rmk}
 
 \begin{rmk}
@@ -711,6 +711,11 @@ Squaring both sides yields~(1). Since the determinant of a matrix is a (normed) 
 \end{proof}
 \begin{rmk}
 These results both simply express an upper bound for the volume of a parallelepiped in terms of the lengths of the edges.
+\end{rmk}
+
+\subsection*{\S~4}
+\begin{rmk}
+The covariant components of a vector are just its coordinates in the dual space, which are also just the entries of its matrix (as a linear function). They are called ``covariant'' because they vary in the same way as basis vectors in the original space under a change of basis (see subsections 3.13--14). This is unlike the regular components of the vector, which vary inversely to the basis vectors and may be called the \emph{contravariant components}.
 \end{rmk}
 
 % References
