@@ -723,6 +723,24 @@ The covariant components of a vector are just its coordinates in the dual space,
 In subsection~7.22, observe that \(Q\)~is just the set of unit vectors under the norm defined in example~3 in subsection~7.20. Since norm functions are continuous under the natural topology, \(Q\)~is closed under this topology, and \(Q\)~is also clearly bounded under this topology. It follows that \(Q\)~is compact under this topology since \(E\)~is finite-dimensional.
 \end{rmk}
 
+\subsection*{\S~6}
+\begin{rmk}
+If \(x=\lambda e+x_1\) and \(y=\mu e+y_1\) are quaternions (\(\lambda,\mu\in\R\) and \(x_1,y_1\in E_1\)), then by the definition of quaternion multiplication
+\[xy=\bigl(\lambda\mu-(x_1,y_1)\bigr)e+\lambda y_1+\mu x_1+x_1\cross y_1\]
+\end{rmk}
+
+\begin{rmk}
+In subsection~7.24, in the proof of Lemma~I, observe that the result holds trivially if \(y=\pm x\) by taking \(\lambda=\mp 1\). If \(y\ne\pm x\), then \(e\ne 0\). Suppose
+\[\alpha x+\beta y+\gamma e=0\qquad(\alpha,\beta,\gamma\in\R)\]
+If \(\alpha\ne 0\), then \(x=\beta_1y+\gamma_1e\) for \(\beta_1,\gamma_1\in\R\), so
+\[-e=x^2=(\beta_1y+\gamma_1e)^2=2\beta_1\gamma_1y+(\gamma_1^2-\beta_1^2)e\]
+which implies
+\[2\beta_1\gamma_1y=(\beta_1^2-\gamma_1^2-1)e\]
+If \(\beta_1=0\), it follows that \(\gamma_1^2=-1\), which is impossible. If \(\gamma_1=0\), it follows that \(\beta_1=\pm 1\), so \(x=\pm y\) contrary to assumption. Therefore \(\beta_1\gamma_1\ne 0\), so \(y=\delta e\) for \(\delta\in\R\). But then \(-e=y^2=\delta^2 e\), so \(\delta^2=-1\), which is impossible. It follows that \(\alpha=0\). Similarly \(\beta=0\). Finally, \(\gamma=0\). This result shows that the vectors \(x,y,e\) are linearly independent.
+
+Now \(x+y\) and \(x-y\) are roots of polynomials of degree \(1\) or~\(2\), but the linear independence of \(x,y,e\) implies that these polynomials must have degree~\(2\), so (7.60) and~(7.61) follow.
+\end{rmk}
+
 % References
 \begin{thebibliography}{0}
 \bibitem{greub} Greub, W. \textit{Linear Algebra}, 4th~ed. Springer, 1975.
