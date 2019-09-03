@@ -10,7 +10,7 @@
 \renewcommand{\equiv}{\sim}
 
 \DeclareMathOperator{\im}{Im}
-\DeclareMathOperator{\adj}{adj}
+\DeclareMathOperator{\ad}{ad}
 \DeclareMathOperator{\cof}{cof}
 \DeclareMathOperator{\tr}{tr}
 
@@ -30,6 +30,7 @@
 \newcommand{\iprod}[2]{(#1,#2)}
 \newcommand{\norm}[1]{|#1|}
 \newcommand{\abs}[1]{|#1|}
+\newcommand{\adj}[1]{\widetilde{#1}}
 
 \newarrow{Dashto}{}{dash}{}{dash}>
 
@@ -429,7 +430,7 @@ Indeed, by the above,
 \subsection*{\S~5}
 \begin{rmk}
 Recall that the system (4.39) is equivalent to \(\varphi x=y\) where \(\varphi:\Gamma^n\to\Gamma^n\) is defined by \(M(\varphi)=(\alpha^j_k)=A\), \(x=(\xi^i)\), and \(y=(\eta^j)\). If \(\det A\ne0\), then \(\varphi\)~is invertible and
-\[x=\varphi^{-1}y=\frac{1}{\det A}\adj(\varphi)(y)\]
+\[x=\varphi^{-1}y=\frac{1}{\det A}\ad(\varphi)(y)\]
 It follows from the analysis of the adjoint matrix in subsection~4.13 that
 \[\xi^i=\frac{1}{\det A}\sum_j\cof(\alpha^j_i)\eta^j\]
 Moreover, it follows from~(4.38) that \(\sum_j\cof(\alpha^j_i)\eta^j=\det A_i\) where \(A_i\)~is the matrix obtained from~\(A\) by replacing the \(i\)-th row with~\(y\).\footnote{The cofactors of \(A_i\) and~\(A\) along the \(i\)-th row agree since \(A_i\) and~\(A\) agree on the other rows.} Therefore
@@ -739,6 +740,13 @@ which implies
 If \(\beta_1=0\), it follows that \(\gamma_1^2=-1\), which is impossible. If \(\gamma_1=0\), it follows that \(\beta_1=\pm 1\), so \(x=\pm y\) contrary to assumption. Therefore \(\beta_1\gamma_1\ne 0\), so \(y=\delta e\) for \(\delta\in\R\). But then \(-e=y^2=\delta^2 e\), so \(\delta^2=-1\), which is impossible. It follows that \(\alpha=0\). Similarly \(\beta=0\). Finally, \(\gamma=0\). This result shows that the vectors \(x,y,e\) are linearly independent.
 
 Now \(x+y\) and \(x-y\) are roots of polynomials of degree \(1\) or~\(2\), but the linear independence of \(x,y,e\) implies that these polynomials must have degree~\(2\), so (7.60) and~(7.61) follow.
+\end{rmk}
+
+\section*{Chapter~VIII}
+\subsection*{\S~1}
+\begin{rmk}
+In subsection~8.2, if the bases \((x_{\nu})\) and~\((y_{\mu})\) are orthonormal, then they are self-dual,\footnote{See problem~2 in Chapter~VII, \S~2.} so \(M(\adj{\varphi},y_{\mu},x_{\nu})=M(\varphi,x_{\nu},y_{\mu})^*\) by~(3.4). It follows that
+\[\tilde{\alpha}^{\varrho}_{\mu}=M(\adj{\varphi})^{\varrho}_{\mu}=M(\varphi)^{\mu}_{\varrho}=\alpha^{\mu}_{\varrho}\]
 \end{rmk}
 
 % References
