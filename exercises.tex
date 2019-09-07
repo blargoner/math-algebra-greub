@@ -681,7 +681,7 @@ Such a~\(\varphi\) is called an \emph{orthogonal} transformation. Note \(\varphi
 A determinant function~\(\Delta\) in an inner product space~\(E\) is normed if and only if \(\abs{\Delta(e_1,\ldots,e_n)}=1\) for any orthonormal basis \(e_1,\ldots,e_n\). If \(E\)~is oriented and \(\Delta\)~is the normed determinant function representing the orientation, then \(\Delta(e_1,\ldots,e_n)=1\) if \(e_1,\ldots,e_n\) is positive. Geometrically, this is just \emph{the} oriented volume function in~\(E\). By comparing (4.26) and~(7.23), we see that \emph{the normed determinant functions are precisely the self-dual determinant functions}.
 
 If \(\Delta_0\ne 0\) is a determinant function in~\(E\) and \(\Delta_0^*\)~is its dual, then \(\Delta_0^*=\alpha\Delta_0\) for some real number~\(\alpha\) by uniqueness of~\(\Delta_0\), so
-\[\alpha\Delta_0(x_1,\ldots,x_n)\Delta_0(y_1,\ldots,y_n)=\det(x_i,y_j)\qquad(x_i,y_i\in E)\]
+\[\alpha\Delta_0(x_1,\ldots,x_n)\Delta_0(y_1,\ldots,y_n)=\det\iprod{x_i}{y_j}\qquad(x_i,y_i\in E)\]
 Substituting \(x_i=y_i=e_i\) shows that \(\alpha>0\). It follows that \(\Delta_1=\pm\sqrt{\alpha}\mult\Delta_0\) is a normed determinant function.
 \end{rmk}
 
@@ -727,7 +727,7 @@ In subsection~7.22, observe that \(Q\)~is just the set of unit vectors under the
 \subsection*{\S~6}
 \begin{rmk}
 If \(x=\lambda e+x_1\) and \(y=\mu e+y_1\) are quaternions (\(\lambda,\mu\in\R\) and \(x_1,y_1\in E_1\)), then by the definition of quaternion multiplication
-\[xy=\bigl(\lambda\mu-(x_1,y_1)\bigr)e+\lambda y_1+\mu x_1+x_1\cross y_1\]
+\[xy=\bigl(\lambda\mu-\iprod{x_1}{y_1}\bigr)e+\lambda y_1+\mu x_1+x_1\cross y_1\]
 \end{rmk}
 
 \begin{rmk}
