@@ -743,10 +743,20 @@ Now \(x+y\) and \(x-y\) are roots of polynomials of degree \(1\) or~\(2\), but t
 \end{rmk}
 
 \section*{Chapter~VIII}
+In this chapter, all vector spaces are real and finite-dimensional.
+
 \subsection*{\S~1}
 \begin{rmk}
 In subsection~8.2, if the bases \((x_{\nu})\) and~\((y_{\mu})\) are orthonormal, then they are self-dual,\footnote{See problem~2 in Chapter~VII, \S~2.} so \(M(\adj{\varphi},y_{\mu},x_{\nu})=M(\varphi,x_{\nu},y_{\mu})^*\) by~(3.4). It follows that
 \[\tilde{\alpha}^{\varrho}_{\mu}=M(\adj{\varphi})^{\varrho}_{\mu}=M(\varphi)^{\mu}_{\varrho}=\alpha^{\mu}_{\varrho}\]
+\end{rmk}
+
+\begin{rmk}
+In subsection~8.5, observe for a direct sum \(E=\sum E_i\) and \(\varphi=\sum\varphi_i\) with \(\varphi_i:E_i\to E_i\), if \(E_i\)~is stable under~\(\adj{\varphi}\) then the restriction of~\(\adj{\varphi}\) to~\(E_i\) is the adjoint of~\(\varphi_i\). In other words, if \(\adj{\varphi}_i\)~denotes the restriction, then
+\[\adj{\varphi}_i=\adj{\varphi_i}\]
+Indeed, for \(x,y\in E_i\),
+\[\iprod{\adj{\varphi}_i x}{y}=\iprod{\adj{\varphi}x}{y}=\iprod{x}{\varphi y}=\iprod{x}{\varphi_i y}\]
+If additionally the \(E_i\)~are orthogonal, we see that \(\varphi\)~is normal if and only if each \(\varphi_i\)~is normal.
 \end{rmk}
 
 % References
