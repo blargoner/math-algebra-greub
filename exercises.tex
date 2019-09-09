@@ -19,6 +19,7 @@
 \newcommand{\dsum}{\oplus}
 \newcommand{\mult}{\cdot}
 \newcommand{\cross}{\times}
+\newcommand{\grad}{\nabla}
 
 \newcommand{\delete}{\widehat}
 \newcommand{\gen}[1]{\langle#1\rangle}
@@ -757,6 +758,13 @@ In subsection~8.5, observe for a direct sum \(E=\sum E_i\) and \(\varphi=\sum\va
 Indeed, for \(x,y\in E_i\),
 \[\iprod{\adj{\varphi}_i x}{y}=\iprod{\adj{\varphi}x}{y}=\iprod{x}{\varphi y}=\iprod{x}{\varphi_i y}\]
 If additionally the \(E_i\)~are orthogonal, we see that \(\varphi\)~is normal if and only if each \(\varphi_i\)~is normal.
+\end{rmk}
+
+\subsection*{\S~2}
+\begin{rmk}
+In subsection~8.6, consider \(E=\R^n\). Since \(e_1\)~minimizes the quadratic form \(q(x)=\iprod{x}{\varphi x}\) subject to the constraint \(h(x)=1-\iprod{x}{x}=0\), there exists a Lagrange multiplier \(\lambda\in\R\) such that
+\[\grad q(e_1)+\lambda\grad h(e_1)=0\]
+Now \(\grad h(e_1)=-2e_1\), and since \(\varphi\)~is self-adjoint it follows that \(\grad q(e_1)=2\varphi e_1\). Therefore \(\varphi e_1=\lambda e_1\), so \(e_1\)~is an eigenvector of~\(\varphi\) with eigenvalue~\(\lambda\).
 \end{rmk}
 
 % References
