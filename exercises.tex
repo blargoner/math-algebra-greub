@@ -746,6 +746,10 @@ Now \(x+y\) and \(x-y\) are roots of polynomials of degree \(1\) or~\(2\), but t
 \section*{Chapter~VIII}
 In this chapter, all vector spaces are real and finite-dimensional.
 
+\begin{rmk}
+In this chapter, it is useful to think intuitively of transformations like complex numbers, which induce transformations of the complex plane through multiplication. Under this analogy, adjoints correspond to complex conjugates; self-adjoint transformations, to real numbers; positive transformations, to nonnegative real numbers; and isometries, to complex numbers on the unit circle.
+\end{rmk}
+
 \subsection*{\S~1}
 \begin{rmk}
 In subsection~8.2, if the bases \((x_{\nu})\) and~\((y_{\mu})\) are orthonormal, then they are self-dual,\footnote{See problem~2 in Chapter~VII, \S~2.} so \(M(\adj{\varphi},y_{\mu},x_{\nu})=M(\varphi,x_{\nu},y_{\mu})^*\) by~(3.4). It follows that
@@ -766,6 +770,15 @@ In subsection~8.6, consider \(E=\R^n\). Since \(e_1\)~minimizes the quadratic fo
 \[\grad q(e_1)+\lambda\grad h(e_1)=0\]
 Now \(\grad h(e_1)=-2e_1\), and since \(\varphi\)~is self-adjoint it follows that \(\grad q(e_1)=2\varphi e_1\). Therefore \(\varphi e_1=\lambda e_1\), so \(e_1\)~is an eigenvector of~\(\varphi\) with eigenvalue~\(\lambda\).
 \end{rmk}
+
+\begin{exer}[5]
+Every positive transformation~\(\varphi\) has a unique positive square root (that is, a positive transformation~\(\psi\) such that \(\psi^2=\varphi\)).
+\end{exer}
+\begin{proof}
+There is an orthonormal basis \(e_1,\ldots,e_n\) of eigenvectors of~\(\varphi\), so that \(\varphi e_i=\lambda_i e_i\) for \(\lambda_i\in\R\). Now \(\lambda_i=\iprod{e_i}{\varphi e_i}\ge 0\), so setting \(\psi e_i=\sqrt{\lambda_i}e_i\) it follows that \(\psi\)~is positive with \(\psi^2=\varphi\).
+
+If \(\psi_1\)~is positive with \(\psi_1^2=\varphi\), then the eigenvalues of~\(\psi_1\) must be \(\sqrt{\lambda_i}\). Also, if \(\psi_1x=\sqrt{\lambda_i}x\), then \(\varphi x=\lambda_i x\), so \(E_{\psi_1}(\sqrt{\lambda_i})\subseteq E_{\varphi}(\lambda_i)\). By~(8.21), it follows that \(E_{\psi_1}(\sqrt{\lambda_i})=E_{\varphi}(\lambda_i)\), so \(\psi_1 e_i=\sqrt{\lambda_i}e_i\) and \(\psi_1=\psi\).
+\end{proof}
 
 % References
 \begin{thebibliography}{0}
