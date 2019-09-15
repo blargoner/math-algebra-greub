@@ -8,6 +8,7 @@
 \newcommand{\from}{\leftarrow}
 \newcommand{\iso}{\cong}
 \renewcommand{\equiv}{\sim}
+\newcommand{\orth}{\perp}
 
 \DeclareMathOperator{\im}{Im}
 \DeclareMathOperator{\ad}{ad}
@@ -779,6 +780,11 @@ There is an orthonormal basis \(e_1,\ldots,e_n\) of eigenvectors of~\(\varphi\),
 
 If \(\psi_1\)~is positive with \(\psi_1^2=\varphi\), then the eigenvalues of~\(\psi_1\) must be \(\sqrt{\lambda_i}\). Also, if \(\psi_1x=\sqrt{\lambda_i}x\), then \(\varphi x=\lambda_i x\), so \(E_{\psi_1}(\sqrt{\lambda_i})\subseteq E_{\varphi}(\lambda_i)\). By~(8.21), it follows that \(E_{\psi_1}(\sqrt{\lambda_i})=E_{\varphi}(\lambda_i)\), so \(\psi_1 e_i=\sqrt{\lambda_i}e_i\) and \(\psi_1=\psi\).
 \end{proof}
+
+\subsection*{\S~3}
+\begin{rmk}
+In subsection~2.19, we see that a linear transformation~\(\pi\) is a projection operator (that is, \(\pi^2=\pi\)) if and only if \(\pi=0_{\ker\pi}\dsum\iota_{\im\pi}\). In subsection~8.11, we see that \(\pi\)~is additionally an \emph{orthogonal} projection if and only if \(\ker\pi\orth\im\pi\).
+\end{rmk}
 
 % References
 \begin{thebibliography}{0}
