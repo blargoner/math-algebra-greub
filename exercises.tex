@@ -758,6 +758,18 @@ In subsection~8.2, if the bases \((x_{\nu})\) and~\((y_{\mu})\) are orthonormal,
 \end{rmk}
 
 \begin{rmk}
+Recall from subsection~7.18 the natural isomorphism \(\tau:E\to L(E)\) given by \(x\mapsto\iprod{x}{-}\), which maps each vector to its dual vector. In subsection~8.4, observe that there is a natural isomorphism
+\[B(E,E)\iso L(E;L(E))\]
+given by \(\Phi\mapsto(x\mapsto(y\mapsto\Phi(x,y)))\). For a linear transformation \(\varphi:E\to E\) and the bilinear function~\(\Phi\) defined by \(\Phi(x,y)=\iprod{\varphi x}{y}\), the linear map corresponding to~\(\Phi\) under this isomorphism is~\(\tau\varphi\):
+\begin{diagram}[nohug]
+x	&\rTo^{\varphi}		&\varphi x\\
+	&\rdTo<{\Phi}		&\dTo>{\tau}\\
+	&					&\iprod{\varphi x}{-}
+\end{diagram}
+In this sense, \(\Phi\)~is naturally dual to~\(\varphi\). Properties of~\(\Phi\) naturally correspond to those of~\(\varphi\); for example, \(\Phi\)~is symmetric if and only if \(\varphi\) is symmetric (self-adjoint), and \(\Phi\)~is skew symmetric if and only if \(\varphi\)~is skew symmetric.
+\end{rmk}
+
+\begin{rmk}
 In subsection~8.5, observe for a direct sum \(E=\sum E_i\) and \(\varphi=\sum\varphi_i\) with \(\varphi_i:E_i\to E_i\), if \(E_i\)~is stable under~\(\adj{\varphi}\) then the restriction of~\(\adj{\varphi}\) to~\(E_i\) is the adjoint of~\(\varphi_i\). In other words, if \(\adj{\varphi}_i\)~denotes the restriction, then
 \[\adj{\varphi}_i=\adj{\varphi_i}\]
 Indeed, for \(x,y\in E_i\),
