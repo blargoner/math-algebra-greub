@@ -798,6 +798,35 @@ If \(\psi_1\)~is positive with \(\psi_1^2=\varphi\), then the eigenvalues of~\(\
 In subsection~2.19, we see that a linear transformation~\(\pi\) is a projection operator (that is, \(\pi^2=\pi\)) if and only if \(\pi=0_{\ker\pi}\dsum\iota_{\im\pi}\). In subsection~8.11, we see that \(\pi\)~is additionally an \emph{orthogonal} projection if and only if \(\ker\pi\orth\im\pi\).
 \end{rmk}
 
+\subsection*{\S~4}
+\begin{exer}[2 - Skew transformations of 3-space]
+Let \(E\)~be an oriented Euclidean 3-space.
+\begin{enumerate}
+\item[(i)] For \(a\in E\), \(\varphi_a(x)=a\cross x\) is a skew transformation of~\(E\).
+\item[(ii)] For \(a,b\in E\), \(\varphi_{a\cross b}=\varphi_a\varphi_b-\varphi_b\varphi_a\).
+\item[(iii)] If \(\varphi\)~is a skew transformation of~\(E\), then \(\varphi=\varphi_a\) for a unique \(a\in E\).
+\item[(iv)] The vector~\(a\) in~(iii) is given by
+\[a=\alpha_{23}e_1+\alpha_{31}e_2+\alpha_{12}e_3\]
+where \(e_1,e_2,e_3\) is a positive orthonormal basis of~\(E\) and \((\alpha_{ij})=M(\varphi;e_i)\).
+\end{enumerate}
+\begin{proof}\
+\begin{enumerate}
+\item[(i)] It is a transformation since the cross product is bilinear, and it is skew since \(\iprod{x}{a\cross x}=0\) for all \(x\in E\).
+\item[(ii)] By the vector triple product formula~(7.41),
+\[(a\cross b)\cross x=a\cross(b\cross x)-b\cross(a\cross x)\]
+\item[(iii)] For uniqueness, note that if \(\varphi_a=\varphi_b\), then \(a\cross x=b\cross x\) for all \(x\in E\), so \((a-b)\cross x=0\) for all \(x\in E\), so \(a-b=0\) and \(a=b\).
+
+For existence, note that the bilinear function \(\iprod{\varphi x}{y}\) is skew symmetric, and hence a determinant function in any plane in~\(E\). Define
+\[\Phi(x,y,z)=\iprod{\varphi y}{z}x+\iprod{\varphi z}{x}y+\iprod{\varphi x}{y}z\]
+Then \(\Phi\)~is clearly trilinear and skew symmetric. By the universal property of determinants if \(\Delta\)~is the normed determinant function representing the orientation in~\(E\) and \(e_1,e_2,e_3\) is an orthonormal basis with \(\Delta(e_1,e_2,e_3)=1\), then \(\Phi=\Delta a\) where \(a=\Phi(e_1,e_2,e_3)\).\footnote{See Proposition~III in subsection~4.3.} By direct computation it is easily verified that \(a\cross e_i=\varphi e_i\), so \(\varphi=\varphi_a\).
+\item[(iv)] By the proof of~(iii), noting that \(a=\Phi(e_1,e_2,e_3)\) and \(\alpha_{ij}=\iprod{\varphi e_i}{e_j}\).\qedhere
+\end{enumerate}
+\end{proof}
+\begin{rmk}
+The definition of~\(\Phi\) in~(iii) is motivated by the fundamental relationship between \(n\)-dimensional and \((n-1)\)-dimensional determinant functions discussed in \S~1 of Chapter~IV above.
+\end{rmk}
+\end{exer}
+
 % References
 \begin{thebibliography}{0}
 \bibitem{greub} Greub, W. \textit{Linear Algebra}, 4th~ed. Springer, 1975.
