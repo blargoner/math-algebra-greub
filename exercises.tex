@@ -809,6 +809,7 @@ Let \(E\)~be an oriented Euclidean 3-space.
 \[a=\alpha_{23}e_1+\alpha_{31}e_2+\alpha_{12}e_3\]
 where \(e_1,e_2,e_3\) is a positive orthonormal basis of~\(E\) and \((\alpha_{ij})=M(\varphi;e_i)\).
 \end{enumerate}
+\end{exer}
 \begin{proof}\
 \begin{enumerate}
 \item[(i)] It is a transformation since the cross product is bilinear, and it is skew since \(\iprod{x}{a\cross x}=0\) for all \(x\in E\).
@@ -826,8 +827,44 @@ Then \(\Phi\)~is clearly trilinear and skew symmetric. By the universal property
 The definition of~\(\Phi\) in~(iii) is motivated by the fundamental relationship between \(n\)-dimensional and \((n-1)\)-dimensional determinant functions discussed in \S~1 of Chapter~IV above. If \(\varphi\)~is skew, then its dual bilinear function \(\Delta_1(x,y)=\iprod{\varphi x}{y}\) is a determinant function in any plane in~\(E\). If \(\varphi=\varphi_a\), then
 \[\Delta_1(x,y)=\iprod{a\cross x}{y}=\Delta(a,x,y)\]
 where \(\Delta\)~is the normed determinant function representing the orientation in~\(E\). In other words, \(\Delta_1\)~is just the 2-dimensional area function induced by the 3-dimensional volume function~\(\Delta\) and the vector~\(a\). Therefore if we \emph{define} a 3-dimensional volume map~\(\Phi\) in terms of~\(\Delta_1\), we should expect that \(\Phi=\Delta a\).
+
+This result, which shows that any skew linear \emph{transformation} of the space can be represented by a unique vector under the \emph{cross} product, is analogous to the Riesz representation theorem, which shows that any linear \emph{function} of the space can be represented by a unique vector under the \emph{inner} product.
 \end{rmk}
+
+\begin{exer}[3]
+If \(\varphi\ne 0\) and~\(\psi\) are skew transformations of an oriented Euclidean 3-space with \(\ker\varphi\subseteq\ker\psi\), then \(\psi=\lambda\varphi\) for some \(\lambda\in\R\).
 \end{exer}
+\begin{proof}
+By the previous problem, we can write \(\varphi(x)=a\cross x\) and \(\psi(x)=b\cross x\) with \(a\ne 0\). By assumption, \(a\) and~\(b\) are orthogonal to the same plane, so \(b=\lambda a\) for some \(\lambda\in\R\) and hence \(\psi=\lambda\varphi\).
+\end{proof}
+
+\begin{exer}[4]
+\[(a_1\cross a_2)\cross a_3=a_2(a_1,a_3)-a_1(a_2,a_3)\]
+\end{exer}
+\begin{proof}
+Without loss of generality, we may assume that \(a_1,a_2\) are orthonormal. In particular, \(a_1\cross a_2\ne 0\). Define
+\[\varphi(x)=(a_1\cross a_2)\cross x\qquad\text{and}\qquad\psi(x)=a_2(a_1,x)-a_1(a_2,x)\]
+Then \(\varphi\ne 0\) is skew, and \(\psi\)~is skew since \(\iprod{x}{\psi x}=0\) for all~\(x\). The kernel of~\(\varphi\) is the line determined by~\(a_1\cross a_2\), which is killed by~\(\psi\). By the previous problem, \(\psi=\lambda\varphi\) for some \(\lambda\in\R\). Substituting \(x=a_1+a_2\) into this equation, it follows that \(a_2-a_1=\lambda(a_2-a_1)\), so \(\lambda=1\) and \(\psi=\varphi\).
+\end{proof}
+
+\begin{exer}[5]
+A linear transformation~\(\varphi\) satisfies \(\adj{\varphi}=\lambda\varphi\) for \(\lambda\in\R\) if and only if \(\varphi\)~is self-adjoint or skew.
+\end{exer}
+\begin{proof}
+If \(\varphi\ne 0\) and \(\adj{\varphi}=\lambda\varphi\) for some \(\lambda\in\R\), then there exist vectors \(x,y\) such that \(\iprod{\varphi x}{y}\ne 0\) and
+\[\iprod{\varphi x}{y}=\lambda\iprod{x}{\varphi y}=\lambda^2\iprod{\varphi x}{y}\]
+so \(\lambda=\pm 1\) and \(\varphi\)~is self-adjoint or skew, respectively. The rest is obvious.
+\end{proof}
+
+\begin{exer}[6]
+If \(\Phi\)~is a skew symmetric bilinear function in an oriented Euclidean 3-space, then there is a unique vector~\(a\) such that
+\[\Phi(x,y)=\iprod{a}{x\cross y}\]
+\end{exer}
+\begin{proof}
+By problem~2, the skew transformation~\(\varphi\) dual to~\(\Phi\) can be written in the form \(\varphi(x)=a\cross x\) for some vector~\(a\). Then
+\[\Phi(x,y)=\iprod{\varphi x}{y}=\iprod{a\cross x}{y}=\iprod{a}{x\cross y}\]
+Uniqueness is obvious.
+\end{proof}
 
 % References
 \begin{thebibliography}{0}
