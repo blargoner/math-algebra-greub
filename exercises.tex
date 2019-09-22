@@ -808,6 +808,13 @@ Let \(E\)~be an oriented Euclidean 3-space.
 \item[(iv)] The vector~\(a\) in~(iii) is given by
 \[a=\alpha_{23}e_1+\alpha_{31}e_2+\alpha_{12}e_3\]
 where \(e_1,e_2,e_3\) is a positive orthonormal basis of~\(E\) and \((\alpha_{ij})=M(\varphi;e_i)\).
+\item[(v)] If \(a\ne 0\), then \(\ker\varphi_a=\gen{a}\) and \(\oc{a}\)~is stable under~\(\varphi_a\).
+\item[(vi)] If \(e_1,e_2\) are normal such that \(e_1,e_2,a\) is a positive orthogonal basis of~\(E\), then
+\[M(\varphi_a;e_1,e_2,a)=\begin{pmatrix}
+0&\norm{a}&0\\
+-\norm{a}&0&0\\
+0&0&0
+\end{pmatrix}\]
 \end{enumerate}
 \end{exer}
 \begin{proof}\
@@ -820,7 +827,9 @@ where \(e_1,e_2,e_3\) is a positive orthonormal basis of~\(E\) and \((\alpha_{ij
 For existence, note that the bilinear function \(\iprod{\varphi x}{y}\) is skew symmetric, and hence a determinant function in any plane in~\(E\). Define
 \[\Phi(x,y,z)=\iprod{\varphi y}{z}x+\iprod{\varphi z}{x}y+\iprod{\varphi x}{y}z\]
 Then \(\Phi\)~is clearly trilinear and skew symmetric. By the universal property of determinants if \(\Delta\)~is the normed determinant function representing the orientation in~\(E\) and \(e_1,e_2,e_3\) is an orthonormal basis with \(\Delta(e_1,e_2,e_3)=1\), then \(\Phi=\Delta a\) where \(a=\Phi(e_1,e_2,e_3)\).\footnote{See Proposition~III in subsection~4.3.} By direct computation it is easily verified that \(a\cross e_i=\varphi e_i\), so \(\varphi=\varphi_a\).
-\item[(iv)] By the proof of~(iii), noting that \(a=\Phi(e_1,e_2,e_3)\) and \(\alpha_{ij}=\iprod{\varphi e_i}{e_j}\).\qedhere
+\item[(iv)] By the proof of~(iii), noting that \(a=\Phi(e_1,e_2,e_3)\) and \(\alpha_{ij}=\iprod{\varphi e_i}{e_j}\).
+\item[(v)] By the fact that \(a\cross x=0\) if and only if \(a\) and~\(x\) are linearly dependent.
+\item[(vi)] By direct computation.\qedhere
 \end{enumerate}
 \end{proof}
 \begin{rmk}
