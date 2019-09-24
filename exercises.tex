@@ -875,6 +875,23 @@ By problem~2, the skew transformation~\(\varphi\) dual to~\(\Phi\) can be writte
 Uniqueness is obvious.
 \end{proof}
 
+\subsection*{\S~5}
+\begin{exer}[2]
+A linear transformation~\(\varphi\) is regular and preserves orthogonality (that is, \(\iprod{\varphi x}{\varphi y}=0\) whenever \(\iprod{x}{y}=0\)) if and only if \(\varphi=\lambda\tau\) where \(\lambda\ne 0\) and \(\tau\)~is a rotation.
+\end{exer}
+\begin{proof}
+For the forward direction, let \(e_1,\ldots,e_n\) be an orthonormal basis. Then \(\varphi e_1,\ldots,\varphi e_n\) is an orthogonal basis. Also
+\[\norm{\varphi e_i}^2-\norm{\varphi e_j}^2=\iprod{\varphi e_i-\varphi e_j}{\varphi e_i+\varphi e_j}=\iprod{\varphi(e_i-e_j)}{\varphi(e_i+e_j)}=0\]
+since
+\[\iprod{e_i-e_j}{e_i+e_j}=1-1=0\]
+for all~\(i,j\). Let \(\lambda=\norm{\varphi e_i}>0\). Then clearly \(\tau=\lambda^{-1}\varphi\) is a rotation.
+
+The reverse direction is trivial.
+\end{proof}
+\begin{rmk}
+This proof is motivated by the geometrical fact that a rectangle is a square if and only if its diagonals are orthogonal.
+\end{rmk}
+
 % References
 \begin{thebibliography}{0}
 \bibitem{greub} Greub, W. \textit{Linear Algebra}, 4th~ed. Springer, 1975.
