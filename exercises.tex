@@ -892,6 +892,23 @@ The reverse direction is trivial.
 This proof is motivated by the geometrical fact that a rectangle is a square if and only if its diagonals are orthogonal.
 \end{rmk}
 
+\begin{exer}[5]
+If \(\varphi:E\to E\) is a mapping such that \(\varphi(0)=0\) and
+\[\norm{\varphi x-\varphi y}=\norm{x-y}\]
+for all \(x,y\in E\), then \(\varphi\)~is linear.
+\end{exer}
+\begin{proof}
+Substituting \(y=0\), we have \(\norm{\varphi x}=\norm{x}\) for all~\(x\), so
+\[\iprod{\varphi x-\varphi y}{\varphi x-\varphi y}=\norm{x}^2-2\iprod{\varphi x}{\varphi y}+\norm{y}^2\]
+On the other hand,
+\[\iprod{\varphi x-\varphi y}{\varphi x-\varphi y}=\norm{\varphi x-\varphi y}^2=\norm{x-y}^2=\norm{x}^2-2\iprod{x}{y}+\norm{y}^2\]
+Therefore
+\[\iprod{\varphi x}{\varphi y}=\iprod{x}{y}\]
+It now follows that
+\[\norm{\varphi(x+y)-\varphi x-\varphi y}^2=\iprod{\varphi(x+y)-\varphi x-\varphi y}{\varphi(x+y)-\varphi x-\varphi y}=0\]
+so \(\varphi(x+y)=\varphi x+\varphi y\). Similarly \(\varphi(\lambda x)=\lambda\varphi x\).
+\end{proof}
+
 % References
 \begin{thebibliography}{0}
 \bibitem{greub} Greub, W. \textit{Linear Algebra}, 4th~ed. Springer, 1975.
