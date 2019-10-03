@@ -909,6 +909,29 @@ It now follows that
 so \(\varphi(x+y)=\varphi x+\varphi y\). Similarly \(\varphi(\lambda x)=\lambda\varphi x\).
 \end{proof}
 
+\subsection*{\S~6}
+\begin{rmk}
+In subsection~8.21, to derive~(8.40) from (8.39) and~(8.41), first observe that \(j\varphi=\varphi j\). Indeed, for \(z\ne 0\), \(\iprod{jz}{z}=0\), so \(\iprod{\varphi jz}{\varphi z}=0\). On the other hand, \(\iprod{j\varphi z}{\varphi z}=0\). Since \(E\)~is a plane, it follows that \(j\varphi z=\lambda\varphi jz\) for some \(\lambda\in\R\). But
+\begin{align*}
+\lambda\norm{z}^2&=\lambda\norm{\varphi jz}^2\\
+	&=\lambda\iprod{\varphi jz}{\varphi jz}\\
+	&=\iprod{j\varphi z}{\varphi jz}\\
+	&=\Delta(\varphi z,\varphi jz)\\
+	&=\Delta(z,jz)\\
+	&=\iprod{jz}{jz}\\
+	&=\iprod{z}{z}=\norm{z}^2
+\end{align*}
+so \(\lambda=1\) and \(j\varphi z=\varphi j z\).
+
+From this and~(8.39), it follows that
+\[\varphi^{-1}x=x\mult\cos(-\Theta)+jx\mult\sin(-\Theta)=x\mult\cos\Theta-jx\mult\sin\Theta\]
+where \(x\) and~\(\Theta\) are as in~(8.39). In~(8.41),
+\[\Delta(x,\varphi y)=\iprod{jx}{\varphi y}=\iprod{\varphi^{-1}jx}{y}=\iprod{j\varphi^{-1}x}{y}=\Delta(\varphi^{-1}x,y)\]
+so
+\[\Delta(\varphi x,y)+\Delta(x,\varphi y)=\Delta(\varphi x+\varphi^{-1}x,y)=2\cos\Theta\mult\Delta(x,y)\]
+and it follows that \(\cos\Theta=\tfrac{1}{2}\tr\varphi\). A similar argument shows that \(\sin\Theta=-\tfrac{1}{2}\tr(j\varphi)\), contrary to what the book says.
+\end{rmk}
+
 % References
 \begin{thebibliography}{0}
 \bibitem{greub} Greub, W. \textit{Linear Algebra}, 4th~ed. Springer, 1975.
