@@ -941,6 +941,12 @@ and it follows that \(\cos\Theta=\tfrac{1}{2}\tr\varphi\). Similar reasoning sho
 In subsection~8.21, to make sense of the ``definition'' in~(8.43), fix \(x\ne 0\) and let \(0\le\Theta\le\pi\) be the angle between \(x\) and~\(\varphi x\). Fix an orientation in~\(E\) so that \(\Theta\)~is the \emph{oriented} angle between \(x\) and~\(\varphi x\). Then (8.40)~holds, so \(\cos\Theta=\tfrac{1}{2}\tr\varphi\). Clearly \(\Theta\)~is independent of~\(x\) and depends only on~\(\varphi\), so can be written as~\(\Theta(\varphi)\) and satisfies~(8.43).
 \end{rmk}
 
+\begin{rmk}
+In subsection~8.24, for the proof of the first part of Proposition~I, let \(q_i=p_i-\lambda_i e\) where \(\lambda_i=\iprod{p_i}{e}\) for \(i=1,2\). Since \(q_1\) and~\(q_2\) each generate the same axis of rotation, either \(q_1=0=q_2\) in which case \(p_1=\pm e\) and \(p_2=\pm e\) and the result holds, or else \(q_1\ne 0\) and \(q_2=\alpha q_1\) for some \(\alpha\ne 0\). If \(\alpha>0\), then \(q_1\) and~\(q_2\) induce the same orientation in their orthogonal plane (in~\(E_1\)), so the oriented angle~\(\Theta\) of rotation in that plane is the same. It follows that
+\[\lambda_1=\cos\frac{\Theta}{2}=\lambda_2\qquad\text{and}\qquad\norm{q_1}=\sin\frac{\Theta}{2}=\norm{q_2}\]
+The second equation implies that \(\alpha=1\), so \(q_1=q_2\) and \(p_1=p_2\). On the other hand if \(\alpha<0\), then \(-p_2\)~is a unit quaternion inducing the same rotation as~\(p_1\) and its pure part~\(-q_2\) satisfies \(-q_2=(-\alpha)q_1\) with \(-\alpha>0\), so by the previous case \(p_1=-p_2\).
+\end{rmk}
+
 % References
 \begin{thebibliography}{0}
 \bibitem{greub} Greub, W. \textit{Linear Algebra}, 4th~ed. Springer, 1975.
