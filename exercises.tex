@@ -947,6 +947,16 @@ In subsection~8.24, for the proof of the first part of Proposition~I, let \(q_i=
 The second equation implies that \(\alpha=1\), so \(q_1=q_2\) and \(p_1=p_2\). On the other hand if \(\alpha<0\), then \(-p_2\)~is a unit quaternion inducing the same rotation as~\(p_1\) and its pure part~\(-q_2\) satisfies \(-q_2=(-\alpha)q_1\) with \(-\alpha>0\), so by the previous case \(p_1=-p_2\).
 \end{rmk}
 
+\begin{exer}[16]
+If \(p\ne\pm e\) is a unit quaternion, then the rotation vector induced by~\(p\) is
+\[u=2\lambda(p-\lambda e)\qquad\lambda=\iprod{p}{e}\]
+\end{exer}
+\begin{proof}
+Let \(q=p-\lambda e\). By assumption, \(q\ne 0\) and \(u=\alpha q\) since \(q\) and~\(u\) both lie on the axis of rotation. If \(\alpha>0\), then \(q\) and~\(u\) both induce the same orientation on the orthogonal plane and
+\[\alpha\norm{q}=\norm{u}=\sin\Theta=2\lambda\norm{q}\]
+where \(\Theta\)~is the oriented angle of rotation. Therefore \(\alpha=2\lambda\) and the result holds. If \(\alpha<0\), then \(-p\)~induces the same rotation vector and satisfies the hypotheses of the previous case since \(u=(-\alpha)(-q)\) with \(-\alpha>0\), so \(-\alpha=2(-\lambda)\) and \(\alpha=2\lambda\) and the result holds. If \(\alpha=0\), then \(u=0\) and \(\Theta=\pi\), so \(\lambda=\cos(\pi/2)=0\) and the result holds.
+\end{proof}
+
 % References
 \begin{thebibliography}{0}
 \bibitem{greub} Greub, W. \textit{Linear Algebra}, 4th~ed. Springer, 1975.
