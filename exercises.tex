@@ -781,6 +781,16 @@ If additionally the \(E_i\)~are orthogonal, we see that \(\varphi\)~is normal if
 
 \subsection*{\S~2}
 \begin{rmk}
+Geometrically, a self-adjoint transformation just independently scales the axes in some system of orthogonal axes for the space.
+\end{rmk}
+
+\begin{rmk}
+For any transformation~\(\varphi\), the transformations
+\[\varphi+\adj{\varphi}\qquad\varphi\adj{\varphi}\qquad\adj{\varphi}\varphi\]
+are self-adjoint.
+\end{rmk}
+
+\begin{rmk}
 In subsection~8.6, consider \(E=\R^n\). Since \(e_1\)~minimizes the quadratic form \(q(x)=\iprod{x}{\varphi x}\) subject to the constraint \(h(x)=1-\iprod{x}{x}=0\), there exists a Lagrange multiplier \(\lambda\in\R\) such that
 \[\grad q(e_1)+\lambda\grad h(e_1)=0\]
 Now \(\grad h(e_1)=-2e_1\), and since \(\varphi\)~is self-adjoint it follows that \(\grad q(e_1)=2\varphi e_1\). Therefore \(\varphi e_1=\lambda e_1\), so \(e_1\)~is an eigenvector of~\(\varphi\) with eigenvalue~\(\lambda\).
