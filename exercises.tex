@@ -776,7 +776,7 @@ In subsection~8.5, observe for a direct sum \(E=\sum E_i\) and \(\varphi=\sum\va
 \[\adj{\varphi}_i=\adj{\varphi_i}\]
 Indeed, for \(x,y\in E_i\),
 \[\iprod{\adj{\varphi}_i x}{y}=\iprod{\adj{\varphi}x}{y}=\iprod{x}{\varphi y}=\iprod{x}{\varphi_i y}\]
-If additionally the \(E_i\)~are orthogonal, we see that \(\varphi\)~is normal if and only if each \(\varphi_i\)~is normal.
+It follows that \(\adj{\varphi}=\sum\adj{\varphi_i}\). If additionally the \(E_i\)~are orthogonal, we see that \(\varphi\)~is normal if and only if each \(\varphi_i\)~is normal.
 \end{rmk}
 
 \subsection*{\S~2}
@@ -789,6 +789,20 @@ For any transformation~\(\varphi\), the transformations
 \[\varphi+\adj{\varphi}\qquad\varphi\adj{\varphi}\qquad\adj{\varphi}\varphi\]
 are self-adjoint.
 \end{rmk}
+
+\begin{rmk}
+If \(E=E_1\dsum E_2\) with \(E_1\orth E_2\), and \(\varphi_1:E_1\to E_1\) and \(\varphi_2:E_2\to E_2\) are self-adjoint, then \(\varphi=\varphi_1\dsum\varphi_2\) is self-adjoint.
+\end{rmk}
+\begin{proof}
+For \(x=x_1+x_2\) and \(y=y_1+y_2\) with \(x_i,y_i\in E_i\),
+\begin{align*}
+\iprod{\varphi x}{y}&=\iprod{\varphi_1 x_1+\varphi_2 x_2}{y_1+y_2}\\
+	&=\iprod{\varphi_1 x_1}{y_1}+\iprod{\varphi_2 x_2}{y_2}\\
+	&=\iprod{x_1}{\varphi_1 y_1}+\iprod{x_2}{\varphi_2 y_2}\\
+	&=\iprod{x_1+x_2}{\varphi_1 y_1+\varphi_2 y_2}\\
+	&=\iprod{x}{\varphi y}\qedhere
+\end{align*}
+\end{proof}
 
 \begin{rmk}
 In subsection~8.6, consider \(E=\R^n\). Since \(e_1\)~minimizes the quadratic form \(q(x)=\iprod{x}{\varphi x}\) subject to the constraint \(h(x)=1-\iprod{x}{x}=0\), there exists a Lagrange multiplier \(\lambda\in\R\) such that
@@ -807,7 +821,12 @@ If \(\psi_1\)~is positive with \(\psi_1^2=\varphi\), then the eigenvalues of~\(\
 
 \subsection*{\S~3}
 \begin{rmk}
-In subsection~2.19, we see that a linear transformation~\(\pi\) is a projection operator (that is, \(\pi^2=\pi\)) if and only if \(\pi=0_{\ker\pi}\dsum\iota_{\im\pi}\). In subsection~8.11, we see that \(\pi\)~is additionally an \emph{orthogonal} projection if and only if \(\ker\pi\orth\im\pi\).
+In subsection~2.19, we see that a linear transformation~\(\pi\) is a projection operator (that is, \(\pi^2=\pi\)) if and only if \(\pi=0_{\ker\pi}\dsum\iota_{\im\pi}\). In subsection~8.11, we see that \(\pi\)~is additionally an \emph{orthogonal} projection if and only if \(\ker\pi\orth\im\pi\). In summary, for a projection operator~\(\pi\), the following are equivalent:
+\begin{itemize}[itemsep=0pt]
+\item \(\ker\pi\orth\im\pi\).
+\item \(\pi\)~is self-adjoint.
+\item \(\pi\)~is normal.
+\end{itemize}
 \end{rmk}
 
 \subsection*{\S~4}
