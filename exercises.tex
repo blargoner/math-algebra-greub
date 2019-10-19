@@ -748,7 +748,7 @@ Now \(x+y\) and \(x-y\) are roots of polynomials of degree \(1\) or~\(2\), but t
 \textbf{In this chapter, all vector spaces are real and finite-dimensional.}
 
 \begin{rmk}
-In this chapter, it is useful to think intuitively of transformations like complex numbers, which induce transformations of the complex plane through multiplication. Under this analogy, adjoints correspond to complex conjugates; self-adjoint transformations, to real numbers; positive transformations, to nonnegative real numbers; and isometries, to complex numbers on the unit circle.
+In this chapter, it is useful to think intuitively of transformations like complex numbers, which induce transformations of the complex plane through multiplication. Under this analogy, adjoints correspond to complex conjugates; self-adjoint transformations, to real numbers; positive transformations, to nonnegative real numbers; skew transformations, to purely imaginary numbers; and isometries, to complex numbers on the unit circle.
 \end{rmk}
 
 \subsection*{\S~1}
@@ -830,6 +830,20 @@ In subsection~2.19, we see that a linear transformation~\(\pi\) is a projection 
 \end{rmk}
 
 \subsection*{\S~4}
+\begin{rmk}
+Geometrically, a skew transformation, apart from possibly killing off part of the space, induces scaled 90-degree rotations\footnote{No one calls these ``scrotations''.} on orthogonal stable planes in the space.
+\end{rmk}
+
+\begin{exer}[1]
+If \(\varphi\)~is a skew transformation of a plane, then
+\[\iprod{\varphi x}{\varphi y}=\det\varphi\mult\iprod{x}{y}\]
+\end{exer}
+\begin{proof}
+If \(\varphi=0\), then the result is trivial; if \(\varphi\ne 0\), then \(\varphi\)~is an automorphism since it has even rank. Now \(\Delta(x,y)=\iprod{\varphi x}{y}\) is a determinant function, so
+\[\iprod{\varphi^2 x}{\varphi y}=\Delta(\varphi x,\varphi y)=\det\varphi\mult\Delta(x,y)=\det\varphi\mult\iprod{\varphi x}{y}\]
+Substituting \(\varphi^{-1}x\) for~\(x\) yields the result.
+\end{proof}
+
 \begin{exer}[2 - Skew transformations of 3-space]
 Let \(E\)~be an oriented Euclidean 3-space.
 \begin{enumerate}
