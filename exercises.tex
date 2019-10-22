@@ -2,6 +2,7 @@
 % By John Peloquin
 \documentclass[letterpaper,12pt]{article}
 \usepackage{amsmath,amssymb,amsthm,enumitem,fourier,diagrams,stmaryrd}
+\usepackage[hidelinks]{hyperref}
 
 \newcommand{\R}{\mathbb{R}}
 
@@ -832,6 +833,27 @@ In subsection~2.19, we see that a linear transformation~\(\pi\) is a projection 
 \subsection*{\S~4}
 \begin{rmk}
 Geometrically, a skew transformation, apart from possibly killing off part of the space, induces scaled 90-degree rotations\footnote{No one calls these ``scrotations''.} on orthogonal stable planes in the space.
+\end{rmk}
+
+\begin{rmk}
+If \(\varphi\)~is a skew transformation of~\(E\) and \(F\)~is stable subspace of~\(E\), then \(\oc{F}\)~is also stable.
+\end{rmk}
+\begin{proof}
+If \(x\in F\) and \(y\in\oc{F}\), then \(\iprod{x}{\varphi y}=-\iprod{\varphi x}{y}=0\).
+\end{proof}
+
+\begin{rmk}
+In subsection~8.16, the proof of the normal form~(8.35) is incorrect because it is not true in general that the~\(a_n\) defined form an orthonormal basis of the space. For example in~\(\R^4\), if we define the transformation \(\psi\) by
+\[e_1\mapsto e_2\qquad e_2\mapsto -e_1\qquad e_3\mapsto e_4\qquad e_4\mapsto -e_3\]
+where \(e_i\)~is the \(i\)-th standard basis vector, then \(\psi\)~is skew and \(\varphi=\psi^2=-\iota\) is diagonalized by the standard basis. If we follow the proof for this example, we get \(a_1=e_1\), \(a_2=\psi e_1=e_2\), \(a_3=e_2\), and \(a_4=\psi e_2=-e_1\), so the~\(a_n\) do not form a basis of~\(\R^4\).
+
+To prove the result, let \(\lambda_1,\ldots,\lambda_r\) be the distinct eigenvalues of \(\varphi=\psi^2\) and write the orthogonal decomposition~(8.21)
+\[E=E_1\dsum\cdots\dsum E_r\]
+where \(E_i\)~is the eigenspace of~\(\varphi\) corresponding to~\(\lambda_i\). Observe that \(E_i\)~is stable under~\(\psi\), for if \(x\in E_i\) then
+\[\varphi(\psi x)=\psi(\varphi x)=\psi(\lambda_i x)=\lambda_i(\psi x)\]
+so \(\psi x\in E_i\). As in the book, the~\(\lambda_i\) are negative or zero. If \(\lambda_i<0\), construct a basis for \(F=E_i\) in the following way: let \(a_1\)~be an arbitrary unit vector in~\(F\) and \(a_2=\kappa_i^{-1}\psi a_1\) where \(\kappa_i=\sqrt{-\lambda_i}\). It is immediate that \(a_2\)~is a unit vector in~\(F\) orthogonal to~\(a_1\) and \(H=\gen{a_1,a_2}\) is stable under~\(\psi\). Let \(\oc{H}\)~be the orthogonal complement of~\(H\) in~\(F\). If \(\oc{H}=0\), take the basis \(a_1,a_2\). Otherwise, adjoin to \(a_1,a_2\) the result of applying this procedure recursively to \(F=\oc{H}\) (recall that \(\oc{H}\)~is stable under~\(\psi\) by the remark above). If \(\lambda_i=0\), assume that \(i=r\) and choose any orthonormal basis of~\(E_r\), noting that \(\psi\)~is zero on~\(E_r\) since
+\[\norm{\psi x}^2=\iprod{\psi x}{\psi x}=-\iprod{x}{\varphi x}=0\]
+for \(x\in E_r\). Combine the resulting bases of the~\(E_i\) to obtain an orthonormal basis of~\(E\) with respect to which the matrix of~\(\psi\) has the form~(8.35).\footnote{See \url{https://math.stackexchange.com/q/3402347}.}
 \end{rmk}
 
 \begin{exer}[1]
