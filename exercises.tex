@@ -1033,6 +1033,18 @@ In subsection~8.21, to make sense of the ``definition'' in~(8.43), fix \(x\ne 0\
 \end{rmk}
 
 \begin{rmk}
+In subsection~8.22, why would we expect the rotation vector~\(u\) in~(8.45) to lie on the rotation axis? Since \(\psi\)~is skew, \(\Psi(x,y)=\iprod{\psi x}{y}\) measures oriented area in planes in~\(E\), and since \(\psi\)~kills off~\(E_1\), \(\Psi(x,y)=0\) if \(x\in E_1\) or \(y\in E_1\). But we know from previous results that \(\Psi\)~actually measures oriented \emph{volume} relative to~\(u\), so it follows that \(u\)~must lie in~\(E_1\).
+
+Note that \(\psi\)~stabilizes \(F=\oc{E_1}\), and if \(\psi_1\)~denotes the restriction, then
+\[\psi_1=\tfrac{1}{2}(\varphi_1-\adj{\varphi_1})=\tfrac{1}{2}(\varphi_1-\varphi_1^{-1})\]
+where \(\varphi_1\)~denotes the restriction of~\(\varphi\). If \(F\)~is oriented by~\(E\) and by \(u\ne 0\), and \(j\)~is the induced canonical complex structure on~\(F\), then
+\[\psi_1=j\mult\sin\Theta\]
+where \(0<\Theta<\pi\) is the oriented angle of rotation. If \(x\in F\) is any unit vector, then
+\[\norm{u}=\norm{u\cross x}=\norm{\psi_1 x}=\norm{jx}\sin\Theta=\sin\Theta\]
+as expected.
+\end{rmk}
+
+\begin{rmk}
 In subsection~8.24, for the proof of the first part of Proposition~I, let \(q_i=p_i-\lambda_i e\) where \(\lambda_i=\iprod{p_i}{e}\) for \(i=1,2\). Since \(q_1\) and~\(q_2\) each generate the same axis of rotation, either \(q_1=0=q_2\) in which case \(p_1=\pm e\) and \(p_2=\pm e\) and the result holds, or else \(q_1\ne 0\) and \(q_2=\alpha q_1\) for some \(\alpha\ne 0\). If \(\alpha>0\), then \(q_1\) and~\(q_2\) induce the same orientation in their orthogonal plane (in~\(E_1\)), so the oriented angle~\(\Theta\) of rotation in that plane is the same. It follows that
 \[\lambda_1=\cos\frac{\Theta}{2}=\lambda_2\qquad\text{and}\qquad\norm{q_1}=\sin\frac{\Theta}{2}=\norm{q_2}\]
 The second equation implies that \(\alpha=1\), so \(q_1=q_2\) and \(p_1=p_2\). On the other hand if \(\alpha<0\), then \(-p_2\)~is a unit quaternion inducing the same rotation as~\(p_1\) and its pure part~\(-q_2\) satisfies \(-q_2=(-\alpha)q_1\) with \(-\alpha>0\), so by the previous case \(p_1=-p_2\).
