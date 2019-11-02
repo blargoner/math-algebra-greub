@@ -1069,9 +1069,31 @@ The rotations agree on~\(e\) and~\(p\), hence on~\(F\). By definition of quatern
 \end{proof}
 
 \section*{Chapter~XI}
+\subsection*{\S~1}
+\begin{rmk}
+A map \(\varphi:E\to F\) of complex vector spaces \(E,F\) is \emph{conjugate-linear} if
+\[\varphi(\lambda x+\mu y)=\conj{\lambda}\varphi x+\conj{\mu}\varphi y\]
+for all \(x,y\in E\) and \(\lambda,\mu\in\C\), where \(\conj{\lambda},\conj{\mu}\) denote the complex conjugates of \(\lambda,\mu\) respectively.
+\end{rmk}
+
+\begin{rmk}
+A sesquilinear function \(\Phi(x,y)\) is linear in~\(x\) and conjugate-linear in~\(y\).
+\end{rmk}
+
+\subsection*{\S~2}
+\begin{rmk}
+The identity map \(\kappa:F\to\conj{F}\) is conjugate-linear. A map \(\varphi:E\to F\) is conjugate-linear if and only if \(\kappa\varphi:E\to\conj{F}\) is linear. This yields a natural bijective correspondence between conjugate-linear maps \(E\to F\) and linear maps \(E\to\conj{F}\).
+\end{rmk}
+
+\begin{rmk}
+If \(z\mapsto\conj{z}\) is a conjugation in~\(E\), then for \(\lambda=\alpha+i\beta\) with \(\alpha,\beta\in\R\),
+\[\conj{\lambda z}=\conj{\alpha z+i\beta z}=\alpha\conj{z}-i\beta\,\conj{z}=\conj{\lambda}\,\conj{z}\]
+Therefore a conjugation is just a conjugate-linear involution.
+\end{rmk}
+
 \subsection*{\S~3}
 \begin{rmk}
-If \(E\)~is a unitary space, then there exists a conjugation in~\(E\). In fact, if \(z_1,\ldots,z_n\) is a basis of~\(E\) and \(F\)~is the real span of \(z_1,\ldots,z_n\), then \(F\)~is a real form of~\(E\) and the map \(z\mapsto\conj{z}\) defined by \(x+iy\mapsto x-iy\) for \(x,y\in F\) is a conjugation in the \emph{vector space}~\(E\).\footnote{See subsection~11.7.} It is also a conjugation in the \emph{unitary space}~\(E\) since for \(z_1=x_1+iy_1\) and \(z_2=x_2+iy_2\) with \(x_j,y_j\in F\),
+If \(E\)~is a unitary space, then there exists a conjugation in~\(E\). In fact, if \(z_1,\ldots,z_n\) is a basis of~\(E\) and \(F\)~is the real span of \(z_1,\ldots,z_n\), then \(F\)~is a real form of~\(E\) and the map \(z\mapsto\conj{z}\) defined by \(x+iy\mapsto x-iy\) for \(x,y\in F\) is a conjugation in the \emph{vector space}~\(E\). It is also a conjugation in the \emph{unitary space}~\(E\) since for \(z_1=x_1+iy_1\) and \(z_2=x_2+iy_2\) with \(x_j,y_j\in F\),
 \[\iprod{z_1}{z_2}=\iprod{x_1}{x_2}+\iprod{y_1}{y_2}+i\left[\iprod{y_1}{x_2}-\iprod{x_1}{y_2}\right]\]
 and
 \[\iprod{\,\conj{z_1}}{\conj{z_2}\,}=\iprod{x_1}{x_2}+\iprod{y_1}{y_2}-i\left[\iprod{y_1}{x_2}-\iprod{x_1}{y_2}\right]\]
@@ -1079,9 +1101,23 @@ so \(\iprod{\,\conj{z_1}}{\conj{z_2}\,}=\conj{\iprod{z_1}{z_2}}\) as required.\f
 \end{rmk}
 
 \begin{rmk}
-If \(z\mapsto\conj{z}\) is a conjugation in the unitary space~\(E\), then for \(\mu=\mu_1+i\mu_2\) with \(\mu_1,\mu_2\in\R\),
-\[\conj{\mu z}=\conj{\mu_1 z+i\mu_2z}=\mu_1\conj{z}-i\mu_2\conj{z}=\conj{\mu}\,\conj{z}\]
-That is, \emph{conjugations are conjugate-linear}.
+If \(E,F\) are unitary spaces and \(\conj{E},\conj{F}\) the corresponding conjugate spaces, then \(E\)~is dual to~\(\conj{E}\) under the scalar product
+\[\sprod{x}{x^*}=\iprod{x}{\kappa_E^{-1}x^*}\]
+where \(\kappa_E:E\to\conj{E}\) is the identity map; similarly \(F\)~is dual to~\(\conj{F}\) under the scalar product
+\[\sprod{y}{y^*}=\iprod{y}{\kappa_F^{-1}y^*}\]
+where \(\kappa_F:F\to\conj{F}\) is the identity map.
+
+If \(\varphi:E\to F\) is a linear map, then the dual map \(\varphi^*:\conj{E}\from\conj{F}\) satisfies
+\[\iprod{\varphi x}{\kappa_F^{-1}y^*}=\sprod{\varphi x}{y^*}=\sprod{x}{\varphi^* y^*}=\iprod{x}{\kappa_E^{-1}\varphi^* y^*}\]
+Taking \(y^*=\kappa_F y\) yields
+\[\iprod{\varphi x}{y}=\iprod{x}{\kappa_E^{-1}\varphi^*\kappa_F y}\]
+Therefore \(\adj{\varphi}=\kappa_E^{-1}\varphi^*\kappa_F\):
+\begin{diagram}
+E				&\rTo^{\varphi}		&F\\
+\dTo<{\kappa_E}	&					&\dTo>{\kappa_F}\\
+\conj{E}		&\lTo_{\varphi^*}	&\conj{F}
+\end{diagram}
+This construction of the adjoint avoids using conjugations in \(E,F\) by using the conjugate spaces \(\conj{E},\conj{F}\) instead.
 \end{rmk}
 
 % References
