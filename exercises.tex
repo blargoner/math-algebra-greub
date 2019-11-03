@@ -1069,13 +1069,17 @@ The rotations agree on~\(e\) and~\(p\), hence on~\(F\). By definition of quatern
 \end{proof}
 
 \section*{Chapter~XI}
-\subsection*{\S~1}
+\begin{rmk}
+In parts of this chapter, it is implicitly assumed that unitary spaces have dimension \(n\ge 1\).
+\end{rmk}
+
 \begin{rmk}
 A map \(\varphi:E\to F\) of complex vector spaces \(E,F\) is \emph{conjugate-linear} if
 \[\varphi(\lambda x+\mu y)=\conj{\lambda}\varphi x+\conj{\mu}\varphi y\]
 for all \(x,y\in E\) and \(\lambda,\mu\in\C\), where \(\conj{\lambda},\conj{\mu}\) denote the complex conjugates of \(\lambda,\mu\) respectively.
 \end{rmk}
 
+\subsection*{\S~1}
 \begin{rmk}
 A sesquilinear function \(\Phi(x,y)\) is linear in~\(x\) and conjugate-linear in~\(y\).
 \end{rmk}
@@ -1088,7 +1092,7 @@ The identity map \(\kappa:F\to\conj{F}\) is conjugate-linear. A map \(\varphi:E\
 \begin{rmk}
 If \(z\mapsto\conj{z}\) is a conjugation in~\(E\), then for \(\lambda=\alpha+i\beta\) with \(\alpha,\beta\in\R\),
 \[\conj{\lambda z}=\conj{\alpha z+i\beta z}=\alpha\conj{z}-i\beta\,\conj{z}=\conj{\lambda}\,\conj{z}\]
-Therefore a conjugation is just a conjugate-linear involution.
+Therefore a conjugation is just a conjugate-linear involution. By the previous remark, a conjugation can also be viewed as a linear map \(E\to\conj{E}\).
 \end{rmk}
 
 \subsection*{\S~3}
@@ -1118,6 +1122,16 @@ E				&\rTo^{\varphi}		&F\\
 \conj{E}		&\lTo_{\varphi^*}	&\conj{F}
 \end{diagram}
 This construction of the adjoint avoids using conjugations in \(E,F\) by using the conjugate spaces \(\conj{E},\conj{F}\) instead.
+\end{rmk}
+
+\begin{rmk}
+The mapping \(\varphi\mapsto\adj{\varphi}\) is conjugate-linear.
+\end{rmk}
+
+\begin{rmk}
+If \(z\mapsto\conj{z}\) is a conjugation in~\(E\) and \(\Delta\)~is a determinant function in~\(E\), then
+\[\conj{\Delta}(z_1,\ldots,z_n)=\conj{\Delta(\conj{z_1},\ldots,\conj{z_n})}\]
+is also a determinant function in~\(E\), called the \emph{conjugate determinant function}.
 \end{rmk}
 
 % References
