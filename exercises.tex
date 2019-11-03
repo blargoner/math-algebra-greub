@@ -1134,6 +1134,25 @@ If \(z\mapsto\conj{z}\) is a conjugation in~\(E\) and \(\Delta\)~is a determinan
 is also a determinant function in~\(E\), called the \emph{conjugate determinant function}.
 \end{rmk}
 
+\begin{exer}[1]
+If \(E\)~is a unitary space and \(\varphi:E\to E\) is linear, then
+\[\Phi(x,y)=\iprod{\varphi x}{y}\]
+is sesquilinear. Conversely, every sesquilinear function in~\(E\) can be uniquely represented in this way. The adjoint~\(\adj{\varphi}\) represents the adjoint~\(\adj{\Phi}\).
+\end{exer}
+\begin{proof}
+The forward direction is trivial. If \(\Phi\)~is sesquilinear, then for any fixed vector~\(x\) the function
+\[y\mapsto\conj{\Phi(x,y)}\]
+is linear, so by the Riesz theorem (11.5) there is a unique vector~\(\varphi x\) such that
+\[\conj{\Phi(x,y)}=\iprod{y}{\varphi x}=\conj{\iprod{\varphi x}{y}}\]
+and therefore
+\[\Phi(x,y)=\iprod{\varphi x}{y}\]
+Clearly \(\varphi\)~is linear and is uniquely determined by~\(\Phi\). Also
+\[\iprod{\adj{\varphi}x}{y}=\conj{\iprod{y}{\adj{\varphi}x}}=\conj{\iprod{\varphi y}{x}}=\conj{\Phi(y,x)}=\adj{\Phi}(x,y)\qedhere\]
+\end{proof}
+\begin{rmk}
+This result shows that the linear transformation \(\varphi\) is naturally left-dual to the sesquilinear function~\(\Phi\). Observe that \(\Phi\)~is Hermitian if and only if \(\varphi\)~is Hermitian (self-adjoint) and \(\Phi\)~is skew-Hermitian if and only if \(\varphi\)~is skew-Hermitian.
+\end{rmk}
+
 % References
 \begin{thebibliography}{0}
 \bibitem{greub} Greub, W. \textit{Linear Algebra}, 4th~ed. Springer, 1975.
