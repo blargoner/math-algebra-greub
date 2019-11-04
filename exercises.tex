@@ -1122,6 +1122,16 @@ E				&\rTo^{\varphi}		&F\\
 \conj{E}		&\lTo_{\varphi^*}	&\conj{F}
 \end{diagram}
 This construction of the adjoint avoids using conjugations in \(E,F\) by using the conjugate spaces \(\conj{E},\conj{F}\) instead.
+
+If \(E=F\), \(\Delta\ne 0\) is a determinant function in~\(E\), and \(\Delta^*\)~is the corresponding determinant function in~\(\conj{E}\) (11.6), then
+\begin{align*}
+\det\adj{\varphi}\mult\Delta(x_1,\ldots,x_n)&=\Delta(\adj{\varphi}x_1,\ldots,\adj{\varphi}x_n)\\
+	&=\Delta(\kappa^{-1}\varphi^*\kappa x_1,\ldots,\kappa^{-1}\varphi^*\kappa x_n)\\
+	&=\conj{\Delta^*(\varphi^*\kappa x_1,\ldots,\varphi^*\kappa x_n)}\\
+	&=\conj{\det\varphi^*}\mult\conj{\Delta^*(\kappa x_1,\ldots,\kappa x_n)}\\
+	&=\conj{\det\varphi}\mult\Delta(x_1,\ldots,x_n)
+\end{align*}
+where \(\kappa=\kappa_E\), so \(\det\adj{\varphi}=\conj{\det\varphi}\). This derivation of~(11.21) similarly avoids using conjugations in~\(E\).
 \end{rmk}
 
 \begin{rmk}
