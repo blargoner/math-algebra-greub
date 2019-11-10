@@ -1,4 +1,4 @@
-% Notes and exercises from Linear Algebra by Greub
+% Notes and exercises from Linear Algebra and Multilinear Algebra by Greub
 % By John Peloquin
 \documentclass[letterpaper,12pt]{article}
 \usepackage{amsmath,amssymb,amsthm,enumitem,fourier,diagrams,stmaryrd}
@@ -48,16 +48,24 @@
 \newtheorem*{warn}{Warning}
 
 % Meta
-\title{Notes and exercises from\\\textit{Linear Algebra}}
+\title{Notes and exercises from\\\textit{Linear Algebra} and \textit{Multilinear Algebra}}
 \author{John Peloquin}
 \date{}
 
 \begin{document}
 \maketitle
 
+% Intro
 \section*{Introduction}
-This document contains notes and exercises from~\cite{greub}. {\boldmath\textbf{Unless otherwise stated, \(\Gamma\)~denotes a field of characteristic~\(0\).}}
+This document contains notes and exercises from \cite{greub1} and~\cite{greub2}.
 
+\bigskip
+\noindent
+{\boldmath\textbf{Unless otherwise stated, \(\Gamma\)~denotes a field of characteristic~\(0\) over which all vector spaces are defined.}}
+
+% Linear algebra
+\newpage
+\part*{Linear Algebra}
 \section*{Chapter~I}
 \subsection*{\S~1}
 \begin{rmk}
@@ -1163,8 +1171,27 @@ Clearly \(\varphi\)~is linear and is uniquely determined by~\(\Phi\). Also
 This result shows that the linear transformation \(\varphi\) is naturally left-dual to the sesquilinear function~\(\Phi\). Observe that \(\Phi\)~is Hermitian if and only if \(\varphi\)~is Hermitian (self-adjoint) and \(\Phi\)~is skew-Hermitian if and only if \(\varphi\)~is skew-Hermitian.
 \end{rmk}
 
+% Multilinear algebra
+\newpage
+\part*{Multilinear Algebra}
+
+\section*{Chapter~1}
+\subsection*{\S~1}
+\begin{rmk}
+If \(\lambda^1\lambda^4-\lambda^2\lambda^3=0\), we want \(\xi^1,\xi^2,\eta^1,\eta^2\) with
+\[\lambda^1=\xi^1\eta^1\qquad\lambda^2=\xi^1\eta^2\qquad\lambda^3=\xi^2\eta^1\qquad\lambda^4=\xi^2\eta^2\]
+If \(\lambda^1=0\), then \(\lambda^2\lambda^3=\lambda^1\lambda^4=0\), so \(\lambda^2=0\) or \(\lambda^3=0\).
+\begin{itemize}[itemsep=0pt]
+\item If \(\lambda^2=0\), we take \(\xi^1=0\), \(\xi^2=1\), \(\eta^1=\lambda^3\), and \(\eta^2=\lambda^4\).
+\item If \(\lambda^3=0\), we take \(\xi^1=\lambda^2\), \(\xi^2=\lambda^4\), \(\eta^1=0\), and \(\eta^2=1\).
+\end{itemize}
+If \(\lambda^1\ne 0\) and \(\lambda^2=0\), then \(\lambda^4=0\) and we take \(\xi^1=\lambda^1\), \(\xi^2=\lambda^3\), \(\eta^1=1\), and \(\eta^2=0\). If \(\lambda^1\ne 0\) and \(\lambda^2\ne 0\), we take \(\xi^1=1\), \(\xi^2=\lambda^3/\lambda^1=\lambda^4/\lambda^2\), \(\eta^1=\lambda^1\), and \(\eta^2=\lambda^2\).
+\end{rmk}
+
 % References
+\newpage
 \begin{thebibliography}{0}
-\bibitem{greub} Greub, W. \textit{Linear Algebra}, 4th~ed. Springer, 1975.
+\bibitem{greub1} Greub, W. \textit{Linear Algebra}, 4th~ed. Springer, 1975.
+\bibitem{greub2} Greub,W. \textit{Multilinear Algebra}, 2nd~ed. Springer, 1978.
 \end{thebibliography}
 \end{document}
