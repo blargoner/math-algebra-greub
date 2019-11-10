@@ -1189,6 +1189,25 @@ If \(\lambda^1=0\), then \(\lambda^2\lambda^3=\lambda^1\lambda^4=0\), so \(\lamb
 If \(\lambda^1\ne 0\) and \(\lambda^2=0\), then \(\lambda^4=0\) and we take \(\xi^1=\lambda^1\), \(\xi^2=\lambda^3\), \(\eta^1=1\), and \(\eta^2=0\). If \(\lambda^1\ne 0\) and \(\lambda^2\ne 0\), we take \(\xi^1=1\), \(\xi^2=\lambda^3/\lambda^1=\lambda^4/\lambda^2\), \(\eta^1=\lambda^1\), and \(\eta^2=\lambda^2\).
 \end{rmk}
 
+\subsection*{\S~2}
+\begin{rmk}
+In the construction of the first induced bilinear map~\(\widetilde{\varphi}\), note that for each \(y\in F\) the linear map \(\varphi(-,y):E\to G\) sends \(E_1\) into~\(G_1\) and hence induces a linear map \(\proj{\varphi}(-,y):E/E_1\to G/G_1\) by \(\proj{\varphi}(\rho x,y)=\pi\varphi(x,y)\):
+\begin{diagram}
+E			&\rTo^{\varphi(-,y)}		&G\\
+\dTo<{\rho}	&							&\dTo>{\pi}\\
+E/E_1		&\rTo_{\proj{\varphi}(-,y)}	&G/G_1
+\end{diagram}
+Since \(\proj{\varphi}(-,y)\) depends linearly on~\(y\), \(\proj{\varphi}\)~is bilinear and we define \(\widetilde{\varphi}=\proj{\varphi}\).
+
+In the construction of the second induced bilinear map~\(\widetilde{\varphi}\), note that the linear map \(y\mapsto\proj{\varphi}(-,y)\) kills~\(F_1\), so it factors through~\(\sigma\):
+\begin{diagram}[nohug]
+F				&\rTo^{y\mapsto\proj{\varphi}(-,y)}			&L(E/E_1;G/G_1)\\
+\dTo<{\sigma}	&\ruTo>{\sigma y\mapsto\proj{\varphi}(-,y)}	&\\
+F/F_1			&											&
+\end{diagram}
+This allows us to define the bilinear map \(\widetilde{\varphi}(\rho x,\sigma y)=\proj{\varphi}(\rho x,y)=\pi\varphi(x,y)\).
+\end{rmk}
+
 % References
 \newpage
 \begin{thebibliography}{0}
