@@ -36,6 +36,7 @@
 \newcommand{\abs}[1]{|#1|}
 \newcommand{\adj}[1]{\widetilde{#1}}
 \newcommand{\conj}[1]{\overline{#1}}
+\newcommand{\proj}[1]{\overline{#1}}
 
 \newarrow{Dashto}{}{dash}{}{dash}>
 
@@ -331,11 +332,11 @@ Viewing this as a function of \(x_1,\ldots,x_n\) (that is, a set map from \(E^n\
 
 \begin{rmk}
 Let \(E\)~be a vector space with \(\dim E=n>1\) and \(E_1\)~a subspace with \(\dim E_1=1\). Let \(\Delta\)~be a determinant function in~\(E\) with \(\Delta(e_1,\ldots,e_n)=1\) where \(e_1\in E_1\). Then \(\Delta\)~induces a determinant function~\(\Delta_1\) in~\(E/E_1\) by
-\[\Delta_1(\,\overline{x_2},\ldots,\overline{x_n}\,)=\Delta(e_1,x_2,\ldots,x_n)\]
-with \(\Delta_1(\,\overline{e_2},\ldots,\overline{e_n}\,)=1\). Define \(D:E^n\to\Gamma\) by
-\[D(x_1,\ldots,x_n)=\sum_{j=1}^n (-1)^{j-1}\pi_1(x_j)\Delta_1(\,\overline{x_1},\ldots,\widehat{\overline{x_j}},\ldots,\overline{x_n}\,)\]
+\[\Delta_1(\,\proj{x_2},\ldots,\proj{x_n}\,)=\Delta(e_1,x_2,\ldots,x_n)\]
+with \(\Delta_1(\,\proj{e_2},\ldots,\proj{e_n}\,)=1\). Define \(D:E^n\to\Gamma\) by
+\[D(x_1,\ldots,x_n)=\sum_{j=1}^n (-1)^{j-1}\pi_1(x_j)\Delta_1(\,\proj{x_1},\ldots,\widehat{\proj{x_j}},\ldots,\proj{x_n}\,)\]
 where \(\pi_1:E\to\Gamma\) is the coordinate function for~\(e_1\). Then \(D\)~is skew symmetric and \(n\)-linear with \(D(e_1,\ldots,e_n)=1\), so \(D=\Delta\) by uniqueness (Proposition~III). Therefore
-\[\boxed{\Delta(x_1,\ldots,x_n)=\sum_{j=1}^n (-1)^{j-1}\pi_1(x_j)\Delta_1(\,\overline{x_1},\ldots,\widehat{\overline{x_j}},\ldots,\overline{x_n}\,)}\]
+\[\boxed{\Delta(x_1,\ldots,x_n)=\sum_{j=1}^n (-1)^{j-1}\pi_1(x_j)\Delta_1(\,\proj{x_1},\ldots,\widehat{\proj{x_j}},\ldots,\proj{x_n}\,)}\]
 This result expresses a fundamental relationship between an \(n\)-dimensional determinant function and an \((n-1)\)-dimensional one. The cofactor expansion formulas for the determinant (subsection 4.15) follow immediately. Note that this relationship can also be exploited to recursively \emph{define} an \(n\)-dimensional determinant function in terms of an \((n-1)\)-dimensional one.
 
 The geometrical fact that the volume of an \(n\)-dimensional parallelepiped is equal to the product of the volume of any \((n-1)\)-dimensional ``base'' and the corresponding ``height'' (subsection 7.15) is closely related to this result.
@@ -370,24 +371,24 @@ Since \(\Delta(a_1,\ldots,a_p,b_1,\ldots,b_q)\ne0\), it follows that \(\det\varp
 \end{rmk}
 
 \begin{exer}[2]
-Let \(\varphi:E\to E\) be linear with \(E_1\)~a stable subspace. If \(\varphi_1:E_1\to E_1\) and \(\overline{\varphi}:E/E_1\to E/E_1\) are the induced maps, then
-\[\det\varphi=\det\varphi_1\mult\det\overline{\varphi}\]
+Let \(\varphi:E\to E\) be linear with \(E_1\)~a stable subspace. If \(\varphi_1:E_1\to E_1\) and \(\proj{\varphi}:E/E_1\to E/E_1\) are the induced maps, then
+\[\det\varphi=\det\varphi_1\mult\det\proj{\varphi}\]
 \end{exer}
 \begin{proof}
 Let \(e_1,\ldots,e_n\) be a basis of~\(E\) where \(e_1,\ldots,e_p\) is a basis of~\(E_1\). Let \(\Delta\ne 0\) be a determinant function in~\(E\). First observe that
 \[\Delta_1(x_1,\ldots,x_p)=\Delta(x_1,\ldots,x_p,\varphi e_{p+1},\ldots,\varphi e_n)\tag{1}\]
 is a determinant function in~\(E_1\) and
-\[\Delta_2(\,\overline{x_{p+1}},\ldots,\overline{x_n}\,)=\Delta(e_1,\ldots,e_p,x_{p+1},\ldots,x_n)\tag{2}\]
+\[\Delta_2(\,\proj{x_{p+1}},\ldots,\proj{x_n}\,)=\Delta(e_1,\ldots,e_p,x_{p+1},\ldots,x_n)\tag{2}\]
 is a well-defined determinant function in~\(E/E_1\). Now
-\[\det\overline{\varphi}\mult\Delta_2(\,\overline{x_{p+1}},\ldots,\overline{x_n}\,)=\Delta_2(\,\overline{\varphi}\ \overline{x_{p+1}},\ldots,\overline{\varphi}\ \overline{x_n}\,)=\Delta_2(\,\overline{\varphi x_{p+1}},\ldots,\overline{\varphi x_n}\,)\tag{3}\]
+\[\det\proj{\varphi}\mult\Delta_2(\,\proj{x_{p+1}},\ldots,\proj{x_n}\,)=\Delta_2(\,\proj{\varphi}\ \proj{x_{p+1}},\ldots,\proj{\varphi}\ \proj{x_n}\,)=\Delta_2(\,\proj{\varphi x_{p+1}},\ldots,\proj{\varphi x_n}\,)\tag{3}\]
 It follows from (2) and~(3) that
-\[\det\overline{\varphi}\mult\Delta(e_1,\ldots,e_p,x_{p+1},\ldots,x_n)=\Delta(e_1,\ldots,e_p,\varphi x_{p+1},\ldots,\varphi x_n)\tag{4}\]
+\[\det\proj{\varphi}\mult\Delta(e_1,\ldots,e_p,x_{p+1},\ldots,x_n)=\Delta(e_1,\ldots,e_p,\varphi x_{p+1},\ldots,\varphi x_n)\tag{4}\]
 Now
 \begin{align*}
 \det\varphi\mult\Delta(e_1,\ldots,e_n)&=\Delta(\varphi e_1,\ldots,\varphi e_n)&&\\
 	&=\Delta_1(\varphi_1 e_1,\ldots,\varphi_1 e_p)&&\text{by~(1)}\\
 	&=\det\varphi_1\mult\Delta_1(e_1,\ldots,e_p)&&\\
-	&=\det\varphi_1\mult\det\overline{\varphi}\mult\Delta(e_1,\ldots,e_n)&&\text{by (1), (4)}
+	&=\det\varphi_1\mult\det\proj{\varphi}\mult\Delta(e_1,\ldots,e_n)&&\text{by (1), (4)}
 \end{align*}
 Since \(\Delta(e_1,\ldots,e_n)\ne 0\), the result follows.
 \end{proof}
@@ -466,25 +467,25 @@ This follows from the result in subsection~4.7 and the fact that
 \end{proof}
 
 \begin{exer}[6]
-Let \(\varphi:E\to E\) be linear with \(E_1\)~a stable subspace. If \(\varphi_1:E_1\to E_1\) and \(\overline{\varphi}:E/E_1\to E/E_1\) are the induced maps, then
-\[\chi(\varphi)=\chi(\varphi_1)\mult\chi(\overline{\varphi})\]
+Let \(\varphi:E\to E\) be linear with \(E_1\)~a stable subspace. If \(\varphi_1:E_1\to E_1\) and \(\proj{\varphi}:E/E_1\to E/E_1\) are the induced maps, then
+\[\chi(\varphi)=\chi(\varphi_1)\mult\chi(\proj{\varphi})\]
 \end{exer}
 \begin{proof}
-This follows from problem~2 in \S~2, the fact that \(\varphi-\lambda\iota_E\) restricted to~\(E_1\) is just \(\varphi_1-\lambda\iota_{E_1}\), and \(\overline{\varphi-\lambda\iota_E}=\overline{\varphi}-\lambda\iota_{E/E_1}\).
+This follows from problem~2 in \S~2, the fact that \(\varphi-\lambda\iota_E\) restricted to~\(E_1\) is just \(\varphi_1-\lambda\iota_{E_1}\), and \(\proj{\varphi-\lambda\iota_E}=\proj{\varphi}-\lambda\iota_{E/E_1}\).
 \end{proof}
 \begin{rmk}
-Taking \(E_1=\ker\varphi\), we have \(\chi(\varphi_1)=\chi(0_{E_1})=(-\lambda)^p\) where \(p=\dim E_1\), so \(\chi(\varphi)=(-\lambda)^p\chi(\overline{\varphi})\).
+Taking \(E_1=\ker\varphi\), we have \(\chi(\varphi_1)=\chi(0_{E_1})=(-\lambda)^p\) where \(p=\dim E_1\), so \(\chi(\varphi)=(-\lambda)^p\chi(\proj{\varphi})\).
 \end{rmk}
 
 \begin{exer}[7]
 A linear map \(\varphi:E\to E\) is nilpotent if and only if \(\chi(\varphi)=(-\lambda)^n\).
 \end{exer}
 \begin{proof}
-If \(\varphi\)~is nilpotent, we proceed by induction on~\(k\) least such that \(\varphi^k=0\). If \(k=1\), the result is trivial. If \(k>1\), let \(E_1=\ker\varphi\) and \(\overline{\varphi}:E/E_1\to E/E_1\) the induced map. Then \(\overline{\varphi}^{k-1}=0\) since
-\[\overline{\varphi}^{k-1}(\overline{x})=\overline{\varphi^{k-1}}(\overline{x})=\overline{\varphi^{k-1}(x)}=0\]
-as \(\varphi^{k-1}(x)\in E_1\). By the induction hypothesis, \(\chi(\overline{\varphi})=(-\lambda)^{n-p}\) where \(p=\dim E_1\), so by the previous problem,
+If \(\varphi\)~is nilpotent, we proceed by induction on~\(k\) least such that \(\varphi^k=0\). If \(k=1\), the result is trivial. If \(k>1\), let \(E_1=\ker\varphi\) and \(\proj{\varphi}:E/E_1\to E/E_1\) the induced map. Then \(\proj{\varphi}^{k-1}=0\) since
+\[\proj{\varphi}^{k-1}(\proj{x})=\proj{\varphi^{k-1}}(\proj{x})=\proj{\varphi^{k-1}(x)}=0\]
+as \(\varphi^{k-1}(x)\in E_1\). By the induction hypothesis, \(\chi(\proj{\varphi})=(-\lambda)^{n-p}\) where \(p=\dim E_1\), so by the previous problem,
 \[\chi(\varphi)=(-\lambda)^p(-\lambda)^{n-p}=(-\lambda)^n\]
-Conversely, if \(\varphi\ne0\) and \(\chi(\varphi)=(-\lambda)^n\), then the constant term \(\det\varphi=0\), so \(p>0\) and by the previous problem \((-\lambda)^n=(-\lambda)^p\chi(\overline{\varphi})\), which implies \(\chi(\overline{\varphi})=(-\lambda)^{n-p}\). By induction, \(\overline{\varphi}\)~is nilpotent. If \(\overline{\varphi}^k=0\), then \(\varphi^{k+1}=0\), so \(\varphi\)~is nilpotent.
+Conversely, if \(\varphi\ne0\) and \(\chi(\varphi)=(-\lambda)^n\), then the constant term \(\det\varphi=0\), so \(p>0\) and by the previous problem \((-\lambda)^n=(-\lambda)^p\chi(\proj{\varphi})\), which implies \(\chi(\proj{\varphi})=(-\lambda)^{n-p}\). By induction, \(\proj{\varphi}\)~is nilpotent. If \(\proj{\varphi}^k=0\), then \(\varphi^{k+1}=0\), so \(\varphi\)~is nilpotent.
 \end{proof}
 
 \subsection*{\S~7}
@@ -517,8 +518,8 @@ An algebra~\(A\) is a \emph{zero algebra} if \(xy=0\) for all \(x,y\in A\); this
 \begin{rmk}
 Let \(\varphi:A\to B\) be a homomorphism of algebras. If \(A_1\)~is a subalgebra of~\(A\) and \(B_1\)~is a subalgebra of~\(B\) and \(\varphi(A_1)\subseteq B_1\), then the restriction \(\varphi_1:A_1\to B_1\) of~\(\varphi\) to \(A_1,B_1\) is a homomorphism.
 
-If \(A_1\) and~\(B_1\) are \emph{ideals}, then the induced linear map \(\overline{\varphi}:A/A_1\to B/B_1\) is also a homomorphism since
-\[\overline{\varphi}(\overline{x}\,\overline{y})=\overline{\varphi}(\overline{xy})=\overline{\varphi(xy)}=\overline{\varphi(x)\varphi(y)}=\overline{\varphi(x)}\,\overline{\varphi(y)}=\overline{\varphi}(\overline{x})\,\overline{\varphi}(\overline{y})\]
+If \(A_1\) and~\(B_1\) are \emph{ideals}, then the induced linear map \(\proj{\varphi}:A/A_1\to B/B_1\) is also a homomorphism since
+\[\proj{\varphi}(\proj{x}\,\proj{y})=\proj{\varphi}(\proj{xy})=\proj{\varphi(xy)}=\proj{\varphi(x)\varphi(y)}=\proj{\varphi(x)}\,\proj{\varphi(y)}=\proj{\varphi}(\proj{x})\,\proj{\varphi}(\proj{y})\]
 \end{rmk}
 
 \noindent In the problems below, \(E\)~is a finite-dimensional vector space.
@@ -658,8 +659,8 @@ The Riesz representation theorem shows that for a finite-dimensional \emph{inner
 
 \begin{rmk}
 If \(E\)~is a finite-dimensional inner product space and \(E_1\)~is a subspace of~\(E\), then \(E\)~induces an inner product in~\(E/E_1\) by
-\[\iprod{\overline{x}}{\overline{y}}=\iprod{x}{y}\]
-where \(x,y\) are the unique representatives of \(\overline{x},\overline{y}\) in~\(\oc{E_1}\) (see problem~5).
+\[\iprod{\proj{x}}{\proj{y}}=\iprod{x}{y}\]
+where \(x,y\) are the unique representatives of \(\proj{x},\proj{y}\) in~\(\oc{E_1}\) (see problem~5).
 \end{rmk}
 \begin{proof}
 The only thing to check is bilinearity, which follows from the fact that \(\oc{E_1}\)~is a subspace of~\(E\).
@@ -678,7 +679,7 @@ so \(y=z\), establishing uniqueness.
 \begin{rmk}
 Let \(E\)~be an inner product space of finite dimension~\(n\). We provide an inductive proof of the existence of an orthonormal basis in~\(E\).
 
-For \(n=0,1\), the result is trivial. For \(n>1\), fix a unit vector \(e_1\in E\) and let \(E_1=\gen{e_1}\). By induction, there is an orthonormal basis \(\overline{e_2},\ldots,\overline{e_n}\) in the induced inner product space \(E/E_1\) (see above). Letting \(e_2,\ldots,e_n\) be the representatives in~\(\oc{E_1}\), it follows that \(e_1,\ldots,e_n\) is an orthonormal basis in~\(E\).
+For \(n=0,1\), the result is trivial. For \(n>1\), fix a unit vector \(e_1\in E\) and let \(E_1=\gen{e_1}\). By induction, there is an orthonormal basis \(\proj{e_2},\ldots,\proj{e_n}\) in the induced inner product space \(E/E_1\) (see above). Letting \(e_2,\ldots,e_n\) be the representatives in~\(\oc{E_1}\), it follows that \(e_1,\ldots,e_n\) is an orthonormal basis in~\(E\).
 \end{rmk}
 
 \begin{rmk}
