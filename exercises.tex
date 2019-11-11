@@ -1232,6 +1232,19 @@ implies \(\lambda_i=0\) by linear independence of the \(s_i\) in~\(S\) and the \
 and the elements on the left generate \(C(S)\tprod C(T)\).
 \end{proof}
 
+\begin{exer}[4]
+If \(a\tprod b\ne 0\), then \(a\tprod b=a'\tprod b'\) if and only if \(a'=\lambda a\) and \(b'=\lambda^{-1}b\) for some \(\lambda\ne 0\).
+\end{exer}
+\begin{proof}
+For the forward direction, note all the vectors are nonzero by bilinearity of~\(\tprod\). Now
+\[a\tprod b+a'\tprod(-b')=0\]
+so we must have \(a'=\lambda a\) for some \(\lambda\ne 0\) (1.5.1). It follows that
+\[a\tprod(b-\lambda b')=0\]
+so \(b-\lambda b'=0\) and \(b'=\lambda^{-1}b\).
+
+The reverse direction follows from bilinearity of~\(\tprod\).
+\end{proof}
+
 % References
 \newpage
 \begin{thebibliography}{0}
