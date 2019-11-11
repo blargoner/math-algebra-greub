@@ -23,6 +23,7 @@
 \newcommand{\mult}{\cdot}
 \newcommand{\cross}{\times}
 \newcommand{\grad}{\nabla}
+\newcommand{\tprod}{\otimes}
 
 \newcommand{\delete}{\widehat}
 \newcommand{\gen}[1]{\langle#1\rangle}
@@ -1212,6 +1213,18 @@ This allows us to define the bilinear map \(\widetilde{\varphi}(\rho x,\sigma y)
 \begin{rmk}
 The claim in problem~5(b) is false because it implies, for example, that any two inner products in~\(\R^2\) agree on orthogonality, which is false.
 \end{rmk}
+
+\subsection*{\S~8}
+\begin{exer}[3]
+If \(S\) and~\(T\) are sets, then \(C(S\times T)\iso C(S)\tprod C(T)\).
+\end{exer}
+\begin{proof}
+By the universal property of the free space, there is a unique linear map \(\varphi:C(S\times T)\to C(S)\tprod C(T)\) with \(\varphi(s,t)=s\tprod t\) for \(s\in S\) and \(t\in T\). Observe that \(\varphi\)~is injective since
+\[0=\varphi\bigl(\,\sum_i\lambda_i(s_i,t_i)\bigr)=\sum_i\lambda_i\,s_i\tprod t_i\]
+implies \(\lambda_i=0\) by linear independence of the \(s_i\) in~\(S\) and the \(t_i\) in~\(T\) (1.5.1). Also \(\varphi\)~is surjective since
+\[\bigl(\,\sum_i\lambda_i s_i\bigr)\tprod\bigl(\,\sum_j\mu_j t_j\bigr)=\sum_{i,j}\lambda_i\mu_j\,s_i\tprod t_j=\sum_{i,j}\lambda_i\mu_j\,\varphi(s_i,t_j)\]
+and the elements on the left generate \(C(S)\tprod C(T)\).
+\end{proof}
 
 % References
 \newpage
