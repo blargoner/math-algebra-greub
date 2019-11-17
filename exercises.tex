@@ -24,6 +24,7 @@
 \newcommand{\cross}{\times}
 \newcommand{\grad}{\nabla}
 \newcommand{\tprod}{\otimes}
+\newcommand{\bigtprod}{\bigotimes}
 
 \newcommand{\delete}{\widehat}
 \newcommand{\gen}[1]{\langle#1\rangle}
@@ -1276,6 +1277,38 @@ In particular, \(E\tprod 0=0=0\tprod E\).
 \subsection*{\S~15}
 \begin{rmk}
 By~(1.7), \emph{the intersection of tensor products is the tensor product of the intersections}. Observe that (1.4) and~(1.5) are special cases of~(1.7). Also, in the proof of~(1.4), \(u_{\beta}=v_{\beta}\) follows immediately from Lemma~1.5.2.
+\end{rmk}
+
+\begin{exer}[2]
+A bilinear mapping \(\varphi:E\times F\to G\) satisfies~\(\bigtprod_2\) if and only if the vectors~\(\varphi(x_{\alpha},y_{\beta})\) are linearly independent whenever the vectors \(x_{\alpha}\in E\) and \(y_{\beta}\in F\) are linearly independent.
+\end{exer}
+\begin{proof}
+If \(f:E\tprod F\to G\) is the induced linear map with \(\varphi=f\after\tprod\), then \(\varphi\)~satisfies \(\bigtprod_2\) if and only if \(f\)~is injective (1.8.1)---that is, if and only if \(f\)~preserves linear independence. But \(f\)~preserves linear independence if and only if \(\varphi\)~does, since \(\tprod\)~does (1.5.1).
+\end{proof}
+
+\begin{exer}[3]
+If \(A\ne 0\) is a finite-dimensional algebra forming a tensor product under the algebra multiplication, then \(\dim A=1\).
+\end{exer}
+\begin{proof}
+By~(1.3) \(\dim A=(\dim A)^2\), and \(\dim A\ne 0\), so \(\dim A=1\).
+\end{proof}
+
+\begin{exer}[5]
+If \(E,E^*\) and \(F,F^*\) are pairs of dual spaces of finite dimension and \(\beta:E\times F\to B(E^*,F^*)\) is the bilinear map given by
+\[\beta_{x,y}(x^*,y^*)=\sprod{x^*}{x}\sprod{y^*}{y}\]
+then \((B(E^*,F^*),\beta)\)~is the tensor product of \(E\) and~\(F\).
+\end{exer}
+\begin{proof}
+Let \(x_1,\ldots,x_n\) be a basis in~\(E\) with dual basis \(x^{*1},\ldots,x^{*n}\) in~\(E^*\) and let \(y_1,\ldots,y_m\) be a basis in~\(F\) with dual basis \(y^{*1},\ldots,y^{*m}\) in~\(F^*\). Let \(\varphi^{*kl}:E^*\times F^*\to\Gamma\) be the basis function in~\(B(E^*,F^*)\) defined by
+\[\varphi^{*kl}(x^{*i},y^{*j})=\delta^k_i\delta^l_j\]
+Then
+\[\beta_{x_k,y_l}(x^{*i},y^{*j})=\sprod{x^{*i}}{x_k}\sprod{y^{*j}}{y_l}=\delta^k_i\delta^l_j=\varphi^{*kl}(x^{*i},y^{*j})\]
+so \(\beta_{x_k,y_l}=\varphi^{*kl}\). It follows that \(\im\beta=B(E^*,F^*)\), so \(\beta\)~satisfies~\(\bigtprod_1\).
+
+If \(\varphi:E\times F\to G\) is bilinear, define \(f:B(E^*,F^*)\to G\) by \(f(\varphi^{*kl})=\varphi(x_k,y_l)\). Then \(\varphi(x_k,y_l)=f(\beta_{x_k,y_l})\), so \(\varphi=f\beta\). It follows that \(\beta\)~satisfies \(\bigtprod_2\).
+\end{proof}
+\begin{rmk}
+This result allows us to view an element \(\sum x_i\tprod y_i\) of the tensor product as a bilinear function: given linear scalar substitutions \(x_i\to\lambda_i\) and \(y_i\to\mu_i\) as inputs, it produces the scalar \(\sum\lambda_i\mu_i\) as output. This is analogous to viewing a vector as a linear function. Indeed, if we identify~\(x\) with~\(\sprod{-}{x}\) and \(y\) with~\(\sprod{-}{y}\), then we can identify \(x\tprod y\) with \(\sprod{-}{x}\sprod{-}{y}\).
 \end{rmk}
 
 % References
