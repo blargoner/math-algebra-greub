@@ -1214,6 +1214,22 @@ This allows us to define the bilinear map \(\widetilde{\varphi}(\rho x,\sigma y)
 The claim in problem~5(b) is false because it implies, for example, that any two inner products in~\(\R^2\) agree on orthogonality, which is false.
 \end{rmk}
 
+\subsection*{\S~4}
+\begin{rmk}
+The tensor product \(E\tprod F\) is a universal (initial) object in the category of ``vector spaces with bilinear maps of \(E\times F\) into them''. In this category, the objects are bilinear maps \(E\times F\to G\), and the arrows are linear maps \(G\to H\) which respect the bilinear maps:
+\begin{diagram}
+E\times F	&\rTo	&H\\
+\dTo		&\ruTo	&\\
+G			&		&
+\end{diagram}
+Every object \(E\times F\to G\) in this category can be obtained from the tensor product \(\tprod:E\times F\to E\tprod F\) in a unique way. This is why \(\tprod\)~is said to satisfy the ``universal property''. This is only possible because the elements of~\(E\tprod F\) satisfy only those relations required to make \(E\tprod F\) into a vector space and to make \(\tprod\)~bilinear. By category theoretic abstract nonsense, \(E\tprod F\)~is unique up to isomorphism.
+\end{rmk}
+
+\subsection*{\S~5}
+\begin{rmk}
+Lemma~1.5.1 generalizes the consequence of linear independence to tensor products other than scalar multiplication; Lemma~1.5.2 generalizes the existence and uniqueness of a representation relative to a basis.
+\end{rmk}
+
 \subsection*{\S~8}
 \begin{exer}[3]
 If \(S\) and~\(T\) are sets, then \(C(S\times T)\iso C(S)\tprod C(T)\).
