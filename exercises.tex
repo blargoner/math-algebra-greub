@@ -1212,7 +1212,7 @@ This allows us to define the bilinear map \(\widetilde{\varphi}(\rho x,\sigma y)
 
 \subsection*{\S~3}
 \begin{rmk}
-The claim in problem~5(b) is false because it implies, for example, that any two inner products in~\(\R^2\) agree on orthogonality, which is false.
+The claim in problem~5(b) is false because it implies, for example, that any two inner products in~\(\R^2\) agree on orthogonality, which is false. The claim holds if and only if \(\psi\)~preserves linear relations satisfied by~\(\varphi\).
 \end{rmk}
 
 \subsection*{\S~4}
@@ -1309,6 +1309,11 @@ If \(\varphi:E\times F\to G\) is bilinear, define \(f:B(E^*,F^*)\to G\) by \(f(\
 \end{proof}
 \begin{rmk}
 This result allows us to view an element \(\sum x_i\tprod y_i\) of the tensor product as a bilinear function: given linear scalar substitutions \(x_i\to\lambda_i\) and \(y_i\to\mu_i\) as inputs, it produces the scalar \(\sum\lambda_i\mu_i\) as output. This is analogous to viewing a vector as a linear function. Indeed, if we identify~\(x\) with~\(\sprod{-}{x}\) and \(y\) with~\(\sprod{-}{y}\), then we can identify \(x\tprod y\) with \(\sprod{-}{x}\sprod{-}{y}\).
+\end{rmk}
+
+\subsection*{\S~19}
+\begin{rmk}
+The ``only if'' part of the claim in problem~1(a) requires \(E\ne 0\) and \(F\ne 0\). For example, if \(E\ne 0\) and \(F=0\) and \(\varphi=0\) and \(\psi=0\), then \(E\tprod F=0\) and \(\varphi\tprod\psi=0\) is injective despite the fact that \(\varphi\)~is not.
 \end{rmk}
 
 % References
