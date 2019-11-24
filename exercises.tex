@@ -1316,6 +1316,29 @@ This result allows us to view an element \(\sum x_i\tprod y_i\) of the tensor pr
 The ``only if'' part of the claim in problem~1(a) requires \(E\ne 0\) and \(F\ne 0\). For example, if \(E\ne 0\) and \(F=0\) and \(\varphi=0\) and \(\psi=0\), then \(E\tprod F=0\) and \(\varphi\tprod\psi=0\) is injective despite the fact that \(\varphi\)~is not.
 \end{rmk}
 
+\begin{exer}[2]
+If \(\varphi:E\to E\) and \(\psi:F\to F\) with \(\dim E=n\) and \(\dim F=m\), then
+\[\tr(\varphi\tprod\psi)=\tr\varphi\mult\tr\psi\]
+and
+\[\det(\varphi\tprod\psi)=(\det\varphi)^m\mult(\det\psi)^n\]
+\end{exer}
+\begin{proof}
+Let \(e_1,\ldots,e_n\) be a basis of~\(E\) and \(f_1,\ldots,f_m\) be a basis of~\(F\). Write
+\begin{align*}
+\varphi e_i&=\sum_{k=1}^n\alpha^k_ie_k\\
+\psi f_j&=\sum_{l=1}^m\beta^l_jf_l
+\end{align*}
+Then \(e_1\tprod f_1,\ldots,e_n\tprod f_m\) is a basis of~\(E\tprod F\) and
+\[(\varphi\tprod\psi)(e_i\tprod f_j)=\varphi e_i\tprod\psi f_j=\sum_{k,l}\alpha^k_i\beta^l_je_k\tprod f_l\]
+It follows that
+\[\tr(\varphi\tprod\psi)=\sum_{i,j}\alpha^i_i\beta^j_j=\bigl(\sum_i\alpha^i_i\bigr)\bigl(\sum_j\beta^j_j\bigr)=\tr\varphi\mult\tr\psi\]
+For the determinant, observe that
+\[\varphi\tprod\psi=(\varphi\tprod\iota_F)\after(\iota_E\tprod\psi)\]
+so
+\[\det(\varphi\tprod\psi)=\det(\varphi\tprod\iota_F)\mult\det(\iota_E\tprod\psi)\]
+But \(M(\varphi\tprod\iota_F)=(\alpha^k_i\delta^l_j)\) is block diagonal with \(m\)~blocks each equal to~\(M(\varphi)\), so \(\det(\varphi\tprod\iota_F)=(\det\varphi)^m\). Similarly \(\det(\iota_E\tprod\psi)=(\det\psi)^n\).
+\end{proof}
+
 % References
 \newpage
 \begin{thebibliography}{0}
