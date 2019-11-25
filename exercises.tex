@@ -1317,7 +1317,7 @@ The ``only if'' part of the claim in problem~1(a) requires \(E\ne 0\) and \(F\ne
 \end{rmk}
 
 \begin{exer}[2]
-If \(\varphi:E\to E\) and \(\psi:F\to F\) with \(\dim E=n\) and \(\dim F=m\), then
+If \(\varphi:E\to E\) and \(\psi:F\to F\) are linear with \(\dim E=n\) and \(\dim F=m\), then
 \[\tr(\varphi\tprod\psi)=\tr\varphi\mult\tr\psi\]
 and
 \[\det(\varphi\tprod\psi)=(\det\varphi)^m\mult(\det\psi)^n\]
@@ -1337,6 +1337,31 @@ For the determinant, observe that
 so
 \[\det(\varphi\tprod\psi)=\det(\varphi\tprod\iota_F)\mult\det(\iota_E\tprod\psi)\]
 But \(M(\varphi\tprod\iota_F)=(\alpha^k_i\delta^l_j)\) is block diagonal with \(m\)~blocks each equal to~\(M(\varphi)\), so \(\det(\varphi\tprod\iota_F)=(\det\varphi)^m\). Similarly \(\det(\iota_E\tprod\psi)=(\det\psi)^n\).
+\end{proof}
+
+\begin{exer}[3]
+If \(\alpha,\beta:E\to E\) are linear with \(\dim E=n\), and \(\Phi:L(E;E)\to L(E;E)\) is defined by
+\[\Phi\sigma=\alpha\after\sigma\after\beta\]
+then
+\[\tr\Phi=\tr\alpha\mult\tr\beta\]
+and
+\[\det\Phi=\det(\alpha\after\beta)^n\]
+\end{exer}
+\begin{proof}
+Let \(e_1,\ldots,e_n\) be a basis of~\(E\) and let \(\psi_{ij}:E\to E\) be the induced basis transformation defined by \(\psi_{ij}e_k=\delta^i_ke_j\). The isomorphism \(\Psi:E\tprod E\to L(E;E)\) defined by \(\Psi(e_i\tprod e_j)=\psi_{ij}\) induces an isomorphism
+\[\widehat{\Psi}:L(E\tprod E;E\tprod E)\iso L(L(E;E);L(E;E))\]
+by \(\widehat{\Psi}(\sigma\tprod\tau)=\Psi\after(\sigma\tprod\tau)\after\Psi^{-1}\):
+\begin{diagram}
+E\tprod E					&\rTo^{\Psi}	&L(E;E)\\
+\dTo<{\sigma\tprod\tau}		&				&\dTo>{\widehat{\Psi}(\sigma\tprod\tau)}\\
+E\tprod E					&\rTo_{\Psi}	&L(E;E)
+\end{diagram}
+It is easy to verify that
+\[\widehat{\Psi}(\beta^*\tprod\alpha)=\Phi\]
+where \(\beta^*\)~is the transpose of~\(\beta\). Therefore by the previous exercise,
+\[\tr\Phi=\tr(\beta^*\tprod\alpha)=\tr(\beta^*)\mult\tr\alpha=\tr\alpha\mult\tr\beta\]
+and
+\[\det\Phi=\det(\beta^*\tprod\alpha)=(\det\beta^*)^n(\det\alpha)^n=\det(\alpha\after\beta)^n\qedhere\]
 \end{proof}
 
 % References
