@@ -39,6 +39,9 @@
 \newcommand{\adj}[1]{\widetilde{#1}}
 \newcommand{\conj}[1]{\overline{#1}}
 \newcommand{\proj}[1]{\overline{#1}}
+\newcommand{\multi}[4]{#2_{#3}#1\cdots#1#2_{#4}}
+\newcommand{\crosss}[3]{\multi{\cross}{#1}{#2}{#3}}
+\newcommand{\tprods}[3]{\multi{\tprod}{#1}{#2}{#3}}
 
 \newarrow{Dashto}{}{dash}{}{dash}>
 
@@ -1379,6 +1382,33 @@ where \(\beta^*\)~is the transpose of~\(\beta\). Therefore by the previous exerc
 and
 \[\det\Phi=\det(\beta^*\tprod\alpha)=(\det\beta^*)^n(\det\alpha)^n=\det(\alpha\after\beta)^n\qedhere\]
 \end{proof}
+
+\subsection*{\S~20}
+\begin{rmk}
+To see that there is a unique isomorphism
+\[f:(\tprods{E}{1}{p})\tprod(\tprods{E}{p+1}{p+q})\to\tprods{E}{1}{p+q}\]
+with
+\[f((\tprods{x}{1}{p})\tprod(\tprods{x}{p+1}{p+q}))=\tprods{x}{1}{p+q}\tag{1}\]
+observe that for each \(p\)-tuple \((x_1,\ldots,x_p)\in\crosss{E}{1}{p}\), there is a \(q\)-linear map \(\varphi_{x_1\ldots x_p}:\crosss{E}{p+1}{p+q}\to\tprods{E}{1}{p+q}\) given by
+\[\varphi_{x_1\ldots x_p}(x_{p+1},\ldots,x_{p+q})=\tprods{x}{1}{p+q}\]
+By the universal property of \(\tprods{E}{p+1}{p+q}\), it follows that there is a linear map \(f_{x_1\ldots x_p}:\tprods{E}{p+1}{p+q}\to\tprods{E}{1}{p+q}\) with
+\[f_{x_1\ldots x_p}(\tprods{x}{p+1}{p+q})=\tprods{x}{1}{p+q}\]
+Now the mapping \((x_1,\ldots,x_p)\mapsto f_{x_1\ldots x_p}\) is \(p\)-linear, so by the universal property of \(\tprods{E}{1}{p}\), there is a linear map
+\[\widehat{f}:\tprods{E}{1}{p}\to L(\tprods{E}{p+1}{p+q};\tprods{E}{1}{p+q})\]
+with \(\widehat{f}(\tprods{x}{1}{p})=f_{x_1\ldots x_p}\). Define
+\[\varphi:(\tprods{E}{1}{p})\cross(\tprods{E}{p+1}{p+q})\to\tprods{E}{1}{p+q}\]
+by \(\varphi(x,y)=\widehat{f}(x)(y)\). Then \(\varphi\)~is bilinear, so by the universal property of \((\tprods{E}{1}{p})\tprod(\tprods{E}{p+1}{p+q})\), there is a linear map~\(f\) satisfying~(1).
+
+By the universal property of \(\tprods{E}{1}{p+q}\), the \((p+q)\)-linear map
+\[\psi:\crosss{E}{1}{p+q}\to(\tprods{E}{1}{p})\tprod(\tprods{E}{p+1}{p+q})\]
+defined by
+\[\psi(x_1,\ldots,x_{p+q})=(\tprods{x}{1}{p})\tprod(\tprods{x}{p+1}{p+q})\]
+induces a linear map
+\[g:\tprods{E}{1}{p+q}\to(\tprods{E}{1}{p})\tprod(\tprods{E}{p+1}{p+q})\]
+with
+\[g(\tprods{x}{1}{p+q})=(\tprods{x}{1}{p})\tprod(\tprods{x}{p+1}{p+q})\]
+By universal properties again, \(f\after g=\iota\) and \(g\after f=\iota\) so \(f\)~is an isomorphism, and \(f\)~is uniquely determined by~(1).
+\end{rmk}
 
 % References
 \newpage
