@@ -1397,7 +1397,7 @@ Now the mapping \((x_1,\ldots,x_p)\mapsto f_{x_1\ldots x_p}\) is \(p\)-linear, s
 \[\widehat{f}:\tprods{E}{1}{p}\to L(\tprods{E}{p+1}{p+q};\tprods{E}{1}{p+q})\]
 with \(\widehat{f}(\tprods{x}{1}{p})=f_{x_1\ldots x_p}\). Define
 \[\varphi:(\tprods{E}{1}{p})\cross(\tprods{E}{p+1}{p+q})\to\tprods{E}{1}{p+q}\]
-by \(\varphi(x,y)=\widehat{f}(x)(y)\). Then \(\varphi\)~is bilinear, so by the universal property of \((\tprods{E}{1}{p})\tprod(\tprods{E}{p+1}{p+q})\), there is a linear map~\(f\) satisfying~(1).
+by \(\varphi(x,y)=\widehat{f}(x)(y)\). Then \(\varphi\)~is bilinear, so by the universal property of \((\tprods{E}{1}{p})\tprod(\tprods{E}{p+1}{p+q})\), there is a linear map~\(f\) satisfying \(f\after\tprod=\varphi\), which implies~(1).
 
 By the universal property of \(\tprods{E}{1}{p+q}\), the \((p+q)\)-linear map
 \[\psi:\crosss{E}{1}{p+q}\to(\tprods{E}{1}{p})\tprod(\tprods{E}{p+1}{p+q})\]
@@ -1408,6 +1408,20 @@ induces a linear map
 with
 \[g(\tprods{x}{1}{p+q})=(\tprods{x}{1}{p})\tprod(\tprods{x}{p+1}{p+q})\]
 By universal properties again, \(f\after g=\iota\) and \(g\after f=\iota\) so \(f\)~is an isomorphism, and \(f\)~is uniquely determined by~(1).
+\end{rmk}
+
+\begin{rmk}
+If the vectors~\(a^i_{\nu}\) are linearly independent in~\(E_i\) (\(i=1,\ldots,p\)), then their tensor products \(a^1_{\nu_1}\tprod\cdots\tprod a^p_{\nu_p}\) are linearly independent in \(\tprods{E}{1}{p}\). Indeed, if \(p=2\), this follows from Lemma~1.5.1. If \(p>2\), we use the natural isomorphism
+\[\tprods{E}{1}{p}\iso(\tprods{E}{1}{p-1})\tprod E_p\]
+If
+\[\sum_{\nu_1,\ldots,\nu_p}\lambda_{\nu_1\ldots\nu_p}a^1_{\nu_1}\tprod\cdots\tprod a^p_{\nu_p}=0\]
+then
+\[\sum_{\nu_1,\ldots,\nu_p}(\lambda_{\nu_1\ldots\nu_p}a^1_{\nu_1}\tprod\cdots\tprod a^{p-1}_{\nu_{p-1}})\tprod a^p_{\nu_p}=0\]
+Since the~\(a^p_{\nu_p}\) are linearly independent in~\(E_p\), it follows from Lemma~1.5.1 that
+\[\lambda_{\nu_1\ldots\nu_p}a^1_{\nu_1}\tprod\cdots\tprod a^{p-1}_{\nu_{p-1}}=0\]
+for all \(\nu_1,\ldots,\nu_p\). But \(a^1_{\nu_1}\tprod\cdots\tprod a^{p-1}_{\nu_{p-1}}\ne 0\) since \(a^i_{\nu}\ne 0\) for all \(i,\nu\) (see problem~1), so \(\lambda_{\nu_1\ldots\nu_p}=0\) for all \(\nu_1,\ldots,\nu_p\).
+
+If the vectors~\(a^i_{\nu}\) span~\(E_i\) (\(i=1,\ldots,p\)), then clearly their tensor products span \(\tprods{E}{1}{p}\). It follows that if the vectors~\(a^i_{\nu}\) form a basis of~\(E_i\) (\(i=1,\ldots,p\)), then their tensor products form a basis of \(\tprods{E}{1}{p}\).
 \end{rmk}
 
 % References
