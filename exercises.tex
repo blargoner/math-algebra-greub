@@ -1311,7 +1311,23 @@ If \(\varphi:E\times F\to G\) is bilinear, define \(f:B(E^*,F^*)\to G\) by \(f(\
 This result allows us to view an element \(\sum x_i\tprod y_i\) of the tensor product as a bilinear function: given linear scalar substitutions \(x_i\to\lambda_i\) and \(y_i\to\mu_i\) as inputs, it produces the scalar \(\sum\lambda_i\mu_i\) as output. This is analogous to viewing a vector as a linear function. Indeed, if we identify~\(x\) with~\(\sprod{-}{x}\) and \(y\) with~\(\sprod{-}{y}\), then we can identify \(x\tprod y\) with \(\sprod{-}{x}\sprod{-}{y}\).
 \end{rmk}
 
+\subsection*{\S~16}
+\begin{rmk}
+The tensor product operation is a bifunctor in the category of vector spaces. It maps the objects \(E\) and~\(F\) to the object \(E\tprod F\) and the arrows \(\varphi:E\to E'\) and \(\psi:F\to F'\) to the arrow \(\varphi\tprod\psi:E\tprod F\to E'\tprod F'\).
+\end{rmk}
+
 \subsection*{\S~19}
+\begin{rmk}
+The proof of~(1.12) is captured in the following diagram:
+\begin{diagram}[nohug]
+E\tprod F						&														&\rTo^{\varphi\tprod\psi}	&		&E'\tprod F'\\
+								&\rdLine_{\pi}											&							&\ruTo	&\\
+\dTo<{\pi_1\tprod\pi_2}			&														&\rdLine\ruLine				&		&\uTo>{\chi}\\
+								&\ruLine_{\ \overline{\varphi}\tprod\overline{\psi}}	&							&\rdTo	&\\
+\overline{E}\tprod\overline{F}	&														&\rTo_g						&		&\overline{E\tprod F}
+\end{diagram}
+\end{rmk}
+
 \begin{rmk}
 The ``only if'' part of the claim in problem~1(a) requires \(E\ne 0\) and \(F\ne 0\). For example, if \(E\ne 0\) and \(F=0\) and \(\varphi=0\) and \(\psi=0\), then \(E\tprod F=0\) and \(\varphi\tprod\psi=0\) is injective despite the fact that \(\varphi\)~is not.
 \end{rmk}
