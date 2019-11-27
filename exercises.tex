@@ -1424,6 +1424,30 @@ for all \(\nu_1,\ldots,\nu_p\). But \(a^1_{\nu_1}\tprod\cdots\tprod a^{p-1}_{\nu
 If the vectors~\(a^i_{\nu}\) span~\(E_i\) (\(i=1,\ldots,p\)), then clearly their tensor products span \(\tprods{E}{1}{p}\). It follows that if the vectors~\(a^i_{\nu}\) form a basis of~\(E_i\) (\(i=1,\ldots,p\)), then their tensor products form a basis of \(\tprods{E}{1}{p}\).
 \end{rmk}
 
+\begin{exer}[1]
+In \(\tprods{E}{1}{p}\):
+\begin{enumerate}
+\item[(a)] \(\tprods{x}{1}{p}=0\) if and only if at least one \(x_i=0\).
+\item[(b)] If \(\tprods{x}{1}{p}\ne 0\), then
+\[\tprods{x}{1}{p}=\tprods{y}{1}{p}\]
+if and only if \(y_i=\lambda_i x_i\) with \(\lambda_1\cdots\lambda_p=1\).
+\end{enumerate}
+\end{exer}
+\begin{proof}
+The reverse directions follow from multilinearity of the tensor product. The forward directions follow by induction on~\(p\) using the natural isomorphism
+\[\tprods{E}{1}{p}\iso(\tprods{E}{1}{p-1})\tprod E_p\]
+\begin{enumerate}
+\item[(a)] If \(p=2\), the result follows from Lemma~1.5.1. If \(p>2\), then \((\tprods{x}{1}{p-1})\tprod x_p=0\), so by Lemma~1.5.1 either \(\tprods{x}{1}{p-1}=0\) and \(x_i=0\) for some \(i=1,\ldots,p-1\) by induction, or else \(x_p=0\).
+\item[(b)] If \(p=2\), the result follows from problem~1.8.4. If \(p>2\), then
+\[(\tprods{x}{1}{p-1})\tprod x_p=(\tprods{y}{1}{p-1})\tprod y_p\]
+so by the same problem,
+\[\tprods{y}{1}{p-1}=\lambda_p^{-1}\tprods{x}{1}{p-1}\qquad\text{and}\qquad y_p=\lambda_p x_p\]
+for some \(\lambda_p\ne 0\). Setting \(\mu=\lambda_p^{-1}/(p-1)\), we have
+\[\tprods{y}{1}{p-1}=\mu x_1\tprod\cdots\tprod\mu x_{p-1}\]
+so \(y_i=\mu_i\mu x_i\) for \(i=1,\ldots,p-1\) with \(\mu_1\cdots\mu_{p-1}=1\) by induction. Setting \(\lambda_i=\mu_i\mu\) for \(i=1,\ldots,p-1\), we have \(y_i=\lambda_i x_i\) for \(i=1,\ldots,p\) and \(\lambda_1\cdots\lambda_p=1\) as desired.\qedhere
+\end{enumerate}
+\end{proof}
+
 % References
 \newpage
 \begin{thebibliography}{0}
