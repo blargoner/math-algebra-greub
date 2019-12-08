@@ -1466,6 +1466,36 @@ In particular, if each \(\varphi_i\)~is nondegenerate, then \(\varphi\)~is nonde
 If \(\Phi\)~is bilinear in \(E\times E'\) and \(\Psi\)~is bilinear in \(F\times F'\), then nondegeneracy of \(\Phi\tprod\Psi\) does not imply nondegeneracy of \(\Phi\) and~\(\Psi\) unless all the spaces are nonzero, contrary to what the book says. For example, if \(E\ne 0\) and \(E'=0\), \(F=F'=0\), and \(\Phi=0\) and \(\Psi=0\), then \(\Phi\)~is degenerate, but \(E\tprod F=0\) and \(E'\tprod F'=0\), so \(\Phi\tprod\Psi=0\) is nondegenerate.\footnote{This is essentially the same error as in problem~1.19.1(a) above.}
 \end{rmk}
 
+\subsection*{\S~26}
+\begin{rmk}
+If \(e_1,\ldots,e_n\) is a basis in~\(E\) and \(f_1,\ldots,f_n\) is its dual basis in~\(L(E)\), then the basis transformation~\(\varphi_{ij}\) in~\(L(E;E)\) with \(\varphi_{ij}(e_k)=\delta_{ik}e_j\) is given by \(x\mapsto f_i(x)e_j\). Therefore it is natural to consider the isomorphism \(T:L(E)\tprod E\to L(E;E)\) with \(T(f_i\tprod e_j)=\varphi_{ij}\). In the algebra induced by~\(T^{-1}\) in \(L(E)\tprod E\),
+\[(f_i\tprod e_j)\after(f_k\tprod e_l)=T^{-1}(\varphi_{ij}\after\varphi_{kl})=T^{-1}(\delta_{il}\varphi_{kj})=f_i(e_l)(f_k\tprod e_j)\]
+This motivates the definition of the composition algebra.
+\end{rmk}
+
+\begin{exer}[1]
+For the bilinear map
+\[\gamma:L(E,E';E'')\times L(F,F';F'')\to L(E\tprod F,E'\tprod F';E''\tprod F'')\]
+with
+\[\gamma(\varphi,\psi):(x\tprod y,x'\tprod y')\mapsto\varphi(x,x')\tprod\psi(y,y')\]
+the pair \((\im\gamma,\gamma)\) is the tensor product of \(L(E,E';E'')\) and \(L(F,F';F'')\).
+\end{exer}
+\begin{proof}
+By transfer of Corollary~II of Proposition~1.16.1, using the isomorphism between linear and bilinear maps induced by the tensor product.
+
+In detail, consider the following commutative diagram:
+\begin{diagram}[nohug]
+L(E\tprod E';E'')\tprod L(F\tprod F';F'')&\rTo^f&L((E\tprod E')\tprod(F\tprod F');E''\tprod F'')\\
+&&\dTo>{\iso}\\
+\uTo<{\iso}&&L((E\tprod F)\tprod(E'\tprod F');E''\tprod F'')\\
+&&\dTo>{\iso}\\
+L(E,E';E'')\tprod L(F,F';F'')&\rTo^g&L(E\tprod F,E'\tprod F';E''\tprod F'')\\
+\uTo<{\tprod}&\ruTo>{\gamma}&\\
+L(E,E';E'')\times L(F,F';F'')&&
+\end{diagram}
+Note \(g\)~is injective since \(f\)~is injective (1.16.1), so \(\gamma\)~satisfies \(\bigtprod_2\) (1.8.1). Since \(\gamma\)~also satisfies~\(\bigtprod_1\), it follows that \(\gamma\)~is the tensor product.
+\end{proof}
+
 % References
 \newpage
 \begin{thebibliography}{0}
