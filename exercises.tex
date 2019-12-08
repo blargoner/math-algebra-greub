@@ -1485,15 +1485,48 @@ By transfer of Corollary~II of Proposition~1.16.1, using the isomorphism between
 
 In detail, consider the following commutative diagram:
 \begin{diagram}[nohug]
-L(E\tprod E';E'')\tprod L(F\tprod F';F'')&\rTo^f&L((E\tprod E')\tprod(F\tprod F');E''\tprod F'')\\
-&&\dTo>{\iso}\\
-\uTo<{\iso}&&L((E\tprod F)\tprod(E'\tprod F');E''\tprod F'')\\
-&&\dTo>{\iso}\\
-L(E,E';E'')\tprod L(F,F';F'')&\rTo^g&L(E\tprod F,E'\tprod F';E''\tprod F'')\\
-\uTo<{\tprod}&\ruTo>{\gamma}&\\
-L(E,E';E'')\times L(F,F';F'')&&
+L(E\tprod E';E'')\tprod L(F\tprod F';F'')	&\rTo^f			&L((E\tprod E')\tprod(F\tprod F');E''\tprod F'')\\
+											&				&\dTo>{\iso}\\
+\uTo<{\iso}									&				&L((E\tprod F)\tprod(E'\tprod F');E''\tprod F'')\\
+											&				&\dTo>{\iso}\\
+L(E,E';E'')\tprod L(F,F';F'')				&\rTo^g			&L(E\tprod F,E'\tprod F';E''\tprod F'')\\
+\uTo<{\tprod}								&\ruTo>{\gamma}	&\\
+L(E,E';E'')\times L(F,F';F'')				&				&
 \end{diagram}
 Note \(g\)~is injective since \(f\)~is injective (1.16.1), so \(\gamma\)~satisfies \(\bigtprod_2\) (1.8.1). Since \(\gamma\)~also satisfies~\(\bigtprod_1\), it follows that \(\gamma\)~is the tensor product.
+\end{proof}
+
+\begin{exer}[2]
+If \(E,E^*\) and \(F,F^*\) are pairs of dual spaces with \(E_1\subseteq E\) and \(F_1\subseteq F\) subspaces, then a scalar product is induced between
+\[(E^*\tprod F^*)/(\oc{E_1}\tprod F^*+E^*\tprod\oc{F_1})\qquad\text{and}\qquad E_1\tprod F_1\]
+by the scalar product between \(E^*\tprod F^*\) and \(E\tprod F\). In particular,
+\[\oc{(E_1\tprod F_1)}=\oc{E_1}\tprod F^*+E^*\tprod\oc{F_1}\]
+\end{exer}
+\begin{proof}
+A scalar product is induced between \(E^*/\oc{E_1}\) and~\(E_1\) by \(\sprod{\proj{x^*}}{x}=\sprod{x^*}{x}\), and between \(F^*/\oc{F_1}\) and~\(F_1\) by \(\sprod{\proj{y^*}}{y}=\sprod{y^*}{y}\). Therefore a scalar product is induced between \((E^*/\oc{E_1})\tprod(F^*/\oc{F_1})\) and \(E_1\tprod F_1\) by
+\[\sprod{\proj{x^*}\tprod\proj{y^*}}{x\tprod y}=\sprod{x^*}{x}\sprod{y^*}{y}=\sprod{x^*\tprod y^*}{x\tprod y}\]
+where the scalar product on the right is between \(E^*\tprod F^*\) and \(E\tprod F\). However,
+\[(E^*\tprod F^*)/(\oc{E_1}\tprod F^*+E^*\tprod\oc{F_1})\iso(E^*/\oc{E_1})\tprod(F^*/\oc{F_1})\]
+where \(\proj{x^*\tprod y^*}\mapsto\proj{x^*}\tprod\proj{y^*}\), so there is a scalar product
+\[\sprod{\proj{x^*\tprod y^*}}{x\tprod y}=\sprod{x^*\tprod y^*}{x\tprod y}\]
+as required.
+\end{proof}
+
+\begin{exer}[3]
+If \(E,E^*\) are dual spaces and \(\varphi:E\to E\) and \(\varphi^*:E^*\from E^*\) are dual transformations, then \(\varphi\tprod\varphi^*\)~is self-dual.
+\end{exer}
+\begin{proof}
+Recall that \(E\tprod E^*\) is self-dual under the scalar product
+\[\sprod{x\tprod x^*}{y\tprod y^*}=\sprod{x^*}{y}\sprod{y^*}{x}\]
+Now
+\begin{align*}
+\sprod{(\varphi\tprod\varphi^*)(x\tprod x^*)}{y\tprod y^*}&=\sprod{\varphi x\tprod\varphi^* x^*}{y\tprod y^*}\\
+	&=\sprod{\varphi^* x^*}{y}\sprod{y^*}{\varphi x}\\
+	&=\sprod{x^*}{\varphi y}\sprod{\varphi^* y^*}{x}\\
+	&=\sprod{x\tprod x^*}{\varphi y\tprod\varphi^* y^*}\\
+	&=\sprod{x\tprod x^*}{(\varphi\tprod\varphi^*)(y\tprod y^*)}
+\end{align*}
+so \((\varphi\tprod\varphi^*)^*=\varphi\tprod\varphi^*\).
 \end{proof}
 
 % References
