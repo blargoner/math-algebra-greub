@@ -1529,6 +1529,50 @@ Now
 so \((\varphi\tprod\varphi^*)^*=\varphi\tprod\varphi^*\).
 \end{proof}
 
+\subsection*{\S~29}
+In this section, all vector spaces are finite-dimensional.
+
+\begin{exer}[1]
+Let \(E,E^*\) and \(F,F^*\) be pairs of dual spaces. If \(a^*\in E^*\) and \(b\in F\), then
+\[(a^*\tprod b)^*=b\tprod a^*\]
+\end{exer}
+\begin{proof}
+Recall \(a^*\tprod b:E\to F\) is defined by \(x\mapsto\sprod{a^*}{x}b\) and \(b\tprod a^*:F^*\to E^*\) is defined by \(y^*\mapsto\sprod{y^*}{b}a^*\). For \(y^*\in F^*\) and \(x\in E\),
+\[\sprod{(b\tprod a^*)y^*}{x}=\sprod{y^*}{b}\sprod{a^*}{x}=\sprod{y^*}{(a^*\tprod b)x}\qedhere\]
+\end{proof}
+
+\begin{exer}[2]
+If \(E,F\ne 0\) are Euclidean spaces with \(\varphi:E\to E\) and \(\psi:F\to F\), then \(\varphi\tprod\psi:E\tprod F\to E\tprod F\) is a rotation if and only if \(\varphi=\lambda\tau_E\) and \(\psi=\lambda^{-1}\tau_F\) where \(\tau_E\) and~\(\tau_F\) are rotations and \(\lambda\ne 0\).
+\end{exer}
+\begin{proof}
+If \(\varphi=\lambda\tau_E\) and \(\psi=\lambda^{-1}\tau_F\), then \(\varphi\tprod\psi=\tau_E\tprod\tau_F\), and
+\begin{align*}
+(\tau_E\tprod\tau_F)^*\after(\tau_E\tprod\tau_F)&=(\tau_E^*\tprod\tau_F^*)\after(\tau_E\tprod\tau_F)\\
+	&=(\tau_E^*\after\tau_E)\tprod(\tau_F^*\after\tau_F)\\
+	&=\iota_E\tprod\iota_F\\
+	&=\iota_{E\tprod F}
+\end{align*}
+so \((\varphi\tprod\psi)^*=(\varphi\tprod\psi)^{-1}\) and \(\varphi\tprod\psi\)~is a rotation.
+
+Conversely if \(\varphi\tprod\psi\)~is a rotation, then
+\[\varphi^*\tprod\psi^*=(\varphi\tprod\psi)^*=(\varphi\tprod\psi)^{-1}=\varphi^{-1}\tprod\psi^{-1}\]
+It follows that \(\varphi^*=\mu\varphi^{-1}\) and \(\psi^*=\mu^{-1}\psi^{-1}\) for some \(\mu\ne 0\).\footnote{See problem~1.8.4.} We may assume \(\mu>0\) (otherwise consider \(-\varphi\) and~\(-\psi\)). Set \(\lambda=\sqrt{\mu}>0\) and define \(\tau_E=\lambda^{-1}\varphi\) and \(\tau_F=\lambda\psi\). Then \(\tau_E^*\after\tau_E=\iota_E\), so \(\tau_E^*=\tau_E^{-1}\) and \(\tau_E\)~is a rotation, and similarly for~\(\tau_F\).
+\end{proof}
+\begin{rmk}
+The proofs of the other parts of this problem in the book are similar.
+\end{rmk}
+
+\begin{exer}[3]
+Let \(E\)~be a real vector space with \(\dim E=n\) and \(\varphi,\psi:E\to E\) be regular transformations.
+\begin{enumerate}
+\item[(a)] If \(n\)~is even, then \(\varphi\tprod\psi\) preserves orientation.
+\item[(b)] If \(n\)~is odd, then \(\varphi\tprod\psi\) preserves orientation if and only if \(\varphi\) and~\(\psi\) either both preserve orientation or both reverse orientation.
+\end{enumerate}
+\end{exer}
+\begin{proof}
+This follows from \(\det(\varphi\tprod\psi)=(\det\varphi\mult\det\psi)^n\).\footnote{See problem~1.19.2.}
+\end{proof}
+
 % References
 \newpage
 \begin{thebibliography}{0}
