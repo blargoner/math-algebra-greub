@@ -228,6 +228,10 @@ The definition of dual space is fundamentally \emph{symmetrical} between \(E\) a
 \end{rmk}
 
 \begin{rmk}
+The results in subsection~2.23 show that quotient spaces are dual to subspaces.
+\end{rmk}
+
+\begin{rmk}
 If \(E,E^*\) and \(F,F^*\) are pairs of dual spaces and \(\varphi:E\to F\) is linear, then \(\varphi^*:E^*\from F^*\) is dual to~\(\varphi\) if and only if the following diagram commutes:
 \begin{diagram}
 F^*\times E&\rTo^{\varphi^*\times\iota_E}&E^*\times E\\
@@ -248,6 +252,24 @@ In the corollary to Proposition~V, for \(f\in L(E)\) let \(f_k=f\after i_k\after
 
 \begin{rmk}
 For \(\varphi:E\to F\) a linear map, let \(L(\varphi):L(E)\from L(F)\) be the dual map given by \(L(\varphi)(f)=f\after\varphi\) (2.50). Then \(L\)~linearly embeds \(L(E;F)\) in \(L(L(F);L(E))\), by (2.43) and~(2.44). Also, \(L(\psi\after\varphi)=L(\varphi)\after L(\psi)\) and \(L(\iota_{E})=\iota_{L(E)}\). This shows that \(L\)~is a contravariant functor in the category of vector spaces. This functor preserves exactness of sequences (see~2.29), and finite direct sums, which are just (co)products in the category (see~2.30), among other things.
+\end{rmk}
+
+\begin{exer}[10]
+If \(\varphi:E\to F\) is a linear map with restriction \(\varphi_1:E_1\to F_1\) and dual map \(\varphi^*:E^*\from F^*\), then \(\varphi^*\)~can be restricted to \(\oc{F_1},\oc{E_1}\) and the induced map \(\proj{\varphi^*}:E^*/\oc{E_1}\from F^*/\oc{F_1}\) is dual to~\(\varphi_1\).
+\end{exer}
+\begin{proof}
+If \(y^*\in\oc{F_1}\) and \(x\in E_1\), then
+\[\sprod{\varphi^*y^*}{x}=\sprod{y^*}{\varphi x}=0\]
+so \(\varphi^*\)~maps \(\oc{F_1}\) into~\(\oc{E_1}\). We know that the pairs \(E_1,E^*/\oc{E_1}\) and \(F_1,F^*/\oc{F_1}\) are dual under the induced scalar products. For \(\proj{y^*}\in F^*/\oc{F_1}\) and \(x\in E_1\),
+\begin{align*}
+\sprod{\proj{\varphi^*}\ \proj{y^*}}{x}&=\sprod{\proj{\varphi^* y^*}}{x}\\
+	&=\sprod{\varphi^* y^*}{x}\\
+	&=\sprod{y^*}{\varphi_1 x}\\
+	&=\sprod{\proj{y^*}}{\varphi_1 x}\qedhere
+\end{align*}
+\end{proof}
+\begin{rmk}
+This result shows that quotient maps are dual to restriction maps. The examples in subsections 2.24 and~2.27 are special cases.
 \end{rmk}
 
 \subsection*{\S~6}
