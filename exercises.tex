@@ -1567,16 +1567,16 @@ If \(E,F\ne 0\) are Euclidean spaces with \(\varphi:E\to E\) and \(\psi:F\to F\)
 \begin{proof}
 If \(\varphi=\lambda\tau_E\) and \(\psi=\lambda^{-1}\tau_F\), then \(\varphi\tprod\psi=\tau_E\tprod\tau_F\), and
 \begin{align*}
-(\tau_E\tprod\tau_F)^*\after(\tau_E\tprod\tau_F)&=(\tau_E^*\tprod\tau_F^*)\after(\tau_E\tprod\tau_F)\\
-	&=(\tau_E^*\after\tau_E)\tprod(\tau_F^*\after\tau_F)\\
+\adj{\tau_E\tprod\tau_F}\after(\tau_E\tprod\tau_F)&=(\adj{\tau_E}\tprod\adj{\tau_F})\after(\tau_E\tprod\tau_F)\\
+	&=(\adj{\tau_E}\after\tau_E)\tprod(\adj{\tau_F}\after\tau_F)\\
 	&=\iota_E\tprod\iota_F\\
 	&=\iota_{E\tprod F}
 \end{align*}
-so \((\varphi\tprod\psi)^*=(\varphi\tprod\psi)^{-1}\) and \(\varphi\tprod\psi\)~is a rotation.
+so \(\adj{\varphi\tprod\psi}=(\varphi\tprod\psi)^{-1}\) and \(\varphi\tprod\psi\)~is a rotation.
 
 Conversely if \(\varphi\tprod\psi\)~is a rotation, then
-\[\varphi^*\tprod\psi^*=(\varphi\tprod\psi)^*=(\varphi\tprod\psi)^{-1}=\varphi^{-1}\tprod\psi^{-1}\]
-It follows that \(\varphi^*=\mu\varphi^{-1}\) and \(\psi^*=\mu^{-1}\psi^{-1}\) for some \(\mu\ne 0\).\footnote{See problem~1.8.4.} We may assume \(\mu>0\) (otherwise consider \(-\varphi\) and~\(-\psi\)). Set \(\lambda=\sqrt{\mu}>0\) and define \(\tau_E=\lambda^{-1}\varphi\) and \(\tau_F=\lambda\psi\). Then \(\tau_E^*\after\tau_E=\iota_E\), so \(\tau_E^*=\tau_E^{-1}\) and \(\tau_E\)~is a rotation, and similarly for~\(\tau_F\).
+\[\adj{\varphi}\tprod\adj{\psi}=\adj{\varphi\tprod\psi}=(\varphi\tprod\psi)^{-1}=\varphi^{-1}\tprod\psi^{-1}\]
+It follows that \(\adj{\varphi}=\mu\varphi^{-1}\) and \(\adj{\psi}=\mu^{-1}\psi^{-1}\) for some \(\mu\ne 0\).\footnote{See problem~1.8.4.} We may assume \(\mu>0\) (otherwise consider \(-\varphi\) and~\(-\psi\)). Set \(\lambda=\sqrt{\mu}>0\) and define \(\tau_E=\lambda^{-1}\varphi\) and \(\tau_F=\lambda\psi\). Then \(\adj{\tau_E}\after\tau_E=\iota_E\), so \(\adj{\tau_E}=\tau_E^{-1}\) and \(\tau_E\)~is a rotation, and similarly for~\(\tau_F\).
 \end{proof}
 \begin{rmk}
 The proofs of the other parts of this problem in the book are similar.
