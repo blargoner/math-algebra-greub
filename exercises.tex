@@ -1251,7 +1251,17 @@ Every object \(E\times F\to G\) in this category can be obtained from the tensor
 
 \subsection*{\S~5}
 \begin{rmk}
-Lemma~1.5.1 generalizes the consequence of linear independence to tensor products other than scalar multiplication; Lemma~1.5.2 generalizes the existence and uniqueness of a representation relative to a basis.
+Lemma~1.5.1 generalizes the consequence of linear independence to tensor products other than scalar multiplication.
+
+We provide an alternative proof. For a linear function \(g\in L(F)\), consider the bilinear map \(E\times F\to E\) defined by \((x,y)\mapsto g(y)x\). By the universal property of the tensor product, there is a linear map \(h:E\tprod F\to E\) with \(h(x\tprod y)=g(y)x\). Now
+\[0=h(\sum a_i\tprod b_i)=\sum h(a_i\tprod b_i)=\sum g(b_i)a_i\]
+By linear independence of the~\(a_i\), it follows that \(g(b_i)=0\) for all~\(i\). Since \(g\)~was arbitrary, it follows that \(b_i=0\) for all~\(i\).
+
+Note \(h=\iota\tprod g:E\tprod F\to E\tprod\Gamma\) (see \S~16).
+\end{rmk}
+
+\begin{rmk}
+Lemma~1.5.2 generalizes the existence and uniqueness of a representation relative to a basis.
 \end{rmk}
 
 \subsection*{\S~8}
