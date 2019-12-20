@@ -1277,9 +1277,9 @@ If \(S\) and~\(T\) are sets, then \(C(S\times T)\iso C(S)\tprod C(T)\).
 \begin{proof}
 By the universal property of the free space, there is a unique linear map \(\varphi:C(S\times T)\to C(S)\tprod C(T)\) with \(\varphi(s,t)=s\tprod t\) for \(s\in S\) and \(t\in T\):
 \begin{diagram}[nohug]
-S\times T	&\rTo^{(s,t)\mapsto s\tprod t}	&C(S)\tprod C(T)\\
-\dTo<i		&\ruTo>{\varphi}				&\\
-C(S\times T)&								&
+S\times T	&\rTo^{\tprod}		&C(S)\tprod C(T)\\
+\dTo<i		&\ruTo>{\varphi}	&\\
+C(S\times T)&					&
 \end{diagram}
 Observe that \(\varphi\)~is injective since
 \[0=\varphi\bigl(\,\sum_i\lambda_i(s_i,t_i)\bigr)=\sum_i\lambda_i\,s_i\tprod t_i\]
