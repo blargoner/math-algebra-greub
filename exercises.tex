@@ -20,6 +20,7 @@
 \newcommand{\sect}{\cap}
 \newcommand{\after}{\circ}
 \newcommand{\dsum}{\oplus}
+\newcommand{\bigdsum}{\bigoplus}
 \newcommand{\mult}{\cdot}
 \newcommand{\cross}{\times}
 \newcommand{\grad}{\nabla}
@@ -1308,9 +1309,16 @@ To obtain the tensor product of \(E/E_1\) and~\(F/F_1\), just take the tensor pr
 
 \subsection*{\S~11}
 \begin{rmk}
-The tensor product operation is bilinear on \emph{spaces}:\footnote{Here the sums are assumed to be direct.}
-\[\bigl(\,\sum_{\alpha}E_{\alpha}\bigr)\tprod\bigl(\,\sum_{\beta}F_{\beta}\bigr)=\sum_{\alpha,\beta}E_{\alpha}\tprod F_{\beta}\]
+The tensor product operation is bilinear on \emph{spaces}:
+\[\bigl(\bigdsum_{\alpha}E_{\alpha}\bigr)\tprod\bigl(\bigdsum_{\beta}F_{\beta}\bigr)=\bigdsum_{\alpha,\beta}E_{\alpha}\tprod F_{\beta}\]
 In particular, \(E\tprod 0=0=0\tprod E\).
+\end{rmk}
+
+\subsection*{\S~12}
+\begin{rmk}
+In the proof of~(1.2), the idea is that \(E\iso\bigdsum_{\alpha}E_{\alpha}\) and \(F\iso\bigdsum_{\beta}F_{\beta}\), so
+\[E\tprod F\iso\bigl(\bigdsum_{\alpha}E_{\alpha}\bigr)\tprod\bigl(\bigdsum_{\beta}F_{\beta}\bigr)=\bigdsum_{\alpha,\beta}E_{\alpha}\tprod F_{\beta}\]
+by the result for external direct sums in the previous section. Note that \(h=f\tprod g\) (see \S~16).
 \end{rmk}
 
 \subsection*{\S~15}
