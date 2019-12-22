@@ -1367,6 +1367,10 @@ This result allows us to view an element \(\sum x_i\tprod y_i\) of the tensor pr
 The tensor product operation is a bifunctor in the category of vector spaces. It maps the objects \(E\) and~\(F\) to the object \(E\tprod F\) and the arrows \(\varphi:E\to E'\) and \(\psi:F\to F'\) to the arrow \(\varphi\tprod\psi:E\tprod F\to E'\tprod F'\).
 \end{rmk}
 
+\begin{rmk}
+Corollary~III to Proposition~1.16.1 is not established in section~1.27, where it is also assumed that \(E'\) and~\(F'\) are finite-dimensional. However, it is true. In fact, for fixed bases in \(E,E',F,F'\), the tensor products of the induced basis maps in \(L(E;E')\) and \(L(F;F')\) are the basis maps in \(L(E\tprod F,E'\tprod F')\) induced by the tensor products of the basis vectors.\footnote{See problem~1.19.4.}
+\end{rmk}
+
 \subsection*{\S~19}
 \begin{rmk}
 The proof of~(1.12) is captured in the following diagram:
@@ -1430,6 +1434,18 @@ where \(\beta^*\)~is the transpose of~\(\beta\). Therefore by the previous exerc
 and
 \[\det\Phi=\det(\beta^*\tprod\alpha)=(\det\beta^*)^n(\det\alpha)^n=\det(\alpha\after\beta)^n\qedhere\]
 \end{proof}
+\begin{rmk}
+It is more natural to do this problem using the composition algebra (see \S~26). Indeed, writing \(\alpha=a^*\tprod b\), \(\beta=c^*\tprod d\), and \(\sigma=x^*\tprod y\), we have
+\begin{align*}
+\alpha\after\sigma\after\beta&=(a^*\tprod b)\after(x^*\tprod y)\after(c^*\tprod d)\\
+	&=(a^*\tprod b)\after\bigl(\sprod{x^*}{d}(c^*\tprod y)\bigr)\\
+	&=\sprod{x^*}{d}\sprod{a^*}{y}(c^*\tprod b)\\
+	&=\bigl(\sprod{x^*}{d}c^*\bigr)\tprod\bigl(\sprod{a^*}{y}b\bigr)\\
+	&=\beta^*x^*\tprod\alpha y\\
+	&=(\beta^*\tprod\alpha)\sigma
+\end{align*}
+so \(\Phi=\beta^*\tprod\alpha\). Here \(\beta^*=d\tprod c^*\).\footnote{See problem~1.29.1.} Alternately, we could use the isomorphism~\(\Omega\) from Proposition~1.29.1.
+\end{rmk}
 
 \subsection*{\S~20}
 \begin{rmk}
