@@ -1492,6 +1492,18 @@ for all \(\nu_1,\ldots,\nu_p\). But \(a^1_{\nu_1}\tprod\cdots\tprod a^{p-1}_{\nu
 If the vectors~\(a^i_{\nu}\) span~\(E_i\) (\(i=1,\ldots,p\)), then clearly their tensor products span \(\tprods{E}{1}{p}\). It follows that if the vectors~\(a^i_{\nu}\) form a basis of~\(E_i\) (\(i=1,\ldots,p\)), then their tensor products form a basis of \(\tprods{E}{1}{p}\).
 \end{rmk}
 
+\begin{rmk}
+To see that for \(\varphi_i:E_i\to F_i\) the map \((\varphi_1,\ldots,\varphi_p)\mapsto\tprods{\varphi}{1}{p}\) induces an injection
+\[L(E_1;F_1)\tprod\cdots\tprod L(E_p;F_p)\to L(\tprods{E}{1}{p};\tprods{F}{1}{p})\]
+proceed by induction on \(p\ge 2\). For \(p=2\), this is just Proposition~1.16.1. For \(p>2\), if we make the appropriate identifications we have
+\begin{align*}
+L(E_1;F_1)\tprod\cdots\tprod L(E_p;F_p)&=\bigl(L(E_1;F_1)\tprod\cdots\tprod L(E_{p-1};F_{p-1})\bigr)\tprod L(E_p;F_p)\\
+	&\subseteq L(\tprods{E}{1}{p-1};\tprods{F}{1}{p-1})\tprod L(E_p;F_p)\\
+	&\subseteq L((\tprods{E}{1}{p-1})\tprod E_p;(\tprods{F}{1}{p-1})\tprod F_p)\\
+	&=L(\tprods{E}{1}{p};\tprods{F}{1}{p})
+\end{align*}
+\end{rmk}
+
 \begin{exer}[1]
 In \(\tprods{E}{1}{p}\):
 \begin{enumerate}
