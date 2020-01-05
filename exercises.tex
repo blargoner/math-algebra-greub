@@ -1661,6 +1661,31 @@ Let \(E\)~be a real vector space with \(\dim E=n\) and \(\varphi,\psi:E\to E\) b
 This follows from \(\det(\varphi\tprod\psi)=(\det\varphi\mult\det\psi)^n\).\footnote{See problem~1.19.2.}
 \end{proof}
 
+\section*{Chapter~2}
+\subsection*{\S~2}
+\begin{rmk}
+If \(A\) and~\(B\) are algebras and \(A\tprod B\) denotes the tensor product of the underlying \emph{vector spaces}, define \(\varphi:A\times B\times A\times B\to A\tprod B\) by
+\[\varphi(x_1,y_1,x_2,y_2)=x_1x_2\tprod y_1y_2\]
+Then \(\varphi\)~is multilinear, so it induces a linear map \(f:(A\tprod B)\tprod(A\tprod B)\to A\tprod B\) satisfying
+\[f((x_1\tprod y_1)\tprod(x_2\tprod y_2))=x_1x_2\tprod y_1y_2\]
+Now the bilinear map \(f\after\tprod\) makes \(A\tprod B\) into an algebra with
+\[(x_1\tprod y_1)(x_2\tprod y_2)=x_1x_2\tprod y_1y_2\]
+This construction avoids the use of structure maps.
+\end{rmk}
+
+\subsection*{\S~3}
+\begin{rmk}
+If \(\varphi_1:A_1\to B_1\) and \(\varphi_2:A_2\to B_2\) are algebra homomorphisms and \(\varphi=\varphi_1\tprod\varphi_2\) is the tensor product of the underlying \emph{linear maps}, then
+\begin{align*}
+\varphi((x_1\tprod x_2)(y_1\tprod y_2))&=\varphi(x_1y_1\tprod x_2y_2)\\
+	&=\varphi_1(x_1y_1)\tprod\varphi_2(x_2y_2)\\
+	&=(\varphi_1x_1\varphi_1y_1)\tprod(\varphi_2x_2\varphi_2y_2)\\
+	&=(\varphi_1x_1\tprod\varphi_2 x_2)(\varphi_1y_1\tprod\varphi_2 y_2)\\
+	&=\varphi(x_1\tprod x_2)\varphi(y_1\tprod y_2)
+\end{align*}
+Since \(\varphi\)~is linear, it follows that \(\varphi\)~is an algebra homomorphism. This proof avoids the use of structure maps.
+\end{rmk}
+
 % References
 \newpage
 \begin{thebibliography}{0}
