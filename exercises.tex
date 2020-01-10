@@ -1686,6 +1686,24 @@ If \(\varphi_1:A_1\to B_1\) and \(\varphi_2:A_2\to B_2\) are algebra homomorphis
 Since \(\varphi\)~is linear, it follows that \(\varphi\)~is an algebra homomorphism. This proof avoids the use of structure maps.
 \end{rmk}
 
+\section*{Chapter~3}
+\subsection*{\S~7}
+\begin{exer}[1]
+If \(u_1=a_1\tprod b_1\ne 0\) and \(u_2=a_2\tprod b_2\) are decomposable tensors, then \(u_1+u_2\) is decomposable if and only if \(a_2=\lambda a_1\) or \(b_2=\mu b_1\) for some \(\lambda,\mu\in\Gamma\).
+\end{exer}
+\begin{proof}
+If \(u_1+u_2\) is decomposable, then
+\[a_1\tprod b_1+a_2\tprod b_2=a_3\tprod b_3\]
+for some \(a_3,b_3\). Assume that \(a_1,a_2\) are linearly independent. If \(a_1,a_2,a_3\) are linearly independent, then \(b_1=b_2=b_3=0\) (1.5.1), contradicting that \(b_1\ne 0\). It follows that \(a_3=\lambda_1 a_1+\lambda_2 a_2\) for some \(\lambda_1,\lambda_2\in\Gamma\), so
+\[a_1\tprod(b_1-\lambda_1 b_3)+a_2\tprod(b_2-\lambda_2 b_3)=0\]
+Since \(a_1,a_2\) are linearly independent, it follows that \(b_1=\lambda_1 b_3\) and \(b_2=\lambda_2 b_3\), so \(b_1,b_2\) are linearly dependent as desired.
+
+The reverse direction follows from bilinearity of the tensor product.
+\end{proof}
+\begin{rmk}
+The forward direction of this problem is essentially a special case of the second part of problem~1.15.1.
+\end{rmk}
+
 % References
 \newpage
 \begin{thebibliography}{0}
