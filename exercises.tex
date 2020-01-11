@@ -17,6 +17,7 @@
 \DeclareMathOperator{\cof}{cof}
 \DeclareMathOperator{\tr}{tr}
 
+\newcommand{\union}{\cup}
 \newcommand{\sect}{\cap}
 \newcommand{\after}{\circ}
 \newcommand{\dsum}{\oplus}
@@ -1328,6 +1329,34 @@ By~(1.7), \emph{the intersection of tensor products is the tensor product of the
 In the proof of~(1.4), \(u_{\beta}=v_{\beta}\) follows immediately from Lemma~1.5.2. In the proof of~(1.5), if \(z\in(E_1\tprod F)\sect(E\tprod F_1)\), then in particular \(z=x+y\) with \(x\in E_1\tprod F_1\) and \(y\in E_1\tprod F'\). Now \(y=z-x\in E\tprod F_1\), so
 \[y\in(E\tprod F_1)\sect(E\tprod F')=E\tprod(F_1\sect F')=E\tprod 0=0\]
 by~(1.4). Hence \(y=0\) and \(z=x\in E_1\tprod F_1\). Note that this argument makes~(1.6) superfluous.
+\end{rmk}
+
+\begin{rmk}
+If \(\sum_{i=1}^r x_i\tprod y_i=\sum_{j=1}^s x_j'\tprod y_j'\) and the~\(x_i\) are linearly independent, then the~\(y_i\) are in the span of the~\(y_j'\).
+\end{rmk}
+\begin{proof}
+By induction on~\(s\). If the vectors in \(\{x_i\}\union\{x_j'\}\) are linearly independent, then \(y_i=0\) for all~\(i\) (1.5.1), so the result holds trivially. Otherwise, since the~\(x_i\) are linearly independent, we may assume (relabeling if necessary) that
+\[x_s=\sum_{i=1}^r\lambda_i x_i+\sum_{j=1}^{s-1}\mu_j x_j'\qquad(\lambda_i,\mu_j\in\Gamma)\]
+By bilinearity of the tensor product, it follows that
+\[\sum_{i=1}^r x_i\tprod(y_i-\lambda_i y_s')=\sum_{j=1}^{s-1}x_j'\tprod(y_j'+\mu_j y_s')\]
+By induction, the \(y_i-\lambda_iy_s'\) are in the span of the \(y_j'+\mu_jy_s'\), so the~\(y_i\) are in the span of the~\(y_j'\).
+\end{proof}
+
+\begin{rmk}
+If \(\sum_{i=1}^r x_i\tprod y_i=\sum_{j=1}^s x_j'\tprod y_j'\) and the \(x_i\) and~\(y_i\) are respectively linearly independent, then \(r\le s\).
+\end{rmk}
+\begin{proof}
+By the previous remark and the elementary fact that the size of a linearly independent set is at most the size of a spanning set in a subspace.
+\end{proof}
+
+\begin{exer}[1]
+If \(\sum_{i=1}^r x_i\tprod y_i=\sum_{j=1}^s x_j'\tprod y_j'\) and the \(x_i\), \(y_i\), \(x_j'\), and \(y_j'\) are each respectively linearly independent, then \(r=s\).
+\end{exer}
+\begin{proof}
+By the previous remark, \(r\le s\) and \(s\le r\).
+\end{proof}
+\begin{rmk}
+It follows from this result and the proof of Lemma~1.5.3 that the tensor representations of minimal length are precisely the representations by linearly independent vectors. These representations are \emph{not} unique, as already seen in problem~1.8.4.
 \end{rmk}
 
 \begin{exer}[2]
