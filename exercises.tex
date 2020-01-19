@@ -1716,6 +1716,22 @@ Since \(\varphi\)~is linear, it follows that \(\varphi\)~is an algebra homomorph
 \end{rmk}
 
 \section*{Chapter~3}
+\subsection*{\S~3}
+\begin{rmk}
+The tensor algebra~\(\bigtprod E\) is a universal (initial) object in the category of ``associative unital algebras with linear maps of~\(E\) into them''. In this category, the objects are linear maps \(E\to A\), for associative unital algebras~\(A\), and the arrows are algebra homomorphisms \(A\to B\) which preserve the identity and respect the linear maps from~\(E\):
+\begin{diagram}
+E&\rTo&B\\
+\dTo&\ruTo&\\
+A&&
+\end{diagram}
+Every object in this category can be obtained from the tensor algebra~\(\bigtprod E\) in a unique way. This is why \(\bigtprod E\)~is said to satisfy the ``universal property''. This is only possible because the elements of~\(\bigtprod E\) satisfy only those properties that are required to make~\(\bigtprod E\) into an associative unital algebra containing~\(E\). By category theoretic abstract nonsense, \(\bigtprod E\)~is unique up to isomorphism (\S~4).
+\end{rmk}
+
+\subsection*{\S~5}
+\begin{rmk}
+We have a functor from the category of vector spaces into the category of associative unital algebras, which sends vector spaces \(E\) and~\(F\) to the tensor algebras \(\bigtprod E\) and~\(\bigtprod F\), and which sends a linear map \(\varphi:E\to F\) to the algebra homomorphism \(\varphi_{\tprod}:\bigtprod E\to\bigtprod F\).
+\end{rmk}
+
 \subsection*{\S~7}
 \begin{exer}[1]
 If \(u_1=a_1\tprod b_1\ne 0\) and \(u_2=a_2\tprod b_2\) are decomposable tensors, then \(u_1+u_2\) is decomposable if and only if \(a_2=\lambda a_1\) or \(b_2=\mu b_1\) for some \(\lambda,\mu\in\Gamma\).
