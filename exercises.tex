@@ -27,6 +27,7 @@
 \newcommand{\grad}{\nabla}
 \newcommand{\tprod}{\otimes}
 \newcommand{\bigtprod}{\bigotimes}
+\newcommand{\medtprod}{{\textstyle\bigtprod}}
 
 \newcommand{\delete}{\widehat}
 \newcommand{\gen}[1]{\langle#1\rangle}
@@ -1271,7 +1272,7 @@ Lemma~1.5.2 generalizes the existence and uniqueness of a representation relativ
 \begin{rmk}
 In the proof of Proposition~1.8.1, note that if \(f\)~is injective, it has a left inverse \(g:G\to E\tprod F\) with \(g\after f=\iota\). If \(\psi:E\times F\to K\) is bilinear, there is a linear map \(h:E\tprod F\to K\) with
 \[\psi=h\after\tprod=h\after\iota\after\tprod=h\after g\after f\after\tprod=h\after g\after\varphi\]
-So \(\psi\)~factors through~\(\varphi\). Since \(\psi\)~was arbitrary, \(\varphi\)~satisfies \(\bigtprod_2\).
+So \(\psi\)~factors through~\(\varphi\). Since \(\psi\)~was arbitrary, \(\varphi\)~satisfies \(\medtprod_2\).
 \end{rmk}
 
 \begin{exer}[3]
@@ -1361,10 +1362,10 @@ It follows from this result and the proof of Lemma~1.5.3 that the tensor represe
 \end{rmk}
 
 \begin{exer}[2]
-A bilinear mapping \(\varphi:E\times F\to G\) satisfies~\(\bigtprod_2\) if and only if the vectors~\(\varphi(x_{\alpha},y_{\beta})\) are linearly independent whenever the vectors \(x_{\alpha}\in E\) and \(y_{\beta}\in F\) are linearly independent.
+A bilinear mapping \(\varphi:E\times F\to G\) satisfies~\(\medtprod_2\) if and only if the vectors~\(\varphi(x_{\alpha},y_{\beta})\) are linearly independent whenever the vectors \(x_{\alpha}\in E\) and \(y_{\beta}\in F\) are linearly independent.
 \end{exer}
 \begin{proof}
-If \(f:E\tprod F\to G\) is the induced linear map with \(\varphi=f\after\tprod\), then \(\varphi\)~satisfies \(\bigtprod_2\) if and only if \(f\)~is injective (1.8.1)---that is, if and only if \(f\)~preserves linear independence. But \(f\)~preserves linear independence if and only if \(\varphi\)~does, since \(\tprod\)~does (1.5.1).
+If \(f:E\tprod F\to G\) is the induced linear map with \(\varphi=f\after\tprod\), then \(\varphi\)~satisfies \(\medtprod_2\) if and only if \(f\)~is injective (1.8.1)---that is, if and only if \(f\)~preserves linear independence. But \(f\)~preserves linear independence if and only if \(\varphi\)~does, since \(\tprod\)~does (1.5.1).
 \end{proof}
 
 \begin{exer}[3]
@@ -1384,9 +1385,9 @@ Let \(x_1,\ldots,x_n\) be a basis in~\(E\) with dual basis \(x^{*1},\ldots,x^{*n
 \[\varphi^{*kl}(x^{*i},y^{*j})=\delta^k_i\delta^l_j\]
 Then
 \[\beta_{x_k,y_l}(x^{*i},y^{*j})=\sprod{x^{*i}}{x_k}\sprod{y^{*j}}{y_l}=\delta^k_i\delta^l_j=\varphi^{*kl}(x^{*i},y^{*j})\]
-so \(\beta_{x_k,y_l}=\varphi^{*kl}\). It follows that \(\im\beta=B(E^*,F^*)\), so \(\beta\)~satisfies~\(\bigtprod_1\).
+so \(\beta_{x_k,y_l}=\varphi^{*kl}\). It follows that \(\im\beta=B(E^*,F^*)\), so \(\beta\)~satisfies~\(\medtprod_1\).
 
-If \(\varphi:E\times F\to G\) is bilinear, define \(f:B(E^*,F^*)\to G\) by \(f(\varphi^{*kl})=\varphi(x_k,y_l)\). Then \(\varphi(x_k,y_l)=f(\beta_{x_k,y_l})\), so \(\varphi=f\beta\). It follows that \(\beta\)~satisfies \(\bigtprod_2\).
+If \(\varphi:E\times F\to G\) is bilinear, define \(f:B(E^*,F^*)\to G\) by \(f(\varphi^{*kl})=\varphi(x_k,y_l)\). Then \(\varphi(x_k,y_l)=f(\beta_{x_k,y_l})\), so \(\varphi=f\beta\). It follows that \(\beta\)~satisfies \(\medtprod_2\).
 \end{proof}
 \begin{rmk}
 This result allows us to view an element \(\sum x_i\tprod y_i\) of the tensor product as a bilinear function: given linear scalar substitutions \(x_i\to\lambda_i\) and \(y_i\to\mu_i\) as inputs, it produces the scalar \(\sum\lambda_i\mu_i\) as output. This is analogous to viewing a vector as a linear function. Indeed, if we identify~\(x\) with~\(\sprod{-}{x}\) and \(y\) with~\(\sprod{-}{y}\), then we can identify \(x\tprod y\) with \(\sprod{-}{x}\sprod{-}{y}\).
@@ -1479,7 +1480,7 @@ so \(\Phi=\beta^*\tprod\alpha\). Here \(\beta^*=d\tprod c^*\).\footnote{See prob
 
 \subsection*{\S~20}
 \begin{rmk}
-A \emph{linear} map is universal if and only if it is an isomorphism. In fact, it satisfies~\(\bigtprod_1\) if and only if it is surjective, and it satisfies~\(\bigtprod_2\) if and only if it is injective (has a left inverse). In this sense, a tensor product map is a multilinear analogue of an isomorphism.
+A \emph{linear} map is universal if and only if it is an isomorphism. In fact, it satisfies~\(\medtprod_1\) if and only if it is surjective, and it satisfies~\(\medtprod_2\) if and only if it is injective (has a left inverse). In this sense, a tensor product map is a multilinear analogue of an isomorphism.
 \end{rmk}
 
 \begin{rmk}
@@ -1603,7 +1604,7 @@ L(E,E';E'')\tprod L(F,F';F'')				&\rTo^g			&L(E\tprod F,E'\tprod F';E''\tprod F'
 \uTo<{\tprod}								&\ruTo>{\gamma}	&\\
 L(E,E';E'')\times L(F,F';F'')				&				&
 \end{diagram}
-Note \(g\)~is injective since \(f\)~is injective (1.16.1), so \(\gamma\)~satisfies \(\bigtprod_2\) (1.8.1). Since \(\gamma\)~also satisfies~\(\bigtprod_1\), it follows that \(\gamma\)~is the tensor product.
+Note \(g\)~is injective since \(f\)~is injective (1.16.1), so \(\gamma\)~satisfies \(\medtprod_2\) (1.8.1). Since \(\gamma\)~also satisfies~\(\medtprod_1\), it follows that \(\gamma\)~is the tensor product.
 \end{proof}
 
 \begin{exer}[2]
@@ -1726,25 +1727,25 @@ Since \(\varphi\)~is linear, it follows that \(\varphi\)~is an algebra homomorph
 \section*{Chapter~3}
 \subsection*{\S~3}
 \begin{rmk}
-The tensor algebra~\(\bigtprod E\) is a universal (initial) object in the category of ``associative unital algebras with linear maps of~\(E\) into them''. In this category, the objects are linear maps \(E\to A\), for associative unital algebras~\(A\), and the arrows are algebra homomorphisms \(A\to B\) which preserve the identity and respect the linear maps from~\(E\):
+The tensor algebra~\(\medtprod E\) is a universal (initial) object in the category of ``associative unital algebras with linear maps of~\(E\) into them''. In this category, the objects are linear maps \(E\to A\), for associative unital algebras~\(A\), and the arrows are algebra homomorphisms \(A\to B\) which preserve the identity and respect the linear maps from~\(E\):
 \begin{diagram}
 E&\rTo&B\\
 \dTo&\ruTo&\\
 A&&
 \end{diagram}
-Every object in this category can be obtained from the tensor algebra~\(\bigtprod E\) in a unique way. This is why \(\bigtprod E\)~is said to satisfy the ``universal property''. This is only possible because the elements of~\(\bigtprod E\) satisfy only those properties that are required to make~\(\bigtprod E\) into an associative unital algebra containing~\(E\). By category theoretic abstract nonsense, \(\bigtprod E\)~is unique up to isomorphism (\S~4).
+Every object in this category can be obtained from the tensor algebra~\(\medtprod E\) in a unique way. This is why \(\medtprod E\)~is said to satisfy the ``universal property''. This is only possible because the elements of~\(\medtprod E\) satisfy only those properties that are required to make~\(\medtprod E\) into an associative unital algebra containing~\(E\). By category theoretic abstract nonsense, \(\medtprod E\)~is unique up to isomorphism (\S~4).
 \end{rmk}
 
 \subsection*{\S~5}
 \begin{rmk}
-We have a functor from the category of vector spaces into the category of associative unital algebras, which sends vector spaces \(E\) and~\(F\) to the tensor algebras \(\bigtprod E\) and~\(\bigtprod F\), and which sends a linear map \(\varphi:E\to F\) to the algebra homomorphism \(\varphi_{\tprod}:\bigtprod E\to\bigtprod F\).
+We have a functor from the category of vector spaces into the category of associative unital algebras, which sends vector spaces \(E\) and~\(F\) to the tensor algebras \(\medtprod E\) and~\(\medtprod F\), and which sends a linear map \(\varphi:E\to F\) to the algebra homomorphism \(\varphi_{\tprod}:\medtprod E\to\medtprod F\).
 \end{rmk}
 
 \subsection*{\S~6}
 \begin{rmk}
 There is a connection between the derivation and the trace of a linear transformation. If \(E\)~is an \(n\)-dimensional vector space and \(\varphi:E\to E\) is linear, let \(\Delta:E^n\to\Gamma\) be a nonzero determinant function in~\(E\). Recall
 \[\tr\varphi\mult\Delta(x_1,\ldots,x_n)=\sum_{i=1}^n\Delta(x_1,\ldots,\varphi x_i,\ldots,x_n)\]
-By the universal property of the tensor product~\(\bigtprod^n E\), there is an induced linear function \(d:\bigtprod^n E\to\Gamma\) with \(d(x_1\tprod\cdots\tprod x_n)=\Delta(x_1,\ldots,x_n)\).
+By the universal property of the tensor product~\(\medtprod^n E\), there is an induced linear function \(d:\medtprod^n E\to\Gamma\) with \(d(x_1\tprod\cdots\tprod x_n)=\Delta(x_1,\ldots,x_n)\).
 Now
 \begin{align*}
 \tr\varphi\mult d(x_1\tprod\cdots\tprod x_n)&=\sum_{i=1}^n d(x_1\tprod\cdots\tprod\varphi x_i\tprod\cdots\tprod x_n)\\
