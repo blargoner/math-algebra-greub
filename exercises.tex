@@ -1644,7 +1644,15 @@ so \((\varphi\tprod\varphi^*)^*=\varphi\tprod\varphi^*\).
 \textbf{In this section, all vector spaces are finite-dimensional.}
 
 \begin{rmk}
-By~(1.30), if we view \(a^*\tprod a\) as a linear transformation, then its trace is just \(\sprod{a^*}{a}\). This gives a natural (coordinate-free) definition of the trace.
+By~(1.30), if we view \(a^*\tprod a\) as a linear transformation, then its trace is just \(\sprod{a^*}{a}\). This gives a natural (coordinate-free) definition of the trace. This also gives a slick proof that \(\tr(\varphi\tprod\psi)=\tr\varphi\mult\tr\psi\). Indeed, if we write \(\varphi=a^*\tprod a\) and \(\psi=b^*\tprod b\), then we can write \(\varphi\tprod\psi=(a^*\tprod b^*)\tprod(a\tprod b)\) since
+\begin{align*}
+(\varphi\tprod\psi)(x\tprod y)&=\varphi x\tprod\psi y\\
+	&=(\sprod{a^*}{x}a)\tprod(\sprod{b^*}{y}b)\\
+	&=\sprod{a^*}{x}\sprod{b^*}{y}(a\tprod b)\\
+	&=\sprod{a^*\tprod b^*}{x\tprod y}(a\tprod b)
+\end{align*}
+Therefore
+\[\tr(\varphi\tprod\psi)=\sprod{a^*\tprod b^*}{a\tprod b}=\sprod{a^*}{a}\sprod{b^*}{b}=\tr\varphi\mult\tr\psi\]
 \end{rmk}
 
 \subsection*{\S~29}
