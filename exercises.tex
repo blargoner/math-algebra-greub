@@ -1798,6 +1798,26 @@ An element of this algebra is a finite sum of decomposable homogeneous mixed ten
 is a (2,2)-tensor.
 \end{rmk}
 
+\subsection*{\S~14}
+\begin{rmk}
+The mapping \(T:GL(E)\to GL(\medtprod^p_q(E^*,E))\) given by \(\alpha\mapsto T_{\alpha}\) is a group homomorphism. The map~\(T_{\alpha}\) is tensorial if \(\alpha\)~is in the center of~\(GL(E)\).
+\end{rmk}
+
+\begin{rmk}
+We have \(T_{\alpha}^*=T_{\alpha^{-1}}\). Indeed, since \((\alpha^{\tprod})^{-1}=(\alpha^{-1})^{\tprod}\),
+\begin{align*}
+\sprod{y^*\tprod y}{T_{\alpha}(x^*\tprod x)}&=\sprod{y^*\tprod y}{(\alpha^{\tprod})^{-1}x^*\tprod\alpha_{\tprod}x}\\
+	&=\sprod{y^*}{\alpha_{\tprod}x}\sprod{(\alpha^{\tprod})^{-1}x^*}{y}\\
+	&=\sprod{\alpha^{\tprod}y^*}{x}\sprod{x^*}{(\alpha^{-1})_{\tprod}y}\\
+	&=\sprod{\alpha^{\tprod}y^*\tprod(\alpha^{-1})_{\tprod}y}{x^*\tprod x}\\
+	&=\sprod{T_{\alpha^{-1}}(y^*\tprod y)}{x^*\tprod x}
+\end{align*}
+\end{rmk}
+
+\begin{rmk}
+Writing \(\medtprod^p_q(E^*,E)\tprod\medtprod^p_q(E^*,E)=\medtprod^p_q(E^*\tprod E^*,E\tprod E)\) (see problem~10), we have \(T_{\alpha}\tprod T_{\beta}=T_{\alpha\tprod\beta}\). Writing \(\medtprod^p_q(E^*,E)\tprod\medtprod^r_s(E^*,E)=\medtprod^{p+r}_{q+s}(E^*,E)\), we have \(T_{\alpha}\tprod T_{\alpha}=T_{\alpha}\).
+\end{rmk}
+
 % References
 \newpage
 \begin{thebibliography}{0}
