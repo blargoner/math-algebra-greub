@@ -1818,6 +1818,45 @@ We have \(T_{\alpha}^*=T_{\alpha^{-1}}\). Indeed, since \((\alpha^{\tprod})^{-1}
 Writing \(\medtprod^p_q(E^*,E)\tprod\medtprod^p_q(E^*,E)=\medtprod^p_q(E^*\tprod E^*,E\tprod E)\) (see problem~10), we have \(T_{\alpha}\tprod T_{\beta}=T_{\alpha\tprod\beta}\). Writing \(\medtprod^p_q(E^*,E)\tprod\medtprod^r_s(E^*,E)=\medtprod^{p+r}_{q+s}(E^*,E)\), we have \(T_{\alpha}\tprod T_{\alpha}=T_{\alpha}\).
 \end{rmk}
 
+\begin{exer}[3]
+For \(u^*\in\medtprod^p E^*\) and \(u\in\medtprod^p E\),
+\[\sprod{u^*}{u}=(C^1_1)^p(u^*\tprod u)\]
+\end{exer}
+\begin{proof}
+By induction on~\(p\). For \(p=0\) the result is trivial, and for \(p=1\) it follows from the definition of~\(C^1_1\). For \(p>1\), write \(u^*=u^{*1}\tprod\tilde{u}^*\) and \(u=u_1\tprod\tilde{u}\). Then
+\begin{align*}
+(C^1_1)^p(u^*\tprod u)&=(C^1_1)^{p-1}(C^1_1(u^*\tprod u))\\
+	&=\sprod{u^{*1}}{u_1}(C^1_1)^{p-1}(\tilde{u}^*\tprod\tilde{u})\\
+	&=\sprod{u^{*1}}{u_1}\sprod{\tilde{u}^*}{\tilde{u}}\\
+	&=\sprod{u^*}{u}\qedhere
+\end{align*}
+\end{proof}
+
+\begin{exer}[4]
+If the mappings
+\[\Phi:\medtprod^p_q(E^*,E)\to\medtprod^r_s(E^*,E)\quad\text{and}\quad\Phi^*:\medtprod^q_p(E^*,E)\from\medtprod^s_r(E^*,E)\]
+are dual and \(\Phi\)~is tensorial, then \(\Phi^*\)~is tensorial.
+\end{exer}
+\begin{proof}
+If \(\alpha\)~is an automorphism of~\(E\), then by a remark above
+\[\Phi^*\after T_{\alpha}=\Phi^*\after T_{\alpha^{-1}}^*=(T_{\alpha^{-1}}\after\Phi)^*=(\Phi\after T_{\alpha^{-1}})^*=T_{\alpha^{-1}}^*\after\Phi^*=T_{\alpha}\after\Phi^*\qedhere\]
+\end{proof}
+
+\begin{exer}[5]
+The sum, composite, and tensor product of tensorial mappings are tensorial.
+\end{exer}
+\begin{proof}
+If \(\Phi\) and~\(\Psi\) are tensorial, then it is obvious that \(\Phi+\Psi\) and \(\Phi\after\Psi\) are also tensorial. By a remark above,
+\begin{align*}
+(\Phi\tprod\Psi)\after T_{\alpha}&=(\Phi\tprod\Psi)\after(T_{\alpha}\tprod T_{\alpha})\\
+	&=(\Phi\after T_{\alpha})\tprod(\Psi\after T_{\alpha})\\
+	&=(T_{\alpha}\after\Phi)\tprod(T_{\alpha}\after\Psi)\\
+	&=(T_{\alpha}\tprod T_{\alpha})\after(\Phi\tprod\Psi)\\
+	&=T_{\alpha}\after(\Phi\tprod\Psi)
+\end{align*}
+so \(\Phi\tprod\Psi\) is tensorial.
+\end{proof}
+
 % References
 \newpage
 \begin{thebibliography}{0}
