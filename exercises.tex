@@ -1824,6 +1824,10 @@ If \(e_i,e^{*i}\) and \(\bar{e}_i,\bar{e}^{*i}\) are pairs of dual bases in \(E,
 In other words, \(T_{\alpha}\)~is the induced change of basis transformation in \(\medtprod^p_q(E^*,E)\). It follows that a mapping is tensorial if and only if its matrix is invariant under this type of change of basis.
 \end{rmk}
 
+\begin{rmk}
+For \(\alpha=\lambda\iota\) with \(\lambda\ne0\), \(\alpha^{*-1}=\lambda^{-1}\iota\), so \(T_{\alpha}=\lambda^{q-p}\iota\) on \(\medtprod^p_q(E^*,E)\).
+\end{rmk}
+
 \begin{exer}[3]
 For \(u^*\in\medtprod^p E^*\) and \(u\in\medtprod^p E\),
 \[\sprod{u^*}{u}=(C^1_1)^p(u^*\tprod u)\]
@@ -1861,6 +1865,13 @@ If \(\Phi\) and~\(\Psi\) are tensorial, then it is obvious that \(\Phi+\Psi\) an
 	&=T_{\alpha}\after(\Phi\tprod\Psi)
 \end{align*}
 so \(\Phi\tprod\Psi\) is tensorial.
+\end{proof}
+
+\begin{exer}[6]
+If \(\Phi:\medtprod^p_q(E^*,E)\to\medtprod^r_s(E^*,E)\) is a nonzero tensorial mapping, then \(r-p=s-q\).
+\end{exer}
+\begin{proof}
+Let \(\lambda>1\). By a remark above, \(\lambda^{q-p}\Phi=\lambda^{s-r}\Phi\) since \(\Phi\)~is tensorial. It follows that \(\lambda^{q-p+r-s}=1\) since \(\Phi\ne 0\), so \(q-p+r-s=0\) since \(\lambda>1\).
 \end{proof}
 
 % References
