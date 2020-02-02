@@ -1828,6 +1828,11 @@ In other words, \(T_{\alpha}\)~is the induced change of basis transformation in 
 For \(\alpha=\lambda\iota\) with \(\lambda\ne0\), \(\alpha^{*-1}=\lambda^{-1}\iota\), so \(T_{\alpha}=\lambda^{q-p}\iota\) on \(\medtprod^p_q(E^*,E)\).
 \end{rmk}
 
+\begin{rmk}
+If \(E\)~is finite-dimensional and we identify \(\medtprod^1_1(E^*,E)\) with \(L(E;E)\) in the natural way, then for any automorphism \(\alpha\) of~\(E\),
+\[T_{\alpha}(a^*\tprod b)=\alpha\after(a^*\tprod b)\after\alpha^{-1}\]
+\end{rmk}
+
 \begin{exer}[3]
 For \(u^*\in\medtprod^p E^*\) and \(u\in\medtprod^p E\),
 \[\sprod{u^*}{u}=(C^1_1)^p(u^*\tprod u)\]
@@ -1872,6 +1877,13 @@ If \(\Phi:\medtprod^p_q(E^*,E)\to\medtprod^r_s(E^*,E)\) is a nonzero tensorial m
 \end{exer}
 \begin{proof}
 Let \(\lambda>1\). By a remark above, \(\lambda^{q-p}\Phi=\lambda^{s-r}\Phi\) since \(\Phi\)~is tensorial. It follows that \(\lambda^{q-p+r-s}=1\) since \(\Phi\ne 0\), so \(q-p+r-s=0\) since \(\lambda>1\).
+\end{proof}
+
+\begin{exer}[7]
+If \(E\)~is finite-dimensional and for \(a\in E^*\tprod E\) the linear map~\(\mu(a)\) is defined by \(z\mapsto a\tprod z\) for \(z\in E\), then \(\mu(a)\)~is tensorial if and only if \(a=\lambda t\) where \(t\)~is the unit tensor.
+\end{exer}
+\begin{proof}
+By direct computation, it is easily verified that \(\mu(a)\)~is tensorial if and only if \(T_{\alpha}(a)=a\) for all automorphisms \(\alpha\) of~\(E\). By a remark above, the latter is true if and only if \(a\), when viewed as a transformation of~\(E\), is preserved under conjugation, which is true if and only if it is a scalar transformation. Since the unit tensor corresponds to the identity transformation, the result follows.
 \end{proof}
 
 % References
