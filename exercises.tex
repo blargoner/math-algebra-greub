@@ -770,6 +770,15 @@ These results both simply express an upper bound for the volume of a parallelepi
 \subsection*{\S~4}
 \begin{rmk}
 The covariant components of a vector are just its coordinates in the dual space, which are also just the entries of its matrix (as a linear function). They are called ``covariant'' because they vary in the same way as basis vectors in the original space under a change of basis (see subsections 3.13--14). This is unlike the regular components of the vector, which vary inversely to the basis vectors and may be called the \emph{contravariant components}.
+
+To see why the covariant components of a vector are its inner products with the basis vectors, observe from (7.42) and~(7.49) that
+\[\iprod{x}{e_{\nu}}=\sprod{\tau x}{e_{\nu}}=\sum_{\lambda}\xi_{\lambda}\sprod{e^{*\lambda}}{e_{\nu}}=\xi_{\nu}\]
+Dually, the contravariant components of a vector are its inner products with the dual basis vectors:
+\[\iprod{\tau x}{e^{*\nu}}=\xi^{\nu}\]
+\end{rmk}
+
+\begin{rmk}
+If \(e_{\nu}\)~is an orthonormal basis of~\(E\), then the dual basis \(e^{*\nu}=\tau e_{\nu}\) is an orthonormal basis of~\(E^*\).
 \end{rmk}
 
 \subsection*{\S~5}
