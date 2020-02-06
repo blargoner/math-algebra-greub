@@ -1914,6 +1914,29 @@ If \(E\)~is finite-dimensional, then every tensorial map \(\Phi:E^*\tprod E\to\G
 This follows from problem~1.3.7 applied to \(\Phi\after\tprod\).
 \end{proof}
 
+\subsection*{\S~15}
+\begin{rmk}
+The induced inner products in \(\medtprod^p E\) and \(\medtprod E\) are just the induced scalar products from \S~8 with \(E^*=E\) under the inner product.
+\end{rmk}
+
+\subsection*{\S~17}
+\begin{rmk}
+The metric tensors encode all of the information required to compute inner products, and hence metric properties (length, angle, etc.), in \(E\) and~\(E^*\).
+\end{rmk}
+
+\begin{rmk}
+We have
+\[\tau_{\tprod}(g)=\sum_{\nu}\tau e_{\nu}\tprod\tau e_{\nu}=g^*\]
+so \(\tau_{\tprod}^{-1}(g^*)=g\). This yields
+\begin{align*}
+\iprod{x^*}{y^*}&=\iprod{\tau^{-1}x^*}{\tau^{-1}y^*}\\
+	&=\sprod{g^*}{\tau^{-1}x^*\tprod\tau^{-1}y^*}\\
+	&=\sprod{g^*}{\tau_{\tprod}^{-1}(x^*\tprod y^*)}\\
+	&=\sprod{x^*\tprod y^*}{\tau_{\tprod}^{-1}g^*}\\
+	&=\sprod{x^*\tprod y^*}{g}
+\end{align*}
+\end{rmk}
+
 % References
 \newpage
 \begin{thebibliography}{0}
