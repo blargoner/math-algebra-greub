@@ -1937,6 +1937,22 @@ so \(\tau_{\tprod}^{-1}(g^*)=g\). This yields
 \end{align*}
 \end{rmk}
 
+\begin{exer}[7]
+If \(E,E^*\) is a pair of dual Euclidean spaces and \(x_{\nu},x^{*\nu}\) a pair of dual bases, then
+\[g^*=\sum_{\nu,\mu}\iprod{x_{\nu}}{x_{\mu}}x^{*\nu}\tprod x^{*\mu}\qquad\text{and}\qquad g=\sum_{\nu,\mu}\iprod{x^{*\nu}}{x^{*\mu}}x_{\nu}\tprod x_{\mu}\]
+\end{exer}
+\begin{proof}
+Since \(x_{\nu}\tprod x_{\mu}\) and \(x^{*\nu}\tprod x^{*\mu}\) are dual bases of \(E\tprod E\) and \(E^*\tprod E^*\), we have
+\[g^*=\sum_{\nu,\mu}g_{\nu\mu}x^{*\nu}\tprod x^{*\mu}\qquad\text{and}\qquad g=\sum_{\nu,\mu}g^{\nu\mu}x_{\nu}\tprod x_{\mu}\]
+where
+\[g_{\nu\mu}=\sprod{g^*}{x_{\nu}\tprod x_{\mu}}=\iprod{x_{\nu}}{x_{\mu}}\]
+and
+\[g^{\nu\mu}=\sprod{x^{*\nu}\tprod x^{*\mu}}{g}=\iprod{x^{*\nu}}{x^{*\mu}}\qedhere\]
+\end{proof}
+\begin{rmk}
+It follows that the components of~\(g^*\) vary in the same way as the basis vectors in~\(E\) under a change of basis, while the components of~\(g\) vary inversely. This is why \(g^*\)~is called ``covariant'' and \(g\)~is called ``contravariant''.
+\end{rmk}
+
 % References
 \newpage
 \begin{thebibliography}{0}
