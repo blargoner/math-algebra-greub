@@ -1937,6 +1937,17 @@ so \(\tau_{\tprod}^{-1}(g^*)=g\). This yields
 \end{align*}
 \end{rmk}
 
+\begin{exer}[4]
+If \(E,E^*\) is a pair of dual Euclidean spaces and \(\varphi=a^*\tprod b\) is a linear transformation of~\(E\), then \(\adj{\varphi}=\tau b\tprod\tau^{-1}a^*\).
+\end{exer}
+\begin{proof}
+Let \(\psi=\tau b\tprod\tau^{-1}a^*\). For \(x\in E\),
+\[\psi x=\sprod{\tau b}{x}\tau^{-1}a^*=\iprod{x}{b}\tau^{-1}a^*\]
+so for \(y\in E\),
+\[\iprod{\psi x}{y}=\iprod{x}{b}\iprod{\tau^{-1}a^*}{y}=\iprod{x}{b}\sprod{a^*}{y}=\iprod{x}{\varphi y}\]
+Therefore \(\psi=\adj{\varphi}\).
+\end{proof}
+
 \begin{exer}[7]
 If \(E,E^*\) is a pair of dual Euclidean spaces and \(x_{\nu},x^{*\nu}\) a pair of dual bases, then
 \[g^*=\sum_{\nu,\mu}\iprod{x_{\nu}}{x_{\mu}}x^{*\nu}\tprod x^{*\mu}\qquad\text{and}\qquad g=\sum_{\nu,\mu}\iprod{x^{*\nu}}{x^{*\mu}}x_{\nu}\tprod x_{\mu}\]
