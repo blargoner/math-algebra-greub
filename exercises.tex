@@ -1582,7 +1582,7 @@ so \(y_i=\mu_i\mu x_i\) for \(i=1,\ldots,p-1\) with \(\mu_1\cdots\mu_{p-1}=1\) b
 
 \subsection*{\S~21}
 \begin{rmk}
-For \(p,q\ge 2\), let
+For \(p,q\ge 1\), let
 \[\varphi_i:\prod_{j=1}^p E^i_j\to E^i_{p+1}\qquad(i=1,\ldots,q)\]
 be a family of \(q\) \(p\)-linear maps. Then there is a unique \(p\)-linear map
 \[\varphi=\tprods{\varphi}{1}{q}:\prod_{j=1}^p\Biggl(\bigtprod_{i=1}^q E^i_j\Biggr)\to\bigtprod_{i=1}^q E^i_{p+1}\]
@@ -1768,6 +1768,12 @@ Every object in this category can be obtained from the tensor algebra~\(\medtpro
 \subsection*{\S~5}
 \begin{rmk}
 We have a functor from the category of vector spaces into the category of associative unital algebras, which sends vector spaces \(E\) and~\(F\) to the tensor algebras \(\medtprod E\) and~\(\medtprod F\), and which sends a linear map \(\varphi:E\to F\) to the algebra homomorphism \(\varphi_{\tprod}:\medtprod E\to\medtprod F\).
+\end{rmk}
+
+\begin{rmk}
+By a remark from \S~21 of chapter~1 above,
+\[\ker\varphi_{\tprod}=\sum_{p=0}^{\infty}\sum_{i=1}^p E\tprod\cdots\tprod\ker\varphi\tprod\cdots\tprod E\]
+where \(\ker\varphi\)~is in position \(i\)~of~\(p\) on the right.
 \end{rmk}
 
 \subsection*{\S~6}
