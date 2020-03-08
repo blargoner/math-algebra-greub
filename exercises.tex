@@ -1870,6 +1870,27 @@ If \(E\)~is finite-dimensional and we identify \(\medtprod^1_1(E^*,E)\) with \(L
 \[T_{\alpha}(a^*\tprod b)=\alpha\after(a^*\tprod b)\after\alpha^{-1}\]
 \end{rmk}
 
+\begin{exer}[1]
+If \(e_{\nu},e^{*\nu}\) and \(\bar{e}_{\nu},\bar{e}^{*\nu}\) are pairs of dual bases in \(E,E^*\) related by
+\[\bar{e}_{\nu}=\sum_{\lambda}\alpha_{\nu}^{\lambda}e_{\lambda}\qquad\text{and}\qquad\bar{e}^{*\nu}=\sum_{\lambda}\beta^{\nu}_{\lambda}e^{*\lambda}\]
+then the components of a mixed tensor \(w\in\medtprod^p_q(E^*,E)\) are related by
+\[\bar{\zeta}^{\mu_1\cdots\mu_q}_{\nu_1\cdots\nu_p}=\sum_{(\kappa),(\lambda)}\alpha_{\nu_1}^{\lambda_1}\cdots\alpha_{\nu_p}^{\lambda_p}\beta^{\mu_1}_{\kappa_1}\cdots\beta^{\mu_q}_{\kappa_q}\zeta^{\kappa_1\cdots\kappa_q}_{\lambda_1\cdots\lambda_p}\]
+\end{exer}
+\begin{proof}
+In this proof, we use the Einstein summation convention to simplify the notation. Since \(e_{\kappa}=\beta_{\kappa}^{\mu}\bar{e}_{\mu}\) and \(e^{*\lambda}=\alpha^{\lambda}_{\nu}\bar{e}^{*\nu}\), we have
+\begin{align*}
+w&=\zeta^{\kappa_1\cdots\kappa_q}_{\lambda_1\cdots\lambda_p}e^{\lambda_1\cdots\lambda_p}_{\kappa_1\cdots\kappa_q}\\
+	&=\zeta^{\kappa_1\cdots\kappa_q}_{\lambda_1\cdots\lambda_p}e^{*\lambda_1}\tprod\cdots\tprod e^{*\lambda_p}\tprod e_{\kappa_1}\tprod\cdots\tprod e_{\kappa_q}\\
+	&=\zeta^{\kappa_1\cdots\kappa_q}_{\lambda_1\cdots\lambda_p}(\alpha^{\lambda_1}_{\nu_1}\bar{e}^{*\nu_1})\tprod\cdots\tprod(\alpha^{\lambda_p}_{\nu_p}\bar{e}^{*\nu_p})\tprod(\beta_{\kappa_1}^{\mu_1}\bar{e}_{\mu_1})\tprod\cdots\tprod(\beta_{\kappa_q}^{\mu_q}\bar{e}_{\mu_q})\\
+	&=\zeta^{\kappa_1\cdots\kappa_q}_{\lambda_1\cdots\lambda_p}\alpha^{\lambda_1}_{\nu_1}\cdots\alpha^{\lambda_p}_{\nu_p}\beta_{\kappa_1}^{\mu_1}\cdots\beta_{\kappa_q}^{\mu_q}\bar{e}^{\nu_1\cdots\nu_p}_{\mu_1\cdots\mu_q}
+\end{align*}
+Therefore
+\[\bar{\zeta}^{\mu_1\cdots\mu_q}_{\nu_1\cdots\nu_p}=\alpha_{\nu_1}^{\lambda_1}\cdots\alpha_{\nu_p}^{\lambda_p}\beta^{\mu_1}_{\kappa_1}\cdots\beta^{\mu_q}_{\kappa_q}\zeta^{\kappa_1\cdots\kappa_q}_{\lambda_1\cdots\lambda_p}\qedhere\]
+\end{proof}
+\begin{rmk}
+This relationship serves as the basis of an alternative definition of a \emph{tensor} as a multidimensional array of numbers which transforms according to this rule under change of basis.
+\end{rmk}
+
 \begin{exer}[3]
 For \(u^*\in\medtprod^p E^*\) and \(u\in\medtprod^p E\),
 \[\sprod{u^*}{u}=(C^1_1)^p(u^*\tprod u)\]
