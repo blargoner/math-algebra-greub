@@ -296,24 +296,22 @@ By the remark in~\S~5 above, and the fact that \(\varphi^{**}=\varphi\).
 
 \section*{Chapter~III}
 \begin{warn}
-Greub's notational choices in this chapter are insane. In particular, although he uses left-hand function notation (writing \(\varphi x\) instead of~\(x\varphi\), and \(\varphi\psi\) to mean \emph{\(\varphi\) after \(\psi\)}), and follows the usual ``row-by-column'' convention for matrix multiplication, his convention for the matrix of a linear mapping is the transpose of that normally used with left-hand notation. This has the following undesirable consequences:
+Greub's notational choices in this chapter are insane. In particular, although he uses left-hand mapping notation (writing \(\varphi x\) instead of~\(x\varphi\), and \(\varphi\psi\) to mean \emph{\(\varphi\) after \(\psi\)}), and follows the usual ``row-by-column'' convention for matrix multiplication, his convention for the matrix of a linear mapping is the transpose of that normally used in these circumstances. This has the following unfortunate consequences:
 \begin{itemize}
 \item The matrix of the linear mapping naturally associated with a system of linear equations has the coefficients from each equation appear \emph{vertically in columns}.
 \item If \(M(x)\)~is the \emph{column vector} representing~\(x\), then \(M(\varphi x)=M(\varphi)^*M(x)\), and if \(M(x)\)~is the \emph{row vector} representing~\(x\), then \(M(\varphi x)=M(x)M(\varphi)\).
 \item \(M(\varphi\psi)=M(\psi)M(\varphi)\)
 \end{itemize}
-Compounding the insanity, Greub also has the annoying habit of indexing over columns instead of rows when working in dual spaces. This further increases the risk of confusion and error, as we see below. Greub says that ``it would be very undesirable\dots to agree once and for all to always let the subscript count the rows'', but we couldn't disagree more.
+Compounding the insanity, Greub (inspired by tensor notation) indexes over columns instead of rows when working in dual spaces. This further increases the risk of confusion and error, as we see below. Greub says that ``it would be very undesirable\dots to agree once and for all to always let the subscript count the rows'', but we couldn't disagree more in this context.
 \end{warn}
 
 \subsection*{\S~3}
 \begin{rmk}
-In subsection~3.13, note \((\alpha^{\mu}_{\nu})=M(\iota;\bar{x}_{\nu},x_{\mu})\) by~(3.22), \((\check{\alpha}^{\mu}_{\nu})=M(\iota;x_{\nu},\bar{x}_{\mu})\) by~(3.23), and \((\beta^{\varrho}_{\sigma})=M(\iota;\bar{x}^{*\varrho},x^{*\sigma})\) by~(3.24). It follows from~(3.4) that
-\[\bigl(\beta^{\mu}_{\nu}\bigr)=\bigl(\check{\alpha}^{\mu}_{\nu}\bigr)^*=\bigl(\bigl(\alpha^{\mu}_{\nu}\bigr)^{-1}\bigr)^*\]
-In other words, the matrix of the dual basis transformation \(x^{*\nu}\mapsto\bar{x}^{*\nu}\) in~\(E^*\) is the \emph{transpose} of the inverse of the matrix of the basis transformation \(x_{\nu}\mapsto\bar{x}_{\nu}\) in~\(E\), contrary to what the book says. It's easier to remember that the matrix of \(x^{*\nu}\mapsfrom\bar{x}^{*\nu}\) (arrow reversed!) is the transpose of the matrix of \(x_{\nu}\mapsto\bar{x}_{\nu}\).
+In subsection~3.13, although \(\beta^{\varrho}_{\nu}=\check{\alpha}_{\nu}^{\varrho}\), we must remember that \(\nu\)~indexes the \emph{columns} of the matrix of the dual basis transformation \(x^{*\nu}\mapsto\bar{x}^{*\nu}\) by~(3.24), whereas \(\nu\)~indexes the \emph{rows} of the matrix of the basis transformation \(x_{\nu}\mapsto\bar{x}_{\nu}\) by~(3.22). In other words, the matrix of the dual basis transformation \(x^{*\nu}\mapsto\bar{x}^{*\nu}\) is the \emph{transpose} of the inverse of the matrix of the basis transformation \(x_{\nu}\mapsto\bar{x}_{\nu}\), contrary to what the book says.\footnote{Compare this to the proof of equation~(3.4) in subsection~3.3.} It's easier to remember that the matrix of \(x^{*\nu}\mapsfrom\bar{x}^{*\nu}\) (arrow reversed!) is the transpose of the matrix of \(x_{\nu}\mapsto\bar{x}_{\nu}\).
 \end{rmk}
 
 \begin{rmk}
-In subsection 3.13, we see that if a basis transformation is effected by~\(\tau\), then the corresponding \emph{coordinate} transformation is effected by~\(\tau^{-1}\). The coordinates of a vector are transformed ``exactly in the same way'' as the vectors of the dual basis, despite the previous remark, because of Greub's notational choices, which introduce transposition into matrix-vector multiplication (see the remarks above).
+In subsection 3.13, we see that if a basis transformation is effected by~\(\tau\), then the corresponding \emph{coordinate} transformation is effected by~\(\tau^{-1}\). The coordinates of a vector are transformed ``exactly in the same way'' as the vectors of the dual basis, despite the previous remark, because of Greub's notational choices.
 \end{rmk}
 
 \section*{Chapter~IV}
