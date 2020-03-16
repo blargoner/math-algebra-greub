@@ -2050,12 +2050,33 @@ To see how (4.16)~follows from~(4.13), write \(u=\pi(a)\) and \(v=\pi(b)\) with 
 
 \subsection*{\S~7}
 \begin{rmk}
+\(X(E)\)~is not a subalgebra of~\(\medtprod E\), but can be made into an algebra (see problem~1).
+\end{rmk}
+
+\begin{rmk}
 The inverse of~\(\rho\) is the induced isomorphism \(\overline{\pi_X}:\medtprod E/N(E)\iso X(E)\):
 \begin{diagram}[nohug]
 \medtprod E			&\rTo^{\pi_X}						&X(E)\\
 \dTo<{\pi}			&\ruTo>{\rho^{-1}=\overline{\pi_X}}	&\\
 \medtprod E/N(E)	&									&
 \end{diagram}
+\end{rmk}
+
+\begin{exer}[1]
+If we define a product in~\(X(E)\) by
+\[u\mult v=\pi_A(u\tprod v)\qquad u,v\in X(E)\]
+then \(X(E)\)~becomes an algebra and \(\rho\)~an algebra isomorphism. Moreover,
+\[\pi_A u\mult\pi_A v=\pi_A(u\tprod v)\qquad u,v\in\medtprod E\]
+\end{exer}
+\begin{proof}
+Clearly the product makes~\(X(E)\) into an algebra. By (4.17) and~(4.15),
+\[\rho(u\mult v)=\rho\pi_A(u\tprod v)=\pi(u\tprod v)=\pi u\mult\pi v=\rho u\mult\rho v\]
+for all \(u,v\in X(E)\), so \(\rho\)~is an algebra isomorphism. By~(4.10),
+\[\pi_A u\mult\pi_A v=\pi_A(\pi_A u\tprod\pi_A v)=\pi_A(u\tprod v)\]
+for all \(u,v\in\medtprod E\).
+\end{proof}
+\begin{rmk}
+The proof also shows that the product is uniquely determined by the requirement that \(\rho\)~be an algebra isomorphism.
 \end{rmk}
 
 % References
