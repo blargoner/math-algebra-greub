@@ -362,12 +362,20 @@ Viewing this as a function of \(x_1,\ldots,x_n\) (that is, a set map from \(E^n\
 Let \(E\)~be a vector space with \(\dim E=n>1\) and \(E_1\)~a subspace with \(\dim E_1=1\). Let \(\Delta\)~be a determinant function in~\(E\) with \(\Delta(e_1,\ldots,e_n)=1\) where \(e_1\in E_1\). Then \(\Delta\)~induces a determinant function~\(\Delta_1\) in~\(E/E_1\) by
 \[\Delta_1(\,\proj{x_2},\ldots,\proj{x_n}\,)=\Delta(e_1,x_2,\ldots,x_n)\]
 with \(\Delta_1(\,\proj{e_2},\ldots,\proj{e_n}\,)=1\). Define \(D:E^n\to\Gamma\) by
-\[D(x_1,\ldots,x_n)=\sum_{j=1}^n (-1)^{j-1}\pi_1(x_j)\Delta_1(\,\proj{x_1},\ldots,\widehat{\proj{x_j}},\ldots,\proj{x_n}\,)\]
+\[D(x_1,\ldots,x_n)=\sum_{j=1}^n (-1)^{j-1}\Delta_1(\,\proj{x_1},\ldots,\widehat{\proj{x_j}},\ldots,\proj{x_n}\,)\mult\pi_1(x_j)\]
 where \(\pi_1:E\to\Gamma\) is the coordinate function for~\(e_1\). Then \(D\)~is skew symmetric and \(n\)-linear with \(D(e_1,\ldots,e_n)=1\), so \(D=\Delta\) by uniqueness (Proposition~III). Therefore
-\[\boxed{\Delta(x_1,\ldots,x_n)=\sum_{j=1}^n (-1)^{j-1}\pi_1(x_j)\Delta_1(\,\proj{x_1},\ldots,\widehat{\proj{x_j}},\ldots,\proj{x_n}\,)}\]
-This result expresses a fundamental relationship between an \(n\)-dimensional determinant function and an \((n-1)\)-dimensional one. The cofactor expansion formulas for the determinant (subsection 4.15) follow immediately. Note that this relationship can also be exploited to recursively \emph{define} an \(n\)-dimensional determinant function in terms of an \((n-1)\)-dimensional one.
+\[\boxed{\Delta(x_1,\ldots,x_n)=\sum_{j=1}^n (-1)^{j-1}\Delta_1(\,\proj{x_1},\ldots,\widehat{\proj{x_j}},\ldots,\proj{x_n}\,)\mult\pi_1(x_j)}\]
+This result, which can also be obtained by applying~\(\pi_1\) to both sides of~(4.6) with \(x=e_1\), expresses a fundamental relationship between an \(n\)-dimensional determinant function and an \((n-1)\)-dimensional one. The cofactor expansion formulas for the determinant (subsection 4.15) follow immediately.
 
-The geometrical fact that the volume of an \(n\)-dimensional parallelepiped is equal to the product of the volume of any \((n-1)\)-dimensional ``base'' and the corresponding ``height'' (subsection 7.15) is closely related to this result.
+Note that this relationship can also be exploited in reverse to \emph{define} an \(n\)-dimensional determinant function in terms of an \((n-1)\)-dimensional one. In fact, if \(\Phi:E^{n-1}\to\Gamma\) is a skew symmetric \((n-1)\)-linear function in~\(E\), then there is a vector \(a\in E\) such that
+\[\Phi(x_1,\ldots,x_{n-1})=\Delta(x_1,\ldots,x_{n-1},a)\tag{1}\]
+Define \(\varphi:E^n\to E\) by
+\[\varphi(x_1,\ldots,x_n)=\sum_{j=1}^n (-1)^{n-j}\Phi(x_1,\ldots,\widehat{x_j},\ldots,x_n)\mult x_j\]
+Then \(\varphi\)~is skew symmetric and \(n\)-linear, so \(\varphi=\Delta a\) where \(a=\varphi(e_1,\ldots,e_n)\). This means
+\[\Delta(x_1,\ldots,x_n)a=\sum_{j=1}^n (-1)^{n-j}\Phi(x_1,\ldots,\widehat{x_j},\ldots,x_n)\mult x_j\tag{2}\]
+If \(x_1,\ldots,x_{n-1}\) are linearly dependent, then (1)~holds trivially, so we may assume that they are linearly independent. If \(a\)~is not in their span, then (1)~follows from~(2) with \(x_n=a\); if \(a\)~is in the span, then (1)~follows from~(2) with \(x_n\) chosen so that \(\Delta(x_1,\ldots,x_n)=1\).
+
+Geometrically, this is the relationship between \(n\)-dimensional volume and \((n-1)\)-dimensional volume measured \emph{relative to a fixed vector}, which we see from~(1) is really the only way to measure \((n-1)\)-dimensional volume. The fact that the volume of an \(n\)-dimensional parallelepiped is equal to the product of the volume of any \((n-1)\)-dimensional ``base'' and the corresponding ``height'' (subsection 7.15) is a special case.
 \end{rmk}
 
 \subsection*{\S~2}
