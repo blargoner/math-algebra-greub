@@ -46,6 +46,7 @@
 \newcommand{\timess}[3]{\multi{\cross}{#1}{#2}{#3}}
 \newcommand{\tprods}[3]{\multi{\tprod}{#1}{#2}{#3}}
 \newcommand{\circled}[1]{\text{\scriptsize\textcircled{\textit{#1}}}}
+\newcommand{\sign}[1]{\varepsilon_{#1}}
 
 \newarrow{Dashto}{}{dash}{}{dash}>
 
@@ -2077,6 +2078,20 @@ for all \(u,v\in\medtprod E\).
 \end{proof}
 \begin{rmk}
 The proof also shows that the product is uniquely determined by the requirement that \(\rho\)~be an algebra isomorphism.
+\end{rmk}
+
+\section*{Chapter~5}
+\subsection*{\S~1}
+\begin{exer}[1]
+Let \(L_p(E;F)\) denote the space of \(p\)-linear mappings \(E^p\to F\), and \(A_p(E;F)\) the subspace of skew-symmetric mappings. If \(T:L_p(E;F)\to L_p(E;F)\) is linear such that \(T\varphi=\varphi\) for all \(\varphi\in A_p(E;F)\), and \(T(\sigma\varphi)=\sign{\sigma}T\varphi\) for all \(\sigma\in S_p\) and \(\varphi\in L_p(E;F)\), then \(T=A\) (the alternator).
+\end{exer}
+\begin{proof}
+By assumption, \(TA=A\) and
+\[(TA)\varphi=T(A\varphi)=\frac{1}{p!}\sum_{\sigma}\sign{\sigma}T(\sigma\varphi)=\frac{1}{p!}\sum_{\sigma}T\varphi=T\varphi\]
+so \(TA=T\).
+\end{proof}
+\begin{rmk}
+This result shows that the alternator is the unique ``skew-symmetric'' transformation of \(p\)-linear mappings which fixes skew-symmetric mappings.
 \end{rmk}
 
 % References
