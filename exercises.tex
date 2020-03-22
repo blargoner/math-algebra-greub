@@ -28,6 +28,9 @@
 \newcommand{\tprod}{\otimes}
 \newcommand{\bigtprod}{\bigotimes}
 \newcommand{\medtprod}{{\textstyle\bigtprod}}
+\newcommand{\eprod}{\wedge}
+\newcommand{\bigeprod}{\bigwedge}
+\newcommand{\medeprod}{{\textstyle\bigeprod}}
 
 \newcommand{\delete}{\widehat}
 \newcommand{\gen}[1]{\langle#1\rangle}
@@ -45,6 +48,7 @@
 \newcommand{\multi}[4]{#2_{#3}#1\cdots#1#2_{#4}}
 \newcommand{\timess}[3]{\multi{\cross}{#1}{#2}{#3}}
 \newcommand{\tprods}[3]{\multi{\tprod}{#1}{#2}{#3}}
+\newcommand{\eprods}[3]{\multi{\eprod}{#1}{#2}{#3}}
 \newcommand{\circled}[1]{\text{\scriptsize\textcircled{\textit{#1}}}}
 \newcommand{\sign}[1]{\varepsilon_{#1}}
 
@@ -2104,6 +2108,23 @@ so \(TA=T\).
 \end{proof}
 \begin{rmk}
 This result shows that the alternator is the unique ``skew-symmetric'' transformation of \(p\)-linear mappings which fixes skew-symmetric mappings.
+\end{rmk}
+
+\subsection*{\S~3}
+\begin{rmk}
+The \(p\)-th exterior power \(\medeprod^p E\) of~\(E\) is a universal (initial) object in the category of ``vector spaces with skew-symmetric \(p\)-linear maps of~\(E\) into them''. In this category, the objects are skew-symmetric \(p\)-linear maps \(E^p\to F\), and the arrows are linear maps \(F\to G\) which respect the \(p\)-linear maps:
+\begin{diagram}
+E^p		&\rTo	&G\\
+\dTo	&\ruTo	&\\
+F		&		&
+\end{diagram}
+Every object \(E^p\to F\) in this category can be obtained from the exterior product \(\medeprod^p:E^p\to\medeprod^p E\) in a unique way. This is why \(\medeprod^p\)~is said to satisfy the ``universal property''. This is only possible because the elements of~\(\medeprod^p E\) satisfy only those relations required to make \(\medeprod^p\) skew-symmetric and \(p\)-linear. By category theoretic abstract nonsense, \(\medeprod^p E\)~is unique up to isomorphism.
+\end{rmk}
+
+\begin{rmk}
+Geometrically, the \(p\)-vector
+\[\medeprod^p(x_1,\ldots,x_p)=\eprods{x}{1}{p}\]
+represents the oriented \(p\)-dimensional parallelepiped determined by \(x_1,\ldots, x_p\).
 \end{rmk}
 
 % References
