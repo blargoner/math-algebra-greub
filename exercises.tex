@@ -1768,7 +1768,7 @@ Since \(\varphi\)~is linear, it follows that \(\varphi\)~is an algebra homomorph
 \section*{Chapter~3}
 \subsection*{\S~3}
 \begin{rmk}
-The tensor algebra~\(\medtprod E\) is a universal (initial) object in the category of ``associative unital algebras with linear maps of~\(E\) into them''. In this category, the objects are linear maps \(E\to A\), for associative unital algebras~\(A\), and the arrows are algebra homomorphisms \(A\to B\) which preserve the identity and respect the linear maps from~\(E\):
+The tensor algebra~\(\medtprod E\) is a universal (initial) object in the category of ``associative unital algebras with linear maps of~\(E\) into them''. In this category, the objects are linear maps \(E\to A\), for associative unital algebras~\(A\), and the arrows are algebra homomorphisms \(A\to B\) which preserve the units and respect the linear maps from~\(E\):
 \begin{diagram}
 E&\rTo&B\\
 \dTo&\ruTo&\\
@@ -2125,6 +2125,48 @@ Every object \(E^p\to F\) in this category can be obtained from the exterior pro
 Geometrically, the \(p\)-vector
 \[\medeprod^p(x_1,\ldots,x_p)=\eprods{x}{1}{p}\]
 represents the oriented \(p\)-dimensional parallelepiped determined by \(x_1,\ldots, x_p\).
+\end{rmk}
+
+\subsection*{\S~4}
+\begin{rmk}
+The projection \(\pi:\medtprod E\to\medtprod E/N(E)\) and the projection \(\pi:\medtprod E\to\medeprod E\) constructed in this section are related by the following commutative diagram:
+\begin{diagram}[nohug]
+\medtprod E		&\rTo^{\pi}	&\medeprod E\\
+\dTo<{\pi}		&\ruTo>{f}	&\\
+\medtprod E/N(E)&			&
+\end{diagram}
+\end{rmk}
+
+\begin{rmk}
+If \(u\in\medeprod^p E\) and \(v\in\medeprod^q E\) with \(pq\)~even, then
+\begin{align*}
+(u+v)^k&=\frac{1}{k!}\underbrace{(u+v)\eprod\cdots\eprod(u+v)}_k\\
+	&=\frac{1}{k!}\sum_{i+j=k}\frac{k!}{i!(k-i)!}\underbrace{u\eprod\cdots\eprod u}_i\eprod\underbrace{v\eprod\cdots\eprod v}_j\\
+	&=\sum_{i+j=k}\frac{1}{i!j!}(i!\,u^i)\eprod(j!\,v^j)\\
+	&=\sum_{i+j=k}u^i\eprod v^j
+\end{align*}
+\end{rmk}
+
+\subsection*{\S~5}
+\begin{rmk}
+The exterior algebra \(\medeprod E\) is a universal (initial) object in the category of ``associative unital algebras with linear maps of~\(E\) into them whose squares are zero''. In this category, the objects are linear maps \(\varphi:E\to A\) for associative unital algebras~\(A\) with \(\varphi^2=0\), and the arrows are algebra homomorphisms \(A\to B\) which preserve the units and respect the linear maps:
+\begin{diagram}
+E	&\rTo	&B\\
+\dTo&\ruTo	&\\
+A	&		&
+\end{diagram}
+Every object in this category can be obtained from the exterior algebra \(\medeprod E\) in a unique way. This is why \(\medeprod E\)~is said to satisfy the ``universal property''. This is only possible because the elements of~\(\medeprod E\) satisfy only those properties that are required to make \(\medeprod E\) into an associative unital algebra containing~\(E\) with skew-symmetric multiplication in~\(E\). By category theoretic abstract nonsense, \(\medeprod E\)~is unique up to isomorphism.
+\end{rmk}
+
+\subsection*{\S~7}
+\begin{rmk}
+If \(E\)~is \(n\)-dimensional, then \(\medeprod^p E=0\) for \(p>n\). Geometrically, this just reflects the fact that you can't fit a \(p\)-dimensional parallelepiped into the \(n\)-dimensional space.
+\end{rmk}
+
+\begin{rmk}
+If \(E\)~is a Euclidean space and \(x_1,\ldots,x_p\in E\), then
+\[\norm{\eprods{x}{1}{p}}=\sqrt{\det\iprod{x_i}{x_j}}\]
+is the volume of the \(p\)-dimensional parallelepiped determined by \(x_1,\ldots,x_p\).
 \end{rmk}
 
 % References
