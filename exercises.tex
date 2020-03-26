@@ -2169,6 +2169,19 @@ If \(E\)~is a Euclidean space and \(x_1,\ldots,x_p\in E\), then
 is the volume of the \(p\)-dimensional parallelepiped determined by \(x_1,\ldots,x_p\).
 \end{rmk}
 
+\begin{exer}[1]
+Let \(E,E^*\) be a pair of finite-dimensional dual vector spaces and \(A\subseteq L(E^*;E)\) be the subspace of linear maps \(\varphi:E^*\to E\) for which \(\varphi^*=-\varphi\). If \(\varphi:E\times E\to A\) is the bilinear map defined by
+\[\varphi_{a,b}(x^*)=\sprod{x^*}{a}b-\sprod{x^*}{b}a\]
+then \((A,\varphi)\) is a second exterior power of~\(E\).
+\end{exer}
+\begin{proof}
+Identifying \(E\tprod E\) with \(L(E^*;E)\) under the natural isomorphism
+\[a\tprod b\mapsto\bigl(x^*\mapsto\sprod{x^*}{a}b\,\bigr)\]
+\(A\)~is just the subspace of skew-symmetric tensors in~\(E\tprod E\), and
+\[\varphi_{a,b}=a\tprod b-b\tprod a\]
+is (up to a factor of~\(2\)) just the skew-symmetric part of \(a\tprod b\).
+\end{proof}
+
 % References
 \newpage
 \begin{thebibliography}{0}
