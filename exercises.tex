@@ -2182,6 +2182,51 @@ Identifying \(E\tprod E\) with \(L(E^*;E)\) under the natural isomorphism
 is (up to a factor of~\(2\)) just the skew-symmetric part of \(a\tprod b\).
 \end{proof}
 
+\begin{exer}[4 - Lagrange identity]
+\[
+\renewcommand{\arraystretch}{1.5}
+\begin{vmatrix}
+\sum_{\nu=1}^n\xi_1^{\nu}\eta^1_{\nu}&\cdots&\sum_{\nu=1}^n\xi_1^{\nu}\eta^p_{\nu}\\
+\vdots&\ddots&\vdots\\
+\sum_{\nu=1}^n\xi_p^{\nu}\eta^1_{\nu}&\cdots&\sum_{\nu=1}^n\xi_p^{\nu}\eta^p_{\nu}
+\end{vmatrix}
+=
+\sum_{<}
+\begin{vmatrix}
+\xi_1^{\nu_1}&\cdots&\xi_1^{\nu_p}\\
+\vdots&\ddots&\vdots\\
+\xi_p^{\nu_1}&\cdots&\xi_p^{\nu_p}
+\end{vmatrix}
+\begin{vmatrix}
+\eta^1_{\nu_1}&\cdots&\eta^1_{\nu_p}\\
+\vdots&\ddots&\vdots\\
+\eta^p_{\nu_1}&\cdots&\eta^p_{\nu_p}
+\end{vmatrix}
+\tag{1}\]
+\end{exer}
+\begin{proof}
+Let \(L\)~denote the left-hand side of~(1). Let \(E,E^*\) be a pair of dual vector spaces with dual bases \(e_1,\ldots,e_n\) and \(e^{*1},\ldots,e^{*n}\). Define
+\[x_i=\sum_{\nu=1}^n\xi_i^{\nu}e_{\nu}\qquad\text{and}\qquad y^{*j}=\sum_{\mu=1}^n\eta^j_{\mu}e^{*\mu}\qquad(i,j=1,\ldots,p)\]
+Since
+\[\sprod{y^{*j}}{x_i}=\sum_{\nu=1}^n\xi_i^{\nu}\eta^j_{\nu}\]
+it follows from (5.10) and~(5.13) that
+\begin{align*}
+L&=\sprod{y^{*1}\eprod\cdots\eprod y^{*p}}{x_1\eprod\cdots\eprod x_p}\\
+	&=\sum_{(\nu),(\mu)}\xi_1^{\nu_1}\cdots\,\xi_p^{\nu_p}\eta^1_{\mu_1}\cdots\,\eta^p_{\mu_p}\sprod{e^{*\mu_1}\eprod\cdots\eprod e^{*\mu_p}}{e_{\nu_1}\eprod\cdots\eprod e_{\nu_p}}\\
+	&=\sum_{(\nu),(\mu)}\xi_1^{\nu_1}\cdots\,\xi_p^{\nu_p}\eta^1_{\mu_1}\cdots\,\eta^p_{\mu_p}\det(\delta_{\nu_i}^{\mu_j})
+\end{align*}
+Now
+\[\det(\delta_{\nu_i}^{\mu_j})=\sum_{\sigma}\sign{\sigma}\delta_{\nu_{\sigma(1)}}^{\mu_1}\cdots\,\delta_{\nu_{\sigma(p)}}^{\mu_p}\]
+so \(\det(\delta_{\nu_i}^{\mu_j})=\sign{\tau}\) if the~\(\nu_i\) are distinct and \(\mu_i=\nu_{\tau(i)}\) for some permutation~\(\tau\), otherwise \(\det(\delta_{\nu_i}^{\mu_j})=0\). The~\(\nu_i\) are distinct if and only if \(\nu_{\sigma(1)}<\cdots<\nu_{\sigma(p)}\) for some permutation~\(\sigma\), so we have
+\begin{align*}
+L&=\sum_{\nu_1<\cdots<\nu_p}\sum_{\sigma}\xi_1^{\nu_{\sigma(1)}}\cdots\,\xi_p^{\nu_{\sigma(p)}}\sum_{\tau}\sign{\tau}\eta^1_{\nu_{\tau\sigma(1)}}\cdots\,\eta^p_{\nu_{\tau\sigma(p)}}\\
+	&=\sum_{\nu_1<\cdots<\nu_p}\sum_{\sigma}\sign{\sigma}\xi_1^{\nu_{\sigma(1)}}\cdots\,\xi_p^{\nu_{\sigma(p)}}\sum_{\tau}\sign{\tau\sigma}\eta^1_{\nu_{\tau\sigma(1)}}\cdots\,\eta^p_{\nu_{\tau\sigma(p)}}
+\end{align*}
+Since \(\tau\sigma\)~runs over all permutations as~\(\tau\) does, we have
+\[L=\sum_{<}\Bigl(\sum_{\sigma}\sign{\sigma}\xi_1^{\nu_{\sigma(1)}}\cdots\,\xi_p^{\nu_{\sigma(p)}}\Bigr)\Bigl(\sum_{\varrho}\sign{\varrho}\eta^1_{\nu_{\varrho(1)}}\cdots\,\eta^p_{\nu_{\varrho(p)}}\Bigr)\]
+which is just~(1).
+\end{proof}
+
 % References
 \newpage
 \begin{thebibliography}{0}
