@@ -2231,6 +2231,34 @@ Since \(\tau\sigma\)~runs over all permutations as~\(\tau\) does, we have
 which is just~(1).
 \end{proof}
 
+\subsection*{\S~8}
+\begin{rmk}
+Let \(E\)~be an \(n\)-dimensional space and \(\Delta\) a determinant function in~\(E\) with \(\Delta(e_1,\ldots,e_n)=1\). If \(\varphi:E\to E\) is linear, then
+\begin{align*}
+\varphi_{\eprod}(\eprods{x}{1}{n})&=\eprods{\varphi x}{1}{n}\\
+	&=\Delta(\varphi x_1,\ldots,\varphi x_n)\mult\eprods{e}{1}{n}\\
+	&=\det\varphi\mult\Delta(x_1,\ldots,x_n)\mult\eprods{e}{1}{n}\\
+	&=\det\varphi\mult\eprods{x}{1}{n}
+\end{align*}
+for all \(x_1,\ldots,x_n\in E\). Therefore
+\[\varphi_{\eprod}^{(n)}=\det\varphi\mult\iota\]
+where \(\varphi_{\eprod}^{(n)}\)~is the restriction of~\(\varphi_{\eprod}\) to~\(\medeprod^n E\).
+\end{rmk}
+
+\subsection*{\S~10}
+\begin{rmk}
+Let \(E\)~be an \(n\)-dimensional space and \(\Delta\) a determinant function in~\(E\) with \(\Delta(e_1,\ldots,e_n)=1\). If \(\varphi:E\to E\) is linear, then
+\begin{align*}
+\theta_{\eprod}(\varphi)(\eprods{x}{1}{n})&=\sum_{i=1}^n x_1\eprod\cdots\eprod\varphi x_i\eprod\cdots\eprod x_n\\
+	&=\sum_{i=1}^n\Delta(x_1,\ldots,\varphi x_i,\ldots,x_n)\mult\eprods{e}{1}{n}\\
+	&=\tr\varphi\mult\Delta(x_1,\ldots,x_n)\mult\eprods{e}{1}{n}\\
+	&=\tr\varphi\mult\eprods{x}{1}{n}
+\end{align*}
+for all \(x_1,\ldots,x_n\in E\). Therefore
+\[\theta_{\eprod}^{(n)}(\varphi)=\tr\varphi\mult\iota\]
+where \(\theta_{\eprod}^{(n)}(\varphi)\)~is the restriction of~\(\theta_{\eprod}(\varphi)\) to~\(\medeprod^n E\).
+\end{rmk}
+
 % References
 \newpage
 \begin{thebibliography}{0}
