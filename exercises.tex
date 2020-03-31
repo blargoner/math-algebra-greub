@@ -2256,7 +2256,14 @@ Let \(E\)~be an \(n\)-dimensional space and \(\Delta\) a determinant function in
 \end{align*}
 for all \(x_1,\ldots,x_n\in E\). Therefore
 \[\theta_{\eprod}^{(n)}(\varphi)=\tr\varphi\mult\iota\]
-where \(\theta_{\eprod}^{(n)}(\varphi)\)~is the restriction of~\(\theta_{\eprod}(\varphi)\) to~\(\medeprod^n E\).
+where \(\theta_{\eprod}^{(n)}(\varphi)\)~is the restriction of~\(\theta_{\eprod}(\varphi)\) to~\(\medeprod^n E\). This is equivalent to the result in subsection~3.6 above, by the following commutative diagram:
+\begin{diagram}[nohug]
+				&										&E^n				&				&\\
+				&										&\dTo<{\tprod^n}	&\rdTo>{\Delta}	&\\
+\medtprod^n E	&\rTo^{\theta_{\circled{n}}(\varphi)}	&\medtprod^n E		&\rTo			&\Gamma\\
+\dTo<{\pi}		&										&\dTo<{\pi}			&\ruTo			&\\
+\medeprod^n E	&\rTo_{\theta_{\eprod}^{(n)}(\varphi)}	&\medeprod^n E		&				&
+\end{diagram}
 \end{rmk}
 
 % References
