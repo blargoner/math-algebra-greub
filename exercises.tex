@@ -1792,15 +1792,15 @@ where \(\ker\varphi\)~is in position \(i\)~of~\(p\) on the right.
 \begin{rmk}
 There is a connection between the derivation and the trace of a linear transformation. If \(E\)~is an \(n\)-dimensional vector space and \(\varphi:E\to E\) is linear, let \(\Delta:E^n\to\Gamma\) be a nonzero determinant function in~\(E\). Recall
 \[\tr\varphi\mult\Delta(x_1,\ldots,x_n)=\sum_{i=1}^n\Delta(x_1,\ldots,\varphi x_i,\ldots,x_n)\]
-By the universal property of the tensor product~\(\medtprod^n E\), there is an induced linear function \(d:\medtprod^n E\to\Gamma\) with \(d(x_1\tprod\cdots\tprod x_n)=\Delta(x_1,\ldots,x_n)\).
+By the universal property of the tensor product~\(\medtprod^n E\), there is an induced linear function \(\Delta_{\tprod}:\medtprod^n E\to\Gamma\) with \(\Delta_{\tprod}(x_1\tprod\cdots\tprod x_n)=\Delta(x_1,\ldots,x_n)\).
 Now
 \begin{align*}
-\tr\varphi\mult d(x_1\tprod\cdots\tprod x_n)&=\sum_{i=1}^n d(x_1\tprod\cdots\tprod\varphi x_i\tprod\cdots\tprod x_n)\\
-	&=d(\sum_{i=1}^n x_1\tprod\cdots\tprod\varphi x_i\tprod\cdots\tprod x_n)\\
-	&=d(\theta_{\circled{n}}(\varphi)(x_1\tprod\cdots\tprod x_n))
+\tr\varphi\mult\Delta_{\tprod}(x_1\tprod\cdots\tprod x_n)&=\sum_{i=1}^n \Delta_{\tprod}(x_1\tprod\cdots\tprod\varphi x_i\tprod\cdots\tprod x_n)\\
+	&=\Delta_{\tprod}(\sum_{i=1}^n x_1\tprod\cdots\tprod\varphi x_i\tprod\cdots\tprod x_n)\\
+	&=\Delta_{\tprod}(\theta_{\circled{n}}(\varphi)(x_1\tprod\cdots\tprod x_n))
 \end{align*}
 It follows that
-\[\tr\varphi\mult d=d\after\theta_{\circled{n}}(\varphi)\]
+\[\Delta_{\tprod}\after(\tr\varphi\mult\iota)=\tr\varphi\mult\Delta_{\tprod}=\Delta_{\tprod}\after\theta_{\circled{n}}(\varphi)\]
 Since \(\theta_{\circled{n}}\)~is linear by~(3.7), it follows that the trace is also linear. If \(\psi:E\to E\) is another linear transformation, then it follows from~(3.8) that
 \[\tr(\varphi\psi)-\tr(\psi\varphi)=\tr(\varphi\psi-\psi\varphi)=\tr\varphi\mult\tr\psi-\tr\psi\mult\tr\varphi=0\]
 so \(\tr(\varphi\psi)=\tr(\psi\varphi)\).\footnote{This is what problem~3.7.3 was supposed to be.}
@@ -2125,10 +2125,16 @@ Every object \(E^p\to F\) in this category can be obtained from the exterior pro
 Geometrically, the \(p\)-vector
 \[\medeprod^p(x_1,\ldots,x_p)=\eprods{x}{1}{p}\]
 represents the oriented (signed) volume of the \(p\)-dimensional parallelepiped determined by \(x_1,\ldots, x_p\). It can also be thought of as a family of \(p\)-dimensional parallelepipeds with the same orientation and volume.
+\end{rmk}
 
+\begin{rmk}
 If \(E\)~is \(n\)-dimensional and \(\Delta\ne 0\) is a determinant function in~\(E\), then since \(\medeprod^n\)~is skew-symmetric and \(n\)-linear in~\(E\),
 \[\eprods{x}{1}{n}=\Delta(x_1,\ldots,x_n)\mult\eprods{e}{1}{n}\]
-where \(\Delta(e_1,\ldots,e_n)=1\). Here \(\eprods{e}{1}{n}\) represents the unit volume under~\(\Delta\).
+where \(\Delta(e_1,\ldots,e_n)=1\). Here \(\eprods{e}{1}{n}\) represents the unit volume under~\(\Delta\). On the other hand, since \(\Delta\)~is skew-symmetric and \(n\)-linear, there is a linear function \(\Delta_{\eprod}:\medeprod^n E\to\Gamma\) with
+\[\Delta_{\eprod}(\eprods{x}{1}{n})=\Delta(x_1,\ldots,x_n)\]
+Note \(\Delta_{\eprod}\)~is inverse to \(\eprods{e}{1}{n}\mult\iota\), so it is an isomorphism. Also
+\[\Delta_{\eprod}(\eprods{x}{1}{n})=\Delta_{\tprod}(\tprods{x}{1}{n})\]
+These results show that the universality of determinant functions is a special case of the universality of the exterior product.
 \end{rmk}
 
 \subsection*{\S~4}
@@ -2242,7 +2248,8 @@ Let \(E\)~be an \(n\)-dimensional space and \(\Delta\) a determinant function in
 \end{align*}
 for all \(x_1,\ldots,x_n\in E\). Therefore
 \[\varphi_{\eprod}^{(n)}=\det\varphi\mult\iota\]
-where \(\varphi_{\eprod}^{(n)}\)~is the restriction of~\(\varphi_{\eprod}\) to~\(\medeprod^n E\).
+where \(\varphi_{\eprod}^{(n)}\)~is the restriction of~\(\varphi_{\eprod}\) to~\(\medeprod^n E\). Equivalently
+\[\tr\varphi_{\eprod}^{(n)}=\det\varphi\]
 \end{rmk}
 
 \subsection*{\S~10}
@@ -2256,12 +2263,14 @@ Let \(E\)~be an \(n\)-dimensional space and \(\Delta\) a determinant function in
 \end{align*}
 for all \(x_1,\ldots,x_n\in E\). Therefore
 \[\theta_{\eprod}^{(n)}(\varphi)=\tr\varphi\mult\iota\]
-where \(\theta_{\eprod}^{(n)}(\varphi)\)~is the restriction of~\(\theta_{\eprod}(\varphi)\) to~\(\medeprod^n E\). This is equivalent to the result in subsection~3.6 above, by the following commutative diagram:
+where \(\theta_{\eprod}^{(n)}(\varphi)\)~is the restriction of~\(\theta_{\eprod}(\varphi)\) to~\(\medeprod^n E\). Equivalently
+\[\tr\theta_{\eprod}^{(n)}(\varphi)=\tr\varphi\]
+This is also equivalent to the result in subsection~3.6 above, by the following commutative diagram:
 \begin{diagram}[nohug]
-				&										&E^n				&				&\\
-				&										&\dTo<{\tprod^n}	&\rdTo>{\Delta}	&\\
-\medtprod^n E	&\rTo^{\theta_{\circled{n}}(\varphi)}	&\medtprod^n E		&\rTo			&\Gamma\\
-\dTo<{\pi}		&										&\dTo<{\pi}			&\ruTo			&\\
+				&										&E^n				&						&\\
+				&										&\dTo<{\tprod^n}	&\rdTo>{\Delta}			&\\
+\medtprod^n E	&\rTo^{\theta_{\circled{n}}(\varphi)}	&\medtprod^n E		&\rTo>{\Delta_{\tprod}}	&\Gamma\\
+\dTo<{\pi}		&										&\dTo<{\pi}			&\ruTo>{\Delta_{\eprod}}&\\
 \medeprod^n E	&\rTo_{\theta_{\eprod}^{(n)}(\varphi)}	&\medeprod^n E		&				&
 \end{diagram}
 \end{rmk}
