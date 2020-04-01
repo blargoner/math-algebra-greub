@@ -2275,6 +2275,27 @@ This is also equivalent to the result in subsection~3.6 above, by the following 
 \end{diagram}
 \end{rmk}
 
+\subsection*{\S~12}
+\begin{exer}[8]
+If \(\psi:E\to E\) is a linear transformation with \(\dim E=n\), then there exist linear transformations \(\psi_i^{(n)}:\medeprod^n E\to\medeprod^n E\) unique such that
+\[(\psi-\lambda\iota)_{\eprod}^{(n)}=\sum_{i=0}^n\psi_i^{(n)}\lambda^{n-i}\qquad\lambda\in\Gamma\]
+Moreover, \(\tr\psi_i^{(n)}=\alpha_i\) where \(\alpha_i\)~is the \(i\)-th characteristic coefficient of~\(\psi\).
+\end{exer}
+\begin{proof}
+By an argument similar to that given in subsection~4.19 of~\cite{greub1},
+\[(\psi-\lambda\iota)_{\eprod}^{(n)}=\sum_{i=0}^n\tilde{S}_i\]
+where
+\[\tilde{S}_i(\eprods{x}{1}{n})=\frac{(-\lambda)^{n-i}}{i!(n-i)!}\sum_{\sigma}\sign{\sigma}\eprods{\varphi x}{\sigma(1)}{\sigma(i)}\eprod\eprods{x}{\sigma(i+1)}{\sigma(n)}\]
+This uniquely determines \(\psi_i^{(n)}\) with \(\tilde{S}_i=\psi_i^{(n)}\lambda^{n-i}\). By (4.47) and~(4.48) of~\cite{greub1},
+\[\Delta_{\eprod}\after\tilde{S}_i=\alpha_i\lambda^{n-i}\Delta_{\eprod}=\Delta_{\eprod}\after(\alpha_i\lambda^{n-i}\iota)\]
+where \(\Delta\ne 0\) is a determinant function in~\(E\). Since \(\Delta_{\eprod}\)~is injective, this implies
+\[\psi_i^{(n)}\lambda^{n-i}=\tilde{S}_i=\alpha_i\lambda^{n-i}\iota\]
+so \(\psi_i^{(n)}=\alpha_i\iota\) and \(\tr\psi_i^{(n)}=\alpha_i\).
+\end{proof}
+\begin{rmk}
+We have \(\psi_0^{(n)}=(-1)^n\iota\), \(\psi_{1}^{(n)}=(-1)^{n-1}\theta_{\eprod}^{(n)}(\psi)\), and \(\psi_n^{(n)}=\psi_{\eprod}^{(n)}\).
+\end{rmk}
+
 % References
 \newpage
 \begin{thebibliography}{0}
