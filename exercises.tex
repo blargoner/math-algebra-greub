@@ -2010,6 +2010,15 @@ and
 It follows that the components of~\(g^*\) vary in the same way as the basis vectors in~\(E\) under a change of basis, while the components of~\(g\) vary inversely. This is why \(g^*\)~is called ``covariant'' and \(g\)~is called ``contravariant''.
 \end{rmk}
 
+\subsection*{\S~19}
+\begin{rmk}
+The definition of the substitution operator~\(i_{\nu}(h)\) does not specify the behavior on \(p\)-linear functions with \(p<\nu\).
+\end{rmk}
+
+\begin{rmk}
+The definitions of the operators \(i_A(h)\) and~\(i_S(h)\) given in this section are inappropriate for use with the algebras of skew-symmetric and symmetric multilinear functions, respectively. See the notes below.
+\end{rmk}
+
 \subsection*{\S~23}
 \begin{rmk}
 We have
@@ -2313,6 +2322,23 @@ It follows that the alternator diagram also commutes:
 T^p(E)			&\rTo_{A}		&T^p(E)
 \end{diagram}
 Therefore (5.81)~follows from~(4.11).
+\end{rmk}
+
+\subsection*{\S~32}
+\begin{rmk}
+In this section, the substitution operator~\(i_A(h)\) should be redefined on~\(T^p(E)\) as
+\[i_A(h)=\frac{1}{p}\sum_{\nu=1}^p(-1)^{\nu-1}i_{\nu}(h)\]
+Then for \(\Phi\in A^p(E)\),
+\begin{align*}
+p\mult(i_A(h)\Phi)(x_1,\ldots,x_{p-1})&=\sum_{\nu=1}^p(-1)^{\nu-1}(i_{\nu}(h)\Phi)(x_1,\ldots,x_{p-1})\\
+	&=\sum_{\nu=1}^p(-1)^{\nu-1}\Phi(x_1,\ldots,x_{\nu-1},h,x_{\nu+1},\ldots,x_{p-1})\\
+	&=\sum_{\nu=1}^p\Phi(h,x_1,\ldots,x_{p-1})\\
+	&=p\mult\Phi(h,x_1,\ldots,x_{p-1})\\
+	&=p\mult(i_1(h)\Phi)(x_1,\ldots,x_{p-1})
+\end{align*}
+so
+\[i_A(h)\Phi=i_1(h)\Phi\]
+as desired. This redefinition is required to make~\(i_A(h)\) an antiderivation in the algebra of skew-symmetric multilinear functions (5.32.1), although under the redefinition \(i_A(h)\)~is no longer an antiderivation in the algebra of multilinear functions.\footnote{See subsection~3.19.}
 \end{rmk}
 
 % References
