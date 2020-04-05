@@ -31,6 +31,8 @@
 \newcommand{\eprod}{\wedge}
 \newcommand{\bigeprod}{\bigwedge}
 \newcommand{\medeprod}{{\textstyle\bigeprod}}
+\newcommand{\fprod}{\bullet}
+\newcommand{\adot}{\bullet}
 
 \newcommand{\delete}{\widehat}
 \newcommand{\gen}[1]{\langle#1\rangle}
@@ -49,6 +51,7 @@
 \newcommand{\timess}[3]{\multi{\cross}{#1}{#2}{#3}}
 \newcommand{\tprods}[3]{\multi{\tprod}{#1}{#2}{#3}}
 \newcommand{\eprods}[3]{\multi{\eprod}{#1}{#2}{#3}}
+\newcommand{\fprods}[3]{\multi{\fprod}{#1}{#2}{#3}}
 \newcommand{\circled}[1]{\text{\scriptsize\textcircled{\textit{#1}}}}
 \newcommand{\sign}[1]{\varepsilon_{#1}}
 
@@ -2339,6 +2342,18 @@ p\mult(i_A(h)\Phi)(x_1,\ldots,x_{p-1})&=\sum_{\nu=1}^p(-1)^{\nu-1}(i_{\nu}(h)\Ph
 so
 \[i_A(h)\Phi=i_1(h)\Phi\]
 as desired. This redefinition is required to make~\(i_A(h)\) an antiderivation in the algebra of skew-symmetric multilinear functions (5.32.1), although under the redefinition \(i_A(h)\)~is no longer an antiderivation in the algebra of multilinear functions.\footnote{See subsection~3.19.}
+\end{rmk}
+
+\subsection*{\S~33}
+\begin{rmk}
+The algebra isomorphism \(\beta\after\eta:\medeprod E^*\to A^{\adot}(E)\) satisfies
+\[\eprods{f^*}{1}{p}\mapsto\eprods{f^*}{1}{p}=p!\,A(\fprods{f^*}{1}{p})\qquad f^*_i\in E^*\]
+The product on the left is the exterior product and the product on the right is the Grassman product, where \(f^*_i\)~has been identified with \(\sprod{f^*_i}{-}\).
+\end{rmk}
+
+\subsection*{\S~34}
+\begin{rmk}
+We see that the algebra isomorphisms \(\medeprod E^*\iso A^{\adot}(E)\) and \(\medeprod E\iso A_{\adot}(E)\) preserve scalar products.
 \end{rmk}
 
 % References
