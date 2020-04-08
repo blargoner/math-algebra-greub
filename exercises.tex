@@ -38,6 +38,7 @@
 \newcommand{\gen}[1]{\langle#1\rangle}
 \newcommand{\pair}[2]{\langle#1,#2\rangle}
 \newcommand{\sprod}[2]{\langle#1,#2\rangle}
+\newcommand{\bigsprod}[2]{\big\langle#1,#2\big\rangle}
 \newcommand{\oc}[1]{#1^{\perp}}
 \newcommand{\occ}[1]{#1^{\perp\perp}}
 \newcommand{\opp}[1]{#1^{\mathrm{opp}}}
@@ -2306,6 +2307,21 @@ so \(\psi_i^{(n)}=\alpha_i\iota\) and \(\tr\psi_i^{(n)}=\alpha_i\).
 \end{proof}
 \begin{rmk}
 We have \(\psi_0^{(n)}=(-1)^n\iota\), \(\psi_{1}^{(n)}=(-1)^{n-1}\theta_{\eprod}^{(n)}(\psi)\), and \(\psi_n^{(n)}=\psi_{\eprod}^{(n)}\).
+\end{rmk}
+
+\subsection*{\S~13}
+\begin{rmk}
+If \(a=\eprods{a}{1}{p}\in\medeprod^p E\) and \(u^*=u^{*1}\eprod\cdots\eprod u^{*q}\in\medeprod^q E^*\) with \(p\le q\), then
+\[i(a)u^*=\sprod{u^{*1}}{a_1}\cdots\sprod{u^{*p}}{a_p}u^{*p+1}\eprod\cdots\eprod u^{*q}\]
+Indeed, for any \(v\in\medeprod E\),
+\begin{align*}
+\sprod{i(a)u^*}{v}&=\sprod{u^*}{a\eprod v}\\
+	&=\sprod{u^{*1}\eprod\cdots\eprod u^{*p}}{a}\sprod{u^{*p+1}\eprod\cdots\eprod u^{*q}}{v}\\
+	&=\bigsprod{\sprod{u^{*1}\eprod\cdots\eprod u^{*p}}{a}u^{*p+1}\eprod\cdots\eprod u^{*q}}{v}
+\end{align*}
+from which the result follows since
+\[\sprod{u^{*1}\eprod\cdots\eprod u^{*p}}{a}=\sprod{u^{*1}}{a_1}\cdots\sprod{u^{*p}}{a_p}\]
+This result shows that \(i(a)\)~is a ``left substitution'' operator.
 \end{rmk}
 
 \subsection*{\S~29}
