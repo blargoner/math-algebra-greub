@@ -2314,6 +2314,58 @@ so \(\psi_i^{(n)}=\alpha_i\iota\) and \(\tr\psi_i^{(n)}=\alpha_i\).
 We have \(\psi_0^{(n)}=(-1)^n\iota\), \(\psi_{1}^{(n)}=(-1)^{n-1}\theta_{\eprod}^{(n)}(\psi)\), and \(\psi_n^{(n)}=\psi_{\eprod}^{(n)}\).
 \end{rmk}
 
+\subsection*{\S~14}
+\begin{exer}[1]
+If \(u^*\in\medeprod^p E^*\) and \(i(a)u^*=0\) for all \(a\in\medeprod^k E\) for some \(k\le p\), then \(u^*=0\).
+\end{exer}
+\begin{proof}
+We claim \(\sprod{u^*}{v}=0\) for all \(v\in\medeprod^p E\), from which it follows that \(u^*=0\). Since \(k\le p\), we may write
+\[v=\sum_{\nu}a_{\nu}\eprod v_{\nu}\qquad a_{\nu}\in\medeprod^k E,\ v_{\nu}\in\medeprod^{p-k}E\]
+Then
+\[\sprod{u^*}{v}=\sum_{\nu}\sprod{u^*}{a_{\nu}\eprod v_{\nu}}=\sum_{\nu}\sprod{i(a_{\nu})u^*}{v_{\nu}}=0\qedhere\]
+\end{proof}
+\begin{rmk}
+This result generalizes Proposition~5.14.2.
+\end{rmk}
+
+\begin{exer}[2]
+Let \(E,E^*\) be a pair of dual \(n\)-dimensional vector spaces and \(e_{\nu},e^{*\nu}\) a pair of dual bases. If \(\varphi:E\to E\) is linear, then
+\begin{align*}
+\theta_{\eprod}(\varphi)&=\sum_{\nu}\mu(\varphi e_{\nu})i(e^{*\nu})\tag{1}\\
+\theta^{\eprod}(\varphi)&=\sum_{\nu}\mu(e^{*\nu})i(\varphi e_{\nu})\tag{2}
+\end{align*}
+\end{exer}
+\begin{proof}
+By Corollary~II to Proposition~5.14.1,
+\[i(e^{*\nu})(\eprods{x}{1}{p})=\sum_{\mu=1}^p(-1)^{\mu-1}\sprod{e^{*\nu}}{x_{\mu}}x_1\eprod\cdots\eprod\delete{x_{\mu}}\eprod\cdots\eprod x_p\]
+It follows that
+\[\mu(\varphi e_{\nu})i(e^{*\nu})(\eprods{x}{1}{p})=\sum_{\mu=1}^p x_1\eprod\cdots\eprod\varphi\bigl(\sprod{e^{*\nu}}{x_{\mu}}e_{\nu}\bigr)\eprod\cdots\eprod x_p\]
+and so
+\begin{align*}
+\sum_{\nu=1}^n\mu(\varphi e_{\nu})i(e^{*\nu})(\eprods{x}{1}{p})&=\sum_{\mu=1}^p x_1\eprod\cdots\eprod\varphi\bigl(\sum_{\nu=1}^n\sprod{e^{*\nu}}{x_{\mu}}e_{\nu}\bigr)\eprod\cdots\eprod x_p\\
+	&=\sum_{\mu=1}^p x_1\eprod\cdots\eprod\varphi x_{\mu}\eprod\cdots\eprod x_p\\
+	&=\theta_{\eprod}(\varphi)(\eprods{x}{1}{p})
+\end{align*}
+This establishes~(1). Now (2)~follows from~(1) by duality since
+\[\theta^{\eprod}(\varphi)=\theta_{\eprod}(\varphi)^*=\sum_{\nu=1}^n i(e^{*\nu})^*\mu(\varphi e_{\nu})^*=\sum_{\nu=1}^n\mu(e^{*\nu})i(\varphi e_{\nu})\qedhere\]
+\end{proof}
+
+\begin{exer}[3]
+Let \(E,E^*\) be a pair of dual \(n\)-dimensional vector spaces and \(e_{\nu},e^{*\nu}\) a pair of dual bases.
+\begin{enumerate}
+\item[(a)] For \(x\in E\) and \(x^*\in E^*\),
+\[i(x^*)\mu(x)+\mu(x)i(x^*)=\sprod{x^*}{x}\iota\]
+\item[(b)] For \(u\in\medeprod^p E\),
+\[\sum_{\nu}\mu(e_{\nu})i(e^{*\nu})u=pu\]
+\item[(c)] For \(u\in\medeprod^p E\),
+\[\sum_{\nu}i(e^{*\nu})\mu(e_{\nu})u=(n-p)u\]
+\end{enumerate}
+\end{exer}
+\begin{proof}
+For~(a), dualize Corollary~I to Proposition~5.14.1; for~(b), apply problem~2 with \(\varphi=\iota\); for~(c), apply (a) and~(b) to obtain
+\[\sum_{\nu=1}^n i(e^{*\nu})\mu(e_{\nu})u=\sum_{\nu=1}^n\sprod{e^{*\nu}}{e_{\nu}}u-\sum_{\nu=1}^n\mu(e_{\nu})i(e^{*\nu})u=nu-pu\qedhere\]
+\end{proof}
+
 \subsection*{\S~29}
 \begin{rmk}
 Recall that if \(E,E^*\) is a pair of finite-dimensional dual vector spaces, then there is a natural isomorphism \(\alpha:\medtprod^p E^*\to T^p(E)\).\footnote{See subsection~3.20.} Since
