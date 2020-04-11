@@ -237,7 +237,7 @@ The structure of~\(\varphi\) is completely determined by the structures of \(\va
 
 \subsection*{\S~5}
 \begin{rmk}
-The definition of dual space is fundamentally \emph{symmetrical} between \(E\) and~\(E^*\), as is the definition of dual mapping between \(\varphi\) and~\(\varphi^*\). This symmetry often allows us to use bidirectional reasoning and derive two theorems from one proof. For example, (2.48) actually follows from~(2.47) by symmetry of \(\varphi\) and~\(\varphi^*\). The proof of Proposition~I in subsection~2.23 exploits symmetry, as do other proofs in the book. Many other books simply \emph{define} the dual space of~\(E\) to be~\(L(E)\) (no doubt in light of Proposition~I of this section), at the expense of this symmetry.
+The definition of dual space is fundamentally \emph{symmetrical} between \(E\) and~\(E^*\), as is the definition of dual mapping between \(\varphi\) and~\(\varphi^*\). This symmetry often allows us to use bidirectional reasoning and derive two theorems from one proof. For example, (2.48) actually follows from~(2.47) by symmetry of \(\varphi\) and~\(\varphi^*\). The proof of Proposition~I in subsection~2.23 exploits symmetry, as do other proofs in the book. Many other books simply \emph{define} the dual space of~\(E\) to be~\(L(E)\) (no doubt in light of Proposition~I of this subsection), at the expense of this symmetry.
 \end{rmk}
 
 \begin{rmk}
@@ -1357,7 +1357,7 @@ In particular, \(E\tprod 0=0=0\tprod E\).
 \begin{rmk}
 In the proof of~(1.2), the idea is that \(E\iso\bigdsum_{\alpha}E_{\alpha}\) and \(F\iso\bigdsum_{\beta}F_{\beta}\), so
 \[E\tprod F\iso\bigl(\bigdsum_{\alpha}E_{\alpha}\bigr)\tprod\bigl(\bigdsum_{\beta}F_{\beta}\bigr)=\bigdsum_{\alpha,\beta}E_{\alpha}\tprod F_{\beta}\]
-by the result for external direct sums in the previous section. Note that \(h=f\tprod g\) (see \S~16).
+by the result for external direct sums in the previous subsection. Observe that \(h=f\tprod g\) (see \S~16).
 \end{rmk}
 
 \subsection*{\S~15}
@@ -1435,12 +1435,12 @@ The tensor product operation is a bifunctor in the category of vector spaces. It
 \end{rmk}
 
 \begin{rmk}
-Corollary~III to Proposition~1.16.1 is not established in section~1.27, where it is also assumed that \(E'\) and~\(F'\) are finite-dimensional. However, it is true. In fact, for fixed bases in \(E,E',F,F'\), the tensor products of the induced basis maps in \(L(E;E')\) and \(L(F;F')\) are the basis maps in \(L(E\tprod F,E'\tprod F')\) induced by the tensor products of the basis vectors.\footnote{See problem~1.19.4.}
+Corollary~III to Proposition~1.16.1 is not established in subsection~1.27, where it is also assumed that \(E'\) and~\(F'\) are finite-dimensional. However, it is true. In fact, for fixed bases in \(E,E',F,F'\), the tensor products of the induced basis maps in \(L(E;E')\) and \(L(F;F')\) are the basis maps in \(L(E\tprod F,E'\tprod F')\) induced by the tensor products of the basis vectors.\footnote{See problem~1.19.4.}
 \end{rmk}
 
 \subsection*{\S~19}
 \begin{rmk}
-The proof of~(1.12) is captured in the following diagram:
+The proof of~(1.12) is captured in the following commutative diagram:
 \begin{diagram}[nohug]
 E\tprod F						&														&\rTo^{\varphi\tprod\psi}	&		&E'\tprod F'\\
 								&\rdLine_{\pi}											&							&\ruTo	&\\
@@ -1678,7 +1678,7 @@ so \((\varphi\tprod\varphi^*)^*=\varphi\tprod\varphi^*\).
 \end{proof}
 
 \subsection*{\S~28}
-\textbf{In this section, all vector spaces are finite-dimensional.}
+\textbf{In this subsection, all vector spaces are finite-dimensional.}
 
 \begin{rmk}
 By~(1.30), if we view \(a^*\tprod a\) as a linear transformation, then its trace is just \(\sprod{a^*}{a}\). This gives a natural (coordinate-free) definition of the trace. This also gives a slick proof that \(\tr(\varphi\tprod\psi)=\tr\varphi\mult\tr\psi\). Indeed, if we write \(\varphi=a^*\tprod a\) and \(\psi=b^*\tprod b\), then we can write \(\varphi\tprod\psi=(a^*\tprod b^*)\tprod(a\tprod b)\) since
@@ -1693,7 +1693,7 @@ Therefore
 \end{rmk}
 
 \subsection*{\S~29}
-\textbf{In this section, all vector spaces are finite-dimensional.}
+\textbf{In this subsection, all vector spaces are finite-dimensional.}
 
 \begin{rmk}
 In the proof of Proposition~1.29.1, note that if \(\alpha=a^*\tprod b\) and \(\beta=c^*\tprod d\), then
@@ -2020,7 +2020,7 @@ The definition of the substitution operator~\(i_{\nu}(h)\) does not specify the 
 \end{rmk}
 
 \begin{rmk}
-The definitions of the operators \(i_A(h)\) and~\(i_S(h)\) given in this section are inappropriate for use with the algebras of skew-symmetric and symmetric multilinear functions, respectively. See the notes below.
+The definitions of the substitution operators \(i_A(h)\) and~\(i_S(h)\) given in this subsection are inappropriate for use with the algebras of skew-symmetric and symmetric multilinear functions, respectively. See below.
 \end{rmk}
 
 \subsection*{\S~23}
@@ -2033,7 +2033,7 @@ It follows that \(T^p_q(E)\)~is dual to~\(T^q_p(E)\), and \(T(E)\)~is dual to it
 \end{rmk}
 
 \begin{rmk}
-The results in this section show that it is possible to develop tensor algebra using multilinear function spaces instead of tensor product spaces (at least in the finite-dimensional case). While it is easier to get started this way, it is messier in the long run.
+The results in this subsection show that it is possible to develop tensor algebra using multilinear function spaces instead of tensor product spaces (at least in the finite-dimensional case). While it is easier to get started this way, it is messier in the long run.
 \end{rmk}
 
 \section*{Chapter~4}
@@ -2062,7 +2062,7 @@ so \(C^1_{j+1}\after\mu(t)=\sigma\).
 
 \subsection*{\S~5}
 \begin{rmk}
-In the following few sections, an algebra of skew-symmetric tensors is constructed in two ways: first from the top down, by starting with the tensor algebra~\(\medtprod E\) and killing off tensors with equal factors in~\(N(E)\) to form \(\medtprod E/N(E)\); and then from the bottom up, by collecting skew-symmetric tensors in~\(\medtprod E\) to form~\(X(E)\). The two constructions are essentially equivalent by~(4.17), although scalar products between dual algebras are defined slightly differently in~\S~8.
+In the following subsections, an algebra of skew-symmetric tensors is constructed in two ways: first from the top down, by starting with the tensor algebra~\(\medtprod E\) and killing off tensors with equal factors in~\(N(E)\) to form \(\medtprod E/N(E)\); and then from the bottom up, by collecting skew-symmetric tensors in~\(\medtprod E\) to form~\(X(E)\). The two constructions are essentially equivalent by~(4.17), although scalar products between dual algebras are defined slightly differently in~\S~8.
 \end{rmk}
 
 \subsection*{\S~6}
@@ -2152,7 +2152,7 @@ These results show that the universality of determinant functions is a special c
 
 \subsection*{\S~4}
 \begin{rmk}
-The projection \(\pi:\medtprod E\to\medtprod E/N(E)\) and the projection \(\pi:\medtprod E\to\medeprod E\) constructed in this section are related by the following commutative diagram:
+The projection \(\pi:\medtprod E\to\medtprod E/N(E)\) and the projection \(\pi:\medtprod E\to\medeprod E\) constructed in this subsection are related by the following commutative diagram:
 \begin{diagram}[nohug]
 \medtprod E		&\rTo^{\pi}	&\medeprod E\\
 \dTo<{\pi}		&\ruTo>{f}	&\\
@@ -2290,7 +2290,7 @@ This is also equivalent to the result in subsection~3.6 above, by the following 
 
 \subsection*{\S~11}
 \begin{rmk}
-If \(\omega=\iota_{\eprod}\) and \(\varphi:E\to E\) is linear, then \(\Omega(\varphi)=\theta_{\eprod}(\varphi)\). This shows that the construction in \S~10 is just a special case of the construction in this section.
+If \(\omega=\iota_{\eprod}\) and \(\varphi:E\to E\) is linear, then \(\Omega(\varphi)=\theta_{\eprod}(\varphi)\). This shows that the construction in \S~10 is just a special case of the construction in this subsection.
 \end{rmk}
 
 \subsection*{\S~12}
@@ -2404,7 +2404,7 @@ Therefore (5.81)~follows from~(4.11).
 
 \subsection*{\S~32}
 \begin{rmk}
-In this section, the substitution operator~\(i_A(h)\) should be redefined on~\(T^p(E)\) as
+In this subsection, the substitution operator~\(i_A(h)\) should be redefined on~\(T^p(E)\) as
 \[i_A(h)=\frac{1}{p}\sum_{\nu=1}^p(-1)^{\nu-1}i_{\nu}(h)\]
 Then for \(\Phi\in A^p(E)\),
 \begin{align*}
