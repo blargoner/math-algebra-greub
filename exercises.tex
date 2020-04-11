@@ -2366,6 +2366,23 @@ For~(a), dualize Corollary~I to Proposition~5.14.1; for~(b), apply problem~2 wit
 \[\sum_{\nu=1}^n i(e^{*\nu})\mu(e_{\nu})u=\sum_{\nu=1}^n\sprod{e^{*\nu}}{e_{\nu}}u-\sum_{\nu=1}^n\mu(e_{\nu})i(e^{*\nu})u=nu-pu\qedhere\]
 \end{proof}
 
+\begin{exer}[6]
+If \(a\in\medeprod^p E\) and \(p\le q\), then
+\[i(a)(\eprods{x^*}{1}{q})=\sum_{\nu_1<\cdots<\nu_p}(-1)^{\sum_{i=1}^p(\nu_i-i)}\sprod{\eprods{x^*}{\nu_1}{\nu_p}}{a}\eprods{x^*}{\nu_{p+1}}{\nu_q}\]
+where \((\nu_{p+1},\ldots,\nu_q)\) is the ordered tuple complementary to \((\nu_1,\ldots,\nu_p)\).
+\end{exer}
+\begin{proof}
+By induction on~\(p\). For \(p=0\) the result is trivial, and for \(p=1\) it is just Corollary~II to Proposition~5.14.1. We illustrate the induction step for \(p=2\), where we may assume that \(a=a_1\eprod a_2\) and write \(u^*=\eprods{x^*}{1}{q}\):
+\begin{align*}
+i(a)u^*&=i(a_2)i(a_1)(\eprods{x^*}{1}{q})\\
+	&=i(a_2)\sum_{\nu_1}(-1)^{\nu_1-1}\sprod{x^*_{\nu_1}}{a_1}x^*_1\eprod\cdots\eprod\delete{x^*_{\nu_1}}\eprod\cdots\eprod x^*_q\\
+	&=\ \ \sum_{\nu_1}(-1)^{\nu_1-1}\sprod{x^*_{\nu_1}}{a_1}i(a_2)(x^*_1\eprod\cdots\eprod\delete{x^*_{\nu_1}}\eprod\cdots\eprod x^*_q)\\
+	&=\sum_{\nu_1<\nu_2}(-1)^{(\nu_1-1)+(\nu_2-2)}C_{\nu_1,\nu_2} x^*_1\eprod\cdots\eprod\delete{x^*_{\nu_1}}\eprod\cdots\eprod\delete{x^*_{\nu_2}}\eprod\cdots\eprod x^*_q
+\end{align*}
+where
+\[C_{\nu_1,\nu_2}=\sum_{\sigma}\sign{\sigma}\sprod{x^*_{\nu_{\sigma(1)}}}{a_1}\sprod{x^*_{\nu_{\sigma(2)}}}{a_2}=\det(\sprod{x^*_{\nu_i}}{a_j})=\sprod{x^*_{\nu_1}\eprod x^*_{\nu_2}}{a_1\eprod a_2}\qedhere\]
+\end{proof}
+
 \subsection*{\S~29}
 \begin{rmk}
 Recall that if \(E,E^*\) is a pair of finite-dimensional dual vector spaces, then there is a natural isomorphism \(\alpha:\medtprod^p E^*\to T^p(E)\).\footnote{See subsection~3.20.} Since
