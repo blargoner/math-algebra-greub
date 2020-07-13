@@ -1317,13 +1317,13 @@ If \(S\) and~\(T\) are sets, then \(C(S\times T)\iso C(S)\tprod C(T)\).
 \begin{proof}
 By the universal property of the free space, there is a unique linear map \(\varphi:C(S\times T)\to C(S)\tprod C(T)\) with \(\varphi(s,t)=s\tprod t\) for \(s\in S\) and \(t\in T\):
 \begin{diagram}[nohug]
-S\times T	&\rTo^{\tprod}		&C(S)\tprod C(T)\\
-\dTo<i		&\ruTo>{\varphi}	&\\
-C(S\times T)&					&
+S\times T	&\rTo^{i\times i}	&C(S)\times C(T)\\
+\dTo<i		&					&\dTo>{\tprod}\\
+C(S\times T)&\rTo>{\varphi}		&C(S)\tprod C(T)
 \end{diagram}
 Observe that \(\varphi\)~is injective since
 \[0=\varphi\bigl(\,\sum_i\lambda_i(s_i,t_i)\bigr)=\sum_i\lambda_i\,s_i\tprod t_i\]
-implies \(\lambda_i=0\) by linear independence of the \(s_i\) in~\(S\) and the \(t_i\) in~\(T\) (1.5.1). Also \(\varphi\)~is surjective since
+implies \(\lambda_i=0\) by linear independence of the distinct \(s_i\) in~\(C(S)\) and \(t_i\) in~\(C(T)\) (1.5.1). Also \(\varphi\)~is surjective since
 \[\bigl(\,\sum_i\lambda_i s_i\bigr)\tprod\bigl(\,\sum_j\mu_j t_j\bigr)=\sum_{i,j}\lambda_i\mu_j\,s_i\tprod t_j=\sum_{i,j}\lambda_i\mu_j\,\varphi(s_i,t_j)\]
 and the elements on the left generate \(C(S)\tprod C(T)\).
 \end{proof}
