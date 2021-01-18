@@ -1225,6 +1225,33 @@ Clearly \(\varphi\)~is linear and is uniquely determined by~\(\Phi\). Also
 This result shows that the linear transformation \(\varphi\) is naturally left-dual to the sesquilinear function~\(\Phi\). Observe that \(\Phi\)~is Hermitian if and only if \(\varphi\)~is Hermitian (self-adjoint) and \(\Phi\)~is skew-Hermitian if and only if \(\varphi\)~is skew-Hermitian.
 \end{rmk}
 
+\section*{Chapter~XII}
+\subsection*{\S~1}
+\begin{exer}[2]
+Define the linear mapping \(\int:\Gamma[t]\to\Gamma[t]\) by
+\[\int t^p=\frac{t^{p+1}}{p+1}\qquad(p\ge 0)\]
+Then \(\int\)~is homogeneous (of degree~1) with \(d\after\int=\iota\), and is unique with these properties.
+\end{exer}
+\begin{proof}
+If \(\int\)~satisfies the properties, then we must have
+\[\int t^p=\frac{t^{p+1}}{p+1}+\alpha_p\qquad(\alpha_p\in\Gamma)\]
+since \(d\after\int=\iota\). But \(\alpha_p=0\) for all~\(p\) since \(\int\)~is homogeneous. Finally, \(\int\)~is uniquely determined on~\(\Gamma[t]\) since \(\int\)~is linear and the~\(t^p\) (\(p\ge 0\)) form a basis of~\(\Gamma[t]\).
+\end{proof}
+
+\begin{exer}[3]
+If \(\int:\Gamma[t]\to\Gamma[t]\) is the integration operator, then \(\int\after d=\iota-\varrho\), where \(\varrho:\Gamma[t]\to\Gamma\) is the scalar projection \(\varrho f=f(0)\). It follows that
+\[\int fg'=fg-\varrho(fg)-\int gf'\]
+\end{exer}
+\begin{proof}
+The first part is easily verified on the basis~\(t^p\) (\(p\ge 0\)). The second part then follows since
+\[fg-\varrho(fg)=\int(fg)'=\int(f'g+fg')=\int f'g+\int fg'\qedhere\]
+\end{proof}
+
+\subsection*{\S~3}
+\begin{rmk}
+If \(A=0\), then the minimum polynomial of \(a=0\) is \(\mu=1\).
+\end{rmk}
+
 % Multilinear algebra
 \newpage
 \part*{Multilinear Algebra}
