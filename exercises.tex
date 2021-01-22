@@ -534,7 +534,7 @@ Conversely, if \(\varphi\ne0\) and \(\chi(\varphi)=(-\lambda)^n\), then the cons
 
 \subsection*{\S~7}
 \begin{exer}[12]
-If \(\varphi_1:E_1\to E_1\) and \(\varphi_2:E_2\to E_2\), then
+If \(\varphi_1:E_1\to E_1\) and \(\varphi_2:E_2\to E_2\) are linear, then
 \[\tr(\varphi_1\dsum\varphi_2)=\tr\varphi_1+\tr\varphi_2\]
 \end{exer}
 \begin{proof}
@@ -1251,6 +1251,25 @@ The first part is easily verified on the basis~\(t^p\) (\(p\ge 0\)). The second 
 \begin{rmk}
 If \(A=0\), then the minimum polynomial of \(a=0\) is \(\mu=1\).
 \end{rmk}
+
+\section*{Chapter~XIII}
+\subsection*{\S~1}
+\begin{rmk}
+Let \(f\in\Gamma[t]\). If \(\varphi:E\to E\) is linear and \(E_1\)~is stable under~\(\varphi\), then \(E_1\)~is stable under~\(f(\varphi)\) and
+\[f(\varphi_{E_1})=f(\varphi)_{E_1}\]
+\end{rmk}
+\begin{proof}
+Stabilization of~\(E_1\) is preserved by addition, scalar multiplication, and composition, so is preserved by~\(f\). It follows that \(f(\varphi_{E_1})\) and~\(f(\varphi)_{E_1}\) are both transformations of~\(E_1\) with the same action, so are equal.
+\end{proof}
+
+\begin{rmk}
+Let \(f\in\Gamma[t]\). If \(\varphi_1:E_1\to E_1\) and \(\varphi_2:E_2\to E_2\) are linear, then
+\[f(\varphi_1\dsum\varphi_2)=f(\varphi_1)\dsum f(\varphi_2)\]
+\end{rmk}
+\begin{proof}
+Write \(\varphi=\varphi_1\dsum\varphi_2\), so \(\varphi_{E_1}=\varphi_1\) and \(\varphi_{E_2}=\varphi_2\). By the previous remark,
+\[f(\varphi)=f(\varphi)_{E_1}\dsum f(\varphi)_{E_2}=f(\varphi_1)\dsum f(\varphi_2)\qedhere\]
+\end{proof}
 
 % Multilinear algebra
 \newpage
