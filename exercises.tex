@@ -1260,9 +1260,12 @@ In the following remarks, \(f\in\Gamma[t]\).
 \begin{rmk}
 If \(\varphi:E\to E\) is linear and \(E_1\)~is stable under~\(\varphi\), then \(E_1\)~is also stable under~\(f(\varphi)\) and
 \[f(\varphi)_{E_1}=f(\varphi_{E_1})\]
+Dually,
+\[\proj{f(\varphi)}=f(\proj{\varphi})\]
 \end{rmk}
 \begin{proof}
-Stabilization of~\(E_1\) is preserved by addition, scalar multiplication, and composition, so is preserved by~\(f\). It follows that \(f(\varphi)_{E_1}\) and~\(f(\varphi_{E_1})\) are both transformations of~\(E_1\) with the same action, so are equal.
+Stabilization of~\(E_1\) is preserved by addition, scalar multiplication, and composition, so is preserved by~\(f\). It follows that \(f(\varphi)_{E_1}\) and~\(f(\varphi_{E_1})\) are both transformations of~\(E_1\) with the same action, so are equal. Finally,
+\[\proj{f(\varphi)}(\proj{x})=\proj{f(\varphi)(x)}=f(\proj{\varphi})(\proj{x})\qedhere\]
 \end{proof}
 
 \begin{rmk}
@@ -1302,6 +1305,21 @@ If \(\varphi_1:E_1\to E_1\) and \(\varphi_2:E_2\to E_2\) are linear, then
 \end{exer}
 \begin{proof}
 Write \(\varphi=\varphi_1\dsum\varphi_2\). By a remark above, \(f(\varphi)=f(\varphi_1)\dsum f(\varphi_2)\), so \(f(\varphi)=0\) if and only if \(f(\varphi_1)=0\) and \(f(\varphi_2)=0\). It follows that \(\mu_{\varphi}\)~is the least common multiple of \(\mu_{\varphi_1}\) and~\(\mu_{\varphi_2}\).
+\end{proof}
+
+\begin{exer}[5]
+If \(\varphi:E\to E\) stabilizes~\(E_1\), and \(\varphi_1:E_1\to E_1\) and \(\proj{\varphi}:E/E_1\to E/E_1\) are the induced transformations, then
+\[\proj{\mu}\meet\mu_1\divides\mu\divides\proj{\mu}\mu_1\]
+where \(\mu=\mu_{\varphi}\), \(\mu_1=\mu_{\varphi_1}\), and \(\proj{\mu}=\mu_{\proj{\varphi}}\).
+\end{exer}
+\begin{proof}
+By a remark above, \(\mu(\varphi_1)=0\) and \(\mu(\proj{\varphi})=0\), so \(\mu_1\divides\mu\) and \(\proj{\mu}\divides\mu\). On the other hand,
+\[\proj{\mu}\mu_1(\varphi)(x)=\mu_1(\varphi)(\proj{\mu}(\varphi)(x))\]
+But \(\proj{\mu}(\varphi)(x)\)~is in~\(E_1\) since
+\[\proj{\proj{\mu}(\varphi)(x)}=\proj{\proj{\mu}(\varphi)}(\proj{x})=\proj{\mu}(\proj{\varphi})(\proj{x})=0\]
+so
+\[\mu_1(\varphi)(\proj{\mu}(\varphi)(x))=\mu_1(\varphi_1)(\proj{\mu}(\varphi)(x))=0\]
+It follows that \(\proj{\mu}\mu_1(\varphi)=0\), so \(\mu\divides\proj{\mu}\mu_1\).
 \end{proof}
 
 \begin{exer}[9]
