@@ -11,6 +11,7 @@
 \newcommand{\iso}{\cong}
 \renewcommand{\equiv}{\sim}
 \newcommand{\orth}{\perp}
+\newcommand{\divides}{\mid}
 
 \DeclareMathOperator{\im}{Im}
 \DeclareMathOperator{\ad}{ad}
@@ -20,6 +21,7 @@
 \newcommand{\union}{\cup}
 \newcommand{\sect}{\cap}
 \newcommand{\after}{\circ}
+\newcommand{\meet}{\wedge}
 \newcommand{\dsum}{\oplus}
 \newcommand{\bigdsum}{\bigoplus}
 \newcommand{\mult}{\cdot}
@@ -1254,21 +1256,59 @@ If \(A=0\), then the minimum polynomial of \(a=0\) is \(\mu=1\).
 
 \section*{Chapter~XIII}
 \subsection*{\S~1}
+In the following remarks, \(f\in\Gamma[t]\).
 \begin{rmk}
-Let \(f\in\Gamma[t]\). If \(\varphi:E\to E\) is linear and \(E_1\)~is stable under~\(\varphi\), then \(E_1\)~is stable under~\(f(\varphi)\) and
-\[f(\varphi_{E_1})=f(\varphi)_{E_1}\]
+If \(\varphi:E\to E\) is linear and \(E_1\)~is stable under~\(\varphi\), then \(E_1\)~is also stable under~\(f(\varphi)\) and
+\[f(\varphi)_{E_1}=f(\varphi_{E_1})\]
 \end{rmk}
 \begin{proof}
-Stabilization of~\(E_1\) is preserved by addition, scalar multiplication, and composition, so is preserved by~\(f\). It follows that \(f(\varphi_{E_1})\) and~\(f(\varphi)_{E_1}\) are both transformations of~\(E_1\) with the same action, so are equal.
+Stabilization of~\(E_1\) is preserved by addition, scalar multiplication, and composition, so is preserved by~\(f\). It follows that \(f(\varphi)_{E_1}\) and~\(f(\varphi_{E_1})\) are both transformations of~\(E_1\) with the same action, so are equal.
 \end{proof}
 
 \begin{rmk}
-Let \(f\in\Gamma[t]\). If \(\varphi_1:E_1\to E_1\) and \(\varphi_2:E_2\to E_2\) are linear, then
+If \(\varphi_1:E_1\to E_1\) and \(\varphi_2:E_2\to E_2\) are linear, then
 \[f(\varphi_1\dsum\varphi_2)=f(\varphi_1)\dsum f(\varphi_2)\]
 \end{rmk}
 \begin{proof}
 Write \(\varphi=\varphi_1\dsum\varphi_2\), so \(\varphi_{E_1}=\varphi_1\) and \(\varphi_{E_2}=\varphi_2\). By the previous remark,
 \[f(\varphi)=f(\varphi)_{E_1}\dsum f(\varphi)_{E_2}=f(\varphi_1)\dsum f(\varphi_2)\qedhere\]
+\end{proof}
+
+\begin{rmk}
+If \(E,E^*\) are dual spaces and \(\varphi:E\to E\) and \(\varphi^*:E^*\from E^*\) are dual transformations, then
+\[f(\varphi)^*=f(\varphi^*)\]
+\end{rmk}
+\begin{proof}
+By the results of subsection~2.25.
+\end{proof}
+
+\begin{rmk}
+In particular, if \(E\)~is an inner product space or a unitary space, then
+\[\adj{f(\varphi)}=\conj{f}(\adj{\varphi})\]
+where \(\conj{f}\)~is obtained from~\(f\) by conjugating the coefficients.\footnote{In the case of an inner product space, \(\conj{f}=f\).}
+\end{rmk}
+\begin{proof}
+Let \(\conj{E}\)~be the conjugate space and \(\kappa:E\to\conj{E}\) the conjugate-linear identity map. Then
+\[\adj{f(\varphi)}=\kappa^{-1}f(\varphi)^*\kappa=\kappa^{-1}f(\varphi^*)\kappa=\conj{f}(\kappa^{-1}\varphi^*\kappa)=\conj{f}(\adj{\varphi})\qedhere\]
+\end{proof}
+
+\begin{rmk}
+It follows that \(f(\varphi)=0\) if and only if \(\conj{f}(\adj{\varphi})=0\), so if \(\mu\)~is the minimum polynomial of~\(\varphi\) then \(\conj{\mu}\)~is the minimum polynomial of~\(\adj{\varphi}\).
+\end{rmk}
+
+\begin{exer}[3]
+If \(\varphi_1:E_1\to E_1\) and \(\varphi_2:E_2\to E_2\) are linear, then
+\[\mu_{\varphi_1\dsum\varphi_2}=\mu_{\varphi_1}\meet\mu_{\varphi_2}\]
+\end{exer}
+\begin{proof}
+Write \(\varphi=\varphi_1\dsum\varphi_2\). By a remark above, \(f(\varphi)=f(\varphi_1)\dsum f(\varphi_2)\), so \(f(\varphi)=0\) if and only if \(f(\varphi_1)=0\) and \(f(\varphi_2)=0\). It follows that \(\mu_{\varphi}\)~is the least common multiple of \(\mu_{\varphi_1}\) and~\(\mu_{\varphi_2}\).
+\end{proof}
+
+\begin{exer}[9]
+The minimum polynomial of a self-adjoint transformation of a unitary space has real coefficients.
+\end{exer}
+\begin{proof}
+By a remark above, \(\conj{\mu}=\mu\).
 \end{proof}
 
 % Multilinear algebra
