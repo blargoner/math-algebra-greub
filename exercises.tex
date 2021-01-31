@@ -1329,6 +1329,38 @@ The minimum polynomial of a self-adjoint transformation of a unitary space has r
 By a remark above, \(\conj{\mu}=\mu\).
 \end{proof}
 
+\subsection*{\S~2}
+\begin{exer}[1]
+The minimum polynomial~\(\mu\) of \(\varphi:E\to E\) is completely reducible if and only if every nonzero subspace of~\(E\) stable under~\(\varphi\) contains an eigenvector of~\(\varphi\).
+\end{exer}
+\begin{proof}
+If \(F\ne 0\) is stable, then by~(13.22)
+\[F=\sum_i F\sect E_i\]
+where the~\(E_i\) are the generalized eigenspaces of~\(\varphi\). Fix~\(i\) with \(F\sect E_i\ne 0\). If \(\mu\)~is completely reducible, then \(E_i=K((t-\lambda)^k)\) for some \(\lambda\in\Gamma\) and \(k\ge 1\). Choose \(x\in F\sect E_i\) with \(x\ne 0\) and let \(1\le l\le k\) be least with \((\varphi-\lambda\iota)^l x=0\). Then it follows that \((\varphi-\lambda\iota)^{l-1}x\in F\) is an eigenvector.
+
+Conversely, if \(\mu\)~is not completely reducible, there is~\(f\) monic irreducible with \(\deg f\ge 2\) and \(f\divides\mu\). Let \(F=K(f)\). Then \(F\ne 0\) is stable but \(F\)~contains no eigenvector, lest \(f=\mu_f\) would have a linear factor.
+\end{proof}
+\begin{rmk}
+This is true in particular if \(\Gamma\)~is algebraically closed (for example \(\Gamma=\C\)).
+\end{rmk}
+
+\begin{exer}[2]
+If the minimum polynomial~\(\mu\) of \(\varphi:E\to E\) is completely reducible, then there is a basis of~\(E\) with respect to which the matrix of~\(\varphi\) is triangular:
+\[\begin{pmatrix}
+\lambda_1&&0\\
+&\ddots&\\
+*&&\lambda_n
+\end{pmatrix}\]
+\end{exer}
+\begin{proof}
+By induction on~\(\dim E\).
+
+Since \(E\ne 0\) is stable, there is an eigenvector~\(x_1\) with \(\varphi x_1=\lambda_1 x_1\). Let \(E_1=\gen{x_1}\) and consider \(\proj{\varphi}:E/E_1\to E/E_1\) with minimum polynomial~\(\proj{\mu}\). Since \(\proj{\mu}\divides\mu\), \(\proj{\mu}\)~is completely reducible, and by induction there is a basis \(\proj{x_2},\ldots,\proj{x_n}\) of~\(E/E_1\) with \(\proj{\varphi}(\proj{x_k})\in\gen{\proj{x_2},\ldots,\proj{x_k}}\) for \(2\le k\le n\). It follows that \(x_1,\ldots,x_n\) is a basis of~\(E\) with \(\varphi x_k\in\gen{x_1,\ldots,x_k}\) for \(1\le k\le n\).
+\end{proof}
+\begin{rmk}
+The diagonal entries of this matrix are just the eigenvalues of~\(\varphi\).
+\end{rmk}
+
 % Multilinear algebra
 \newpage
 \part*{Multilinear Algebra}
