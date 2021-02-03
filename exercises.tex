@@ -1383,6 +1383,23 @@ Since \(E\ne 0\) is stable, there is an eigenvector~\(x_1\) with \(\varphi x_1=\
 The diagonal entries of this matrix are just the eigenvalues of~\(\varphi\).
 \end{rmk}
 
+\begin{exer}[9]
+Let \(F\)~be a subspace of~\(E\) stable under \(\varphi:E\to E\) and consider the induced mappings \(\varphi_F:F\to F\) and \(\proj{\varphi}:E/F\to E/F\). Let \(E=\sum_i E_i\) be the generalized eigenspace decomposition of~\(E\) under~\(\varphi\).
+\begin{enumerate}
+\item[(a)] The generalized eigenspace decomposition of~\(F\) under~\(\varphi_F\) is
+\[F=\sum_i F\sect E_i\]
+\end{enumerate}
+\end{exer}
+\begin{proof}
+For~(a), we already know from~(13.22) that
+\[F=\sum_i F\sect E_i\tag{1}\]
+Let
+\[F=\sum_i F_i\tag{2}\]
+be the generalized eigenspace decomposition of~\(F\) under~\(\varphi_F\). Since \(\mu_{\varphi_F}\divides\mu_{\varphi}\), we may assume that \(F_i=K_F(f_i^{j_i})\) and \(E_i=K(f_i^{k_i})\) for some~\(f_i\) with \(j_i\le k_i\). Then
+\[F_i=K_F(f_i^{j_i})=F\sect K(f_i^{j_i})\subseteq F\sect K(f_i^{k_i})=F\sect E_i\tag{3}\]
+It follows from (1), (2), and~(3) that \(F_i=F\sect E_i\), establishing~(a).
+\end{proof}
+
 % Multilinear algebra
 \newpage
 \part*{Multilinear Algebra}
