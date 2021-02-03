@@ -1269,11 +1269,19 @@ Stabilization of~\(E_1\) is preserved by addition, scalar multiplication, and co
 \end{proof}
 
 \begin{rmk}
+It follows that if \(K_1(f)=\ker f(\varphi_{E_1})\), then
+\[K_1(f)=K(f)\sect E_1\]
+Dually, if \(\proj{K}(f)=\ker f(\proj{\varphi})\), then
+\[\proj{K}(f)\supseteq\proj{K(f)}\]
+The reverse inclusion does not hold in general. For a counterexample, consider \(f=t\) with \(\varphi:\R^2\to\R^2\) defined by \(\varphi(x,y)=(y,0)\) and \(E_1=\R\times 0\).
+\end{rmk}
+
+\begin{rmk}
 If \(\varphi_1:E_1\to E_1\) and \(\varphi_2:E_2\to E_2\) are linear, then
 \[f(\varphi_1\dsum\varphi_2)=f(\varphi_1)\dsum f(\varphi_2)\]
 \end{rmk}
 \begin{proof}
-Write \(\varphi=\varphi_1\dsum\varphi_2\), so \(\varphi_{E_1}=\varphi_1\) and \(\varphi_{E_2}=\varphi_2\). By the previous remark,
+Write \(\varphi=\varphi_1\dsum\varphi_2\), so \(\varphi_{E_1}=\varphi_1\) and \(\varphi_{E_2}=\varphi_2\). Then
 \[f(\varphi)=f(\varphi)_{E_1}\dsum f(\varphi)_{E_2}=f(\varphi_1)\dsum f(\varphi_2)\qedhere\]
 \end{proof}
 
