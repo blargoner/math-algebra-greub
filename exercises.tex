@@ -1400,6 +1400,15 @@ be the generalized eigenspace decomposition of~\(F\) under~\(\varphi_F\). Since 
 It follows from (1), (2), and~(3) that \(F_i=F\sect E_i\), establishing~(a).
 \end{proof}
 
+\subsection*{\S~3}
+\begin{rmk}
+In the proof of the corollary to Proposition~IV, to see that \(\mu(\varphi)=0\), first observe that
+\[\mu(\varphi)(a_0)=\varphi^n(a_0)-\sum_{\nu=0}^{n-1}\alpha_{\nu}\varphi^{\nu}(a_0)=\varphi(a_{n-1})-\sum_{\nu=0}^{n-1}\alpha_{\nu}a_{\nu}=0\]
+Now if \(\mu(\varphi)(a_{\nu})=0\) for some \(0\le\nu\le n-2\), then
+\[\mu(\varphi)(a_{\nu+1})=\mu(\varphi)(\varphi(a_{\nu}))=\varphi(\mu(\varphi)(a_{\nu}))=\varphi(0)=0\]
+By induction, \(\mu(\varphi)(a_{\nu})=0\) for all \(0\le\nu\le n-1\), so \(\mu(\varphi)=0\).
+\end{rmk}
+
 % Multilinear algebra
 \newpage
 \part*{Multilinear Algebra}
