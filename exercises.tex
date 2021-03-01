@@ -882,9 +882,19 @@ For \(x=x_1+x_2\) and \(y=y_1+y_2\) with \(x_i,y_i\in E_i\),
 \end{proof}
 
 \begin{rmk}
-In subsection~8.6, consider \(E=\R^n\). Since \(e_1\)~minimizes the quadratic form \(q(x)=\iprod{x}{\varphi x}\) subject to the constraint \(h(x)=1-\iprod{x}{x}=0\), there exists a Lagrange multiplier \(\lambda\in\R\) such that
-\[\grad q(e_1)+\lambda\grad h(e_1)=0\]
-Now \(\grad h(e_1)=-2e_1\), and since \(\varphi\)~is self-adjoint it follows that \(\grad q(e_1)=2\varphi e_1\). Therefore \(\varphi e_1=\lambda e_1\), so \(e_1\)~is an eigenvector of~\(\varphi\) with eigenvalue~\(\lambda\).
+We provide an alternative proof of the existence of eigenvectors for self-adjoint transformations (subsection 8.6).
+
+Let \(\varphi:E\to E\) be a transformation. First observe that for \(u\ne 0\), \(\varphi u=\lambda u\) for some~\(\lambda\) if and only if \(\varphi u\in\occ{u}\), which is true if and only if \(\iprod{\varphi u}{v}=0\) for all \(v\in\oc{u}\). This motivates us to study the bilinear function
+\[\Phi(x,y)=\iprod{\varphi x}{y}\]
+We may assume without loss of generality that \(\norm{u}=\norm{v}=1\). Consider a unit vector~\(w\) coincident with~\(u\) and moving in the direction of~\(v\):
+\[w(t)=(\cos t)u+(\sin t)v\qquad 0\le t\le\pi/2\]
+Note \(\norm{w(t)}=1\) and \(w(0)=u\). Also
+\[w'(t)=(-\sin t)u+(\cos t)v\]
+so \(w'(0)=v\). This means \(\Phi(u,v)=\Phi(w(0),w'(0))\). If \(\varphi\)~is self-adjoint, then \(\Phi\)~is symmetric and
+\[2\mult\Phi(u,v)=\Phi(w'(0),w(0))+\Phi(w(0),w'(0))=(\Psi\after w)'(0)\]
+where \(\Psi(x)=\Phi(x,x)\) is the quadratic function associated with~\(\Phi\). Now we have \((\Psi\after w)'(0)=0\) if \(t=0\) minimizes (or maximizes) \(\Psi\after w\), which is true if \(w(0)=u\) minimizes (or maximizes) \(\Psi\). But we know such a~\(u\) exists since the unit sphere is compact in~\(E\), and the argument above then shows that \(u\)~is an eigenvector of~\(\varphi\). Note that
+\[\Psi(u)=\Phi(u,u)=\iprod{\varphi u}{u}=\iprod{\lambda u}{u}=\lambda\iprod{u}{u}=\lambda\]
+is the eigenvalue, which is the minimum (resp. maximum) eigenvalue of~\(\varphi\). In summary: the quadratic function associated with a self-adjoint transformation attains its extreme values on the unit sphere at eigenvectors, where its values are the extreme eigenvalues.
 \end{rmk}
 
 \begin{exer}[5]
