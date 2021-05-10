@@ -243,6 +243,18 @@ The definition of dual space is fundamentally \emph{symmetrical} between \(E\) a
 \end{rmk}
 
 \begin{rmk}
+The definition of duality can be generalized to modules. Let \(R\)~be a ring (with unit), \(M\)~a \emph{left} \(R\)-module, and \(N\)~a \emph{right} \(R\)-module. A binary mapping \(\Phi:M\times N\to R\) is \emph{bilinear} if
+\[\Phi(\lambda x_1+\mu x_2,y)=\lambda\Phi(x_1,y)+\mu\Phi(x_2,y)\]
+and
+\[\Phi(x,y_1\lambda+y_2\mu)=\Phi(x,y_1)\lambda+\Phi(x,y_2)\mu\]
+for all \(x,x_1,x_2\in M\), \(y,y_1,y_2\in N\) and \(\lambda,\mu\in R\). The map is \emph{nondegenerate} if
+\[\{\,x\in M\mid\Phi(x,y)=0\text{ for all }y\in N\,\}=0\]
+and
+\[\{\,y\in N\mid\Phi(x,y)=0\text{ for all }x\in M\,\}=0\]
+Now \(M\)~is \emph{dual} to~\(N\) if there is a nondegenerate bilinear map \(\sprod{-}{-}:M\times N\to R\). Note this relation is not in general symmetric unless \(R\)~is commutative.
+\end{rmk}
+
+\begin{rmk}
 The results in subsection~2.23 show that quotient spaces are dual to subspaces.
 \end{rmk}
 
