@@ -1276,6 +1276,16 @@ The first part is easily verified on the basis~\(t^p\) (\(p\ge 0\)). The second 
 If \(A=0\), then the minimum polynomial of \(a=0\) is \(\mu=1\).
 \end{rmk}
 
+\begin{rmk}
+In the proof of Proposition~I, to see why the elements \(1,\proj{t},\ldots,\proj{t}^{r-1}\) form a basis of \(\Gamma[t]/I_{\mu}\), first observe that every element of \(\Gamma[t]/I_{\mu}\) is of the form \(f(\proj{t})\) for some \(f\in\Gamma[t]\). Write \(f=g\mu+h\) where \(h=0\) or \(\deg h<r\). Then
+\[f(\proj{t})=g(\proj{t})\mu(\proj{t})+h(\proj{t})=h(\proj{t})\]
+since \(\mu(\proj{t})=0\), and clearly \(h(\proj{t})\)~is in the span of \(1,\proj{t},\ldots,\proj{t}^{r-1}\).
+
+On the other hand, suppose
+\[\alpha_0+\alpha_1\proj{t}+\cdots+\alpha_{r-1}\proj{t}^{r-1}=0\]
+Define \(f=\alpha_0+\cdots+\alpha_{r-1}t^{r-1}\). Then \(f=0\) or \(\deg f<r\). But \(f\in\ker\pi=I_{\mu}\), so \(\mu\divides f\), which forces \(f=0\) and \(\alpha_0=\cdots=\alpha_{r-1}=0\). It follows that the elements \(1,\proj{t},\ldots,\proj{t}^{r-1}\) are linearly independent.
+\end{rmk}
+
 \section*{Chapter~XIII}
 \subsection*{\S~1}
 In the following remarks, \(f\in\Gamma[t]\).
