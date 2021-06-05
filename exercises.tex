@@ -1420,6 +1420,20 @@ Let \(F\)~be a subspace of~\(E\) stable under \(\varphi:E\to E\) and consider th
 \begin{enumerate}
 \item[(a)] The generalized eigenspace decomposition of~\(F\) under~\(\varphi_F\) is
 \[F=\sum_i F\sect E_i\]
+\item[(b)] The generalized eigenspace decomposition of~\(E/F\) under~\(\proj{\varphi}\) is
+\[E/F=\sum_i E_i/F\]
+Moreover, \(E_i/F\iso E_i/(F\sect E_i)\).
+\item[(c)] If \(\pi_i\), \(\pi^F_i\), and \(\proj{\pi}_i\) are the projection operators in \(E\), \(F\), and \(E/F\) associated with the decompositions, then the diagram
+\begin{diagram}
+F				&\rTo^j	&E			&\rTo^{\rho}&E/F\\
+\dTo<{\pi^F_i}	&		&\dTo{\pi_i}&			&\dTo>{\proj{\pi}_i}\\
+F				&\rTo_j	&E			&\rTo_{\rho}&E/F
+\end{diagram}
+commutes, where \(j\) and~\(\rho\) are the canonical injection and projection. Moreover,
+\[\pi^F_i=(\pi_i)_F\qquad\text{and}\qquad\proj{\pi}_i=\proj{\pi_i}\]
+so \(\pi^F_i\) and \(\proj{\pi}_i\) are unique making the diagram commute.
+\item[(d)] If \(g_i\in\Gamma[t]\) with \(g_i(\varphi)=\pi_i\), then
+\[g_i(\varphi_F)=\pi^F_i\qquad\text{and}\qquad g_i(\proj{\varphi})=\proj{\pi}_i\]
 \end{enumerate}
 \end{exer}
 \begin{proof}
@@ -1430,6 +1444,20 @@ Let
 be the generalized eigenspace decomposition of~\(F\) under~\(\varphi_F\). Since \(\mu_{\varphi_F}\divides\mu_{\varphi}\), we may assume that \(F_i=K_F(f_i^{j_i})\) and \(E_i=K(f_i^{k_i})\) for some~\(f_i\) with \(j_i\le k_i\). Then
 \[F_i=K_F(f_i^{j_i})=F\sect K(f_i^{j_i})\subseteq F\sect K(f_i^{k_i})=F\sect E_i\tag{3}\]
 It follows from (1), (2), and~(3) that \(F_i=F\sect E_i\), establishing~(a).
+
+For~(b), it follows from~(1) that
+\[E/F=\sum_i E_i/F\tag{4}\]
+is a direct sum decomposition of~\(E/F\), and it is immediate that \(E_i/F\)~is stable under~\(\proj{\varphi}\) since \(E_i\)~is stable under~\(\varphi\). Let
+\[E/F=\sum_i(E/F)_i\tag{5}\]
+be the generalized eigenspace decomposition of~\(E/F\) under~\(\proj{\varphi}\). Since \(\mu_{\proj{\varphi}}\divides\mu_{\varphi}\), we may assume that \((E/F)_i=\proj{K}(f_i^{m_i})\) with \(m_i\le k_i\). Now
+\[E_i/F=K(f_i^{k_i})/F\subseteq\proj{K}(f_i^{k_i})\]
+so if \(\mu_i\)~denotes the minimum polynomial of~\(\proj{\varphi}_{E_i/F}\), then \(\mu_i\divides f_i^{k_i}\). On the other hand, \(\mu_i\divides\mu_{\proj{\varphi}}\), so we must have \(\mu_i\divides f_i^{m_i}\) and therefore
+\[E_i/F\subseteq\proj{K}(f_i^{m_i})=(E/F)_i\tag{6}\]
+It now follows from (4), (5), and~(6) that \((E/F)_i=E_i/F\). Finally, the restriction to~\(E_i\) of the canonical projection induces the isomorphism \(E_i/F_i\iso E_i/F\).
+
+For~(c), commutativity of the left square in the diagram follows from~(a) and commutativity of the right square follows from~(b). The rest of~(c) follows from the diagram.
+
+Finally, (d)~follows immediately from~(c).
 \end{proof}
 
 \subsection*{\S~3}
