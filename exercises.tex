@@ -1318,7 +1318,13 @@ Write \(\varphi=\varphi_1\dsum\varphi_2\), so \(\varphi_{E_1}=\varphi_1\) and \(
 \end{proof}
 
 \begin{rmk}
-If \(E,E^*\) are dual spaces and \(\varphi:E\to E\) and \(\varphi^*:E^*\from E^*\) are dual transformations, then
+It follows that
+\[r(f(\varphi))=r(f(\varphi_1))+r(f(\varphi_2))\]
+where \(r(\psi)\)~denotes the rank of~\(\psi\).
+\end{rmk}
+
+\begin{rmk}
+If \(E,E^*\) are dual spaces and \(\varphi:E\to E\) and \(\varphi^*:E^*\from E^*\) are dual linear transformations, then
 \[f(\varphi)^*=f(\varphi^*)\]
 \end{rmk}
 \begin{proof}
@@ -1336,7 +1342,21 @@ Let \(\conj{E}\)~be the conjugate space and \(\kappa:E\to\conj{E}\) the conjugat
 \end{proof}
 
 \begin{rmk}
-It follows that \(f(\varphi)=0\) if and only if \(\conj{f}(\adj{\varphi})=0\), so if \(\mu\)~is the minimum polynomial of~\(\varphi\) then \(\conj{\mu}\)~is the minimum polynomial of~\(\adj{\varphi}\).
+It follows that \(f(\varphi)=0\) if and only if \(\conj{f}(\adj{\varphi})=0\), so \(\mu_{\adj{\varphi}}=\conj{\mu_{\varphi}}\).
+\end{rmk}
+
+\begin{rmk}
+If \(\varphi:E\to E\) and \(\psi:F\to F\) are linear with
+\[\psi=\alpha\after\varphi\after\alpha^{-1}\]
+where \(\alpha:E\iso F\), then
+\[f(\psi)=\alpha\after f(\varphi)\after\alpha^{-1}\]
+\end{rmk}
+\begin{proof}
+Conjugation by~\(\alpha\) is an algebra isomorphism \(A(E;E)\iso A(F;F)\).
+\end{proof}
+
+\begin{rmk}
+It follows that \(f(\psi)=0\) if and only if \(f(\varphi)=0\), so \(\mu_{\psi}=\mu_{\varphi}\).
 \end{rmk}
 
 \begin{exer}[3]
