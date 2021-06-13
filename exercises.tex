@@ -1526,6 +1526,21 @@ In subsection~13.14, observe that
 \end{align*}
 \end{rmk}
 
+\begin{exer}[5]
+If \(\varphi:E\to E\) stabilizes~\(E_1\), and \(\varphi_1:E_1\to E_1\) and \(\proj{\varphi}:E/E_1\to E/E_1\) are the induced transformations, then \(E\)~is cyclic if and only if (i) \(E_1\)~is cyclic, (ii) \(E/E_1\)~is cyclic, and (iii) \(\mu=\mu_1\proj{\mu}\), where \(\mu=\mu_{\varphi}\), \(\mu_1=\mu_{\varphi_1}\), and \(\proj{\mu}=\mu_{\proj{\varphi}}\).
+\end{exer}
+\begin{proof}
+If \(E\)~is cyclic, then \(\sigma_a:\Gamma[t]\to E\) is surjective for some \(a\in E\). It follows that \(\pi\sigma_a:\Gamma[t]\to E/E_1\) is also surjective, where \(\pi:E\to E/E_1\) is the canonical projection. But
+\[(\pi\sigma_a)(f)=\pi(f(\varphi)(a))=f(\proj{\varphi})(\proj{a})=\sigma_{\proj{a}}(f)\]
+so \(\sigma_{\proj{a}}=\pi\sigma_a\) is surjective, and therefore \(E/E_1\)~is cyclic. Now
+\[\deg\mu_1\le\dim E_1=\dim E-\dim E/E_1=\deg\mu-\deg\proj{\mu}\le\deg\mu_1\]
+since \(\mu\divides\mu_1\proj{\mu}\). It follows that \(\dim E_1=\deg\mu_1\) so \(E_1\)~is cyclic, and \(\deg\mu=\deg\mu_1\proj{\mu}\) so \(\mu=\mu_1\proj{\mu}\).
+
+Conversely, if \(E_1\) and~\(E/E_1\) are cyclic and \(\mu=\mu_1\proj{\mu}\), then
+\[\dim E=\dim E_1+\dim E/E_1=\deg\mu_1+\deg\proj{\mu}=\deg\mu_1\proj{\mu}=\deg\mu\]
+so \(E\)~is cyclic.
+\end{proof}
+
 % Multilinear algebra
 \newpage
 \part*{Multilinear Algebra}
