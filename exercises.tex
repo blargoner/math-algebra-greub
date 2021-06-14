@@ -1555,6 +1555,44 @@ Conversely, if \(E_1\) and~\(E/E_1\) are cyclic and \(\mu=\mu_1\proj{\mu}\), the
 so \(E\)~is cyclic.
 \end{proof}
 
+\begin{rmk}
+If \(\varphi=\varphi_1\dsum\varphi_2\) with \(\mu_2=\mu_{\varphi_2}\), then \(\proj{\mu}=\mu_2\), so if \(E\)~is cyclic it follows that \(\mu=\mu_1\mu_2\). Since also \(\mu=\mu_1\meet\mu_2\), this implies that \(\mu_1\) and~\(\mu_2\) are relatively prime.
+\end{rmk}
+
+\begin{exer}[6]
+Let \(E=F_1\dsum\cdots\dsum F_s\) and \(\varphi=\varphi_1\dsum\cdots\dsum\varphi_s\) where \(\varphi_j:F_j\to F_j\) with \(\mu=\mu_{\varphi}\) and \(\mu_j=\mu_{\varphi_j}\).
+\begin{itemize}
+\item[(a)] \(E\)~is cyclic if and only if each~\(F_j\) is cyclic and the~\(\mu_j\) are relatively prime.
+\item[(b)] If \(E\)~is cyclic, then each \(F_j\)~is a sum of generalized eigenspaces for~\(\varphi\).
+\item[(c)] If \(E\)~is cyclic and
+\[a=a_1+\cdots+a_s\qquad a_j\in F_j\]
+is any vector in~\(E\), then \(a\)~generates \(E\) if and only if each~\(a_j\) generates \(F_j\).
+\end{itemize}
+\end{exer}
+\begin{proof}
+For~(a), if \(E\)~is cyclic then by problem~5 each~\(F_j\) is cyclic and (by induction on~\(s\))
+\[\mu_1\meet\cdots\meet\mu_s=\mu=\mu_1\mult\cdots\mult\mu_s\]
+so the \(\mu_j\)~are relatively prime. Conversely, if each~\(F_j\) is cyclic and the~\(\mu_j\) are relatively prime, then
+\begin{align*}
+\dim E&=\dim F_1+\cdots+\dim F_s\\
+	&=\deg\mu_1+\cdots+\deg\mu_s\\
+	&=\deg\mu_1\mult\cdots\mult\mu_s\\
+	&=\deg\mu_1\meet\cdots\meet\mu_s\\
+	&=\deg\mu
+\end{align*}
+so \(E\)~is cyclic.
+
+For~(b), since \(\mu=\mu_1\mult\cdots\mult\mu_s\) and the~\(\mu_j\) are relatively prime, the generalized eigenspaces of~\(\varphi_j\) in~\(F_j\) are generalized eigenspaces of~\(\varphi\) in~\(E\). It follows that the projection operator associated with~\(F_j\) is a polynomial \(g_j(\varphi)\) in~\(\varphi\).
+
+For~(c), if \(a\)~generates \(E\) and \(x\in F_j\), then there is \(f\in\Gamma[t]\) with
+\[x=f(\varphi)a=f(\varphi_1)a_1+\cdots+f(\varphi_s)a_s=f(\varphi_j)a_j\]
+so \(a_j\)~generates \(F_j\). Conversely, if each~\(a_j\) generates \(F_j\) and
+\[x=x_1+\cdots+x_s\qquad x_j\in F_j\]
+is a vector in~\(E\), there are \(f_j\in\Gamma[t]\) with \(x_j=f_j(\varphi_j)a_j\). Define \(f=\sum f_jg_j\). Then
+\[f(\varphi)a=\sum f_j(\varphi)g_j(\varphi)a=\sum f_j(\varphi)a_j=\sum x_j=x\]
+so \(a\)~generates \(E\).
+\end{proof}
+
 % Multilinear algebra
 \newpage
 \part*{Multilinear Algebra}
