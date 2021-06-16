@@ -1561,13 +1561,13 @@ If \(\varphi=\varphi_1\dsum\varphi_2\) with \(\mu_2=\mu_{\varphi_2}\), then \(\p
 
 \begin{exer}[6]
 Let \(E=F_1\dsum\cdots\dsum F_s\) and \(\varphi=\varphi_1\dsum\cdots\dsum\varphi_s\) where \(\varphi_j:F_j\to F_j\) with \(\mu=\mu_{\varphi}\) and \(\mu_j=\mu_{\varphi_j}\).
-\begin{itemize}
+\begin{enumerate}
 \item[(a)] \(E\)~is cyclic if and only if each~\(F_j\) is cyclic and the~\(\mu_j\) are relatively prime.
 \item[(b)] If \(E\)~is cyclic, then each \(F_j\)~is a sum of generalized eigenspaces for~\(\varphi\).
 \item[(c)] If \(E\)~is cyclic and
 \[a=a_1+\cdots+a_s\qquad a_j\in F_j\]
 is any vector in~\(E\), then \(a\)~generates \(E\) if and only if each~\(a_j\) generates \(F_j\).
-\end{itemize}
+\end{enumerate}
 \end{exer}
 \begin{proof}
 For~(a), if \(E\)~is cyclic then by problem~5 each~\(F_j\) is cyclic and (by induction on~\(s\))
@@ -1598,6 +1598,30 @@ If \(\varphi:E\to E\) stabilizes~\(F\), and \(\varphi_F:F\to F\) and \(\proj{\va
 \end{exer}
 \begin{proof}
 By Theorem~I and problem~5.
+\end{proof}
+
+\begin{exer}[8]
+Let \(E\)~be irreducible with respect to \(\varphi\), with \(\mu_{\varphi}=f^k\) (\(f\)~irreducible).
+\begin{enumerate}
+\item[(a)] The \(k\)~subspaces \(K(f),\ldots,K(f^k)\) are the only nontrivial stable subspaces of~\(E\).
+\item[(b)] \(\im f(\varphi)^m=K(f^{k-m})\) for \(0\le m\le k\).
+\end{enumerate}
+\end{exer}
+\begin{proof}
+We may assume that \(f\)~is monic with \(\deg f=p\). For~(a), we know that
+\[0=K(1)\subset K(f)\subset\cdots\subset K(f^k)=E\]
+are stable subspaces of~\(E\). If \(F\ne 0\) is a stable subspace of~\(E\), then \(\mu_F=f^m\) for some \(1\le m\le k\) and hence \(F\subseteq K(f^m)\). Since \(F\) and~\(K(f^m)\) are both cyclic,
+\[\dim F=pm=\dim K(f^m)\]
+so \(F=K(f^m)\).
+
+For~(b), \(\im f(\varphi)^m\) is stable and
+\begin{align*}
+\dim\im f(\varphi)^m&=\dim E-\dim\ker f(\varphi)^m\\
+	&=pk-pm\\
+	&=p(k-m)\\
+	&=\dim\ker f(\varphi)^{k-m}
+\end{align*}
+so we must have \(\im f(\varphi)^m=K(f^{k-m})\) by~(a).
 \end{proof}
 
 % Multilinear algebra
