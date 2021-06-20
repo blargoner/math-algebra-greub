@@ -526,8 +526,8 @@ In subsection~4.14, \(\det B^j_i=\det S^j_i\) does \emph{not} follow from~(4.38)
 \subsection*{\S~6}
 \begin{exer}[5]
 If \(\varphi_1:E_1\to E_1\) and \(\varphi_2:E_2\to E_2\) are linear, then
-\[\chi(\varphi_1\dsum\varphi_2)=\chi(\varphi_1)\mult\chi(\varphi_2)\]
-where \(\chi(\varphi)\)~denotes the characteristic polynomial of~\(\varphi\).
+\[\chi_{\varphi_1\dsum\varphi_2}=\chi_{\varphi_1}\chi_{\varphi_2}\]
+where \(\chi_{\varphi}\)~denotes the characteristic polynomial of~\(\varphi\).
 \end{exer}
 \begin{proof}
 This follows from the result in subsection~4.7 and the fact that
@@ -536,24 +536,24 @@ This follows from the result in subsection~4.7 and the fact that
 
 \begin{exer}[6]
 Let \(\varphi:E\to E\) be linear with \(E_1\)~a stable subspace. If \(\varphi_1:E_1\to E_1\) and \(\proj{\varphi}:E/E_1\to E/E_1\) are the induced maps, then
-\[\chi(\varphi)=\chi(\varphi_1)\mult\chi(\proj{\varphi})\]
+\[\chi_{\varphi}=\chi_{\varphi_1}\chi_{\proj{\varphi}}\]
 \end{exer}
 \begin{proof}
 This follows from problem~2 in \S~2, the fact that \(\varphi-\lambda\iota_E\) restricted to~\(E_1\) is just \(\varphi_1-\lambda\iota_{E_1}\), and \(\proj{\varphi-\lambda\iota_E}=\proj{\varphi}-\lambda\iota_{E/E_1}\).
 \end{proof}
 \begin{rmk}
-Taking \(E_1=\ker\varphi\), we have \(\chi(\varphi_1)=\chi(0_{E_1})=(-\lambda)^p\) where \(p=\dim E_1\), so \(\chi(\varphi)=(-\lambda)^p\chi(\proj{\varphi})\).
+Taking \(E_1=\ker\varphi\), we have \(\chi_{\varphi_1}=\chi_{0_{E_1}}=(-\lambda)^p\) where \(p=\dim E_1\), so \(\chi_{\varphi}=(-\lambda)^p\chi_{\proj{\varphi}}\).
 \end{rmk}
 
 \begin{exer}[7]
-A linear map \(\varphi:E\to E\) is nilpotent if and only if \(\chi(\varphi)=(-\lambda)^n\).
+A linear map \(\varphi:E\to E\) is nilpotent if and only if \(\chi_{\varphi}=(-\lambda)^n\).
 \end{exer}
 \begin{proof}
 If \(\varphi\)~is nilpotent, we proceed by induction on~\(k\) least such that \(\varphi^k=0\). If \(k=1\), the result is trivial. If \(k>1\), let \(E_1=\ker\varphi\) and \(\proj{\varphi}:E/E_1\to E/E_1\) the induced map. Then \(\proj{\varphi}^{k-1}=0\) since
 \[\proj{\varphi}^{k-1}(\proj{x})=\proj{\varphi^{k-1}}(\proj{x})=\proj{\varphi^{k-1}(x)}=0\]
-as \(\varphi^{k-1}(x)\in E_1\). By the induction hypothesis, \(\chi(\proj{\varphi})=(-\lambda)^{n-p}\) where \(p=\dim E_1\), so by the previous problem,
-\[\chi(\varphi)=(-\lambda)^p(-\lambda)^{n-p}=(-\lambda)^n\]
-Conversely, if \(\varphi\ne0\) and \(\chi(\varphi)=(-\lambda)^n\), then the constant term \(\det\varphi=0\), so \(p>0\) and by the previous problem \((-\lambda)^n=(-\lambda)^p\chi(\proj{\varphi})\), which implies \(\chi(\proj{\varphi})=(-\lambda)^{n-p}\). By induction, \(\proj{\varphi}\)~is nilpotent. If \(\proj{\varphi}^k=0\), then \(\varphi^{k+1}=0\), so \(\varphi\)~is nilpotent.
+as \(\varphi^{k-1}(x)\in E_1\). By the induction hypothesis, \(\chi_{\proj{\varphi}}=(-\lambda)^{n-p}\) where \(p=\dim E_1\), so by the previous problem,
+\[\chi_{\varphi}=(-\lambda)^p(-\lambda)^{n-p}=(-\lambda)^n\]
+Conversely, if \(\varphi\ne0\) and \(\chi_{\varphi}=(-\lambda)^n\), then the constant term \(\det\varphi=0\), so \(p>0\) and by the previous problem \((-\lambda)^n=(-\lambda)^p\chi_{\proj{\varphi}}\), which implies \(\chi_{\proj{\varphi}}=(-\lambda)^{n-p}\). By induction, \(\proj{\varphi}\)~is nilpotent. If \(\proj{\varphi}^k=0\), then \(\varphi^{k+1}=0\), so \(\varphi\)~is nilpotent.
 \end{proof}
 
 \subsection*{\S~7}
