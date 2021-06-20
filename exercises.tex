@@ -1633,6 +1633,30 @@ Substituting \(t+\lambda\) for~\(t\), we obtain
 In particular, it follows that \(\mu_{\varphi}(\lambda)\)~is the constant term of~\(\mu_{\varphi-\lambda\iota}\), and \(\mu_{\varphi-\lambda\iota}(-\lambda)\)~is the constant term of~\(\mu_{\varphi}\).
 \end{rmk}
 
+\begin{rmk}
+In subsections 13.21 and~13.22, we have
+\[C^2(\varphi)=\Gamma(\varphi)\subseteq C(\varphi)=C(\Gamma(\varphi))=C^3(\varphi)\]
+\end{rmk}
+
+\begin{exer}[2]
+\(E\)~is cyclic with respect to~\(\varphi\) if and only if \(\chi_{\varphi}=\pm\mu_{\varphi}\).
+\end{exer}
+\begin{proof}
+The forward direction follows from Lemma~II, and the reverse from
+\[\dim E=\dim\chi_{\varphi}=\dim\mu_{\varphi}\qedhere\]
+\end{proof}
+
+\begin{exer}[3]
+If \(\varphi:E\to E\), and \(E=\sum_j F_j\) is a decomposition of~\(E\) as a direct sum of stable subspaces \(F_j\), then each~\(F_j\) is a sum of generalized eigenspaces for~\(\varphi\) if and only if each~\(F_j\) is stable under~\(C(\varphi)\).
+\end{exer}
+\begin{proof}
+If each~\(F_j\) is a sum of generalized eigenspaces, then by Theorem~I the projection operators~\(\rho_j\) are in~\(\Gamma(\varphi)\). If \(\psi\in C(\varphi)\), then \(\psi\)~commutes with~\(\rho_j\), so
+\[\psi F_j=\psi\rho_j F_j=\rho_j\psi F_j\subseteq F_j\]
+Conversely, if each~\(F_j\) is stable under~\(C(\varphi)\) and \(\psi\in C(\varphi)\), then for \(x=\sum_j x_j\) with \(x_j\in F_j\), we have
+\[\rho_j\psi x=\psi x_j=\psi\rho_j x\]
+so \(\rho_j\)~commutes with~\(\psi\). Since \(\psi\)~was arbitrary, \(\rho_j\in C^2(\varphi)\). But \(C^2(\varphi)=\Gamma(\varphi)\) by Theorem~III, so \(\rho_j\in\Gamma(\varphi)\) and each~\(F_j\) is a sum of generalized eigenspaces by Theorem~I.
+\end{proof}
+
 % Multilinear algebra
 \newpage
 \part*{Multilinear Algebra}
