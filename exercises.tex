@@ -311,9 +311,15 @@ This result shows that quotient maps are dual to restriction maps. The examples 
 
 \subsection*{\S~6}
 \begin{rmk}
+If \(E\)~is finite-dimensional, then since \(E\)~is dual to~\(L(E)\) and \(L(E)\)~is dual to~\(L(L(E))\), it follows from Corollary~II that there is a natural isomorphism \(E\to L(L(E))\) given by
+\[x\mapsto(f\mapsto f(x))\]
+This means that the vector~\(x\) may be naturally \emph{identified} with the linear function ``evaluation at~\(x\)''.
+\end{rmk}
+
+\begin{rmk}
 If \(E\)~is finite-dimensional, then every basis of a dual space~\(E^*\) is a dual basis. Indeed, if \(f_1,\ldots,f_n\) is a basis of~\(E^*\), let \(e_1,\ldots,e_n\) be its dual basis in~\(E\). Then \(\sprod{f_i}{e_j}=\delta_{ij}\) by~(2.62), so \(f_1,\ldots,f_n\) is the dual basis of \(e_1,\ldots,e_n\), again by~(2.62).
 
-Alternatively, with \(E^*=L(E)\), let \(f_1^*,\ldots,f_n^*\) be the dual basis of \(f_1,\ldots,f_n\) in \(E^{**}=L(L(E))\), so \(\sprod{f_j^*}{f_i}=\delta_{ij}\) by~(2.62). Let \(e_1,\ldots,e_n\in E\) be defined by \(\sprod{f_j^*}{f}=\sprod{f}{e_j}\) for all \(f\in E^*\) (see \S~5, problem~3). Then \(\sprod{f_i}{e_j}=\sprod{f_j^*}{f_i}=\delta_{ij}\), so \(f_1,\ldots,f_n\) is the dual basis of \(e_1,\ldots,e_n\).
+Alternatively, with \(E^*=L(E)\), let \(f_1^*,\ldots,f_n^*\) be the dual basis of \(f_1,\ldots,f_n\) in \(E^{**}=L(L(E))\), so \(\sprod{f_j^*}{f_i}=\delta_{ij}\) by~(2.62). Let \(e_1,\ldots,e_n\in E\) be defined by \(\sprod{f_j^*}{f}=\sprod{f}{e_j}\) for all \(f\in E^*\).\footnote{See problem~3 in \S~5 or the prior remark.} Then \(\sprod{f_i}{e_j}=\sprod{f_j^*}{f_i}=\delta_{ij}\), so \(f_1,\ldots,f_n\) is the dual basis of \(e_1,\ldots,e_n\).
 
 The first proof here uses the symmetry between \(E\) and~\(E^*\), while the second uses the natural isomorphism \(E\iso E^{**}\).
 \end{rmk}
