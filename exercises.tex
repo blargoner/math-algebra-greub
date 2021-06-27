@@ -324,6 +324,12 @@ Alternatively, with \(E^*=L(E)\), let \(f_1^*,\ldots,f_n^*\) be the dual basis o
 The first proof here uses the symmetry between \(E\) and~\(E^*\), while the second uses the natural isomorphism \(E\iso E^{**}\).
 \end{rmk}
 
+\begin{rmk}
+In Proposition~III,
+\[\Phi(x^*,x)=\sprod{x^*}{\varphi x}=\sprod{\varphi^* x^*}{x}\]
+so there is also a natural isomorphism \(B(E^*,E)\iso L(E^*;E^*)\). We see that \(\varphi^*\) is ``left-dual'' to~\(\Phi\) while \(\varphi\)~is ``right-dual'' to~\(\Phi\). It might be said that \(\Phi\), \(\varphi\), \(\varphi^*\) enter into a holy trinity.\footnote{No one says this.}
+\end{rmk}
+
 \begin{exer}[9]
 If \(E\) and~\(F\) are finite-dimensional, then the mapping
 \[\Phi:L(E;F)\to L(F^*;E^*)\]
@@ -863,17 +869,19 @@ In subsection~8.2, if the bases \((x_{\nu})\) and~\((y_{\mu})\) are orthonormal,
 \end{rmk}
 
 \begin{rmk}
-Recall from subsection~7.18 the natural isomorphism \(\tau:E\to L(E)\) given by \(x\mapsto\iprod{x}{-}\), which maps each vector to its dual vector. In subsection~8.4, observe that there is a natural isomorphism
+In subsection~8.4, the natural isomorphism \(B(E,E)\iso L(E;E)\) follows from Proposition~III in chapter~II, \S~6. There is also a natural isomorphism
 \[B(E,E)\iso L(E;L(E))\]
-given by \(\Phi\mapsto(x\mapsto(y\mapsto\Phi(x,y)))\). For a linear transformation \(\varphi:E\to E\) and the bilinear function~\(\Phi\) defined by \(\Phi(x,y)=\iprod{\varphi x}{y}\), the linear map corresponding to~\(\Phi\) under this isomorphism is~\(\tau\varphi\):
+given by
+\[\Phi\mapsto(x\mapsto(y\mapsto\Phi(x,y)))\tag{1}\]
+Recall from subsection~7.18 the natural isomorphism \(\tau:E\to L(E)\) given by \(x\mapsto\iprod{x}{-}\), which maps each vector to its dual vector. For a linear transformation \(\varphi:E\to E\) and its corresponding bilinear function~\(\Phi\) defined by \(\Phi(x,y)=\iprod{\varphi x}{y}\), the linear map~\(\Phi'\) corresponding to~\(\Phi\) under the isomorphism~(1) is~\(\tau\varphi\):
 \begin{diagram}[nohug]
-x	&\rTo^{\varphi}		&\varphi x\\
-	&\rdTo<{\Phi}		&\dTo>{\tau}\\
+x	&\rMapsto^{\varphi}	&\varphi x\\
+	&\rdMapsto<{\Phi'}	&\dMapsto>{\tau}\\
 	&					&\iprod{\varphi x}{-}
 \end{diagram}
-In this sense, \(\Phi\)~is naturally dual to~\(\varphi\). Properties of~\(\Phi\) naturally correspond to those of~\(\varphi\); for example, \(\Phi\)~is symmetric if and only if \(\varphi\) is symmetric (self-adjoint), and \(\Phi\)~is skew symmetric if and only if \(\varphi\)~is skew symmetric. Since
+In these ways, \(\Phi\)~is naturally dual to~\(\varphi\). Properties of~\(\Phi\) naturally correspond to those of~\(\varphi\); for example, \(\Phi\)~is symmetric if and only if \(\varphi\) is symmetric (self-adjoint), and \(\Phi\)~is skew symmetric if and only if \(\varphi\)~is skew symmetric. Since
 \[\Phi(x,y)=\iprod{\varphi x}{y}=\iprod{x}{\adj{\varphi}y}\]
-we see that \(\varphi\)~is ``left-dual'' to~\(\Phi\), while \(\adj{\varphi}\)~is ``right-dual'' to~\(\Phi\). It might be said that \(\Phi\), \(\varphi\), and \(\adj{\varphi}\) enter into a holy trinity.\footnote{No one says this.}
+we see that \(\varphi\)~is ``left-dual'' to~\(\Phi\), while \(\adj{\varphi}\)~is ``right-dual'' to~\(\Phi\).
 \end{rmk}
 
 \begin{rmk}
