@@ -1673,8 +1673,53 @@ so \(\rho_j\)~commutes with~\(\psi\). Since \(\psi\)~was arbitrary, \(\rho_j\in 
 
 \subsection*{\S~6}
 \begin{rmk}
+If \(\varphi:E\to E\) is nilpotent of degree~\(k\) and \(E\)~is cyclic with respect to~\(\varphi\), then \(a\) generates \(E\) if and only if \(k\)~is least with \(\varphi^k a=0\) (equivalently \(\varphi^{k-1}a\ne 0\)).
+\end{rmk}
+\begin{proof}
+If \(a\) generates \(E\), then the vectors
+\[a,\varphi a,\ldots,\varphi^{k-1}a\tag{1}\]
+form a basis of~\(E\) and are therefore nonzero, while \(\varphi^k a=0\). Conversely, if \(k\)~is least with \(\varphi^k a=0\) and the vectors (1) are linearly dependent, there are scalars \(\alpha_0,\ldots,\alpha_{k-1}\) not all zero with
+\[\alpha_0a+\alpha_1\varphi a+\cdots+\alpha_{k-1}\varphi^{k-1}a=0\tag{2}\]
+Let \(j\)~be least with \(\alpha_j\ne 0\). Applying \(\varphi^{k-j-1}\) to~(2) yields
+\[\alpha_j\varphi^{k-1}a=0\]
+which is a contradiction.
+\end{proof}
+
+\begin{rmk}
 In the proof of Theorem~I, Proposition~I is used as a lemma. On the other hand, Proposition~I follows from Theorem~I by the remarks at the end of subsection~13.23.
 \end{rmk}
+
+\begin{exer}[1]
+If \(\varphi:E\to E\) is nilpotent and \(N_{\lambda}\)~is the number of subspaces of dimension~\(\lambda\) in an irreducible decomposition of~\(E\), then
+\[\dim\ker\varphi=\sum_{\lambda}N_{\lambda}\]
+\end{exer}
+\begin{proof}
+From subsection~13.17,
+\[r(\varphi)=\sum_{\lambda}(\lambda-1)N_{\lambda}=\dim E-\sum_{\lambda}N_{\lambda}\]
+so
+\[\sum_{\lambda}N_{\lambda}=\dim E-\dim\im\varphi=\dim\ker\varphi\qedhere\]
+\end{proof}
+
+\begin{exer}[3]
+Let \(\varphi:E\to E\) and \(\varphi^*:E^*\from E^*\) be dual. If \(\varphi\)~is nilpotent of degree~\(k\) and \(E\)~is cyclic with respect to~\(\varphi\), then \(\varphi^*\)~is nilpotent of degree~\(k\) and \(E^*\)~is cyclic with respect to~\(\varphi^*\). If \(a\) generates \(E\), then \(a^*\) generates \(E^*\) if and only if
+\[\sprod{a^*}{\varphi^{k-1}a}\ne0\]
+\end{exer}
+\begin{proof}
+We know \(\mu_{\varphi^*}=\mu_{\varphi}=t^k\), so \(\varphi^*\)~is nilpotent of degree~\(k\), and
+\[\dim E^*=\dim E=k\]
+so \(E^*\)~is cyclic with respect to~\(\varphi^*\).\footnote{See the remark in \S~4 above.}
+
+By a remark above, \(a^*\) generates \(E^*\) if and only if \((\varphi^*)^{k-1}a^*\ne0\). Since
+\[\sprod{(\varphi^*)^{k-1}a^*}{\varphi^j a}=\sprod{a^*}{\varphi^{k+j-1}a}=0\tag{1}\]
+for all \(j\ge 1\) and the \((\varphi^j a)_{j\ge 0}\) form a basis of~\(E\), it follows that \((\varphi^*)^{k-1}a^*=0\) if and only if (1)~holds for \(j=0\).
+\end{proof}
+
+\begin{exer}[4]
+A linear transformation is diagonalizable if and only if it is semi\-simple and its minimum polynomial is completely reducible, or equivalently if its minimum polynomial is the product of distinct monic linear factors.
+\end{exer}
+\begin{proof}
+A linear transformation is diagonalizable if and only if its generalized eigenspace decomposition is an eigenspace decomposition, which is true if and only if the minimum polynomial has the indicated form. The rest follows from Theorem~I.
+\end{proof}
 
 % Multilinear algebra
 \newpage
