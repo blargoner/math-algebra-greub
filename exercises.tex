@@ -1721,6 +1721,21 @@ A linear transformation is diagonalizable if and only if it is semi\-simple and 
 A linear transformation is diagonalizable if and only if its generalized eigenspace decomposition is an eigenspace decomposition, which is true if and only if the minimum polynomial has the indicated form. The rest follows from Theorem~I.
 \end{proof}
 
+\begin{exer}[5]
+If \(\varphi,\psi:E\to E\) are commuting diagonalizable transformations, they are simultaneously diagonalizable (that is, there exists a basis of~\(E\) which diagonalizes both \(\varphi\) and~\(\psi\)).
+\end{exer}
+\begin{proof}
+Let
+\[\sum_i E_i=E=\sum_j F_j\]
+be the generalized eigenspace decompositions for \(\varphi\) and~\(\psi\) respectively, which are eigenspace decompositions by diagonalizability of \(\varphi\) and~\(\psi\). It follows from commutativity of \(\varphi\) and~\(\psi\) and the results of subsection~13.21 that there is an induced decomposition
+\[E=\sum_{i,j}E_i\sect F_j\]
+A basis of~\(E\) obtained by joining bases of the subspaces \(E_i\sect F_j\) diagonalizes both \(\varphi\) and~\(\psi\).
+\end{proof}
+
+\begin{rmk}
+It follows from this problem and the previous problem that if \(\varphi\) and~\(\psi\) are commuting semisimple transformations over the field of complex numbers (which is algebraically closed), then \(\varphi+\psi\) and~\(\varphi\psi\) are semisimple.
+\end{rmk}
+
 % Multilinear algebra
 \newpage
 \part*{Multilinear Algebra}
