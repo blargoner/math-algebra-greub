@@ -1736,6 +1736,18 @@ A basis of~\(E\) obtained by joining bases of the subspaces \(E_i\sect F_j\) dia
 It follows from this problem and the previous problem that if \(\varphi\) and~\(\psi\) are commuting semisimple transformations over the field of complex numbers (which is algebraically closed), then \(\varphi+\psi\) and~\(\varphi\psi\) are semisimple.
 \end{rmk}
 
+\begin{exer}[6]
+Let \(E\)~be a complex vector space and \(\varphi:E\to E\). Let \(E=\sum_i E_i\) be the generalized eigenspace decomposition of~\(E\) and \(\pi_i:E\to E\) the corresponding projection operators. Assume that the minimum polynomial of the induced transformation \(\varphi_i:E_i\to E_i\) is \(\mu_i=(t-\lambda_i)^{k_i}\). Then the semisimple part of~\(\varphi\) is
+\[\varphi_S=\sum_i\lambda_i\pi_i\]
+\end{exer}
+\begin{proof}
+Let \(\iota_i:E_i\to E_i\) be the identity map and write
+\[\varphi_i=(\varphi_i-\lambda_i\iota_i)+\lambda_i\iota_i\]
+Note that \(\varphi_i-\lambda_i\iota_i\) is nilpotent, \(\lambda_i\iota_i\)~is semisimple, and the two transformations commute. Since
+\[\varphi=\sum_i\varphi_i=\sum_i(\varphi_i-\lambda_i\iota_i)+\sum_i\lambda_i\iota_i\]
+and direct sums preserve nilpotency, semisimplicity, and commutativity, the result now follows from the uniqueness of the Jordan-Chevalley decomposition (Theorem II).
+\end{proof}
+
 % Multilinear algebra
 \newpage
 \part*{Multilinear Algebra}
