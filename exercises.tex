@@ -26,7 +26,6 @@
 \newcommand{\bigdsum}{\bigoplus}
 \newcommand{\mult}{\cdot}
 \newcommand{\cross}{\times}
-\newcommand{\grad}{\nabla}
 \newcommand{\tprod}{\otimes}
 \newcommand{\bigtprod}{\bigotimes}
 \newcommand{\medtprod}{{\textstyle\bigtprod}}
@@ -38,7 +37,6 @@
 
 \newcommand{\delete}{\widehat}
 \newcommand{\gen}[1]{\langle#1\rangle}
-\newcommand{\pair}[2]{\langle#1,#2\rangle}
 \newcommand{\sprod}[2]{\langle#1,#2\rangle}
 \newcommand{\bigsprod}[2]{\big\langle#1,#2\big\rangle}
 \newcommand{\oc}[1]{#1^{\perp}}
@@ -178,8 +176,8 @@ By~(i), every object \(X\to F\) in this category can be obtained from the inclus
 
 Now (ii)~shows that we have a \emph{functor} from the category of sets into the category of vector spaces, which sends sets \(X\) and~\(Y\) to the vector spaces \(C(X)\) and~\(C(Y)\), and which sends a set map \(\alpha:X\to Y\) to the linear map \(\alpha_*:C(X)\to C(Y)\). The functor preserves the category structure of composites of arrows.
 
-In~(iii), we are ``forgetting'' the linear structure of~\(E\) when forming~\(C(E)\). For example, if \(E=\R^2\), then \(\pair{1}{1}=\pair{1}{0}+\pair{0}{1}\) in~\(E\), but \emph{not} in~\(C(E)\). The ``formal'' linear combination
-\[\pair{1}{1}-\pair{1}{0}-\pair{0}{1}\]
+In~(iii), we are ``forgetting'' the linear structure of~\(E\) when forming~\(C(E)\). For example, if \(E=\R^2\), then \((1,1)=(1,0)+(0,1)\) in~\(E\), but \emph{not} in~\(C(E)\). The ``formal'' linear combination
+\[(1,1)-(1,0)-(0,1)\]
 is not zero in~\(C(E)\) because the pairs are unrelated elements (symbols) which are \emph{linearly independent}. Note \(\pi_E\)~is surjective (since \(\iota_E\)~is), so \(E\)~is a projection of~\(C(E)\). In~(iv), we see that \(\varphi:E\to F\) is linear if and only if it is a ``projection'' of \(\varphi_*:C(E)\to C(F)\).
 
 In~(v), we see that \(\pi_E\)~just recalls the linear structure of~\(E\) that was forgotten in~\(C(E)\). In particular, \(C(E)/N(E)\iso E\). In other words, if you start with~\(E\), then forget about its linear structure, then recall that linear structure, you just get \(E\)~again.
