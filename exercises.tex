@@ -567,6 +567,50 @@ Conversely, if \(\varphi\ne0\) and \(\chi_{\varphi}=(-\lambda)^n\), then the con
 \end{proof}
 
 \subsection*{\S~7}
+\begin{exer}[5]
+If \(f:L(E;E)\to\Gamma\) is linear, there is \(\alpha\in L(E;E)\) unique with
+\[f(\varphi)=\tr(\varphi\after\alpha)\]
+\end{exer}
+\begin{proof}
+Since \(L(E;E)\)~is finite-dimensional and dual to itself under the scalar product
+\[\sprod{\varphi}{\psi}=\tr(\psi\after\varphi)\]
+it follows from Proposition~I in chapter~II, \S~6 that there is \(\alpha\)~unique with
+\[f(\varphi)=\sprod{\alpha}{\varphi}=\tr(\varphi\after\alpha)\qedhere\]
+\end{proof}
+
+\begin{exer}[6]
+If \(f:L(E;E)\to\Gamma\) is linear with
+\[f(\psi\after\varphi)=f(\varphi\after\psi)\]
+there is \(\lambda\in\Gamma\) with
+\[f(\varphi)=\lambda\mult\tr\varphi\]
+\end{exer}
+\begin{proof}
+By problem~5, there is~\(\alpha\) with
+\[f(\varphi)=\tr(\varphi\after\alpha)=\tr(\alpha\after\varphi)\]
+We claim \(\alpha=\lambda\iota\) for some \(\lambda\in\Gamma\), from which the result follows. By assumption,
+\[\tr(\alpha\after\varphi\after\psi)=\tr(\alpha\after\psi\after\varphi)=\tr(\varphi\after\alpha\after\psi)\tag{1}\]
+for all \(\varphi\) and~\(\psi\). Fix a basis of~\(E\). Let \(A=M(\alpha)\), let \(R_l\)~be the matrix with \(1\)'s~in the \(l\)-th row and \(0\)'s elsewhere, and let \(C_k\)~be the matrix with \(1\)'s~in the \(k\)-th column and \(0\)'s elsewhere. By direct computation,
+\[(C_kR_lA)_{ij}=0\qquad(k\ne l)\]
+while
+\[(C_kAR_l)_{ij}=A_{kl}\]
+It follows from~(1) with \(R_l=M(\varphi)\) and \(C_k=M(\psi)\) that \(A\)~is diagonal. Now let \(T_{kl}\)~be the matrix with \(1\)'s~in entries \((k,l)\) and~\((l,k)\) and \(0\)'s elsewhere. It follows from~(1) with \(T_{kl}=M(\varphi)\) and \(C_k=M(\psi)\) that
+\[A_{ll}=\tr(C_lA)=\tr(C_kT_{kl}A)=\tr(C_kAT_{kl})=A_{kk}\]
+Therefore the claim holds with \(\lambda=A_{11}\).
+\end{proof}
+
+\begin{exer}[10]
+If \(A:L(E;E)\to L(E;E)\) is linear and ``functorial'' in that
+\[A(\varphi\after\psi)=A(\varphi)\after A(\psi)\qquad\text{and}\qquad A(\iota)=\iota\]
+then \(\tr A(\varphi)=\tr\varphi\).
+\end{exer}
+\begin{proof}
+The function \(\tr\after A:L(E;E)\to\Gamma\) is linear and
+\[(\tr\after A)(\varphi\after\psi)=\tr(A(\varphi)\after A(\psi))=\tr(A(\psi)\after A(\varphi))=(\tr\after A)(\psi\after\varphi)\]
+so \(\tr\after A=\lambda\mult\tr\) for some \(\lambda\in\Gamma\) by problem~6. But this implies
+\[\lambda\mult\tr\iota=(\tr\after A)(\iota)=\tr\iota\]
+so \(\lambda=1\) and \(\tr\after A=\tr\).
+\end{proof}
+
 \begin{exer}[12]
 If \(\varphi_1:E_1\to E_1\) and \(\varphi_2:E_2\to E_2\) are linear, then
 \[\tr(\varphi_1\dsum\varphi_2)=\tr\varphi_1+\tr\varphi_2\]
