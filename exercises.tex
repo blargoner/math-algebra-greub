@@ -1804,19 +1804,19 @@ The only 1-dimensional subspace stable under~\(\varphi\) is the line \(y=0\), wh
 
 \subsection*{\S~7}
 \begin{exer}[2]
-If \(E\)~is an inner product space, then \(\varphi:E\to E\) is normal if and only if \(\adj{\varphi}=f(\varphi)\) for some \(f\in\Gamma[t]\).
+If \(E\)~is an inner product space, then \(\varphi:E\to E\) is normal if and only if \(\adj{\varphi}=f(\varphi)\) for some \(f\in\R[t]\).
 \end{exer}
 \begin{proof}
 If \(\adj{\varphi}=f(\varphi)\), then \(\adj{\varphi}\varphi=\varphi\adj{\varphi}\), so \(\varphi\)~is normal. Conversely, if \(\varphi\)~is normal let
 \[E=E_1\dsum\cdots\dsum E_r\tag{1}\]
-be the orthogonal generalized eigenspace decomposition of~\(E\) and \(\varphi_i:E_i\to E_i\) the induced homothetic restriction (Theorem~I). Write \(\varphi_i=\lambda_i\tau_i\) where \(\lambda_i\in\Gamma\) and \(\tau_i\)~is a rotation. We know \(\tau_i^{-1}=f_i(\tau_i)\) for some \(f_i\in\Gamma[t]\).\footnote{See problem~12 in \S~1.} By subsection~8.5, we have the direct sum
+be the orthogonal generalized eigenspace decomposition of~\(E\) and \(\varphi_i:E_i\to E_i\) the induced homothetic restriction (Theorem~I). Write \(\varphi_i=\lambda_i\tau_i\) where \(\lambda_i\in\R\) and \(\tau_i\)~is a rotation. We know \(\tau_i^{-1}=f_i(\tau_i)\) for some \(f_i\in\R[t]\).\footnote{See problem~12 in \S~1.} By subsection~8.5, we have the direct sum
 \[\adj{\varphi}=\sum\adj{\varphi_i}=\sum\lambda_i\adj{\tau_i}=\sum\lambda_i\tau_i^{-1}=\sum\lambda_i f_i(\tau_i)\tag{2}\]
-Define \(g_i\in\Gamma[t]\) by
+Define \(g_i\in\R[t]\) by
 \[g_i(t)=\begin{cases}
 0&\text{if }\lambda_i=0\\
 \lambda_if_i(\lambda_i^{-1}t)&\text{if }\lambda_i\ne0
 \end{cases}\]
-Let \(\pi_i=h_i(\varphi)\) be the \(i\)-th projection operator for~(1), where \(h_i\in\Gamma[t]\). It follows from~(2) that
+Let \(\pi_i=h_i(\varphi)\) be the \(i\)-th projection operator for~(1), where \(h_i\in\R[t]\). It follows from~(2) that
 \[\adj{\varphi}=\sum g_i(\varphi)h_i(\varphi)\]
 Setting \(f=\sum g_ih_i\), we have \(\adj{\varphi}=f(\varphi)\).
 \end{proof}
