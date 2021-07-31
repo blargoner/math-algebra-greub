@@ -1323,6 +1323,12 @@ This result shows that the linear transformation \(\varphi\) is naturally left-d
 
 \section*{Chapter~XII}
 \subsection*{\S~1}
+\begin{rmk}
+The pair \((\Gamma[t], t)\) is a universal (initial) object in the category of pointed algebras \((A,a)\), where \(A\) is an associative unital \(\Gamma\)-algebra with unit \(e\in A\) and distinguished element \(a\in A\). In this category, an arrow \(\varphi:(A,a)\to(B,b)\) is a unital \(\Gamma\)-algebra homomorphism \(\varphi:A\to B\) with \(\varphi a=b\). This result follows from the existence and uniqueness of the evaluation homomorphism \(\Gamma[t]\to A\).
+
+Identifying the scalars \(\alpha\in\Gamma\) with the elements \(\alpha\mult e\in A\), this result shows that \(\Gamma[t]\)~is universal as an algebra obtained by adjoining a single element to~\(\Gamma\), in the sense that every such algebra can be obtained from~\(\Gamma[t]\) in a unique way through evaluation.
+\end{rmk}
+
 \begin{exer}[2]
 Define the linear mapping \(\int:\Gamma[t]\to\Gamma[t]\) by
 \[\int t^p=\frac{t^{p+1}}{p+1}\qquad(p\ge 0)\]
@@ -1359,8 +1365,16 @@ Define \(f=\alpha_0+\cdots+\alpha_{r-1}t^{r-1}\). Then \(f=0\) or \(\deg f<r\). 
 \end{rmk}
 
 \section*{Chapter~XIII}
+\begin{rmk}
+In parts of this chapter, it is implicitly assumed that the vector space \(E\)~has dimension \(n\ge 1\).
+\end{rmk}
+
 \subsection*{\S~1}
 In the following remarks, \(f\in\Gamma[t]\).
+\begin{rmk}
+Why is it natural to apply polynomials to a linear transformation? If we think of a linear transformation \(\varphi:E\to E\) as being ``adjoined'' to the scalar transformations in~\(A(E;E)\), then we know that the structure of the resulting subalgebra is obtained from that of~\(\Gamma[t]\) in a unique way through evaluation \(f\mapsto f(\varphi)\), by the universal property of~\(\Gamma[t]\).\footnote{See the remark in chapter~XII, \S~1 above.} This fact makes it natural to apply polynomials to~\(\varphi\) in order to study the structure of~\(\varphi\).
+\end{rmk}
+
 \begin{rmk}
 If \(\varphi:E\to E\) is linear and \(E_1\)~is stable under~\(\varphi\), then \(E_1\)~is also stable under~\(f(\varphi)\) and
 \[f(\varphi)_{E_1}=f(\varphi_{E_1})\]
