@@ -1,7 +1,7 @@
 % Notes and exercises from Linear Algebra and Multilinear Algebra by Greub
 % By John Peloquin
 \documentclass[letterpaper,12pt]{article}
-\usepackage{amsmath,amssymb,amsthm,enumitem,fourier,diagrams,stmaryrd}
+\usepackage{amsmath,amssymb,amsthm,enumitem,fourier,diagrams,tikz-cd,stmaryrd}
 \usepackage[hidelinks]{hyperref}
 
 \newcommand{\R}{\mathbb{R}}
@@ -21,6 +21,7 @@
 \newcommand{\union}{\cup}
 \newcommand{\sect}{\cap}
 \newcommand{\after}{\circ}
+\newcommand{\join}{\vee}
 \newcommand{\meet}{\wedge}
 \newcommand{\dsum}{\oplus}
 \newcommand{\bigdsum}{\bigoplus}
@@ -1372,7 +1373,22 @@ In parts of this chapter, it is implicitly assumed that the vector space \(E\)~h
 \subsection*{\S~1}
 In the following remarks, \(f\in\Gamma[t]\).
 \begin{rmk}
-Why is it natural to apply polynomials to a linear transformation? If we think of a linear transformation \(\varphi:E\to E\) as being ``adjoined'' to the scalar transformations in~\(A(E;E)\), then we know that the structure of the resulting subalgebra is obtained from that of~\(\Gamma[t]\) in a unique way through evaluation \(f\mapsto f(\varphi)\), by the universal property of~\(\Gamma[t]\).\footnote{See the remark in chapter~XII, \S~1 above.} This fact makes it natural to apply polynomials to~\(\varphi\) in order to study the structure of~\(\varphi\).
+Why is it natural to apply polynomials to a linear transformation? If we think of a linear transformation \(\varphi:E\to E\) as being adjoined to the scalar transformations in~\(A(E;E)\), then we know that the structure of the resulting subalgebra is obtained from that of~\(\Gamma[t]\) in a unique way through evaluation \(f\mapsto f(\varphi)\), by the universal property of~\(\Gamma[t]\).\footnote{See the remark in chapter~XII, \S~1 above.} This fact makes it natural to apply polynomials to~\(\varphi\) in order to study the structure of~\(\varphi\).
+\end{rmk}
+
+\begin{rmk}
+The results of this section are summarized in the following diagram, which shows that \(K\)~is a homomorphism from the lattice of polynomials in~\(\Gamma[t]\) under divisibility to the lattice of subspaces of~\(E\) under inclusion:\footnote{Recall from chapter~XII that \(f\join g\) denotes the greatest common divisor of \(f\) and~\(g\), while \(f\meet g\) denotes the least common multiple of \(f\) and~\(g\)---notation inspired by the lattice of \emph{ideals}.}
+\begin{center}
+\begin{tikzcd}[sep={4em,between origins},tips=false]
+h &&&&&&&\\
+&& \mu \ar[rrrr,maps to,tips=true,shorten=3em,bend left=15,"K"{yshift=0.5em}] &&&& K(\mu)=E & \\
+& h\join\mu \ar[luu] \ar[ru] &&&& K(h)=K(h\join\mu) \ar[ru] && \\
+&& f\meet g \ar[uu] &&&& K(f\meet g)=K(f)+K(g) \ar[uu] & \\
+& f \ar[ru] && g \ar[lu] && K(f) \ar[ru] && K(g) \ar[lu] \\
+&& f\join g \ar[lu] \ar[ru] &&&& K(f\join g)=K(f)\sect K(g) \ar[lu] \ar[ru] & \\
+&& 1 \ar[u] &&&& K(1)=0 \ar[u] &
+\end{tikzcd}
+\end{center}
 \end{rmk}
 
 \begin{rmk}
