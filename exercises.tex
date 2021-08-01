@@ -1469,6 +1469,12 @@ It follows that \(f(\psi)=0\) if and only if \(f(\varphi)=0\), so \(\mu_{\psi}=\
 In particular if \(E=E_1\dsum E_2\) and \(\varphi:E\to E\) is given by \(\varphi=\varphi_1\dsum\varphi_2\) where \(\varphi_1:E_1\to E_1\) and \(\varphi_2:E_2\to E_2\), then \(\mu_{\varphi_1}=\mu_{\proj{\varphi}}\) where \(\proj{\varphi}:E/E_2\to E/E_2\) is the induced transformation. Dually, \(\mu_{\varphi_2}=\mu_{\proj{\varphi}}\) where \(\proj{\varphi}:E/E_1\to E/E_1\) is induced.\footnote{See the conjugacy diagrams in chapter~II, \S~4 above.}
 \end{rmk}
 
+\begin{exer}[2] Consider the linear transformations \(\varphi,\psi:\R^2\to\R^2\) defined by
+\[\varphi(x,y)=(y,0)\qquad\text{and}\qquad\psi(x,y)=(0,y)\]
+Then \(\varphi\psi=\varphi\) while \(\psi\varphi=0\), so
+\[\mu_{\varphi\psi}=t^2\ne t=\mu_{\psi\varphi}\]
+\end{exer}
+
 \begin{exer}[3]
 If \(\varphi_1:E_1\to E_1\) and \(\varphi_2:E_2\to E_2\) are linear, then
 \[\mu_{\varphi_1\dsum\varphi_2}=\mu_{\varphi_1}\meet\mu_{\varphi_2}\]
@@ -1491,6 +1497,24 @@ so
 \[\mu_1(\varphi)(\proj{\mu}(\varphi)(x))=\mu_1(\varphi_1)(\proj{\mu}(\varphi)(x))=0\]
 It follows that \(\proj{\mu}\mu_1(\varphi)=0\), so \(\mu\divides\proj{\mu}\mu_1\).
 \end{proof}
+
+\begin{exer}[6]
+The minimum polynomial~\(\mu\) of \(\varphi:E\to E\) can be constructed in the following way: select \(x_1\in E\) and let \(k_1\)~be least such that the vectors
+\[x_1,\varphi x_1,\ldots,\varphi^{k_1}x_1\tag{1}\]
+are linearly dependent, with
+\[\lambda_0 x_1+\lambda_1\varphi x_1+\cdots+\lambda_{k_1}\varphi^{k_1}x_1=0\]
+where the~\(\lambda_i\) are not all zero, so in particular \(\lambda_{k_1}\ne 0\). Define the polynomial
+\[f_1=\lambda_0+\lambda_1 t+\cdots+\lambda_{k_1}t^{k_1}\]
+If the vectors~(1) do not span~\(E\), select \(x_2\in E\) not in their span and construct the corresponding polynomial~\(f_2\). Repeat this procedure until \(E\)~is exhausted. Then \(\mu\)~is the (monic) least common multiple of the~\(f_i\).
+\end{exer}
+\begin{proof}
+Let \(E_i\)~be the span of the vectors
+\[x_i,\varphi x_i,\ldots,\varphi^{k_i-1}x_i\tag{2}\]
+By construction, (2)~is a basis of~\(E_i\) with \(\varphi^{k_i}x_i\in E_i\), and we have the direct sum \(E=\sum_i E_i\). The minimum polynomial of the restriction \(\varphi_i:E_i\to E_i\) is just \(\lambda_{k_i}^{-1}f_i\), so the result follows from problem~3.
+\end{proof}
+\begin{rmk}
+The subspaces~\(E_i\) are cyclic, so this procedure just produces a cyclic decomposition of~\(E\), from which the minimum polynomial is easily computed.\footnote{See Proposition~IV and its corollary in \S~3.}
+\end{rmk}
 
 \begin{exer}[9]
 The minimum polynomial of a self-adjoint transformation of a unitary space has real coefficients.
