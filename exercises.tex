@@ -1,11 +1,12 @@
 % Notes and exercises from Linear Algebra and Multilinear Algebra by Greub
 % By John Peloquin
 \documentclass[letterpaper,12pt]{article}
-\usepackage{amsmath,amssymb,amsthm,enumitem,fourier,diagrams,tikz-cd,stmaryrd}
+\usepackage{amsmath,amssymb,amsthm,enumitem,fourier,diagrams,tikz-cd,stmaryrd,graphicx}
 \usepackage[hidelinks]{hyperref}
 
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\C}{\mathbb{C}}
+\newcommand{\um}{\reflectbox{\(\mu\)}}
 
 \newcommand{\from}{\leftarrow}
 \newcommand{\iso}{\cong}
@@ -1515,6 +1516,19 @@ By construction, (2)~is a basis of~\(E_i\) with \(\varphi^{k_i}x_i\in E_i\), and
 \begin{rmk}
 The subspaces~\(E_i\) are cyclic, so this procedure just produces a cyclic decomposition of~\(E\), from which the minimum polynomial is easily computed.\footnote{See Proposition~IV and its corollary in \S~3.}
 \end{rmk}
+
+\begin{exer}[8]
+If \(E\)~is an inner product space and \(\varphi:E\to E\) is a rotation, then the coefficients~\(\alpha_i\) of the minimum polynomial~\(\mu\) of~\(\varphi\) satisfy
+\[\alpha_i=\varepsilon\alpha_{k-i}\qquad k=\deg\mu\]
+where \(\varepsilon=\pm 1\).
+\end{exer}
+\begin{proof}
+Since \(\adj{\varphi}=\varphi^{-1}\), we have \(\mu_{\varphi^{-1}}=\mu\) by a remark above, so
+\[\alpha_0+\alpha_1\varphi^{-1}+\cdots+\alpha_k\varphi^{-k}=\mu(\varphi^{-1})=0\tag{1}\]
+Multiplying both sides of~(1) by~\(\varphi^k\) yields
+\[\alpha_0\varphi^k+\alpha_1\varphi^{k-1}+\cdots+\alpha_k=\um(\varphi)=0\tag{2}\]
+where \(\um=\sum_i\alpha_{k-i}t^i\). It follows from~(2) that \(\mu\divides\um\), and in fact \(\alpha_0\mu=\um\). Since \(\alpha_0^2=\alpha_k=1\), the result holds with \(\varepsilon=\alpha_0\).
+\end{proof}
 
 \begin{exer}[9]
 The minimum polynomial of a self-adjoint transformation of a unitary space has real coefficients.
