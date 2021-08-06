@@ -1531,10 +1531,19 @@ where \(\um=\sum_i\alpha_{k-i}t^i\). It follows from~(2) that \(\mu\divides\um\)
 \end{proof}
 
 \begin{exer}[9]
-The minimum polynomial of a self-adjoint transformation of a unitary space has real coefficients.
+The minimum polynomial~\(\mu\) of a self-adjoint transformation of a unitary space has real coefficients.
 \end{exer}
 \begin{proof}
 By a remark above, \(\conj{\mu}=\mu\).
+\end{proof}
+
+\begin{exer}[12]
+If \(\varphi:E\to E\) is regular, then \(\varphi^{-1}=f(\varphi)\) for some \(f\in\Gamma[t]\).
+\end{exer}
+\begin{proof}
+Let \(\mu\)~be the minimum polynomial of~\(\varphi\) and \(\alpha=\mu(0)\). Since \(\varphi\)~is regular, \(0\)~is not an eigenvalue of~\(\varphi\), so \(\alpha\ne0\). Write
+\[\alpha^{-1}\mu=1-tf\qquad f\in\Gamma[t]\tag{1}\]
+Evaluating both sides of~(1) at~\(\varphi\) yields \(\varphi f(\varphi)=\iota\) and therefore \(\varphi^{-1}=f(\varphi)\).
 \end{proof}
 
 \subsection*{\S~2}
