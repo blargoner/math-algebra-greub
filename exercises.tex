@@ -1637,6 +1637,27 @@ For~(c), commutativity of the left square in the diagram follows from~(a) and co
 Finally, (d)~follows immediately from~(c).
 \end{proof}
 
+\begin{exer}[10]
+If the minimum polynomial~\(\mu\) of \(\varphi:E\to E\) is completely reducible, then \(\mu\divides\chi\) where \(\chi\)~is the characteristic polynomial of~\(\varphi\).
+\end{exer}
+\begin{proof}
+First consider the case \(\mu=(t-\lambda)^k\). By problem~2, there is a basis of~\(E\) with respect to which the matrix of~\(\varphi\) has the form
+\[\begin{pmatrix}
+\lambda&&0\\
+&\ddots&\\
+*&&\lambda
+\end{pmatrix}\]
+It follows immediately that \((\varphi-\lambda\iota)^n=0\) where \(n=\dim E\), so \(\mu\divides(t-\lambda)^n\) and therefore \(k\le n\). Moreover, \(\chi=(-1)^n(t-\lambda)^n\), so \(\mu\divides\chi\).
+
+In the general case, take the prime decomposition
+\[\mu=(t-\lambda_1)^{k_1}\mult\cdots\mult(t-\lambda_r)^{k_r}\]
+and let \(E=\sum_i E_i\) be the corresponding generalized eigenspace decomposition. Let \(\varphi_i:E_i\to E_i\) be the restriction with minimum polynomial \(\mu_i=(t-\lambda_i)^{k_i}\) and characteristic polynomial \(\chi_i\). Then \(\mu_i\divides\chi_i\) by the previous case, so
+\[\mu=\mu_1\mult\cdots\mult\mu_r\divides\chi_1\mult\cdots\mult\chi_r=\chi\qedhere\]
+\end{proof}
+\begin{rmk}
+This is just a special case of the Cayley-Hamilton theorem.\footnote{See Theorem~II in \S~5.}
+\end{rmk}
+
 \subsection*{\S~3}
 \begin{rmk}
 In Proposition~I, the vector~\(a\) is intuitively ``hard to kill'', and therefore generates a cyclic subspace that is as large as possible (see Proposition~V).
