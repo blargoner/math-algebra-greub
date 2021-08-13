@@ -1662,9 +1662,9 @@ First consider the case \(\mu=(t-\lambda)^k\). By problem~2, there is a basis of
 It follows immediately that \((\varphi-\lambda\iota)^n=0\) where \(n=\dim E\), so \(\mu\divides(t-\lambda)^n\) and therefore \(k\le n\). Moreover, \(\chi=(-1)^n(t-\lambda)^n\), so \(\mu\divides\chi\).
 
 In the general case, take the prime decomposition
-\[\mu=(t-\lambda_1)^{k_1}\mult\cdots\mult(t-\lambda_r)^{k_r}\]
+\[\mu=(t-\lambda_1)^{k_1}\cdots(t-\lambda_r)^{k_r}\]
 and let \(E=\sum_i E_i\) be the corresponding generalized eigenspace decomposition. Let \(\varphi_i:E_i\to E_i\) be the restriction with minimum polynomial \(\mu_i=(t-\lambda_i)^{k_i}\) and characteristic polynomial \(\chi_i\). Then \(\mu_i\divides\chi_i\) by the previous case, so
-\[\mu=\mu_1\mult\cdots\mult\mu_r\divides\chi_1\mult\cdots\mult\chi_r=\chi\qedhere\]
+\[\mu=\mu_1\cdots\mu_r\divides\chi_1\cdots\chi_r=\chi\qedhere\]
 \end{proof}
 \begin{rmk}
 This is just a special case of the Cayley-Hamilton theorem.\footnote{See Theorem~II in \S~5.}
@@ -1757,18 +1757,18 @@ is any vector in~\(E\), then \(a\)~generates \(E\) if and only if each~\(a_j\) g
 \end{exer}
 \begin{proof}
 For~(a), if \(E\)~is cyclic then by problem~5 each~\(F_j\) is cyclic and (by induction on~\(s\))
-\[\mu_1\meet\cdots\meet\mu_s=\mu=\mu_1\mult\cdots\mult\mu_s\]
+\[\mu_1\meet\cdots\meet\mu_s=\mu=\mu_1\cdots\mu_s\]
 so the \(\mu_j\)~are relatively prime. Conversely, if each~\(F_j\) is cyclic and the~\(\mu_j\) are relatively prime, then
 \begin{align*}
 \dim E&=\dim F_1+\cdots+\dim F_s\\
 	&=\deg\mu_1+\cdots+\deg\mu_s\\
-	&=\deg\mu_1\mult\cdots\mult\mu_s\\
+	&=\deg\mu_1\cdots\mu_s\\
 	&=\deg\mu_1\meet\cdots\meet\mu_s\\
 	&=\deg\mu
 \end{align*}
 so \(E\)~is cyclic.
 
-For~(b), since \(\mu=\mu_1\mult\cdots\mult\mu_s\) and the~\(\mu_j\) are relatively prime, the generalized eigenspaces of~\(\varphi_j\) in~\(F_j\) are generalized eigenspaces of~\(\varphi\) in~\(E\). It follows that the projection operator associated with~\(F_j\) is a polynomial \(g_j(\varphi)\) in~\(\varphi\).
+For~(b), since \(\mu=\mu_1\cdots\mu_s\) and the~\(\mu_j\) are relatively prime, the generalized eigenspaces of~\(\varphi_j\) in~\(F_j\) are generalized eigenspaces of~\(\varphi\) in~\(E\). It follows that the projection operator associated with~\(F_j\) is a polynomial \(g_j(\varphi)\) in~\(\varphi\).
 
 For~(c), if \(a\)~generates \(E\) and \(x\in F_j\), then there is \(f\in\Gamma[t]\) with
 \[x=f(\varphi)a=f(\varphi_1)a_1+\cdots+f(\varphi_s)a_s=f(\varphi_j)a_j\]
