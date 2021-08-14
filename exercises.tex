@@ -24,6 +24,7 @@
 \newcommand{\after}{\circ}
 \newcommand{\join}{\vee}
 \newcommand{\meet}{\wedge}
+\newcommand{\bigmeet}{\bigwedge}
 \newcommand{\dsum}{\oplus}
 \newcommand{\bigdsum}{\bigoplus}
 \newcommand{\mult}{\cdot}
@@ -1726,6 +1727,10 @@ Proposition~II shows that two linear transformations are conjugate if and only i
 The proof of case~II can be simplified by noting that \(\dim E_i=\dim F_i\) follows from the fact that \(r(f_i(\varphi_i)^j)=r(f_i(\psi_i)^j)\) for all \(j\ge 1\).
 \end{rmk}
 
+\begin{rmk}
+In the proof of Corollary~II to Proposition~II, it follows from the results of subsection~13.20 that the common characteristic polynomial of the induced restrictions of \(\varphi\) and~\(\psi\) to \(E_i\) and~\(F_i\) is just \(f_i^{m_i}\).\footnote{See the remarks in \S~5 below.}
+\end{rmk}
+
 \begin{exer}[5]
 If \(\varphi:E\to E\) stabilizes~\(E_1\), and \(\varphi_1:E_1\to E_1\) and \(\proj{\varphi}:E/E_1\to E/E_1\) are the induced transformations, then \(E\)~is cyclic if and only if (i) \(E_1\)~is cyclic, (ii) \(E/E_1\)~is cyclic, and (iii) \(\mu=\mu_1\proj{\mu}\), where \(\mu=\mu_{\varphi}\), \(\mu_1=\mu_{\varphi_1}\), and \(\proj{\mu}=\mu_{\proj{\varphi}}\).
 \end{exer}
@@ -1811,6 +1816,29 @@ so we must have \(\im f(\varphi)^m=K(f^{k-m})\) by~(a).
 \end{proof}
 
 \subsection*{\S~5}
+\begin{rmk}
+The minimum polynomial \(\mu\) and the characteristic polynomial \(\chi\) of a linear transformation \(\varphi:E\to E\) have the same prime factors.
+\end{rmk}
+\begin{proof}
+Let \(E=\sum_i F_i\) be a cyclic decomposition of~\(E\) and \(\varphi_i:F_i\to F_i\) the induced restriction of~\(\varphi\) with minimum polynomial \(\mu_i\) and characteristic polynomial \(\chi_i\). Then
+\[\mu=\bigmeet\mu_i\]
+and
+\[\chi=\prod\chi_i=\pm\prod\mu_i\]
+by the cyclic case of the Cayley-Hamilton theorem (Lemma~II). It follows that the prime factors of \(\mu\) and~\(\chi\) are the prime factors of the~\(\mu_i\).
+\end{proof}
+
+\begin{rmk}
+If \(\varphi:E\to E\), let
+\[\chi=f_1^{m_1}\cdots f_r^{m_r}\qquad\text{and}\qquad\mu=f_1^{k_1}\cdots f_r^{k_r}\quad(k_i\le m_i)\]
+be the prime decompositions of the characteristic and minimum polynomials, by the Cayley-Hamilton theorem. If
+\[E=E_1\dsum\cdots\dsum E_r\]
+is the generalized eigenspace decomposition of~\(E\) and \(\varphi_i:E_i\to E_i\) the induced restriction of~\(\varphi\) with minimum polynomial \(\mu_i\) and characteristic polynomial \(\chi_i\), then
+\[\chi_i=f_i^{m_i}\qquad\text{and}\qquad\mu_i=f_i^{k_i}\]
+\end{rmk}
+\begin{proof}
+We already know that \(\mu_i=f_i^{k_i}\), and it follows from the previous remark that \(f_i\)~does not divide~\(\chi_j\) if \(i\ne j\). On the other hand \(\chi=\prod\chi_i\), so we must have \(\chi_i=f_i^{m_i}\).
+\end{proof}
+
 \begin{rmk}
 In subsection~13.20, we see that
 \[\mu_{\varphi}(t)=\mu_{\varphi-\lambda\iota}(t-\lambda)\]
