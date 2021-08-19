@@ -1858,8 +1858,11 @@ is the generalized eigenspace decomposition of~\(E\) and \(\varphi_i:E_i\to E_i\
 \[\chi_i=f_i^{m_i}\qquad\text{and}\qquad\mu_i=f_i^{k_i}\]
 \end{rmk}
 \begin{proof}
-We already know that \(\mu_i=f_i^{k_i}\), and it follows from the previous remark that \(f_i\)~does not divide~\(\chi_j\) if \(i\ne j\). On the other hand \(\chi=\prod\chi_i\), so we must have \(\chi_i=f_i^{m_i}\).
+We already know that \(\mu_i=f_i^{k_i}\), and it follows from the previous remark that \(f_i\)~does not divide~\(\chi_j\) if \(i\ne j\). On the other hand \(\chi=\chi_1\cdots\chi_r\), so we must have \(\chi_i=f_i^{m_i}\).
 \end{proof}
+\begin{rmk}
+This result shows that the algebraic multiplicity of an eigenvalue~\(\lambda\) (the number of times it occurs as a root of the characteristic polynomial) is the dimension of the generalized eigenspace corresponding to~\(\lambda\), which is greater than or equal to the geometric multiplicity (the dimension of the eigenspace).
+\end{rmk}
 
 \begin{rmk}
 In subsection~13.20, we see that
@@ -1874,12 +1877,24 @@ In subsections 13.21 and~13.22, we have
 \[C^2(\varphi)=\Gamma(\varphi)\subseteq C(\varphi)=C(\Gamma(\varphi))=C^3(\varphi)\]
 \end{rmk}
 
+\begin{exer}[1]
+If \(\varphi:E\to E\), let \(\mu=f_1^{k_1}\cdots f_r^{k_r}\) be the prime decomposition of the minimum polynomial with \(p_i=\deg f_i\) and \(E=\sum_i E_i\) the generalized eigenspace decomposition. Denote by \(N_{ij}\) the number of irreducible subspaces of~\(E_i\) of dimension \(p_ij\) for \(1\le j\le k_i\) and set
+\[l_i=\sum_{j=1}^{k_i}jN_{ij}\]
+Then the characteristic polynomial of~\(\varphi\) is \(\chi=f_1^{l_1}\cdots f_r^{l_r}\).
+\end{exer}
+\begin{proof}
+By a remark above, we know that the characteristic polynomial of the induced restriction \(\varphi_i:E_i\to E_i\) is \(\chi_i=f_i^{m_i}\) where
+\[p_im_i=\deg\chi_i=\dim E_i=\sum_{j=1}^{k_i}p_ijN_{ij}=p_i l_i\]
+so \(m_i=l_i\) and
+\[\chi=\chi_1\cdots\chi_r=f_1^{l_1}\cdots f_r^{l_r}\qedhere\]
+\end{proof}
+
 \begin{exer}[2]
 \(E\)~is cyclic with respect to~\(\varphi\) if and only if \(\chi_{\varphi}=\pm\mu_{\varphi}\).
 \end{exer}
 \begin{proof}
 The forward direction follows from Lemma~II, and the reverse from
-\[\dim E=\dim\chi_{\varphi}=\dim\mu_{\varphi}\qedhere\]
+\[\dim E=\deg\chi_{\varphi}=\deg\mu_{\varphi}\qedhere\]
 \end{proof}
 
 \begin{exer}[3]
