@@ -1481,6 +1481,24 @@ It follows that \(f(\psi)=0\) if and only if \(f(\varphi)=0\), so \(\mu_{\psi}=\
 In particular if \(E=E_1\dsum E_2\) and \(\varphi:E\to E\) is given by \(\varphi=\varphi_1\dsum\varphi_2\) where \(\varphi_1:E_1\to E_1\) and \(\varphi_2:E_2\to E_2\), then \(\mu_{\varphi_1}=\mu_{\proj{\varphi}}\) where \(\proj{\varphi}:E/E_2\to E/E_2\) is the induced transformation. Dually, \(\mu_{\varphi_2}=\mu_{\proj{\varphi}}\) where \(\proj{\varphi}:E/E_1\to E/E_1\) is induced.\footnote{See the conjugacy diagrams in chapter~II, \S~4 above.}
 \end{rmk}
 
+\begin{rmk}
+Let \(\varphi:E\to E\) be linear. If \(\mu=\mu_{\varphi}=fg\) and
+\[E=K(f)\dsum E_1\tag{1}\]
+where \(E_1\)~is stable under~\(\varphi\), then \(f\) and~\(g\) are relatively prime and \(E_1=K(g)\).
+\end{rmk}
+\begin{proof}
+We have
+\[g(\varphi)E_1\subseteq K(f)\sect E_1=0\]
+so
+\[E_1\subseteq K(g)\tag{2}\]
+It follows from (1) and~(2) that \(E=K(f\meet g)\), so \(\mu\divides f\meet g\). This implies \(fg=f\meet g\) and therefore \(f\) and~\(g\) are relatively prime. Now
+\[E=K(f)\dsum K(g)\tag{3}\]
+and it follows from (1), (2), and~(3) that \(E_1=K(g)\).
+\end{proof}
+\begin{rmk}
+This result is a converse to Corollary~I to Proposition~II. The proof is essentially the same as those of Proposition~I and Theorem~V in \S~6.
+\end{rmk}
+
 \begin{exer}[2] Consider the linear transformations \(\varphi,\psi:\R^2\to\R^2\) defined by
 \[\varphi(x,y)=(y,0)\qquad\text{and}\qquad\psi(x,y)=(0,y)\]
 Then \(\varphi\psi=\varphi\) while \(\psi\varphi=0\), so
