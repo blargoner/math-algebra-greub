@@ -2047,11 +2047,33 @@ Note that \(\varphi_i-\lambda_i\iota_i\) is nilpotent, \(\lambda_i\iota_i\)~is s
 and direct sums preserve nilpotency, semisimplicity, and commutativity, the result now follows from the uniqueness of the Jordan-Chevalley decomposition (Theorem II).
 \end{proof}
 
+\begin{exer}[7]
+Let \(E\)~be an \(n\)-dimensional complex vector space and \(\varphi:E\to E\) have eigenvalues \(\lambda_1,\ldots,\lambda_n\) (not necessarily distinct). If \(f\in\Gamma[t]\), then \(f(\varphi)\)~has the eigenvalues \(f(\lambda_1),\ldots,f(\lambda_n)\).
+\end{exer}
+\begin{proof}
+Fix a basis of~\(E\) with
+\[M(\varphi)=\begin{pmatrix}
+\lambda_1&&0\\
+&\ddots&\\
+*&&\lambda_n
+\end{pmatrix}\]
+By direct computation,
+\[M(f(\varphi))=f(M(\varphi))=\begin{pmatrix}
+f(\lambda_1)&&0\\
+&\ddots&\\
+*&&f(\lambda_n)
+\end{pmatrix}\]
+from which the result follows.
+\end{proof}
+
 \begin{exer}[8] Consider the transformations \(\varphi,\psi:\R^2\to\R^2\) defined by
 \[\varphi(x,y)=(y,0)\qquad\text{and}\qquad\psi(x,y)=(y,x)\]
 The only 1-dimensional subspace stable under~\(\varphi\) is the line \(y=0\), while the only 1-dimensional subspaces stable under~\(\psi\) are the lines \(y=\pm x\), so the set \(\{\varphi,\psi\}\) is semisimple but \(\varphi\)~is not. Note that \(\varphi\) and~\(\psi\) do not commute since, for example
 \[\varphi\psi(1,0)=(1,0)\ne(0,0)=\psi\varphi(1,0)\]
 \end{exer}
+\begin{rmk}
+Conversely, let \(\varphi\)~be reflection in the line \(y=0\) along the line \(x=0\), and let \(\psi\)~be reflection in the line \(y=0\) along the line \(y=x\). Then \(\varphi\) and~\(\psi\) are semisimple but the set \(\{\varphi,\psi\}\) is not.
+\end{rmk}
 
 \subsection*{\S~7}
 \begin{exer}[2]
