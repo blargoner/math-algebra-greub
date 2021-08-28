@@ -2091,6 +2091,17 @@ Conversely, let \(\varphi\)~be reflection in the line \(y=0\) along the line \(x
 \end{rmk}
 
 \subsection*{\S~7}
+\begin{rmk}
+In Theorems I and~II, the definition of \emph{homothetic} must be loosened slightly to allow for possibly negative scalars.
+
+In the proof of Theorem~I, to see that \(\tau\)~is a \emph{proper} rotation, let \(E=\sum_i F_i\) be an irreducible decomposition. The minimum polynomial \(\mu_i\) of the restriction \(\varphi_i:F_i\to F_i\) must be \(\mu_i=t^2+\alpha t+\beta\), so the Jordan canonical matrix of~\(\varphi_i\) is just
+\[\begin{pmatrix}
+0&1\\
+-\beta&-\alpha
+\end{pmatrix}\]
+and therefore \(\det\varphi_i=\beta>0\). It follows that \(\det\varphi>0\) and \(\det\tau>0\).
+\end{rmk}
+
 \begin{exer}[2]
 If \(E\)~is an inner product space, then \(\varphi:E\to E\) is normal if and only if \(\adj{\varphi}=f(\varphi)\) for some \(f\in\R[t]\).
 \end{exer}
@@ -2108,6 +2119,9 @@ Let \(\pi_i=h_i(\varphi)\) be the \(i\)-th projection operator for~(1), where \(
 \[\adj{\varphi}=\sum g_i(\varphi)h_i(\varphi)\]
 Setting \(f=\sum g_ih_i\), we have \(\adj{\varphi}=f(\varphi)\).
 \end{proof}
+\begin{rmk}
+In the case of a unitary space, \(\varphi\) and~\(\adj{\varphi}\) are both diagonalizable by the spectral theorem\footnote{See subsection~11.10.} and hence simultaneously diagonalizable.\footnote{See problem~5 in \S~6 above.} By Lagrange interpolation, there is a polynomial \(f\in\C[t]\) with \(f(M(\varphi))=M(\adj{\varphi})\), so \(f(\varphi)=\adj{\varphi}\).
+\end{rmk}
 
 % Multilinear algebra
 \newpage
