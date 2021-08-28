@@ -698,6 +698,21 @@ We see the following examples of change of coefficient field of a vector space:
 \end{rmk}
 
 \begin{rmk}
+Let \(\varphi:\R^2\to\R^2\) be counterclockwise rotation about the origin by \(\pi/2\) radians. With respect to the standard basis over~\(\R\), the matrix of~\(\varphi\) is
+\[M_{\R}(\varphi)=\begin{pmatrix}
+0&1\\
+-1&0
+\end{pmatrix}\]
+The characteristic polynomial of~\(\varphi\) and~\(M_{\R}(\varphi)\) over~\(\R\) is \(\chi_{\varphi}^{\R}=\lambda^2+1\).
+
+If we induce the canonical complex structure on~\(\R^2\), then the matrix of~\(\varphi\) with respect to the standard basis over~\(\C\) is
+\[M_{\C}(\varphi)=\begin{pmatrix}i\end{pmatrix}\]
+The characteristic polynomial of~\(\varphi\) and~\(M_{\C}(\varphi)\) over~\(\C\) is \(\chi_{\varphi}^{\C}=-\lambda+i\). By contrast, the characteristic polynomial of \(M_{\R}(\varphi)\) viewed as a matrix over~\(\C\) (representing a transformation \(\C^2\to\C^2\)) is again \(\lambda^2+1\).
+
+This example shows that the characteristic polynomial of a \emph{transformation} is not in general preserved under field extension, although the characteristic polynomial of a \emph{matrix} is. The same is true of the minimum polynomial.\footnote{See Chapter~XIII. In this example, \(\mu_{\varphi}^{\R}=t^2+1\) while \(\mu_{\varphi}^{\C}=t-i\).}
+\end{rmk}
+
+\begin{rmk}
 Let \(\Delta\subseteq\Gamma\) be a subfield and \(E\)~be a \(\Gamma\)-vector space. A \(\Delta\)-subspace \(F\) of~\(E\) is a \(\Gamma\)-subspace if and only if \(F\)~is stable under the \(\Delta\)-linear transformations
 \[\varepsilon_{\alpha}:x\mapsto\alpha x\qquad\alpha\in\Gamma\]
 This stability condition for subspaces is analogous to the commutativity condition for linear transformations in the proposition of subsection~5.19.
