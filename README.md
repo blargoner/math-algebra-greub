@@ -4,6 +4,7 @@ Notes and exercises by John Peloquin.
 Errata for the books are [here](https://github.com/blargoner/math-algebra-greub-errata).
 
 Like these books? You might also like these videos inspired by them:
+- [Determinants of Linear Maps](https://youtu.be/98-hH8aGMoU)
 - [Determinants and Volume](https://youtu.be/9IswLDsEWFk)
 - [Duality in Linear Algebra](https://youtu.be/eOIJzb7SItg)
 
