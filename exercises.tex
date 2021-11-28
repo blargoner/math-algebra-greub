@@ -408,7 +408,7 @@ Geometrically, \(\Delta(x_1,\ldots,x_n)\) measures the oriented (signed) volume 
 \end{rmk}
 
 \begin{rmk}
-We provide an alternative proof of Proposition~IV. First note
+We provide an alternative proof of Proposition~IV, which says \(\ad\iota=\iota\). First note
 \[(-1)^{j-1}\Delta(x,x_1,\ldots,\delete{x_j},\ldots,x_n)=\Delta(x_1,\ldots,x,\ldots,x_n)\]
 where \(x\)~is in the \(j\)-th position on the right.\footnote{\(\delete{x_j}\)~denotes deletion of \(x_j\)~from the sequence on the left.} Therefore
 \[\sum_{j=1}^n(-1)^{j-1}\Delta(x,x_1,\ldots,\delete{x_j},\ldots,x_n)x_j=\Delta(x,x_2,\ldots,x_n)x_1+\cdots+\Delta(x_1,\ldots,x_{n-1},x)x_n\]
@@ -439,7 +439,7 @@ Geometrically, this result expresses a relationship between \(n\)-dimensional vo
 \begin{rmk}
 In subsection~4.6, we want a transformation~\(\psi\) with \(\psi\varphi=(\det\varphi)\iota\). We can choose a basis \(x_1,\ldots,x_n\) in~\(E\) with \(\Delta(x_1,\ldots,x_n)=1\), for which we want
 \begin{align*}
-(\psi\varphi)x_i=\psi(\varphi x_i)&=(\det\varphi)x_i\\
+\psi(\varphi x_i)=(\psi\varphi)x_i&=(\det\varphi)x_i\\
 	&=(\det\varphi)\Delta(x_1,\ldots,x_n)x_i\\
 	&=\Delta(\varphi x_1,\ldots,\varphi x_n)x_i
 \end{align*}
@@ -448,6 +448,16 @@ To obtain this, we can define
 where \(x\)~is in the \(j\)-th position on the right.\footnote{See the remark on Proposition~IV above.} Then \(\psi\)~obviously satisfies the above properties, by multilinearity and skew symmetry of~\(\Delta\).
 
 To obtain~\(\psi\) in a ``coordinate-free''  manner (without choosing a basis), we observe that the construction on the right is multilinear and skew symmetric in \(x_1,\ldots,x_n\) when viewed as a mapping \(\Phi:E^n\to L(E;E)\). By the universal property of~\(\Delta\) (Proposition~III), there is a unique \(\psi\in L(E;E)\) satisfying the above; this~\(\psi\) is also seen to be independent of the choice of~\(\Delta\).
+\end{rmk}
+
+\begin{rmk}
+Alternatively, fix a vector~\(x\) and define \(\Phi:E^{n-1}\to\Gamma\) by
+\[\Phi(x_1,\ldots,x_{n-1})=\Delta(\varphi x_1,\ldots,\varphi x_{n-1},x)\]
+By a remark above, there is a unique vector~\(x'\) with
+\[\Phi(x_1,\ldots,x_{n-1})=\Delta(x_1,\ldots,x_{n-1},x')\]
+for all vectors \(x_1,\ldots,x_{n-1}\). Writing \(x'=\psi x\), we obtain
+\[\Delta(\varphi x_1,\ldots,\varphi x_{n-1},x_n)=\Delta(x_1,\ldots, x_{n-1},\psi x_n)\tag{1}\]
+for all vectors \(x_1,\ldots,x_n\). It follows from~(1) that \(\psi:E\to E\) is linear and uniquely determined by~\(\varphi\). It is easy to verify that \(\psi=\ad\varphi\).
 \end{rmk}
 
 \begin{rmk}
@@ -484,6 +494,24 @@ Now
 	&=\det\varphi_1\mult\det\proj{\varphi}\mult\Delta(e_1,\ldots,e_n)&&\text{by (1), (4)}
 \end{align*}
 Since \(\Delta(e_1,\ldots,e_n)\ne 0\), the result follows.
+\end{proof}
+
+\begin{exer}[7]\
+\begin{enumerate}
+\item[(i)] \(\ad(\psi\varphi)=\ad(\varphi)\ad(\psi)\)
+\item[(ii)] \(\det\ad\varphi=(\det\varphi)^{n-1}\)
+\end{enumerate}
+\end{exer}
+\begin{proof}
+For~(i), by a remark above we have for all vectors \(x_1,\ldots,x_n\)
+\begin{align*}
+\Delta(x_1,\ldots,x_{n-1},\ad(\psi\varphi)x_n)&=\Delta(\psi\varphi x_1,\ldots,\psi\varphi x_{n-1},x_n)\\
+	&=\Delta(\varphi x_1,\ldots,\varphi x_{n-1},\ad(\psi)x_n)\\
+	&=\Delta(x_1,\ldots,x_{n-1},\ad(\varphi)\ad(\psi)x_n)
+\end{align*}
+For~(ii), since \(\ad(\varphi)\varphi=(\det\varphi)\iota\), we have
+\[\det\ad\varphi\mult\det\varphi=\det(\ad(\varphi)\varphi)=\det((\det\varphi)\iota)=(\det\varphi)^n\]
+If \(\det\varphi\ne0\), then the result follows, so suppose \(\det\varphi=0\). If \(\varphi=0\), then \(\ad\varphi=0\) and the result holds. If \(\varphi\ne 0\), then since \(\ad(\varphi)\varphi=0\), we must have \(\det\ad\varphi=0\) and the result holds.
 \end{proof}
 
 \subsection*{\S~4}
