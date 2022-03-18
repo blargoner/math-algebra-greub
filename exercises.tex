@@ -495,6 +495,16 @@ Now
 \end{align*}
 Since \(\Delta(e_1,\ldots,e_n)\ne 0\), the result follows.
 \end{proof}
+\begin{rmk}
+It follows that if \(A\)~is an \(n\times n\) matrix of the form
+\[A=\begin{pmatrix}
+A_1&\\
+*&A_2
+\end{pmatrix}\]
+where \(A_1\)~is \(p\times p\) and \(A_2\)~is \((n-p)\times(n-p)\), then
+\[\det A=\det A_1\mult\det A_2\]
+Indeed, let \(E\)~be an \(n\)-dimensional vector space and \(\varphi:E\to E\) be defined by \(M(\varphi;e_1,\ldots,e_n)=A\), so \(\det A=\det\varphi\). Let \(E_1=\gen{e_1,\ldots,e_p}\) and \(E_2=\gen{e_{p+1},\ldots,e_n}\). Then \(E=E_1\dsum E_2\) and \(E_1\)~is stable under~\(\varphi\). If \(\varphi_1:E_1\to E_1\) and \(\proj{\varphi}:E/E_1\to E/E_1\) are the induced maps, then \(A_1=M(\varphi_1)\) and \(A_2=M(\proj{\varphi})\), so \(\det A_1=\det\varphi_1\) and \(\det A_2=\det\proj{\varphi}\). The result now follows from the problem.
+\end{rmk}
 
 \begin{exer}[7]\
 \begin{enumerate}
@@ -513,54 +523,6 @@ For~(ii), since \(\ad(\varphi)\varphi=(\det\varphi)\iota\), we have
 \[\det\ad\varphi\mult\det\varphi=\det(\ad(\varphi)\varphi)=\det((\det\varphi)\iota)=(\det\varphi)^n\]
 If \(\det\varphi\ne0\), then the result follows, so suppose \(\det\varphi=0\). If \(\varphi=0\), then \(\ad\varphi=0\) and the result holds. If \(\varphi\ne 0\), then since \(\ad(\varphi)\varphi=0\), we must have \(\det\ad\varphi=0\) and the result holds.
 \end{proof}
-
-\subsection*{\S~4}
-\begin{rmk}
-If \(A\)~is an \(n\times n\) matrix of the form
-\[A=\begin{pmatrix}
-A_1&\\
-*&A_2
-\end{pmatrix}\]
-where \(A_1\)~is \(p\times p\) and \(A_2\)~is \((n-p)\times(n-p)\), then
-\[\det A=\det A_1\mult\det A_2\tag{1}\]
-Indeed, let \(E\)~be an \(n\)-dimensional vector space and \(\varphi:E\to E\) be defined by \(M(\varphi;e_1,\ldots,e_n)=A\), so \(\det A=\det\varphi\). Let \(E_1=\gen{e_1,\ldots,e_p}\) and \(E_2=\gen{e_{p+1},\ldots,e_n}\). Then \(E=E_1\dsum E_2\) and \(E_1\)~is stable under~\(\varphi\). If \(\varphi_1:E_1\to E_1\) is the induced map, then \(A_1=M(\varphi_1)\), so \(\det A_1=\det\varphi_1\). Dually, \(E^*=E_1^*\dsum E_2^*\) where \(E_1^*=\gen{e_1^*,\ldots,e_p^*}\) and \(E_2^*=\gen{e_{p+1}^*,\ldots,e_n^*}\), and \(E_2^*\)~is stable under~\(\varphi^*\) since
-\[M(\varphi^*;e_1^*,\ldots,e_n^*)=A^*=\begin{pmatrix}
-A_1^*&*\\
-&A_2^*
-\end{pmatrix}\]
-If \(\varphi_2^*:E_2^*\to E_2^*\) is the induced map, then \(A_2^*=M(\varphi_2^*)\) and \(\det A_2=\det A_2^*=\det\varphi_2^*\). So we must prove that \(\det\varphi=\det\varphi_1\mult\det\varphi_2^*\).
-
-Let \(\Delta\ne0\) be a determinant function in~\(E\) and \(\Delta^*\)~its dual in~\(E^*\). We claim
-\begin{multline*}
-\Delta^*(e_1^*,\ldots,e_n^*)\mult\Delta(e_1,\ldots,e_p,\varphi e_{p+1},\ldots,\varphi e_n)\\=\Delta(e_1,\ldots,e_n)\mult\Delta^*(e_1^*,\ldots,e_p^*,\varphi^* e_{p+1}^*,\ldots,\varphi^* e_n^*)\tag{2}
-\end{multline*}
-Indeed, by~(4.26) the left side of~(2) is a determinant of the form
-\[\begin{vmatrix}
-J&\\
-*&B
-\end{vmatrix}\]
-where \(J\)~is the \(p\times p\) identity matrix and \(B=(\beta_i^j)\) with \(\beta_i^j=\sprod{e_j^*}{\varphi e_i}=\sprod{\varphi^* e_j^*}{e_i}\). However, since the determinant is multilinear in its rows,\footnote{See subsection~4.9, item~4.} it is equal to
-\[\begin{vmatrix}
-J&\\
-&B
-\end{vmatrix}\]
-A similar argument shows that the same is true of the right side of~(2). Now
-\begin{align*}
-\det\varphi&=\det\varphi\mult\Delta(e_1,\ldots,e_n)\mult\Delta^*(e_1^*,\ldots,e_n^*)&&\\
-	&=\Delta(\varphi_1e_1,\ldots,\varphi_1e_p,\varphi e_{p+1},\ldots,\varphi e_n)\mult\Delta^*(e_1^*,\ldots,e_n^*)&&\\
-	&=\det\varphi_1\mult\Delta(e_1,\ldots,e_p,\varphi e_{p+1},\ldots,\varphi e_n)\mult\Delta^*(e_1^*,\ldots,e_n^*)&&\\
-	&=\det\varphi_1\mult\Delta^*(e_1^*,\ldots,e_p^*,\varphi_2^* e_{p+1}^*,\ldots,\varphi_2^* e_n^*)\mult\Delta(e_1,\ldots,e_n)&\text{by~(2)}\\
-	&=\det\varphi_1\mult\det\varphi_2^*\mult\Delta^*(e_1^*,\ldots,e_n^*)\mult\Delta(e_1,\ldots,e_n)\\
-	&=\det\varphi_1\mult\det\varphi_2^*
-\end{align*}
-The same result~(1) holds when \(A\)~has the form
-\[A=\begin{pmatrix}
-A_1&*\\
-&A_2
-\end{pmatrix}\]
-Indeed, by the above,
-\[\det A=\det A^*=\det A_1^*\mult\det A_2^*=\det A_1\mult\det A_2\]
-\end{rmk}
 
 \subsection*{\S~5}
 \begin{rmk}
