@@ -1058,6 +1058,23 @@ so \(\psi x\in E_i\). As in the book, the~\(\lambda_i\) are negative or zero. If
 for \(x\in E_r\). Combine the resulting bases of the~\(E_i\) to obtain an orthonormal basis of~\(E\) with respect to which the matrix of~\(\psi\) has the form~(8.35).\footnote{See \url{https://math.stackexchange.com/q/3402347}.}
 \end{rmk}
 
+\begin{rmk}
+If \(E\)~is an oriented Euclidean \(3\)-space and \(\varphi:E\to E\) is linear, then
+\[\varphi x\cross\varphi y=\adj{(\ad\varphi)}(x\cross y)\]
+Moreover if \(\varphi\)~is invertible, then
+\[\varphi(x\cross y)=\det\varphi\mult\adj{\varphi}^{-1}x\cross\adj{\varphi}^{-1}y\]
+\end{rmk}
+\begin{proof}
+For all vectors~\(z\),
+\begin{align*}
+\iprod{\varphi x\cross\varphi y}{z}&=\Delta(\varphi x,\varphi y,z)\\
+	&=\Delta(x,y,(\ad\varphi)z)\\
+	&=\iprod{x\cross y}{(\ad\varphi)z}\\
+	&=\iprod{\adj{(\ad\varphi)}(x\cross y)}{z}
+\end{align*}
+so the first equation follows by definiteness of the inner product. The second equation is proved in a similar way.
+\end{proof}
+
 \begin{exer}[1]
 If \(\varphi\)~is a skew transformation of a plane, then
 \[\iprod{\varphi x}{\varphi y}=\det\varphi\mult\iprod{x}{y}\]
