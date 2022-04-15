@@ -2211,6 +2211,25 @@ Note \(h=\iota\tprod g:E\tprod F\to E\tprod\Gamma\) (see \S~16).
 Lemma~1.5.2 generalizes the existence and uniqueness of a representation relative to a basis.
 \end{rmk}
 
+\begin{rmk}
+If \(z=\sum_{i=1}^n x_i\tprod y_i\) with \(x_i\in E\) and \(y_i\in F\), and \(\{x_1,\ldots,x_m\}\) is a maximal linearly independent subset of \(\{x_1,\ldots,x_n\}\) of size \(m\le n\), then
+\[z=\sum_{i=1}^m x_i\tprod y_i'\qquad\text{where}\qquad y_i'-y_i\in\gen{y_{m+1},\ldots,y_n}\]
+\end{rmk}
+\begin{proof}
+Write
+\[x_j=\sum_{i=1}^m\lambda_{ji}x_i\qquad j=m+1,\ldots,n\qquad(\lambda_{ji}\in\Gamma)\]
+Then
+\begin{align*}
+z&=\sum_{i=1}^m x_i\tprod y_i+\sum_{j=m+1}^n\Bigl(\sum_{i=1}^m\lambda_{ji}x_i\Bigr)\tprod y_j\\
+	&=\sum_{i=1}^m x_i\tprod y_i+\sum_{i=1}^m x_i\tprod\Bigl(\sum_{j=m+1}^n\lambda_{ji} y_j\Bigr)\\
+	&=\sum_{i=1}^m x_i\tprod\Bigl(y_i+\sum_{j=m+1}^n\lambda_{ji} y_j\Bigr)
+\end{align*}
+Now take \(y_i'=y_i+\sum_{j=m+1}^n\lambda_{ji} y_j\).
+\end{proof}
+\begin{rmk}
+Lemma~1.5.3 follows from this remark, which makes clear that a tensor representation of minimal length must consist of linearly independent vectors.
+\end{rmk}
+
 \subsection*{\S~8}
 \begin{rmk}
 In the proof of Proposition~1.8.1, note that if \(f\)~is injective, it has a left inverse \(g:G\to E\tprod F\) with \(g\after f=\iota\). If \(\psi:E\times F\to K\) is bilinear, there is a linear map \(h:E\tprod F\to K\) with
@@ -2281,7 +2300,7 @@ If \(\sum_{i=1}^r x_i\tprod y_i=\sum_{j=1}^s x_j'\tprod y_j'\) and the~\(x_i\) a
 \end{rmk}
 \begin{proof}
 By induction on~\(s\). If the vectors in \(\{x_i\}\union\{x_j'\}\) are linearly independent, then \(y_i=0\) for all~\(i\) (1.5.1), so the result holds trivially. Otherwise, since the~\(x_i\) are linearly independent, we may assume (relabeling if necessary) that
-\[x_s=\sum_{i=1}^r\lambda_i x_i+\sum_{j=1}^{s-1}\mu_j x_j'\qquad(\lambda_i,\mu_j\in\Gamma)\]
+\[x_s'=\sum_{i=1}^r\lambda_i x_i+\sum_{j=1}^{s-1}\mu_j x_j'\qquad(\lambda_i,\mu_j\in\Gamma)\]
 By bilinearity of the tensor product, it follows that
 \[\sum_{i=1}^r x_i\tprod(y_i-\lambda_i y_s')=\sum_{j=1}^{s-1}x_j'\tprod(y_j'+\mu_j y_s')\]
 By induction, the \(y_i-\lambda_iy_s'\) are in the span of the \(y_j'+\mu_jy_s'\), so the~\(y_i\) are in the span of the~\(y_j'\).
@@ -2339,6 +2358,10 @@ This result allows us to view an element \(\sum x_i\tprod y_i\) of the tensor pr
 \subsection*{\S~16}
 \begin{rmk}
 The tensor product operation is a bifunctor in the category of vector spaces. It maps the objects \(E\) and~\(F\) to the object \(E\tprod F\) and the arrows \(\varphi:E\to E'\) and \(\psi:F\to F'\) to the arrow \(\varphi\tprod\psi:E\tprod F\to E'\tprod F'\).
+\end{rmk}
+
+\begin{rmk}
+In the proof of Proposition~1.16.1, taking \(x=a\) and \(y\)~arbitrary in~(1.9), it follows from a remark in \S~5 above and Lemma~1.5.1 that the \(\psi_i(y)\)~are linearly dependent. But the linear dependence relation is independent of the choice of~\(y\), so the~\(\psi_i\) are linearly dependent, contrary to the assumption. Here we are essentially ``lifting'' the remark from vectors to maps.
 \end{rmk}
 
 \begin{rmk}
