@@ -2553,6 +2553,13 @@ If \(\Phi\)~is bilinear in \(E\times E'\) and \(\Psi\)~is bilinear in \(F\times 
 
 \subsection*{\S~26}
 \begin{rmk}
+Let \(S:(E^*\tprod E)\tprod(E^*\tprod E)\to(E^*\tprod E^*)\tprod(E\tprod E)\) be the linear isomorphism defined by
+\[(x^*\tprod x)\tprod(y^*\tprod y)\mapsto(x^*\tprod y^*)\tprod(y\tprod x)\]
+Let \(f:(E^*\tprod E^*)\tprod(E\tprod E)\to\Gamma\tprod(E^*\tprod E)\) be the linear map corresponding to the tensor product of the bilinear maps \(\sprod{-}{-}:E^*\cross E\to\Gamma\) and \(\tprod:E^*\cross E\to E^*\tprod E\). Let \(g:\Gamma\tprod(E^*\tprod E)\to E^*\tprod E\) be the linear map defined by \(g(\lambda\tprod z)=\lambda z\). Then the bilinear map~\({\after}\) corresponding to \(gfS\) satisfies
+\[(x^*\tprod x)\after(y^*\tprod y)=\sprod{x^*}{y}(y^*\tprod x)\]
+\end{rmk}
+
+\begin{rmk}
 If \(e_1,\ldots,e_n\) is a basis in~\(E\) and \(f_1,\ldots,f_n\) is its dual basis in~\(L(E)\), then the basis transformation~\(\varphi_{ij}\) in~\(L(E;E)\) with \(\varphi_{ij}(e_k)=\delta_{ik}e_j\) is given by \(x\mapsto f_i(x)e_j\). Therefore it is natural to consider the isomorphism \(T:L(E)\tprod E\to L(E;E)\) with \(T(f_i\tprod e_j)=\varphi_{ij}\). In the algebra induced by~\(T^{-1}\) in \(L(E)\tprod E\),
 \[(f_i\tprod e_j)\after(f_k\tprod e_l)=T^{-1}(\varphi_{ij}\after\varphi_{kl})=T^{-1}(\delta_{il}\varphi_{kj})=f_i(e_l)(f_k\tprod e_j)\]
 This motivates the definition of the composition algebra. An alternative way to discover the isomorphism is (see \S~28)
