@@ -2442,7 +2442,7 @@ and
 \[\det\Phi=\det(\beta^*\tprod\alpha)=(\det\beta^*)^n(\det\alpha)^n=\det(\alpha\after\beta)^n\qedhere\]
 \end{proof}
 \begin{rmk}
-It is more natural to do this problem using the composition algebra (see \S~26). Indeed, writing \(\alpha=a^*\tprod b\), \(\beta=c^*\tprod d\), and \(\sigma=x^*\tprod y\), we have
+It is more natural to do this problem using the composition algebra (see \S~26). Indeed, if \(\alpha=a^*\tprod b\), \(\beta=c^*\tprod d\), and \(\sigma=x^*\tprod y\), then
 \begin{align*}
 \alpha\after\sigma\after\beta&=(a^*\tprod b)\after(x^*\tprod y)\after(c^*\tprod d)\\
 	&=(a^*\tprod b)\after\bigl(\sprod{x^*}{d}(c^*\tprod y)\bigr)\\
@@ -2451,7 +2451,7 @@ It is more natural to do this problem using the composition algebra (see \S~26).
 	&=\beta^*x^*\tprod\alpha y\\
 	&=(\beta^*\tprod\alpha)\sigma
 \end{align*}
-so \(\Phi=\beta^*\tprod\alpha\). Here \(\beta^*=d\tprod c^*\).\footnote{See problem~1.29.1.} Alternately, we could use the isomorphism~\(\Omega\) from Proposition~1.29.1.
+so \(\Phi=\beta^*\tprod\alpha\). Here \(\beta^*=d\tprod c^*\).\footnote{See problem~1.29.1.} The general case follows by multilinearity. Alternately, we could use the isomorphism~\(\Omega\) from Proposition~1.29.1.
 \end{rmk}
 
 \subsection*{\S~20}
@@ -2564,6 +2564,12 @@ If \(e_1,\ldots,e_n\) is a basis in~\(E\) and \(f_1,\ldots,f_n\) is its dual bas
 \[(f_i\tprod e_j)\after(f_k\tprod e_l)=T^{-1}(\varphi_{ij}\after\varphi_{kl})=T^{-1}(\delta_{il}\varphi_{kj})=f_i(e_l)(f_k\tprod e_j)\]
 This motivates the definition of the composition algebra. An alternative way to discover the isomorphism is (see \S~28)
 \[L(E;E)\iso L(E\tprod\Gamma;\Gamma\tprod E)\iso L(E;\Gamma)\tprod L(\Gamma;E)\iso L(E)\tprod E\]
+\end{rmk}
+
+\begin{rmk}
+If \(\dim E<\infty\), the fact that
+\[\sprod{T(x^*\tprod x)}{T(y^*\tprod y)}=\sprod{x^*\tprod x}{y^*\tprod y}\]
+follows from~(1.29) in \S~28.
 \end{rmk}
 
 \begin{exer}[1]
