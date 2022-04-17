@@ -2529,9 +2529,7 @@ The reverse directions follow from multilinearity of the tensor product. The for
 \[(\tprods{x}{1}{p-1})\tprod x_p=(\tprods{y}{1}{p-1})\tprod y_p\]
 so by the same problem,
 \[\tprods{y}{1}{p-1}=\lambda_p^{-1}\tprods{x}{1}{p-1}\qquad\text{and}\qquad y_p=\lambda_p x_p\]
-for some \(\lambda_p\ne 0\). Setting \(\mu=\lambda_p^{-1}/(p-1)\), we have
-\[\tprods{y}{1}{p-1}=\mu x_1\tprod\cdots\tprod\mu x_{p-1}\]
-so \(y_i=\mu_i\mu x_i\) for \(i=1,\ldots,p-1\) with \(\mu_1\cdots\mu_{p-1}=1\) by induction. Setting \(\lambda_i=\mu_i\mu\) for \(i=1,\ldots,p-1\), we have \(y_i=\lambda_i x_i\) for \(i=1,\ldots,p\) and \(\lambda_1\cdots\lambda_p=1\) as desired.\qedhere
+for some \(\lambda_p\ne 0\). By induction, we may write \(y_1=\mu_1\lambda_p^{-1}x_1\) and \(y_i=\mu_i x_i\) for \(i=2,\ldots,p-1\) with \(\mu_1\cdots\mu_{p-1}=1\). Setting \(\lambda_1=\mu_1\lambda_p^{-1}\) and \(\lambda_i=\mu_i\) for \(i=2,\ldots,p-1\), it follows that \(y_i=\lambda_i x_i\) for \(i=1,\ldots,p\) and \(\lambda_1\cdots\lambda_p=1\).\qedhere
 \end{enumerate}
 \end{proof}
 
