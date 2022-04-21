@@ -2705,11 +2705,6 @@ This follows from \(\det(\varphi\tprod\psi)=(\det\varphi\mult\det\psi)^n\).\foot
 The multiplication in the canonical tensor product \(A\tprod B\) of algebras \(A\) and~\(B\) is just the tensor product of the multiplications in \(A\) and~\(B\), as defined in subsection~1.21.
 \end{rmk}
 
-\begin{rmk}
-If \(x\) and~\(y\) are distinct indeterminates, then
-\[\Gamma[x]\tprod\Gamma[y]\iso\Gamma[x,y]\]
-\end{rmk}
-
 \subsection*{\S~3}
 \begin{rmk}
 If \(\varphi_1:A_1\to B_1\) and \(\varphi_2:A_2\to B_2\) are algebra homomorphisms and \(\varphi=\varphi_1\tprod\varphi_2\) is the tensor product of the underlying \emph{linear maps}, then
@@ -2721,6 +2716,21 @@ If \(\varphi_1:A_1\to B_1\) and \(\varphi_2:A_2\to B_2\) are algebra homomorphis
 	&=\varphi(x_1\tprod x_2)\varphi(y_1\tprod y_2)
 \end{align*}
 Since \(\varphi\)~is linear, it follows that \(\varphi\)~is an algebra homomorphism. This proof avoids the use of structure maps.
+\end{rmk}
+
+\subsection*{\S~5}
+\begin{rmk}
+The canonical tensor product \(A\tprod B\) of \(G\)-graded algebras \(A=\sum_{\alpha\in G}A_{\alpha}\) and \(B=\sum_{\beta\in G}B_{\beta}\) is a \emph{graded algebra} under the simple gradation in~(2.15). In fact, if \(x_i\in A_{\alpha_i}\) and \(y_i\in B_{\beta_i}\) for \(i=1,2\), then
+\[(x_1\tprod y_1)(x_2\tprod y_2)=x_1x_2\tprod y_1y_2\]
+Since \(A\) and~\(B\) are graded algebras, \(x_1x_2\in A_{\alpha_1+\alpha_2}\) and \(y_1y_2\in B_{\beta_1+\beta_2}\), so by~(2.15) \(x_1x_2\tprod y_1y_2\) is homogeneous with
+\[\deg(x_1x_2\tprod y_1y_2)=\alpha_1+\alpha_2+\beta_1+\beta_2=\deg(x_1\tprod y_1)+\deg(x_2\tprod y_2)\]
+The result now follows from bilinearity of the algebra multiplication.
+\end{rmk}
+
+\begin{rmk}
+If \(x\) and~\(y\) are distinct indeterminates, then
+\[\Gamma[x]\tprod\Gamma[y]\iso\Gamma[x,y]\]
+is an isomorphism of graded algebras.
 \end{rmk}
 
 \section*{Chapter~3}
