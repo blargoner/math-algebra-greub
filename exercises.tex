@@ -56,7 +56,7 @@
 \newcommand{\tprods}[3]{\multi{\tprod}{#1}{#2}{#3}}
 \newcommand{\eprods}[3]{\multi{\eprod}{#1}{#2}{#3}}
 \newcommand{\fprods}[3]{\multi{\fprod}{#1}{#2}{#3}}
-\newcommand{\circled}[1]{\text{\scriptsize\textcircled{\textit{#1}}}}
+\newcommand{\circled}[1]{\text{\tiny\textcircled{\textit{#1}}}}
 \newcommand{\sign}[1]{\varepsilon_{#1}}
 
 \newarrow{Dashto}{}{dash}{}{dash}>
@@ -2817,6 +2817,12 @@ By~(1.25), \(\medtprod(E^*,E)\) is dual to itself and to \(\medtprod(E,E^*)\).
 \end{rmk}
 
 \subsection*{\S~14}
+\begin{rmk}
+Let \(\alpha^{\circled{p}}\) denote the restriction of~\(\alpha^{\tprod}\) to \(\medtprod^p E^*\) and \(\alpha_{\circled{q}}\) the restriction of~\(\alpha_{\tprod}\) to \(\medtprod^q E\). Then \(\alpha^{\circled{p}}\) and \(\alpha_{\circled{q}}\) are automorphisms, and
+\[T_{\alpha}=(\alpha^{\circled{p}})^{-1}\tprod\alpha_{\circled{q}}\]
+is an automorphism of~\(\medtprod^p_q(E^*,E)\). Note \(T_{\alpha}\)~is just the restriction of \((\alpha^{\tprod})^{-1}\tprod\alpha_{\tprod}\) to~\(\medtprod^p_q(E^*,E)\).
+\end{rmk}
+
 \begin{rmk}
 The mapping \(T:GL(E)\to GL(\medtprod^p_q(E^*,E))\) given by \(\alpha\mapsto T_{\alpha}\) is a group homomorphism. The map~\(T_{\alpha}\) is tensorial if \(\alpha\)~is in the center of~\(GL(E)\).
 \end{rmk}
