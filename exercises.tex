@@ -2969,8 +2969,14 @@ The metric tensors encode all of the information required to compute inner produ
 \end{rmk}
 
 \begin{rmk}
+Since \(E\)~and the orthonormal basis \(e_{\nu}\) are self-dual under the inner product, the metric tensor \(g=\sum_{\nu}e_{\nu}\tprod e_{\nu}\) is just the unit tensor in~\(E\tprod E\). It follows that \(g\tprod g\) is the unit tensor in \((E\tprod E)\tprod(E\tprod E)\), and hence is the metric tensor in~\(E\tprod E\), and more generally
+\[\underbrace{g\tprod\cdots\tprod g}_p\]
+is the metric tensor in~\(\medtprod^p E\).\footnote{See problem~2(b).}
+\end{rmk}
+
+\begin{rmk}
 We have
-\[\tau_{\tprod}(g)=\sum_{\nu}\tau e_{\nu}\tprod\tau e_{\nu}=g^*\]
+\[\tau_{\tprod}(g)=\sum_{\nu}\tau e_{\nu}\tprod\tau e_{\nu}=\sum_{\nu}e^{*\nu}\tprod e^{*\nu}=g^*\]
 so \(\tau_{\tprod}^{-1}(g^*)=g\). This yields
 \begin{align*}
 \iprod{x^*}{y^*}&=\iprod{\tau^{-1}x^*}{\tau^{-1}y^*}\\
@@ -2980,6 +2986,30 @@ so \(\tau_{\tprod}^{-1}(g^*)=g\). This yields
 	&=\sprod{x^*\tprod y^*}{g}
 \end{align*}
 \end{rmk}
+
+\begin{exer}[2]
+Let \(E,E^*\) be a pair of dual finite-dimensional Euclidean spaces with metric tensors \(g\in E\tprod E\) and \(g^*\in E^*\tprod E^*\).
+\begin{enumerate}
+\item[(a)] \(C^1_2(g^*\tprod g)\) is the unit tensor in~\(E^*\tprod E\).
+\item[(b)] \(\underbrace{g\tprod\cdots\tprod g}_p\) is the metric tensor of~\(\medtprod^p E\).
+\end{enumerate}
+\end{exer}
+\begin{proof}
+Let \(e_{\nu},e^{*\nu}\) be a pair of dual orthonormal bases in \(E,E^*\). We know that \(g=\sum_{\nu}e_{\nu}\tprod e_{\nu}\) and \(g^*=\sum_{\mu}e^{*\mu}\tprod e^{*\mu}\), so
+\begin{align*}
+C^1_2(g^*\tprod g)&=\sum_{\mu,\nu}C^1_2(e^{*\mu}\tprod e^{*\mu}\tprod e_{\nu}\tprod e_{\nu})\\
+	&=\sum_{\mu,\nu}\sprod{e^{*\mu}}{e_{\nu}}e^{*\mu}\tprod e_{\nu}\\
+	&=\sum_{\nu}e^{*\nu}\tprod e_{\nu}
+\end{align*}
+which is the unit tensor in~\(E^*\tprod E\).
+
+Writing \(\medtprod^p(E\tprod E)=(\medtprod^p E)\tprod(\medtprod^p E)\), we have
+\begin{align*}
+\underbrace{g\tprod\cdots\tprod g}_p&=\bigl(\sum_{\nu_1}e_{\nu_1}\tprod e_{\nu_1}\bigr)\tprod\cdots\tprod\bigl(\sum_{\nu_p}e_{\nu_p}\tprod e_{\nu_p}\bigr)\\
+	&=\sum_{(\nu)}(e_{\nu_1}\tprod\cdots\tprod e_{\nu_p})\tprod(e_{\nu_1}\tprod\cdots\tprod e_{\nu_p})
+\end{align*}
+which is the metric tensor of~\(\medtprod^p E\) since \(e_{\nu_1}\tprod\cdots\tprod e_{\nu_p}\) is an orthonormal basis in~\(\medtprod^p E\).
+\end{proof}
 
 \begin{exer}[4]
 If \(E,E^*\) is a pair of dual Euclidean spaces and \(\varphi=a^*\tprod b\) is a linear transformation of~\(E\), then \(\adj{\varphi}=\tau b\tprod\tau^{-1}a^*\).
