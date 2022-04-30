@@ -2918,10 +2918,10 @@ so \(\Phi\tprod\Psi\) is tensorial.
 \end{proof}
 
 \begin{exer}[6]
-If \(\Phi:\medtprod^p_q(E^*,E)\to\medtprod^r_s(E^*,E)\) is a nonzero tensorial mapping, then \(r-p=s-q\).
+Let \(\Gamma\)~have characteristic zero. If \(\Phi:\medtprod^p_q(E^*,E)\to\medtprod^r_s(E^*,E)\) is a nonzero tensorial mapping, then \(r-p=s-q\).
 \end{exer}
 \begin{proof}
-Let \(\lambda>1\). By a remark above, \(\lambda^{q-p}\Phi=\lambda^{s-r}\Phi\) since \(\Phi\)~is tensorial. It follows that \(\lambda^{q-p+r-s}=1\) since \(\Phi\ne 0\), so \(q-p+r-s=0\) since \(\lambda>1\).
+By a remark above with \(\lambda=2\), \(2^{q-p}\Phi=2^{s-r}\Phi\) since \(\Phi\)~is tensorial. It follows that \(2^{q-p+r-s}=1\) since \(\Phi\ne 0\), so \(q-p+r-s=0\).
 \end{proof}
 
 \begin{exer}[7]
@@ -2937,6 +2937,26 @@ If \(E\)~is finite-dimensional, then every tensorial map \(\Phi:E^*\tprod E\to\G
 \begin{proof}
 This follows from problem~1.3.7 applied to \(\Phi\after\tprod\).
 \end{proof}
+
+\begin{exer}[11]
+Let \(\Gamma\)~have characteristic zero.
+\begin{enumerate}
+\item[(a)] If \(u\in\medtprod^p_q(E^*,E)\) is a nonzero invariant tensor, then \(p=q\).
+\item[(b)] If \(E\)~has finite dimension, then \(u\in E^*\tprod E\) is invariant if and only if \(u=\lambda t\) where \(t\)~is the unit tensor.
+\item[(c)] If \(E\)~has infinite dimension and \(u\in E^*\tprod E\) is invariant, then \(u=0\).
+\item[(d)] If \(E\)~has finite dimension, then \(u\)~is invariant if and only if the components of~\(u\) are the same with respect to every pair of dual bases.
+\end{enumerate}
+\end{exer}
+\begin{proof}
+For~(a), taking \(\alpha=2\iota\) we have \(T_{\alpha}=2^{q-p}\iota\) by a remark above, so \(2^{q-p}u=u\) since \(u\)~is invariant, which implies \(2^{q-p}=1\) since \(u\ne 0\), which implies \(q-p=0\).
+
+For (b) and~(c), if we view~\(u\) as a linear transformation of~\(E\), then \(u\)~is invariant if and only if it is preserved under conjugation, which is true if and only if it is a scalar transformation. Now (b) follows since the unit tensor corresponds to the identity transformation when \(\dim E<\infty\), and (c) follows since there is no unit tensor when \(\dim E=\infty\).
+
+For~(d), since \(T_{\alpha}\)~is a change of basis transformation by a remark above.
+\end{proof}
+\begin{rmk}
+Intuitively, an invariant tensor represents a geometric quantity since it does not depend upon the choice of coordinate system.
+\end{rmk}
 
 \subsection*{\S~15}
 \begin{rmk}
