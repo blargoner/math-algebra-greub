@@ -2971,7 +2971,7 @@ The metric tensors encode all of the information required to compute inner produ
 \begin{rmk}
 Since \(E\)~and the orthonormal basis \(e_{\nu}\) are self-dual under the inner product, the metric tensor \(g=\sum_{\nu}e_{\nu}\tprod e_{\nu}\) is just the unit tensor in~\(E\tprod E\). It follows that \(g\tprod g\) is the unit tensor in \((E\tprod E)\tprod(E\tprod E)\), and hence is the metric tensor in~\(E\tprod E\), and more generally
 \[\underbrace{g\tprod\cdots\tprod g}_p\]
-is the metric tensor in~\(\medtprod^p E\).\footnote{See problem~2(b).}
+is the metric tensor in~\(\medtprod^p E\).\footnote{See problem~2(b) for another proof.}
 \end{rmk}
 
 \begin{rmk}
@@ -3012,18 +3012,35 @@ which is the metric tensor of~\(\medtprod^p E\) since \(e_{\nu_1}\tprod\cdots\tp
 \end{proof}
 
 \begin{exer}[4]
-If \(E,E^*\) is a pair of dual Euclidean spaces and \(\varphi=a^*\tprod b\) is a linear transformation of~\(E\), then \(\adj{\varphi}=\tau b\tprod\tau^{-1}a^*\).
+Let \(E,E^*\) be a pair of dual finite-dimensional Euclidean spaces.
+\begin{enumerate}
+\item[(a)] If \(\varphi=a^*\tprod b\) is a linear transformation of~\(E\), then \(\adj{\varphi}=\tau b\tprod\tau^{-1}a^*\).
+\item[(b)] The inner product induced in~\(L(E;E)\) is given by
+\[\iprod{\varphi}{\psi}=\tr(\varphi\after\adj{\psi})\]
+\end{enumerate}
 \end{exer}
 \begin{proof}
-Let \(\psi=\tau b\tprod\tau^{-1}a^*\). For \(x\in E\),
-\[\psi x=\sprod{\tau b}{x}\tau^{-1}a^*=\iprod{x}{b}\tau^{-1}a^*\]
-so for \(y\in E\),
-\[\iprod{\psi x}{y}=\iprod{x}{b}\iprod{\tau^{-1}a^*}{y}=\iprod{x}{b}\sprod{a^*}{y}=\iprod{x}{\varphi y}\]
-Therefore \(\psi=\adj{\varphi}\).
+For~(a), if \(\varphi=a^*\tprod b\) in~\(E^*\tprod E\) then \(\varphi=\tau^{-1}a^*\tprod b\) in~\(E\tprod E\), so \(\adj{\varphi}=b\tprod\tau^{-1}a^*\) in~\(E\tprod E\) by problem~1.30.1 and \(\adj{\varphi}=\tau b\tprod\tau^{-1}a^*\) in~\(E^*\tprod E\).
+
+For~(b), if \(\varphi=a^*\tprod b\) and \(\psi=c^*\tprod d\), then
+\begin{align*}
+\varphi\after\adj{\psi}&=(a^*\tprod b)\after(\tau d\tprod\tau^{-1}c^*)\\
+	&=\sprod{a^*}{\tau^{-1}c^*}(\tau d\tprod b)\\
+	&=\iprod{\tau^{-1}a^*}{\tau^{-1}c^*}(\tau d\tprod b)\\
+	&=\iprod{a^*}{c^*}(\tau d\tprod b)
+\end{align*}
+so
+\begin{align*}
+\tr(\varphi\after\adj{\psi})&=\iprod{a^*}{c^*}\sprod{\tau d}{b}\\
+	&=\iprod{a^*}{c^*}\iprod{b}{d}\\
+	&=\iprod{a^*\tprod b}{c^*\tprod d}\\
+	&=\iprod{\varphi}{\psi}
+\end{align*}
+The general case follows by multilinearity.
 \end{proof}
 
 \begin{exer}[7]
-If \(E,E^*\) is a pair of dual Euclidean spaces and \(x_{\nu},x^{*\nu}\) a pair of dual bases, then
+If \(E,E^*\) is a pair of dual finite-dimensional Euclidean spaces and \(x_{\nu},x^{*\nu}\) a pair of dual bases, then
 \[g^*=\sum_{\nu,\mu}\iprod{x_{\nu}}{x_{\mu}}x^{*\nu}\tprod x^{*\mu}\qquad\text{and}\qquad g=\sum_{\nu,\mu}\iprod{x^{*\nu}}{x^{*\mu}}x_{\nu}\tprod x_{\mu}\]
 \end{exer}
 \begin{proof}
