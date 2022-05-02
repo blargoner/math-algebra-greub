@@ -1,7 +1,7 @@
 % Notes and exercises from Linear Algebra and Multilinear Algebra by Greub
 % By John Peloquin
 \documentclass[letterpaper,12pt]{article}
-\usepackage{amsmath,amssymb,amsthm,enumitem,fourier,diagrams,tikz-cd,stmaryrd,graphicx}
+\usepackage{amsmath,amssymb,amsthm,enumitem,fourier,diagrams,tikz-cd,stmaryrd}
 \usepackage[hidelinks]{hyperref}
 
 \newcommand{\R}{\mathbb{R}}
@@ -19,6 +19,24 @@
 \DeclareMathOperator{\cof}{cof}
 \DeclareMathOperator{\tr}{tr}
 
+% much ado about dots
+\makeatletter
+\newcommand{\bigcdot}[1]{\mathbin{\mathpalette\bigcdot@{#1}}}
+\newcommand{\bigcdot@}[2]{%
+  \sbox0{$#1\vcenter{}$}% math axis
+  \sbox2{$#1\cdot\m@th$}%
+  \hbox{%
+    \hfil
+    \raise\ht0\hbox{%
+      \scalebox{#2}{%
+        \lower\ht0\hbox{$#1\bullet\m@th$}%
+      }%
+    }%
+    \hfil
+  }%
+}
+\makeatother
+
 \newcommand{\union}{\cup}
 \newcommand{\sect}{\cap}
 \newcommand{\after}{\circ}
@@ -35,8 +53,9 @@
 \newcommand{\eprod}{\wedge}
 \newcommand{\bigeprod}{\bigwedge}
 \newcommand{\medeprod}{{\textstyle\bigeprod}}
-\newcommand{\fprod}{\bullet}
-\newcommand{\adot}{\bullet}
+\newcommand{\fprod}{\bigcdot{0.5}}
+\newcommand{\tdot}{\bigcdot{0.75}}
+\newcommand{\adot}{\bigcdot{0.75}}
 
 \newcommand{\delete}{\widehat}
 \newcommand{\gen}[1]{\langle#1\rangle}
@@ -3053,6 +3072,42 @@ and
 \end{proof}
 \begin{rmk}
 It follows that the components of~\(g^*\) vary in the same way as the basis vectors in~\(E\) under a change of basis, while the components of~\(g\) vary inversely. This is why \(g^*\)~is called ``covariant'' and \(g\)~is called ``contravariant''.
+\end{rmk}
+
+\subsection*{\S~18}
+\begin{rmk}
+The multiplication in the algebra~\(T^{\tdot}(E)\) is defined by
+\[\Phi\fprod\Psi=\sum_{p,q}\Phi_p\fprod\Psi_q\]
+where \(\Phi=\sum_p\Phi_p\) with \(\Phi_p\in T^p(E)\), \(\Psi=\sum_q\Psi_q\) with \(\Psi_q\in T^q(E)\), and \(\Phi_p\fprod\Psi_q\) is given by~(3.17).\footnote{Compare with the definition in subsection~3.2.} This definition makes~\(T^{\tdot}(E)\) into a \emph{graded algebra} where the elements of~\(T^p(E)\) are homogeneous of degree~\(p\).
+\end{rmk}
+
+\begin{rmk}
+For a given linear map \(\varphi:E\to F\), to see that \(\varphi^*:T^{\tdot}(E)\from T^{\tdot}(F)\) is a homomorphism homogeneous of degree zero, first note that \(\varphi^*\Psi\in T^p(E)\) for \(\Psi\in T^p(F)\) by the definition since \(\varphi\)~is linear and \(\Psi\)~is \(p\)-linear. Moreover,
+\[\varphi^*(\lambda\Phi+\mu\Psi)=\lambda\varphi^*\Phi+\mu\varphi^*\Psi\qquad\Phi,\Psi\in T^p(F)\]
+so \(\varphi^*:T^p(E)\from T^p(F)\) is linear. The maps~\(\varphi^*\) for all~\(p\) extend in a unique way to a linear map \(\varphi^*:T^{\tdot}(E)\from T^{\tdot}(F)\) which is homogeneous of degree zero. For \(\Phi\in T^p(F)\) and \(\Psi\in T^q(F)\),
+\begin{align*}
+(\varphi^*(\Phi\fprod\Psi))(x_1,\ldots,x_{p+q})&=(\Phi\fprod\Psi)(\varphi x_1,\ldots,\varphi x_{p+q})\\
+	&=\Phi(\varphi x_1,\ldots,\varphi x_p)\mult\Psi(\varphi x_{p+1},\ldots,\varphi x_{p+q})\\
+	&=(\varphi^*\Phi)(x_1,\ldots,x_p)\mult(\varphi^*\Psi)(x_{p+1},\ldots,x_{p+q})\\
+	&=((\varphi^*\Phi)\fprod(\varphi^*\Psi))(x_1,\ldots,x_{p+q})
+\end{align*}
+so
+\[\varphi^*(\Phi\fprod\Psi)=(\varphi^*\Phi)\fprod(\varphi^*\Psi)\]
+This equation extends to all \(\Phi,\Psi\in T^{\tdot}(F)\) by bilinearity of the multiplication in \(T^{\tdot}(E)\) and~\(T^{\tdot}(F)\) and linearity of~\(\varphi^*\), so \(\varphi^*\)~is a homomorphism.
+\end{rmk}
+
+\begin{rmk}
+For a linear map \(\varphi:E\to E\), the map \(\theta^T(\varphi):T^{\tdot}(E)\to T^{\tdot}(E)\) is seen to be a derivation homogeneous of degree zero by an argument similar to that in the previous remark. In this case for \(\Phi\in T^p(E)\) and \(\Psi\in T^q(E)\) with \(p,q\ge 1\),
+\begin{align*}
+(\theta^T(\varphi)(\Phi\fprod\Psi))(x_1,\ldots,x_{p+q})&=\sum_{i=1}^{p+q}(\Phi\fprod\Psi)(x_1,\ldots,\varphi x_i,\ldots,x_{p+q})\\
+	&=\sum_{i=1}^{p}\Phi(x_1,\ldots,\varphi x_i,\ldots,x_p)\mult\Psi(x_{p+1},\ldots,x_{p+q})\\
+	&\qquad+\sum_{i=p+1}^{p+q}\Phi(x_1,\ldots,x_p)\mult\Psi(x_{p+1},\ldots,\varphi x_i,\ldots,x_{p+q})\\
+	&=(\theta^T(\varphi)(\Phi))(x_1,\ldots,x_p)\mult\Psi(x_{p+1},\ldots,x_{p+q})\\
+	&\qquad+\Phi(x_1,\ldots,x_p)\mult(\theta^T(\varphi)(\Psi))(x_{p+1},\ldots,x_{p+q})\\
+	&=\bigl(\theta^T(\varphi)(\Phi)\fprod\Psi+\Phi\fprod\theta^T(\varphi)(\Psi)\bigr)(x_1,\ldots,x_{p+q})
+\end{align*}
+so
+\[\theta^T(\varphi)(\Phi\fprod\Psi)=\theta^T(\varphi)(\Phi)\fprod\Psi+\Phi\fprod\theta^T(\varphi)(\Psi)\]
 \end{rmk}
 
 \subsection*{\S~19}
