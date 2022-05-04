@@ -3093,11 +3093,11 @@ so \(\varphi^*:T^p(E)\from T^p(F)\) is linear. This map extends via direct sum o
 \end{align*}
 so
 \[\varphi^*(\Phi\fprod\Psi)=(\varphi^*\Phi)\fprod(\varphi^*\Psi)\]
-This equation extends to all \(\Phi,\Psi\in T^{\tdot}(F)\) by bilinearity of the multiplication in \(T^{\tdot}(E)\) and~\(T^{\tdot}(F)\) and linearity of~\(\varphi^*\), so \(\varphi^*\)~is a homomorphism.
+This equation extends to all \(\Phi,\Psi\in T^{\tdot}(F)\) by bilinearity of the multiplication in \(T^{\tdot}(E)\) and~\(T^{\tdot}(F)\) and linearity of~\(\varphi^*\), so \(\varphi^*\)~is a homomorphism. Under the natural identifications \(E^*=T^1(E)\) and \(F^*=T^1(F)\), \(\varphi^*\)~extends the dual map \(\varphi^*:E^*\from F^*\) of~\(\varphi\).
 \end{rmk}
 
 \begin{rmk}
-For a linear map \(\varphi:E\to E\), the map \(\theta^T(\varphi):T^{\tdot}(E)\to T^{\tdot}(E)\) is seen to be a derivation homogeneous of degree zero by an argument similar to that in the previous remark. In this case for \(\Phi\in T^p(E)\) and \(\Psi\in T^q(E)\) with \(p,q\ge 1\),
+For a linear map \(\varphi:E\to E\), the map \(\theta^T(\varphi):T^{\tdot}(E)\from T^{\tdot}(E)\) is seen to be a derivation homogeneous of degree zero by an argument similar to that in the previous remark. In this case for \(\Phi\in T^p(E)\) and \(\Psi\in T^q(E)\) with \(p,q\ge 1\),
 \begin{align*}
 (\theta^T(\varphi)(\Phi\fprod\Psi))(x_1,\ldots,x_{p+q})&=\sum_{i=1}^{p+q}(\Phi\fprod\Psi)(x_1,\ldots,\varphi x_i,\ldots,x_{p+q})\\
 	&=\sum_{i=1}^{p}\Phi(x_1,\ldots,\varphi x_i,\ldots,x_p)\mult\Psi(x_{p+1},\ldots,x_{p+q})\\
@@ -3108,6 +3108,7 @@ For a linear map \(\varphi:E\to E\), the map \(\theta^T(\varphi):T^{\tdot}(E)\to
 \end{align*}
 so
 \[\theta^T(\varphi)(\Phi\fprod\Psi)=\theta^T(\varphi)(\Phi)\fprod\Psi+\Phi\fprod\theta^T(\varphi)(\Psi)\]
+Under the identification \(E^*=T^1(E)\), \(\theta^T(\varphi)\)~extends the dual map \(\varphi^*:E^*\from E^*\).
 \end{rmk}
 
 \subsection*{\S~19}
@@ -3117,6 +3118,21 @@ The definitions of the substitution operators \(i_{\nu}(h)\), \(i_A(h)\), and \(
 
 \begin{rmk}
 The operator~\(i_A(h)\) is seen to be an antiderivation with respect to the canonical involution in~\(T^{\tdot}(E)\), while \(i_S(h)\)~is seen to be a derivation in~\(T^{\tdot}(E)\).
+\end{rmk}
+
+\subsection*{\S~21}
+\begin{rmk}
+By definition,
+\[T_{\tdot}(E)=\sum_p T_p(E)=\sum_p T^p(E^*)=T^{\tdot}(E^*)\]
+The multiplication makes~\(T_{\tdot}(E)\) into a \emph{graded algebra} where the elements of~\(T_p(E)\) are homogeneous of degree~\(p\).
+\end{rmk}
+
+\begin{rmk}
+For a linear map \(\varphi:E\to F\), the dual map \(\varphi^*:E^*\from F^*\) induces the homomorphism \(\varphi_*=(\varphi^*)^*:T^{\tdot}(E^*)\to T^{\tdot}(F^*)\), homogeneous of degree zero. Under the natural identifications \(E=T_1(E)\) and \(F=T_1(F)\), \(\varphi_*\)~extends \(\varphi\).
+\end{rmk}
+
+\begin{rmk}
+For a linear map \(\varphi:E\to E\), the dual map \(\varphi^*:E^*\from E^*\) induces the derivation \(\theta_T(\varphi)=\theta^T(\varphi^*):T^{\tdot}(E^*)\to T^{\tdot}(E^*)\) which is homogeneous of degree zero. Under the identification \(E=T_1(E)\), \(\theta_T(\varphi)\)~extends \(\varphi\).
 \end{rmk}
 
 \subsection*{\S~23}
