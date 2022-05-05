@@ -3082,8 +3082,12 @@ where \(\Phi=\sum_p\Phi_p\) with \(\Phi_p\in T^p(E)\), \(\Psi=\sum_q\Psi_q\) wit
 \end{rmk}
 
 \begin{rmk}
+The function \(\fprods{f}{1}{p}\) (\(f_{\nu}\in T^1(E)\)) is \emph{decomposable} in~\(T^p(E)\).
+\end{rmk}
+
+\begin{rmk}
 For a given linear map \(\varphi:E\to F\), to see that \(\varphi^*:T^{\tdot}(E)\from T^{\tdot}(F)\) is a homomorphism homogeneous of degree zero, first note that \(\varphi^*\Psi\in T^p(E)\) for \(\Psi\in T^p(F)\) by the definition since \(\varphi\)~is linear and \(\Psi\)~is \(p\)-linear. Moreover,
-\[\varphi^*(\lambda\Phi+\mu\Psi)=\lambda\varphi^*\Phi+\mu\varphi^*\Psi\qquad\Phi,\Psi\in T^p(F)\]
+\[\varphi^*(\lambda\Phi+\mu\Psi)=\lambda\varphi^*\Phi+\mu\varphi^*\Psi\qquad(\Phi,\Psi\in T^p(F))\]
 so \(\varphi^*:T^p(E)\from T^p(F)\) is linear. This map extends via direct sum over all~\(p\) to the linear map \(\varphi^*:T^{\tdot}(E)\from T^{\tdot}(F)\) which is homogeneous of degree zero. For \(\Phi\in T^p(F)\) and \(\Psi\in T^q(F)\),
 \begin{align*}
 (\varphi^*(\Phi\fprod\Psi))(x_1,\ldots,x_{p+q})&=(\Phi\fprod\Psi)(\varphi x_1,\ldots,\varphi x_{p+q})\\
@@ -3093,7 +3097,8 @@ so \(\varphi^*:T^p(E)\from T^p(F)\) is linear. This map extends via direct sum o
 \end{align*}
 so
 \[\varphi^*(\Phi\fprod\Psi)=(\varphi^*\Phi)\fprod(\varphi^*\Psi)\]
-This equation extends to all \(\Phi,\Psi\in T^{\tdot}(F)\) by bilinearity of the multiplication in \(T^{\tdot}(E)\) and~\(T^{\tdot}(F)\) and linearity of~\(\varphi^*\), so \(\varphi^*\)~is a homomorphism. Under the natural identifications \(E^*=T^1(E)\) and \(F^*=T^1(F)\), \(\varphi^*\)~extends the dual map \(\varphi^*:E^*\from F^*\) of~\(\varphi\).
+This equation extends to all \(\Phi,\Psi\in T^{\tdot}(F)\) by bilinearity of the multiplication in \(T^{\tdot}(E)\) and~\(T^{\tdot}(F)\) and linearity of~\(\varphi^*\), so \(\varphi^*\)~is a homomorphism. Under the natural identifications \(E^*=T^1(E)\) and \(F^*=T^1(F)\), \(\varphi^*\)~is an extension of the dual map \(\varphi^*:E^*\from F^*\) of~\(\varphi\) and
+\[\varphi^*(\fprods{y^*}{1}{p})=\fprods{\varphi^*y^*}{1}{p}\qquad(y^*_{\nu}\in F^*)\]
 \end{rmk}
 
 \begin{rmk}
@@ -3128,11 +3133,39 @@ The multiplication makes~\(T_{\tdot}(E)\) into a \emph{graded algebra} where the
 \end{rmk}
 
 \begin{rmk}
-For a linear map \(\varphi:E\to F\), the dual map \(\varphi^*:E^*\from F^*\) induces the homomorphism \(\varphi_*=(\varphi^*)^*:T^{\tdot}(E^*)\to T^{\tdot}(F^*)\), homogeneous of degree zero. Under the natural identifications \(E=T_1(E)\) and \(F=T_1(F)\), \(\varphi_*\)~extends \(\varphi\).
+For a linear map \(\varphi:E\to F\), the dual map \(\varphi^*:E^*\from F^*\) induces the homomorphism \(\varphi_*=(\varphi^*)^*:T^{\tdot}(E^*)\to T^{\tdot}(F^*)\), homogeneous of degree zero. Under the natural identifications \(E=T_1(E)\) and \(F=T_1(F)\), \(\varphi_*\)~extends \(\varphi\) and
+\[\varphi_*(\fprods{x}{1}{p})=\fprods{\varphi x}{1}{p}\qquad(x_{\nu}\in E)\]
 \end{rmk}
 
 \begin{rmk}
 For a linear map \(\varphi:E\to E\), the dual map \(\varphi^*:E^*\from E^*\) induces the derivation \(\theta_T(\varphi)=\theta^T(\varphi^*):T^{\tdot}(E^*)\to T^{\tdot}(E^*)\) which is homogeneous of degree zero. Under the identification \(E=T_1(E)\), \(\theta_T(\varphi)\)~extends \(\varphi\).
+\end{rmk}
+
+\subsection*{\S~22}
+\begin{rmk}
+The scalar product between \(T^p(E)\) and~\(T_p(E)\) is given by
+\[\sprod{\fprods{f}{1}{p}}{\fprods{x}{1}{p}}=\sprod{f_1}{x_1}\cdots\sprod{f_p}{x_p}\qquad(f_{\nu}\in E^*, x_{\nu}\in E)\]
+It follows that the isomorphisms \(\medtprod^p E^*\iso T^p(E)\) and \(\medtprod^p E\iso T_p(E)\) preserve scalar products.
+\end{rmk}
+
+\begin{rmk}
+A scalar product between \(T^{\tdot}(E)\) and~\(T_{\tdot}(E)\) is induced by
+\[\sprod{\Phi}{\Psi}=\sum_p\sprod{\Phi_p}{\Psi_p}\]
+where \(\Phi=\sum_p\Phi_p\) with \(\Phi_p\in T^p(E)\) and \(\Psi=\sum_p\Psi_p\) with \(\Psi_p\in T_p(E)\).
+It follows from the previous remark that the isomorphisms \(\medtprod E^*\iso T^{\tdot}(E)\) and \(\medtprod E\iso T_{\tdot}(E)\) preserve scalar products.
+\end{rmk}
+
+\begin{rmk}
+For a linear map \(\varphi:E\to F\), the homomorphisms \(\varphi_*:T_{\tdot}(E)\to T_{\tdot}(F)\) and \(\varphi^*:T^{\tdot}(E)\from T^{\tdot}(F)\) are dual. This can be proved by direct computation or by appealing to commutativity of the following diagrams:
+\begin{diagram}
+\medtprod E^*&\lTo{\varphi^{\tprod}}&\medtprod F^*&&\medtprod E&\rTo^{\varphi_{\tprod}}&\medtprod F\\
+\dTo<{\iso}&&\dTo>{\iso}&&\dTo<{\iso}&&\dTo>{\iso}\\
+T^{\tdot}(E)&\lTo^{\varphi^*}&T^{\tdot}(F)&&T_{\tdot}(E)&\rTo^{\varphi_*}&T_{\tdot}(F)
+\end{diagram}
+\end{rmk}
+
+\begin{rmk}
+For a linear map \(\varphi:E\to E\), the derivations \(\theta_T(\varphi):T_{\tdot}(E)\to T_{\tdot}(E)\) and \(\theta^T(\varphi):T^{\tdot}(E)\from T^{\tdot}(E)\) are dual.
 \end{rmk}
 
 \subsection*{\S~23}
