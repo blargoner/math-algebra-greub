@@ -3113,7 +3113,8 @@ For a linear map \(\varphi:E\to E\), the map \(\theta^T(\varphi):T^{\tdot}(E)\fr
 \end{align*}
 so
 \[\theta^T(\varphi)(\Phi\fprod\Psi)=\theta^T(\varphi)(\Phi)\fprod\Psi+\Phi\fprod\theta^T(\varphi)(\Psi)\]
-Under the identification \(E^*=T^1(E)\), \(\theta^T(\varphi)\)~extends the dual map \(\varphi^*:E^*\from E^*\).
+Under the identification \(E^*=T^1(E)\), \(\theta^T(\varphi)\)~extends the dual map \(\varphi^*:E^*\from E^*\) and
+\[\theta^T(\varphi)(\fprods{x^*}{1}{p})=\sum_{i=1}^p x^*_1\fprod\cdots\fprod\varphi^*x^*_i\fprod\cdots\fprod x^*_p\qquad(x^*_{\nu}\in E^*)\]
 \end{rmk}
 
 \subsection*{\S~19}
@@ -3138,7 +3139,8 @@ For a linear map \(\varphi:E\to F\), the dual map \(\varphi^*:E^*\from F^*\) ind
 \end{rmk}
 
 \begin{rmk}
-For a linear map \(\varphi:E\to E\), the dual map \(\varphi^*:E^*\from E^*\) induces the derivation \(\theta_T(\varphi)=\theta^T(\varphi^*):T^{\tdot}(E^*)\to T^{\tdot}(E^*)\) which is homogeneous of degree zero. Under the identification \(E=T_1(E)\), \(\theta_T(\varphi)\)~extends \(\varphi\).
+For a linear map \(\varphi:E\to E\), the dual map \(\varphi^*:E^*\from E^*\) induces the derivation \(\theta_T(\varphi)=\theta^T(\varphi^*):T^{\tdot}(E^*)\to T^{\tdot}(E^*)\) which is homogeneous of degree zero. Under the identification \(E=T_1(E)\), \(\theta_T(\varphi)\)~extends \(\varphi\) and
+\[\theta_T(\varphi)(\fprods{x}{1}{p})=\sum_{i=1}^p x_1\fprod\cdots\fprod\varphi x_i\fprod\cdots\fprod x_p\qquad(x_{\nu}\in E)\]
 \end{rmk}
 
 \subsection*{\S~22}
@@ -3165,7 +3167,12 @@ T^{\tdot}(E)&\lTo^{\varphi^*}&T^{\tdot}(F)&&T_{\tdot}(E)&\rTo^{\varphi_*}&T_{\td
 \end{rmk}
 
 \begin{rmk}
-For a linear map \(\varphi:E\to E\), the derivations \(\theta_T(\varphi):T_{\tdot}(E)\to T_{\tdot}(E)\) and \(\theta^T(\varphi):T^{\tdot}(E)\from T^{\tdot}(E)\) are dual.
+For a linear map \(\varphi:E\to E\), the derivations \(\theta_T(\varphi):T_{\tdot}(E)\to T_{\tdot}(E)\) and \(\theta^T(\varphi):T^{\tdot}(E)\from T^{\tdot}(E)\) are dual, from the following diagrams:
+\begin{diagram}
+\medtprod E^*&\lTo{\theta^{\tprod}(\varphi)}&\medtprod E^*&&\medtprod E&\rTo^{\theta_{\tprod}(\varphi)}&\medtprod E\\
+\dTo<{\iso}&&\dTo>{\iso}&&\dTo<{\iso}&&\dTo>{\iso}\\
+T^{\tdot}(E)&\lTo^{\theta^T(\varphi)}&T^{\tdot}(E)&&T_{\tdot}(E)&\rTo^{\theta_T(\varphi)}&T_{\tdot}(E)
+\end{diagram}
 \end{rmk}
 
 \subsection*{\S~23}
@@ -3174,7 +3181,7 @@ We have
 \[T^p_q(E)\iso(\medtprod^pE^*)\tprod(\medtprod^q E)=\medtprod^p_q(E^*,E)\]
 and
 \[T(E)\iso(\medtprod E^*)\tprod(\medtprod E)=\medtprod(E^*,E)\]
-It follows that \(T^p_q(E)\)~is dual to~\(T^q_p(E)\), and \(T(E)\)~is dual to itself and to~\(T(E^*)\).
+It follows from a remark in \S~12 above that \(T(E)\)~is a \emph{graded algebra} under the simple gradation in~(2.15). Also \(T^p_q(E)\)~is dual to~\(T^q_p(E)\), and \(T(E)\)~is dual to itself and to~\(T(E^*)\).
 \end{rmk}
 
 \begin{rmk}
