@@ -2753,6 +2753,14 @@ is an isomorphism of graded algebras.
 \end{rmk}
 
 \section*{Chapter~3}
+In this chapter, we see three ways of defining a tensor:
+\begin{itemize}[itemsep=0pt]
+\item As an object in a tensor algebra characterized by a universal property.
+\item As a multilinear function.
+\item As a multidimensional array of scalars which transforms according to a certain rule under change of basis.
+\end{itemize}
+The first way is the most elegant but perhaps the hardest to learn; the second, easier to get started with but messier in the long run; the third, quick and dirty.
+
 \subsection*{\S~3}
 \begin{rmk}
 The tensor algebra~\(\medtprod E\) is a universal (initial) object in the category of ``associative unital algebras with linear maps of~\(E\) into them''. In this category, the objects are linear maps \(E\to A\), for associative unital algebras~\(A\), and the arrows are unital algebra homomorphisms \(A\to B\) which preserve the units and respect the linear maps from~\(E\):
@@ -2839,7 +2847,7 @@ By~(1.25), \(\medtprod(E^*,E)\) is dual to itself and to \(\medtprod(E,E^*)\).
 \begin{rmk}
 Let \(\alpha^{\circled{p}}\) denote the restriction of~\(\alpha^{\tprod}\) to \(\medtprod^p E^*\) and \(\alpha_{\circled{q}}\) the restriction of~\(\alpha_{\tprod}\) to \(\medtprod^q E\). Then \(\alpha^{\circled{p}}\) and \(\alpha_{\circled{q}}\) are automorphisms, and
 \[T_{\alpha}=(\alpha^{\circled{p}})^{-1}\tprod\alpha_{\circled{q}}\]
-is an automorphism of~\(\medtprod^p_q(E^*,E)\). Note \(T_{\alpha}\)~is just the restriction of \((\alpha^{\tprod})^{-1}\tprod\alpha_{\tprod}\) to~\(\medtprod^p_q(E^*,E)\).
+is an automorphism of~\(\medtprod^p_q(E^*,E)\) which extends to \((\alpha^{\tprod})^{-1}\tprod\alpha_{\tprod}\) on~\(\medtprod(E^*,E)\).
 \end{rmk}
 
 \begin{rmk}
@@ -2894,7 +2902,7 @@ Therefore
 \[\bar{\zeta}^{\mu_1\cdots\mu_q}_{\nu_1\cdots\nu_p}=\alpha_{\nu_1}^{\lambda_1}\cdots\alpha_{\nu_p}^{\lambda_p}\beta^{\mu_1}_{\kappa_1}\cdots\beta^{\mu_q}_{\kappa_q}\zeta^{\kappa_1\cdots\kappa_q}_{\lambda_1\cdots\lambda_p}\qedhere\]
 \end{proof}
 \begin{rmk}
-This relationship serves as the basis of an alternative definition of a \emph{tensor} as a multidimensional array of numbers which transforms according to this rule under change of basis.
+This relationship serves as the basis of an alternative definition of a \emph{tensor} as a multidimensional array of scalars which transforms according to this rule under change of basis.
 \end{rmk}
 
 \begin{exer}[3]
@@ -2974,7 +2982,7 @@ For (b) and~(c), if we view~\(u\) as a linear transformation of~\(E\), then \(u\
 For~(d), since \(T_{\alpha}\)~is a change of basis transformation by a remark above.
 \end{proof}
 \begin{rmk}
-Intuitively, an invariant tensor represents a geometric quantity since it does not depend upon the choice of coordinate system.
+Intuitively, an invariant tensor represents a geometric quantity whose description does not depend upon the choice of coordinate system.
 \end{rmk}
 
 \subsection*{\S~15}
@@ -3025,9 +3033,9 @@ which is the unit tensor in~\(E^*\tprod E\).
 Writing \(\medtprod^p(E\tprod E)=(\medtprod^p E)\tprod(\medtprod^p E)\), we have
 \begin{align*}
 \underbrace{g\tprod\cdots\tprod g}_p&=\bigl(\sum_{\nu_1}e_{\nu_1}\tprod e_{\nu_1}\bigr)\tprod\cdots\tprod\bigl(\sum_{\nu_p}e_{\nu_p}\tprod e_{\nu_p}\bigr)\\
-	&=\sum_{(\nu)}(e_{\nu_1}\tprod\cdots\tprod e_{\nu_p})\tprod(e_{\nu_1}\tprod\cdots\tprod e_{\nu_p})
+	&=\sum_{(\nu)}(\tprods{e}{\nu_1}{\nu_p})\tprod(\tprods{e}{\nu_1}{\nu_p})
 \end{align*}
-which is the metric tensor of~\(\medtprod^p E\) since \(e_{\nu_1}\tprod\cdots\tprod e_{\nu_p}\) is an orthonormal basis in~\(\medtprod^p E\).
+which is the metric tensor of~\(\medtprod^p E\) since \(\tprods{e}{\nu_1}{\nu_p}\) is an orthonormal basis in~\(\medtprod^p E\).
 \end{proof}
 
 \begin{exer}[4]
