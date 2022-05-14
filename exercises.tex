@@ -2765,9 +2765,9 @@ The first way is the most elegant but perhaps the hardest to learn; the second, 
 \begin{rmk}
 The tensor algebra~\(\medtprod E\) is a universal (initial) object in the category of ``associative unital algebras with linear maps of~\(E\) into them''. In this category, the objects are linear maps \(E\to A\), for associative unital algebras~\(A\), and the arrows are unital algebra homomorphisms \(A\to B\) which preserve the units and respect the linear maps from~\(E\):
 \begin{diagram}
-E&\rTo&B\\
-\dTo&\ruTo&\\
-A&&
+E	&\rTo	&B\\
+\dTo&\ruTo	&\\
+A	&		&
 \end{diagram}
 Every object in this category can be obtained from the tensor algebra~\(\medtprod E\) in a unique way. This is why \(\medtprod E\)~is said to satisfy the ``universal property''. This is only possible because the elements of~\(\medtprod E\) satisfy only those properties that are required to make~\(\medtprod E\) into an associative unital algebra containing~\(E\). By category theoretic abstract nonsense, \(\medtprod E\)~is unique up to isomorphism (\S~4).
 \end{rmk}
@@ -3168,18 +3168,18 @@ It follows from the previous remark that the isomorphisms \(\medtprod E^*\iso T^
 \begin{rmk}
 For a linear map \(\varphi:E\to F\), the homomorphisms \(\varphi_*:T_{\tdot}(E)\to T_{\tdot}(F)\) and \(\varphi^*:T^{\tdot}(E)\from T^{\tdot}(F)\) are dual. This can be proved by direct computation or by appealing to commutativity of the following diagrams:
 \begin{diagram}
-\medtprod E^*&\lTo{\varphi^{\tprod}}&\medtprod F^*&&\medtprod E&\rTo^{\varphi_{\tprod}}&\medtprod F\\
-\dTo<{\iso}&&\dTo>{\iso}&&\dTo<{\iso}&&\dTo>{\iso}\\
-T^{\tdot}(E)&\lTo^{\varphi^*}&T^{\tdot}(F)&&T_{\tdot}(E)&\rTo^{\varphi_*}&T_{\tdot}(F)
+\medtprod E^*	&\lTo{\varphi^{\tprod}}	&\medtprod F^*	&&\medtprod E	&\rTo^{\varphi_{\tprod}}	&\medtprod F\\
+\dTo<{\iso}		&						&\dTo>{\iso}	&&\dTo<{\iso}	&							&\dTo>{\iso}\\
+T^{\tdot}(E)	&\lTo^{\varphi^*}		&T^{\tdot}(F)	&&T_{\tdot}(E)	&\rTo^{\varphi_*}			&T_{\tdot}(F)
 \end{diagram}
 \end{rmk}
 
 \begin{rmk}
 For a linear map \(\varphi:E\to E\), the derivations \(\theta_T(\varphi):T_{\tdot}(E)\to T_{\tdot}(E)\) and \(\theta^T(\varphi):T^{\tdot}(E)\from T^{\tdot}(E)\) are dual, from the following diagrams:
 \begin{diagram}
-\medtprod E^*&\lTo{\theta^{\tprod}(\varphi)}&\medtprod E^*&&\medtprod E&\rTo^{\theta_{\tprod}(\varphi)}&\medtprod E\\
-\dTo<{\iso}&&\dTo>{\iso}&&\dTo<{\iso}&&\dTo>{\iso}\\
-T^{\tdot}(E)&\lTo^{\theta^T(\varphi)}&T^{\tdot}(E)&&T_{\tdot}(E)&\rTo^{\theta_T(\varphi)}&T_{\tdot}(E)
+\medtprod E^*	&\lTo{\theta^{\tprod}(\varphi)}	&\medtprod E^*	&&\medtprod E	&\rTo^{\theta_{\tprod}(\varphi)}&\medtprod E\\
+\dTo<{\iso}		&								&\dTo>{\iso}	&&\dTo<{\iso}	&								&\dTo>{\iso}\\
+T^{\tdot}(E)	&\lTo^{\theta^T(\varphi)}		&T^{\tdot}(E)	&&T_{\tdot}(E)	&\rTo^{\theta_T(\varphi)}		&T_{\tdot}(E)
 \end{diagram}
 \end{rmk}
 
@@ -3205,9 +3205,9 @@ The proof that \(\ker\pi_A\supseteq N^p(E)\) in~(4.4) is similar to the proof th
 \begin{rmk}
 By (4.4) and~(4.5), we have the following commutative diagram:
 \begin{diagram}[nohug]
-\medtprod^p E&\rTo^{\pi_A}&X^p(E)\\
-\dTo<{\pi}&\ruTo>{\iso}&\\
-\medtprod^p E/N^p(E)&&
+\medtprod^p E		&\rTo^{\pi_A}	&X^p(E)\\
+\dTo<{\pi}			&\ruTo>{\iso}	&\\
+\medtprod^p E/N^p(E)&				&
 \end{diagram}
 \end{rmk}
 
@@ -3301,6 +3301,24 @@ The proof also shows that the product is uniquely determined by the requirement 
 
 \section*{Chapter~5}
 \subsection*{\S~1}
+\begin{rmk}
+For \(\sigma\in S_p\),
+\[\sigma(\fprods{f}{1}{p})=\fprods{f}{\sigma^{-1}(1)}{\sigma^{-1}(p)}\qquad(f_{\nu}\in T^1(E))\]
+since
+\begin{align*}
+(\sigma(\fprods{f}{1}{p}))(x_1,\ldots,x_p)&=(\fprods{f}{1}{p})(x_{\sigma(1)},\ldots,x_{\sigma(p)})\\
+	&=f_1(x_{\sigma(1)})\mult\cdots\mult f_p(x_{\sigma(p)})\\
+	&=f_{\sigma^{-1}(1)}(x_1)\mult\cdots\mult f_{\sigma^{-1}(p)}(x_p)\\
+	&=(\fprods{f}{\sigma^{-1}(1)}{\sigma^{-1}(p)})(x_1,\ldots,x_p)
+\end{align*}
+If \(E\)~is finite-dimensional, it follows that these diagrams commute:
+\begin{diagram}
+\medtprod^p E^*	&\rTo^{\sigma}	&\medtprod^p E^*&&\medtprod^p E^*	&\rTo^{\pi^A}	&\medtprod^p E^*\\
+\dTo<{\iso}		&				&\dTo>{\iso}	&&\dTo<{\iso}		&				&\dTo>{\iso}\\
+T^p(E)			&\rTo_{\sigma}	&T^p(E)			&&T^p(E)			&\rTo_A			&T^p(E)
+\end{diagram}
+\end{rmk}
+
 \begin{exer}[1]
 Let \(L_p(E;F)\) denote the space of \(p\)-linear mappings \(E^p\to F\), and \(A_p(E;F)\) the subspace of skew-symmetric mappings. If \(T:L_p(E;F)\to L_p(E;F)\) is linear such that \(T\varphi=\varphi\) for all \(\varphi\in A_p(E;F)\), and \(T(\sigma\varphi)=\sign{\sigma}T\varphi\) for all \(\sigma\in S_p\) and \(\varphi\in L_p(E;F)\), then \(T=A\) (the alternator).
 \end{exer}
