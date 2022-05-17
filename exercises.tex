@@ -3365,12 +3365,15 @@ These results show that the universality of determinant functions is a special c
 
 \subsection*{\S~4}
 \begin{rmk}
-The projection \(\pi:\medtprod E\to\medtprod E/N(E)\) and the projection \(\pi:\medtprod E\to\medeprod E\) constructed in this subsection are related by the following commutative diagram:
+The projection \(\pi:\medtprod E\to\medeprod E\) constructed in this subsection and the canonical projection \(\rho:\medtprod E\to\medtprod E/N(E)\) are connected by this commutative diagram:
 \begin{diagram}[nohug]
 \medtprod E		&\rTo^{\pi}	&\medeprod E\\
-\dTo<{\pi}		&\ruTo>{f}	&\\
+\dTo<{\rho}		&\ruTo>{f}	&\\
 \medtprod E/N(E)&			&
 \end{diagram}
+For \(u,v\in\medeprod E\), if we write \(f^{-1}u=\rho\tilde{u}\) and \(f^{-1}v=\rho\tilde{v}\) for \(\tilde{u},\tilde{v}\in\medtprod E\), then \(u=\pi\tilde{u}\) and \(v=\pi\tilde{v}\) and
+\[u\eprod v=f(\rho\tilde{u}\mult\rho\tilde{v})=f(\rho(\tilde{u}\tprod\tilde{v}))=\pi(\tilde{u}\tprod\tilde{v})\]
+This multiplication makes~\(\medeprod E\) into a \emph{graded algebra} where the elements of~\(\medeprod^p E\) are homogeneous of degree~\(p\). It also makes~\(\pi\) into an algebra homomorphism.
 \end{rmk}
 
 \begin{rmk}
@@ -3392,6 +3395,14 @@ E	&\rTo	&B\\
 A	&		&
 \end{diagram}
 Every object in this category can be obtained from the exterior algebra \(\medeprod E\) in a unique way. This is why \(\medeprod E\)~is said to satisfy the ``universal property''. This is only possible because the elements of~\(\medeprod E\) satisfy only those properties that are required to make \(\medeprod E\) into an associative unital algebra containing~\(E\) with skew-symmetric multiplication in~\(E\). By category theoretic abstract nonsense, \(\medeprod E\)~is unique up to isomorphism.
+\end{rmk}
+
+\begin{rmk}
+The exterior algebra~\(\medeprod E\) can be constructed in two ways:
+\begin{itemize}[itemsep=0pt]
+\item Top down, as \(\medeprod E=\medtprod E/N(E)\).
+\item Bottom up, as \(\medeprod E=\sum_p\medeprod^p E\), where \(\medeprod^p E\)~is constructed either top down or bottom up as remarked above.
+\end{itemize}
 \end{rmk}
 
 \subsection*{\S~7}
