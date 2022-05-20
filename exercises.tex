@@ -3411,6 +3411,17 @@ It is not necessary to establish~(5.9), since the skew-symmetry of~\(\alpha\) fo
 
 \subsection*{\S~7}
 \begin{rmk}
+If \(\nu_1<\cdots<\nu_p\) and \(\mu_1<\cdots<\mu_p\), then
+\[\det(\delta^{\nu_i}_{\mu_j})=\begin{cases}
+1&\text{if }(\nu_1,\ldots,\nu_p)=(\mu_1,\ldots,\mu_p)\\
+0&\text{otherwise}
+\end{cases}\]
+\end{rmk}
+\begin{proof}
+If \((\nu_1,\ldots,\nu_p)=(\mu_1,\ldots,\mu_p)\), then \(\delta^{\nu_i}_{\mu_i}=1\) for all~\(i\) and \(\delta^{\nu_i}_{\mu_j}=0\) for all \(i\ne j\) since \(\nu_i\ne\nu_j=\mu_j\), so \(\det(\delta^{\nu_i}_{\mu_j})=1\). Conversely if \(k\)~is least with \(\nu_k\ne\mu_k\), say \(\nu_k<\mu_k\), then \(\delta^{\nu_k}_{\mu_j}=0\) for all~\(j\), so \(\det(\delta^{\nu_i}_{\mu_j})=0\).
+\end{proof}
+
+\begin{rmk}
 If \(E\)~is \(n\)-dimensional, then \(\medeprod^p E=0\) for \(p>n\). Geometrically, this just reflects the fact that you can't fit a \(p\)-dimensional parallelepiped into the \(n\)-dimensional space.
 \end{rmk}
 
