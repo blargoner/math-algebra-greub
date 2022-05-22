@@ -2774,6 +2774,15 @@ Every object in this category can be obtained from the tensor algebra~\(\medtpro
 
 \subsection*{\S~5}
 \begin{rmk}
+For a linear map \(\varphi:E\to F\), the following diagram commutes:
+\begin{diagram}
+E			&\rTo^{\varphi}			&F\\
+\dTo<i		&						&\dTo>j\\
+\medtprod E	&\rTo_{\varphi_{\tprod}}&\medtprod F
+\end{diagram}
+\end{rmk}
+
+\begin{rmk}
 We have a functor from the category of vector spaces into the category of associative unital algebras, which sends vector spaces \(E\) and~\(F\) to the tensor algebras \(\medtprod E\) and~\(\medtprod F\), and which sends a linear map \(\varphi:E\to F\) to the unital algebra homomorphism \(\varphi_{\tprod}:\medtprod E\to\medtprod F\).
 \end{rmk}
 
@@ -2784,6 +2793,15 @@ where \(\ker\varphi\)~is in position \(i\)~of~\(p\) on the right.
 \end{rmk}
 
 \subsection*{\S~6}
+\begin{rmk}
+For a linear map \(\varphi:E\to E\), the following diagram commutes:
+\begin{diagram}
+E			&\rTo^{\varphi}					&E\\
+\dTo<i		&								&\dTo>i\\
+\medtprod E	&\rTo_{\theta_{\tprod}(\varphi)}&\medtprod E
+\end{diagram}
+\end{rmk}
+
 \begin{rmk}
 There is a connection between the derivation and the trace of a linear transformation. If \(E\)~is an \(n\)-dimensional vector space and \(\varphi:E\to E\) is linear, let \(\Delta:E^n\to\Gamma\) be a nonzero determinant function in~\(E\). Recall
 \[\tr\varphi\mult\Delta(x_1,\ldots,x_n)=\sum_{i=1}^n\Delta(x_1,\ldots,\varphi x_i,\ldots,x_n)\]
@@ -3491,6 +3509,15 @@ which is just~(1).
 
 \subsection*{\S~8}
 \begin{rmk}
+For a linear map \(\varphi:E\to F\), the following diagram commutes:
+\begin{diagram}
+\medtprod E	&\rTo^{\varphi_{\tprod}}&\medtprod F\\
+\dTo<{\pi_E}&						&\dTo>{\pi_F}\\
+\medeprod E	&\rTo_{\varphi_{\eprod}}&\medeprod F
+\end{diagram}
+\end{rmk}
+
+\begin{rmk}
 Let \(E\)~be an \(n\)-dimensional space and \(\Delta\) a determinant function in~\(E\) with \(\Delta(e_1,\ldots,e_n)=1\). If \(\varphi:E\to E\) is linear, then
 \begin{align*}
 \varphi_{\eprod}(\eprods{x}{1}{n})&=\eprods{\varphi x}{1}{n}\\
@@ -3505,6 +3532,15 @@ where \(\varphi_{\eprod}^{(n)}\)~is the restriction of~\(\varphi_{\eprod}\) to~\
 \end{rmk}
 
 \subsection*{\S~10}
+\begin{rmk}
+For a linear map \(\varphi:E\to E\), the following diagram commutes:
+\begin{diagram}
+\medtprod E	&\rTo^{\theta_{\tprod}(\varphi)}&\medtprod E\\
+\dTo<{\pi_E}&								&\dTo>{\pi_E}\\
+\medeprod E	&\rTo_{\theta_{\eprod}(\varphi)}&\medeprod E
+\end{diagram}
+\end{rmk}
+
 \begin{rmk}
 Let \(E\)~be an \(n\)-dimensional space and \(\Delta\) a determinant function in~\(E\) with \(\Delta(e_1,\ldots,e_n)=1\). If \(\varphi:E\to E\) is linear, then
 \begin{align*}
