@@ -50,6 +50,7 @@
 \newcommand{\tprod}{\otimes}
 \newcommand{\bigtprod}{\bigotimes}
 \newcommand{\medtprod}{{\textstyle\bigtprod}}
+\newcommand{\stprod}{\mathop{\widehat{\otimes}}}
 \newcommand{\eprod}{\wedge}
 \newcommand{\bigeprod}{\bigwedge}
 \newcommand{\medeprod}{{\textstyle\bigeprod}}
@@ -3689,6 +3690,24 @@ i(a)u^*&=i(a_2)i(a_1)(\eprods{x^*}{1}{q})\\
 where
 \[C_{\nu_1,\nu_2}=\sum_{\sigma}\sign{\sigma}\sprod{x^*_{\nu_{\sigma(1)}}}{a_1}\sprod{x^*_{\nu_{\sigma(2)}}}{a_2}=\det(\sprod{x^*_{\nu_i}}{a_j})=\sprod{x^*_{\nu_1}\eprod x^*_{\nu_2}}{a_1\eprod a_2}\qedhere\]
 \end{proof}
+
+\subsection*{\S~16}
+\begin{rmk}
+The formula~(5.45) expresses commutativity of the following diagram:
+\begin{diagram}
+\medeprod(E\dsum F)				&\rTo^{(\varphi\dsum\psi)_{\eprod}}			&\medeprod(E'\dsum F')\\
+\dTo<h>{\iso}					&											&\dTo>{h'}<{\iso}\\
+\medeprod E\stprod\medeprod F	&\rTo_{\varphi_{\eprod}\tprod\psi_{\eprod}}	&\medeprod E'\stprod\medeprod F'
+\end{diagram}
+For \(x\in E\) and \(y\in F\),
+\begin{align*}
+(h'\after(\varphi\dsum\psi)_{\eprod})(x+y)&=h'(\varphi x+\psi y)\\
+	&=\varphi x\tprod 1+1\tprod\psi y\\
+	&=(\varphi_{\eprod}\tprod\psi_{\eprod})(x\tprod 1+1\tprod y)\\
+	&=((\varphi_{\eprod}\tprod\psi_{\eprod})\after h)(x+y)
+\end{align*}
+It follows that the diagram commutes since \(\medeprod(E\dsum F)\) is generated as an algebra by the elements of \(E\dsum F\) and the scalar~\(1\).
+\end{rmk}
 
 \subsection*{\S~29}
 \begin{rmk} The formula~(5.81) follows from~(4.11) and a diagram in \S~1 above.
