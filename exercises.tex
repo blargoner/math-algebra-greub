@@ -62,6 +62,7 @@
 \newcommand{\gen}[1]{\langle#1\rangle}
 \newcommand{\sprod}[2]{\langle#1,#2\rangle}
 \newcommand{\bigsprod}[2]{\big\langle#1,#2\big\rangle}
+\newcommand{\ssprod}[2]{\langle\!\langle#1,#2\rangle\!\rangle}
 \newcommand{\oc}[1]{#1^{\perp}}
 \newcommand{\occ}[1]{#1^{\perp\perp}}
 \newcommand{\opp}[1]{#1^{\mathrm{opp}}}
@@ -3720,6 +3721,21 @@ To prove~(5.48), for \(u\in\medeprod^p E\) and \(v\in\medeprod F\) observe that
 	&=\bigl((\mu(a)\after\omega^q)\tprod\mu(b)\bigr)(u\tprod v)
 \end{align*}
 The result now follows by multilinearity.
+\end{rmk}
+
+\begin{rmk}
+We provide an alternative proof of~(5.51). For \(u=\eprods{x}{1}{p}\in\medeprod^p E\), \(v=\eprods{y}{1}{r}\in\medeprod^r F\), \(u^*=\eprods{x^*}{1}{q}\in\medeprod^q E^*\), and \(v^*=\eprods{y^*}{1}{s}\in\medeprod^s F^*\), let
+\[z_i=\begin{cases}
+x_i&\text{for }1\le i\le p\\
+y_{i-p}&\text{for }p<i\le p+r
+\end{cases}\]
+and dually for~\(z^*_j\). Then
+\[\ssprod{u^*\tprod v^*}{u\tprod v}=\sprod{\eprods{z^*}{1}{q+s}}{\eprods{z}{1}{p+r}}\]
+If \(p+r\ne q+s\), then the right-hand side is zero and~(5.51) holds, otherwise
+\[\sprod{\eprods{z^*}{1}{q+s}}{\eprods{z}{1}{p+r}}=\det\sprod{z^*_j}{z_i}\]
+Now \(\sprod{z^*_j}{z_i}=0\) if \(1\le i\le p\) and \(q<j\le q+s\), and also if \(p<i\le p+r\) and \(1\le j\le q\), so it follows that \(\det\sprod{z^*_j}{z_i}=0\) unless \(p=q\) and \(r=s\), in which case the determinant is block diagonal with
+\[\det\sprod{z^*_j}{z_i}=\det\sprod{x^*_j}{x_i}\mult\det\sprod{y^*_j}{y_i}\]
+Since \(\det\sprod{x^*_j}{x_i}=\sprod{u^*}{u}\) and \(\det\sprod{y^*_j}{y_i}=\sprod{v^*}{v}\), (5.51)~holds. The general case follows by multilinearity.
 \end{rmk}
 
 \subsection*{\S~29}
