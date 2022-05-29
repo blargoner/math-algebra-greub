@@ -217,6 +217,16 @@ are two direct sum decompositions of~\(E\) with \(E_i\subseteq F_i\) for \(i=1,2
 If \(x\in F_i\), then \(x=x_1+x_2\) with \(x_j\in E_j\). But then we must have \(x=x_i\) since \(x_j\in F_j\), so \(x\in E_i\).
 \end{proof}
 
+\begin{rmk}
+If \(E_1\) and~\(E_2\) are subspaces of~\(E\), then
+\[\frac{E_1+E_2}{E_1\sect E_2}\ =\ \frac{E_1}{E_1\sect E_2}\dsum\frac{E_2}{E_1\sect E_2}\]
+\end{rmk}
+\begin{proof}
+Let \(E_{12}=E_1\sect E_2\). Viewing both sides of the above equation as subspaces of~\(E/E_{12}\), it is clear that there is a sum since the canonical projection is linear. If \(\proj{x_1}=\proj{x_2}\) with \(x_1\in E_1\) and \(x_2\in E_2\), then
+\[\proj{x_1-x_2}=\proj{x_1}-\proj{x_2}=0\]
+so \(x_1-x_2\in E_{12}\), which implies that \(x_1=(x_1-x_2)+x_2\in E_{12}\), so \(\proj{x_1}=0\). It follows that \((E_1/E_{12})\sect(E_2/E_{12})=0\), so the sum is direct.
+\end{proof}
+
 \subsection*{\S~4}
 \begin{exer}[11]
 Let \(E\)~be a real vector space and \(E_1\)~a vector hyperplane in~\(E\) (that is, a subspace of codimension~\(1\)). Define an equivalence relation on \(E^1=E-E_1\) as follows: for \(x,y\in E^1\), \(x\equiv y\) if the segment
