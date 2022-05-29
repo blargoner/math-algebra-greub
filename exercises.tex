@@ -2800,6 +2800,48 @@ By a remark from \S~21 of chapter~1 above,
 where \(\ker\varphi\)~is in position \(i\)~of~\(p\) on the right.
 \end{rmk}
 
+\begin{rmk}
+For vector spaces \(E\) and~\(F\), the canonical injections
+\begin{diagram}
+E&\rTo^{i_1}&E\dsum F&\lTo^{i_2}&F
+\end{diagram}
+induce the homomorphisms
+\begin{diagram}
+\medtprod E&\rTo^{(i_1)_{\tprod}}&\medtprod(E\dsum F)&\lTo^{(i_2)_{\tprod}}&\medtprod F
+\end{diagram}
+which in turn induce a linear map \(f:(\medtprod E)\tprod(\medtprod F)\to\medtprod(E\dsum F)\) homogeneous of degree zero with
+\[f(u\tprod v)=(i_1)_{\tprod}(u)\tprod(i_2)_{\tprod}(v)\qquad(u\in\medtprod E,v\in\medtprod F)\]
+However \(f\)~is \emph{not} an algebra homomorphism if \(E\ne 0\) and \(F\ne 0\). Indeed, if \(x\in E\) with \(x\ne 0\) and \(y\in F\) with \(y\ne 0\), then \(x\) and~\(y\) are linearly independent in~\(E\dsum F\), so \(x\tprod y\) and \(y\tprod x\) are linearly independent in \(\medtprod(E\dsum F)\). If \(f\)~were a homomorphism, we would have
+\[y\tprod x=f(1\tprod y)\tprod f(x\tprod 1)=f((1\tprod y)(x\tprod 1))=f(x\tprod y)=x\tprod y\]
+which is a contradiction.
+
+In the other direction, the sum of the injections
+\begin{diagram}
+E&\rTo&\medtprod E&\rTo&(\medtprod E)\tprod(\medtprod F)
+\end{diagram}
+given by \(x\mapsto x\tprod 1\) and
+\begin{diagram}
+F&\rTo&\medtprod F&\rTo&(\medtprod E)\tprod(\medtprod F)
+\end{diagram}
+given by \(y\mapsto 1\tprod y\) induces a homomorphism \(h:\medtprod(E\dsum F)\to(\medtprod E)\tprod(\medtprod F)\). If
+\[u=\tprods{x}{1}{p}\in\medtprod^p E\qquad\text{and}\qquad v=\tprods{y}{1}{q}\in\medtprod^q F\]
+then
+\begin{align*}
+(h\after f)(u\tprod v)&=h(\tprods{x}{1}{p}\tprod\tprods{y}{1}{q})\\
+	&=h(x_1)\cdots h(x_p)h(y_1)\cdots h(y_q)\\
+	&=(x_1\tprod 1)\cdots(x_p\tprod 1)(1\tprod y_1)\cdots(1\tprod y_q)\\
+	&=(\tprods{x}{1}{p})\tprod(\tprods{y}{1}{q})\\
+	&=u\tprod v
+\end{align*}
+By multilinearity, it follows that \(h\after f=\iota\), so \(f\)~is injective and \(h\)~is surjective. However  for \(x\in E\) and \(y\in F\),
+\[h(y\tprod x)=(1\tprod y)(x\tprod 1)=x\tprod y=(x\tprod 1)(1\tprod y)=h(x\tprod y)\]
+so \(h\)~is not injective and \(f\)~is not surjective if \(E\ne 0\) and \(F\ne 0\).
+
+Intuitively it makes sense that \((\medtprod E)\tprod(\medtprod F)\) can be viewed as a subspace of~\(\medtprod(E\dsum F)\) since elements in the former can be represented in the latter, but not a subalgebra since factors from~\(E\) commute with factors from~\(F\) in products in the former but not in the latter.
+
+Similar remarks apply to \((\medtprod E)\stprod(\medtprod F)\) and~\(\medtprod(E\dsum F)\).
+\end{rmk}
+
 \subsection*{\S~6}
 \begin{rmk}
 For a linear map \(\varphi:E\to E\), the following diagram commutes:
