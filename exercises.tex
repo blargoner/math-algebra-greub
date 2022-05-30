@@ -294,6 +294,24 @@ E/E_2		&\rTo_{\proj{\varphi}}	&F/F_2		&&E/E_1			&\rTo_{\proj{\varphi}}	&F/F_1
 Here the isomorphisms are those induced by the canonical projections.
 \end{rmk}
 
+\begin{rmk}
+If \(E_1\) and~\(E_2\) are subspaces of~\(E\), then there is a natural isomorphism\footnote{Compare with the result for internal direct sums in chapter~I, \S~3 above.}
+\[\frac{E_1+E_2}{E_1\sect E_2}\ \iso\ \frac{E_1}{E_1\sect E_2}\dsum\frac{E_2}{E_1\sect E_2}\]
+\end{rmk}
+\begin{proof}
+We assume without loss of generality that \(E=E_1+E_2\), and we also write \(E_{12}=E_1\sect E_2\). Then we have the following commutative diagram:
+\begin{diagram}
+E			&\lTo^{i_1}	&E_1			&\rTo^{i_1}	&E			&\lTo^{i_2}	&E_2			&\rTo^{i_2}	&E\\
+\dTo<{\pi_2}&			&\dTo<{\rho_1}	&			&\dTo>{\rho}&			&\dTo>{\rho_2}	&			&\dTo>{\pi_1}\\
+E/E_2		&\lTo_{\iso}&E_1/E_{12}		&\rTo		&E/E_{12}	&\lTo		&E_2/E_{12}		&\rTo_{\iso}&E/E_1
+\end{diagram}
+The horizontal arrows on top are inclusions, the vertical arrows are canonical projections, and the horizontal arrows on bottom are induced. Define
+\[f=\proj{\bigl((\proj{\pi_2 i_1})^{-1}\pi_2,(\proj{\pi_1 i_2})^{-1}\pi_1\bigr)}:E/E_{12}\to(E_1/E_{12})\dsum(E_2/E_{12})\]
+where the bars denote induced maps and the parentheses denote pairing, and
+\[g=\bigl[\proj{\rho i_1},\proj{\rho i_2}\bigr]:(E_1/E_{12})\dsum(E_2/E_{12})\to E/E_{12}\]
+where the brackets denote copairing. It is easy to verify that \(f\after g=\iota\) and \(g\after f=\iota\), so \(f\) and~\(g\) are isomorphisms.
+\end{proof}
+
 \subsection*{\S~5}
 \begin{rmk}
 The definition of dual space is fundamentally \emph{symmetrical} between \(E\) and~\(E^*\), as is the definition of dual mapping between \(\varphi\) and~\(\varphi^*\). This symmetry often allows us to use bidirectional reasoning and derive two theorems from one proof. For example, (2.48) actually follows from~(2.47) by symmetry of \(\varphi\) and~\(\varphi^*\). The proof of Proposition~I in subsection~2.23 exploits symmetry, as do other proofs in the book.
