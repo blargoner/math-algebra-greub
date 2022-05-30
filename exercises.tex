@@ -3377,9 +3377,9 @@ This diagram generalizes the diagram in \S~2 above.
 \subsection*{\S~8}
 \begin{exer}[1]
 If we define a product in~\(X(E)\) by
-\[u\mult v=\pi_A(u\tprod v)\qquad u,v\in X(E)\]
+\[u\mult v=\pi_A(u\tprod v)\qquad(u,v\in X(E))\]
 then \(X(E)\)~becomes a graded algebra and \(\rho\)~an algebra isomorphism, where the elements of~\(X^p(E)\) are homogeneous of degree~\(p\). Moreover,
-\[\pi_A u\mult\pi_A v=\pi_A(u\tprod v)\qquad u,v\in\medtprod E\]
+\[\pi_A u\mult\pi_A v=\pi_A(u\tprod v)\qquad(u,v\in\medtprod E)\]
 \end{exer}
 \begin{proof}
 Clearly the product makes~\(X(E)\) into a graded algebra. By (4.17) and~(4.15),
@@ -3817,6 +3817,26 @@ If \(p+r\ne q+s\), then the right-hand side is zero and~(5.51) holds, otherwise
 Now \(\sprod{z^*_j}{z_i}=0\) if \(1\le i\le p\) and \(q<j\le q+s\), and also if \(p<i\le p+r\) and \(1\le j\le q\), so it follows that \(\det\sprod{z^*_j}{z_i}=0\) unless \(p=q\) and \(r=s\), in which case the determinant is block diagonal with
 \[\det\sprod{z^*_j}{z_i}=\det\sprod{x^*_j}{x_i}\mult\det\sprod{y^*_j}{y_i}\]
 Since \(\det\sprod{x^*_j}{x_i}=\sprod{u^*}{u}\) and \(\det\sprod{y^*_j}{y_i}=\sprod{v^*}{v}\), (5.51)~holds. The general case follows by multilinearity.
+\end{rmk}
+
+\subsection*{\S~21}
+\begin{exer}[1]
+In the exterior algebra~\(\medeprod E\),
+\[u\eprod v=\pi_{\eprod}(u\tprod v)\qquad(u,v\in\medeprod E)\]
+where \(\pi_1\) and~\(\pi_2\) are the canonical projections of \(E\dsum E\) onto~\(E\) and \(\pi=\pi_1+\pi_2\).
+\end{exer}
+\begin{proof}
+By~(5.52), interchanging \(E\) and a dual space~\(E^*\) and noting that
+\[\Delta^{\eprod}=(\Delta^*)_{\eprod}=(i_1^*+i_2^*)_{\eprod}=(\pi_1+\pi_2)_{\eprod}=\pi_{\eprod}\qedhere\]
+\end{proof}
+\begin{rmk}
+This shows that \(\pi_{\eprod}\)~is the structure map for~\(\medeprod E\). If \(\mu\)~is the structure map for~\(\medtprod E\), then the following diagram commutes:
+\begin{diagram}
+\medtprod E\stprod\medtprod E	&\rTo^{\mu}			&\medtprod E\\
+\dTo<{\pi\tprod\pi}				&					&\dTo>{\pi}\\
+\medeprod E\stprod\medeprod E	&\rTo_{\pi_{\eprod}}&\medeprod E
+\end{diagram}
+Also \(\pi_{\eprod}\)~is isomorphic to~\(\pi_A\) on~\(X(E)\).\footnote{See problem~1 in chapter~4, \S~8 above.}
 \end{rmk}
 
 \subsection*{\S~29}
