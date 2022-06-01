@@ -836,6 +836,15 @@ This implies \(x^*\in\oc{F}\), which implies \(\sprod{x^*}{x}=0\), which in turn
 \end{proof}
 
 \subsection*{\S~2}
+\begin{rmk}
+Let \(A=\sum_k A_k\) be a positively graded algebra. If \(b\in A_q\) with \(b\ne 0\) and
+\[b=\sum_i u_ia_i\qquad(u_i\in A,a_i\in A_p)\]
+then \(q\ge p\) and we may assume that \(u_i\in A_{q-p}\) for all~\(i\).
+\end{rmk}
+\begin{proof}
+By bilinearity of the algebra multiplication, we may assume that each~\(u_i\) is homogeneous, say \(u_i\in A_{k_i}\). Since \(\deg b=q\) and \(\deg(u_ia_i)=k_i+p\), it follows that \(\sum_{k_i+p\ne q}u_ia_i=0\). On the other hand since \(b\ne 0\), there is at least one~\(i\) with \(k_i+p=q\), so \(q\ge p\).
+\end{proof}
+
 \begin{exer}[1]
 Let \(A\)~be a \(G\)-graded algebra. If \(x\in A\) is an invertible element homogeneous of degree~\(k\), then \(x^{-1}\)~is homogeneous of degree~\(-k\). If \(A\)~is nonzero and positively graded, then \(k=0\).
 \end{exer}
