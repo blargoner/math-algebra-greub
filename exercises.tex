@@ -39,6 +39,7 @@
 
 \newcommand{\union}{\cup}
 \newcommand{\sect}{\cap}
+\newcommand{\bigsect}{\bigcap}
 \newcommand{\after}{\circ}
 \newcommand{\join}{\vee}
 \newcommand{\meet}{\wedge}
@@ -3888,6 +3889,11 @@ The result now follows by linearity.
 \subsection*{\S~23}
 \begin{rmk}
 By (5.54) and a remark in \S~15 above, the elements of~\(I_{E_1}\) are sums of wedge products with \emph{at least one factor from~\(E_1\)} followed by zero or more factors from~\(E_2\), so (5.55)~follows. Since any element of~\(\medeprod E\) is equal to such an element plus a sum of wedge products with factors from~\(E_2\) (zero factors from~\(E_1\)), (5.56)~follows.
+\end{rmk}
+
+\subsection*{\S~25}
+\begin{rmk}
+In the proof of the second part of the corollary to Proposition~5.25.2, if \(E\)~has infinite dimension, then \(I^q\ne 0\) for each~\(q\) (since for example there are \(q\)~linearly independent vectors in~\(E\), so \(\medeprod^q E\ne 0\)). If there were a minimal ideal~\(I\) in~\(\medeprod E\), then we would have \(0\ne I\subseteq I^q\) for all~\(q\), hence \(0\ne I\subseteq\bigsect_q I^q\). Since \(\bigsect_q I^q=0\) (which is equally true when \(E\)~has finite dimension), it follows that there is no such minimal ideal~\(I\).
 \end{rmk}
 
 \subsection*{\S~29}
