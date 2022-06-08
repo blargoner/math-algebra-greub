@@ -3896,6 +3896,22 @@ By (5.54) and a remark in \S~15 above, the elements of~\(I_{E_1}\) are sums of w
 In the proof of the second part of the corollary to Proposition~5.25.2, if \(E\)~has infinite dimension, then \(I^q\ne 0\) for each~\(q\) (since for example there are \(q\)~linearly independent vectors in~\(E\), so \(\medeprod^q E\ne 0\)). If there were a minimal ideal~\(I\) in~\(\medeprod E\), then we would have \(0\ne I\subseteq I^q\) for all~\(q\), hence \(0\ne I\subseteq\bigsect_q I^q\). Since \(\bigsect_q I^q=0\) (which is equally true when \(E\)~has finite dimension), it follows that there is no such minimal ideal~\(I\).
 \end{rmk}
 
+\subsection*{\S~26}
+\begin{rmk}
+We prove that
+\[N(E)=\begin{cases}
+0&\text{if }\dim E=\infty\\
+\medeprod^n E&\text{if }\dim E=n
+\end{cases}\]
+First if \(u\in N(E)\), then \(u=\sum_p u_p\) with \(u_p\in N(E)\sect\medeprod^p E\) since \(N(E)\)~is a graded ideal. We claim that \(u_p=0\) for all \(p<\dim E\). We know that \(u_p\in\medeprod^p F\subseteq\medeprod^p E\) for some \(m\)-dimensional subspace~\(F\) of~\(E\) with \(p<m\). Let \(e_1,\ldots,e_m\) be a basis of~\(F\) and write
+\[u_p=\sum_{<}\lambda^{\nu_1,\ldots,\nu_p}\eprods{e}{\nu_1}{\nu_p}\]
+For any given \(1\le\mu_1<\cdots<\mu_p\le m\), fix \(1\le\mu\le m\) with \(\mu\ne\mu_i\) for all \(1\le i\le p\). Since \(u_p\in N(E)\),
+\[0=e_{\mu}\eprod u_p=\sum_{<}\lambda^{\nu_1,\ldots,\nu_p}e_{\mu}\eprod\eprods{e}{\nu_1}{\nu_p}\]
+Now the \(e_{\mu}\eprod\eprods{e}{\nu_1}{\nu_p}\) that are nonzero are linearly independent in~\(\medeprod^{p+1}F\). These include \(e_{\mu}\eprod\eprods{e}{\mu_1}{\mu_p}\), so we must have \(\lambda^{\mu_1,\ldots,\mu_p}=0\). Since the~\(\mu_i\) were arbitrary, it follows that \(u_p=0\). Now if \(\dim E=\infty\) this implies \(u=0\), and if \(\dim E=n\) this implies \(u=u_n\in\medeprod^n E\). Conversely in the latter case, if we take \(F=E\) and \(x=\sum_i\lambda^i e_i\) arbitrary, then
+\[x\eprod\eprods{e}{1}{n}=\sum_i\lambda^i e_i\eprod\eprods{e}{1}{n}=0\]
+so \(\medeprod^n E\subseteq N(E)\), completing the proof.
+\end{rmk}
+
 \subsection*{\S~29}
 \begin{rmk} The formula~(5.81) follows from~(4.11) and a diagram in \S~1 above.
 \end{rmk}
