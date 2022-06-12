@@ -82,6 +82,7 @@
 \newcommand{\sign}[1]{\varepsilon_{#1}}
 
 \newarrow{Dashto}{}{dash}{}{dash}>
+\newarrow{Equalto}{}={}={}
 
 % Theorems
 \theoremstyle{definition}
@@ -3910,6 +3911,17 @@ For any given \(1\le\mu_1<\cdots<\mu_p\le m\), fix \(1\le\mu\le m\) with \(\mu\n
 Now the \(e_{\mu}\eprod\eprods{e}{\nu_1}{\nu_p}\) that are nonzero are linearly independent in~\(\medeprod^{p+1}F\). These include \(e_{\mu}\eprod\eprods{e}{\mu_1}{\mu_p}\), so we must have \(\lambda^{\mu_1,\ldots,\mu_p}=0\). Since the~\(\mu_i\) were arbitrary, it follows that \(u_p=0\). Now if \(\dim E=\infty\) this implies \(u=0\), and if \(\dim E=n\) this implies \(u=u_n\in\medeprod^n E\). Conversely in the latter case, if we take \(F=E\) and \(x=\sum_i\lambda^i e_i\) arbitrary, then
 \[x\eprod\eprods{e}{1}{n}=\sum_i\lambda^i e_i\eprod\eprods{e}{1}{n}=0\]
 so \(\medeprod^n E\subseteq N(E)\), completing the proof.
+
+The fact that \(N(E)=\medeprod^n E\) if \(\dim E=n\) also follows from Proposition~5.26.1 by taking \(F=E\) and \(p=n\).
+\end{rmk}
+
+\begin{rmk}
+If \(E\)~is \(n\)-dimensional, then we have the following inclusions:
+\begin{diagram}
+N(\medeprod^0 E)	&\subseteq	&N(\medeprod^1 E)	&\subseteq	&\cdots	&\subseteq	&N(\medeprod^n E)	&\subseteq	&N(\medeprod^{n+1}E)\\
+\dEqualto			&			&\dEqualto			&			&		&			&\dEqualto			&			&\dEqualto\\
+I_{\bigeprod^{n+1}E}&\subseteq	&I_{\bigeprod^n E}	&\subseteq	&\cdots	&\subseteq	&I_{\bigeprod^1 E}	&\subseteq	&I_{\bigeprod^0 E}
+\end{diagram}
 \end{rmk}
 
 \subsection*{\S~29}
