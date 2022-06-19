@@ -3671,6 +3671,42 @@ From~(5.36), we see that the following diagram commutes:
 \end{diagram}
 \end{rmk}
 
+\begin{exer}[2]
+Let \(a\in\medeprod^k E\) where \(k\)~is odd. Define \(\theta:\medeprod E\to\medeprod E\) by
+\[\theta u=\begin{cases}
+a\eprod u&\text{if \(u\in\medeprod^p E\), \(p\)~odd}\\
+0&\text{if \(u\in\medeprod^p E\), \(p\)~even}
+\end{cases}\]
+Then \(\theta\)~is a derivation homogeneous of degree~\(k\) in~\(\medeprod E\).
+\end{exer}
+\begin{proof}
+It is clear that \(\theta\)~is linear and homogeneous of degree~\(k\). We must prove
+\[\theta(u\eprod v)=\theta u\eprod v+u\eprod\theta v\qquad(u,v\in\medeprod E)\tag{1}\]
+By multilinearity, we may assume \(u\in\medeprod^p E\) and \(v\in\medeprod^q E\), so \(u\eprod v\in\medeprod^{p+q}E\). We proceed by cases on the parities of \(p\) and~\(q\).
+
+If \(p\) and~\(q\) are even, then \(p+q\)~is even and both sides of~(1) are zero.
+
+If \(p\)~is even and \(q\)~is odd, then \(p+q\)~is odd and
+\begin{align*}
+\theta u\eprod v+u\eprod\theta v&=0\eprod v+u\eprod a\eprod v\\
+	&=a\eprod u\eprod v\\
+	&=\theta(u\eprod v)
+\end{align*}
+
+If \(p\)~is odd and \(q\)~is even, then the proof is similar to the previous case.
+
+If \(p\) and~\(q\) are odd, then \(p+q\)~is even and \(pk\)~is odd, so
+\begin{align*}
+\theta u\eprod v+u\eprod\theta v&=a\eprod u\eprod v+u\eprod a\eprod v\\
+	&=a\eprod u\eprod v-a\eprod u\eprod v\\
+	&=0\\
+	&=\theta(u\eprod v)\qedhere
+\end{align*}
+\end{proof}
+\begin{rmk}
+It follows from Proposition~5.27.2 that every derivation of odd degree in~\(\medeprod E\) has this form.
+\end{rmk}
+
 \begin{exer}[8]
 If \(\psi:E\to E\) is a linear transformation with \(\dim E=n\), then there exist linear transformations \(\psi_i^{(n)}:\medeprod^n E\to\medeprod^n E\) unique such that
 \[(\psi-\lambda\iota)_{\eprod}^{(n)}=\sum_{i=0}^n\psi_i^{(n)}\lambda^{n-i}\qquad\lambda\in\Gamma\]
