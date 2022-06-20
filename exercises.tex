@@ -307,7 +307,7 @@ E			&\lTo^{i_1}	&E_1			&\rTo^{i_1}			&E			&\lTo^{i_2}			&E_2			&\rTo^{i_2}	&E\\
 \dTo<{\pi_2}&			&\dTo<{\rho_1}	&					&\dTo>{\rho}&					&\dTo>{\rho_2}	&			&\dTo>{\pi_1}\\
 E/E_2		&\lTo_{\iso}&E_1/E_{12}		&\rTo_{\proj{i_1}}	&E/E_{12}	&\lTo_{\proj{i_2}}	&E_2/E_{12}		&\rTo_{\iso}&E/E_1
 \end{diagram}
-The horizontal arrows on top are inclusions, the vertical arrows are canonical projections, and the horizontal arrows on bottom are induced. Define
+The horizontal arrows on top are inclusions, the vertical arrows are canonical projections, and the horizontal arrows on bottom are induced. Note \(\proj{i_1}\) and~\(\proj{i_2}\) are also just inclusions. Define
 \[f=\proj{\bigl((\proj{\pi_2 i_1})^{-1}\pi_2,(\proj{\pi_1 i_2})^{-1}\pi_1\bigr)}:E/E_{12}\to(E_1/E_{12})\dsum(E_2/E_{12})\]
 where the bars denote induced maps and the parentheses denote pairing, and
 \[g=\bigl[\proj{i_1},\proj{i_2}\bigr]:(E_1/E_{12})\dsum(E_2/E_{12})\to E/E_{12}\]
@@ -3895,13 +3895,15 @@ Also \(\pi_{\eprod}\)~is isomorphic to~\(\pi_A\) on~\(X(E)\).\footnote{See probl
 \begin{exer}[2]
 Let \(E=E_1+E_2\) and \(E_{12}=E_1\sect E_2\). For \(\proj{E}=E/E_{12}\), \(\proj{E_1}=E_1/E_{12}\), and \(\proj{E_2}=E_2/E_{12}\), the following diagram commutes:
 \begin{diagram}
-\medeprod E_1\stprod\medeprod E_2				&					&\rTo^{g}								&							&\medeprod E\\
+\medeprod E_1\stprod\medeprod E_2				&\rTo^{f}_{\iso}	&\medeprod(E_1\dsum E_2)				&\rTo^{\varphi_{\eprod}}	&\medeprod E\\
 \dTo<{(\rho_1)_{\eprod}\tprod(\rho_2)_{\eprod}}	&					&										&							&\dTo>{\rho_{\eprod}}\\
-\medeprod\proj{E_1}\stprod\medeprod\proj{E_2}	&\rTo_{f}^{\iso}	&\medeprod(\proj{E_1}\dsum\proj{E_2})	&\rTo_{\psi_{\eprod}}^{\iso}&\medeprod\proj{E}
+\medeprod\proj{E_1}\stprod\medeprod\proj{E_2}	&\rTo_{g}^{\iso}	&\medeprod(\proj{E_1}\dsum\proj{E_2})	&\rTo_{\psi_{\eprod}}^{\iso}&\medeprod\proj{E}
 \end{diagram}
-Here \(f\) and~\(g\) are defined as in~(5.42) (although \(g\)~is not necessarily injective), the \(\rho\)'s are canonical projections, and
+Here \(f\) and~\(g\) are defined as in~(5.42),
+\[\varphi=[i_1,i_2]:E_1\dsum E_2\to E\]
+where \(i_1:E_1\to E\) and \(i_2:E_2\to E\) are the inclusions,
 \[\psi=[\proj{i_1},\proj{i_2}]:\proj{E_1}\dsum\proj{E_2}\to\proj{E}\]
-is the natural isomorphism described in chapter~II, \S~4 of~\cite{greub1} above.
+is the induced isomorphism described in chapter~II, \S~4 of~\cite{greub1} above, and the \(\rho\)'s are canonical projections.
 \end{exer}
 \begin{proof}
 By definition of~\(\psi\), this diagram of canonical injections commutes:
@@ -3912,13 +3914,13 @@ By definition of~\(\psi\), this diagram of canonical injections commutes:
 \end{diagram}
 Hence for \(u_1\in\medeprod E_1\) and \(u_2\in\medeprod E_2\),
 \begin{align*}
-(\rho_{\eprod}\after g)(u_1\tprod u_2)&=\rho_{\eprod}\bigl((i_1)_{\eprod}(u_1)\eprod(i_2)_{\eprod}(u_2)\bigr)\\
+(\rho_{\eprod}\after\varphi_{\eprod}\after f)(u_1\tprod u_2)&=\rho_{\eprod}\bigl((i_1)_{\eprod}(u_1)\eprod(i_2)_{\eprod}(u_2)\bigr)\\
 	&=(\rho\after i_1)_{\eprod}(u_1)\eprod(\rho\after i_2)_{\eprod}(u_2)\\
 	&=(\proj{i_1}\after\rho_1)_{\eprod}(u_1)\eprod(\proj{i_2}\after\rho_2)_{\eprod}(u_2)\\
 	&=(\psi\after j_1\after\rho_1)_{\eprod}(u_1)\eprod(\psi\after j_2\after\rho_2)_{\eprod}(u_2)\\
 	&=\psi_{\eprod}\bigl[(j_1)_{\eprod}\bigl((\rho_1)_{\eprod}(u_1)\bigr)\eprod(j_2)_{\eprod}\bigl((\rho_2)_{\eprod}(u_2)\bigr)\bigr]\\
-	&=\psi_{\eprod}\bigl[f\bigl((\rho_1)_{\eprod}(u_1)\tprod(\rho_2)_{\eprod}(u_2)\bigr)\bigr]\\
-	&=\bigl[\psi_{\eprod}\after f\after\bigl((\rho_1)_{\eprod}\tprod(\rho_2)_{\eprod}\bigr)\bigr](u_1\tprod u_2)
+	&=\psi_{\eprod}\bigl[g\bigl((\rho_1)_{\eprod}(u_1)\tprod(\rho_2)_{\eprod}(u_2)\bigr)\bigr]\\
+	&=\bigl[\psi_{\eprod}\after g\after\bigl((\rho_1)_{\eprod}\tprod(\rho_2)_{\eprod}\bigr)\bigr](u_1\tprod u_2)
 \end{align*}
 The result now follows by linearity.
 \end{proof}
