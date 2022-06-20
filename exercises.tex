@@ -3970,6 +3970,30 @@ I_{\bigeprod^{n+1}E}&\subseteq	&I_{\bigeprod^n E}	&\subseteq	&\cdots	&\subseteq	
 In the corollary to Proposition~5.26.1, note that \(N(y)=I_y\), so it follows that \(u\)~is divisible by~\(y\) if and only if \(y\eprod u=0\) for \emph{any} \(u\in\medeprod E\).
 \end{rmk}
 
+\subsection*{\S~27}
+\begin{rmk}
+If \(\varphi:E\to\medeprod E\) is linear and \(F\)~is a finite-dimensional subspace of~\(E\) such that
+\[y\eprod\varphi y=0\qquad(y\in F)\]
+then there is \(v\in\medeprod E\) with
+\[\varphi y=y\eprod v\qquad(y\in F)\]
+If \(\varphi\)~is homogeneous of degree~\(k\) (\(\im\varphi\subseteq\medeprod^{k+1}E\)), then we may take \(v\in\medeprod^k E\).
+\end{rmk}
+\begin{proof}
+By induction on \(m=\dim F\). If \(m=0\), then we can take \(v=0\), say. If \(m\ge 1\) and the result holds for subspaces of dimension \(m-1\), fix \(a\in F\) with \(a\ne 0\). Since \(a\eprod\varphi a=0\), it follows from the corollary to Proposition~5.26.1 that there is \(c\in\medeprod E\) with \(\varphi a=a\eprod c\).
+
+Define \(\sigma:E\to\medeprod E\) by \(\sigma x=\varphi x-x\eprod c\). Then \(\sigma a=0\), \(y\eprod\sigma y=0\) for all \(y\in F\), and \(a\eprod\sigma y=0\) for all \(y\in F\), as in~(5.70).
+
+Write \(E=\gen{a}\dsum E'\) and \(F=\gen{a}\dsum F'\). Since \(\medeprod E=\medeprod\gen{a}\stprod\medeprod E'\), there are linear maps \(\sigma_i:E\to\medeprod E'\) (\(i=0,1\)) with
+\[\sigma x=1\tprod\sigma_0 x+a\tprod\sigma_1 x\qquad(x\in E)\]
+Taking \(x=y\in F\) and multiplying both sides by~\(a\), it follows that \(\sigma_0 y=0\) for all \(y\in F\), so \(\sigma y=a\tprod\sigma_1 y\) for all \(y\in F\). A simple computation then shows that \(y\eprod\sigma_1 y=0\) for all \(y\in F\), and hence in particular for \(y\in F'\).
+
+By induction, there is \(v'\in\medeprod E\) with \(\sigma_1 y'=y'\eprod v'\) for all \(y'\in F'\). For \(y=\lambda a+y'\) with \(\lambda\in\Gamma\) and \(y'\in F'\), it follows that \(\sigma y=-y\eprod(a\eprod v')\), as in~(5.73). Therefore
+\[\varphi y=y\eprod c+\sigma y=y\eprod(c-a\eprod v')\qquad(y\in F)\]
+The result now follows by taking \(v=c-a\eprod v'\).
+
+If \(\im\varphi\subseteq\medeprod^{k+1} E\), the refinement follows by projecting onto~\(\medeprod^{k+1}E\) as in the proof of the corollary to Proposition~5.27.1.
+\end{proof}
+
 \subsection*{\S~29}
 \begin{rmk} The formula~(5.81) follows from~(4.11) and a diagram in \S~1 above.
 \end{rmk}
