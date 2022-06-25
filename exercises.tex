@@ -3433,6 +3433,7 @@ If \(E\)~is finite-dimensional, it follows that these diagrams commute:
 \dTo<{\iso}		&				&\dTo>{\iso}	&&\dTo<{\iso}		&				&\dTo>{\iso}\\
 T^p(E)			&\rTo_{\sigma}	&T^p(E)			&&T^p(E)			&\rTo_A			&T^p(E)
 \end{diagram}
+As with~\(\pi_A\), the factor~\(1/p!\) in the definition of~\(A\) on~\(T^p(E)\) ensures that \(A\)~is a projection operator (\(A^2=A\)).
 \end{rmk}
 
 \begin{exer}[1]
@@ -3496,10 +3497,19 @@ This multiplication makes~\(\medeprod E\) into a \emph{graded algebra} where the
 \end{rmk}
 
 \begin{rmk}
+The factor~\(1/k!\) in the definition of~\(u^k\) kills off coefficients arising in
+\[\underbrace{u\eprod\cdots\eprod u}_k\]
+For example if \(u=e_1\eprod e_2+e_3\eprod e_4\) where \(e_i\in E\), then
+\[u\eprod u=2e_1\eprod e_2\eprod e_3\eprod e_4\]
+so
+\[u^2=\frac{1}{2}u\eprod u=e_1\eprod e_2\eprod e_3\eprod e_4\]
+\end{rmk}
+
+\begin{rmk}
 If \(u\in\medeprod^p E\) and \(v\in\medeprod^q E\) with \(pq\)~even, then
 \begin{align*}
 (u+v)^k&=\frac{1}{k!}\underbrace{(u+v)\eprod\cdots\eprod(u+v)}_k\\
-	&=\frac{1}{k!}\sum_{i+j=k}\frac{k!}{i!(k-i)!}\underbrace{u\eprod\cdots\eprod u}_i\eprod\underbrace{v\eprod\cdots\eprod v}_j\\
+	&=\frac{1}{k!}\sum_{i+j=k}\frac{k!}{i!j!}\underbrace{u\eprod\cdots\eprod u}_i\eprod\underbrace{v\eprod\cdots\eprod v}_j\\
 	&=\sum_{i+j=k}\frac{1}{i!j!}(i!\,u^i)\eprod(j!\,v^j)\\
 	&=\sum_{i+j=k}u^i\eprod v^j
 \end{align*}
