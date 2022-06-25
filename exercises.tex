@@ -53,6 +53,7 @@
 \newcommand{\medtprod}{{\textstyle\bigtprod}}
 \newcommand{\stprod}{\mathop{\widehat{\otimes}}}
 \newcommand{\eprod}{\wedge}
+\newcommand{\eprodf}{\mathop{\tilde{\wedge}}}
 \newcommand{\bigeprod}{\bigwedge}
 \newcommand{\medeprod}{{\textstyle\bigeprod}}
 \newcommand{\fprod}{\bigcdot{0.5}}
@@ -3616,6 +3617,17 @@ L&=\sum_{\nu_1<\cdots<\nu_p}\sum_{\sigma}\xi_1^{\nu_{\sigma(1)}}\cdots\,\xi_p^{\
 Since \(\tau\sigma\)~runs over all permutations as~\(\tau\) does, we have
 \[L=\sum_{<}\Bigl(\sum_{\sigma}\sign{\sigma}\xi_1^{\nu_{\sigma(1)}}\cdots\,\xi_p^{\nu_{\sigma(p)}}\Bigr)\Bigl(\sum_{\varrho}\sign{\varrho}\eta^1_{\nu_{\varrho(1)}}\cdots\,\eta^p_{\nu_{\varrho(p)}}\Bigr)\]
 which is just~(1).
+\end{proof}
+
+\begin{exer}[6]
+Let \((\medeprod E,\eprod)\) be an exterior algebra over~\(E\). If we define
+\[u\eprodf v=\frac{(p+q)!}{p!q!}u\eprod v\qquad(u\in\medeprod^p E,v\in\medeprod^q E)\]
+and extend the definition to~\(\medeprod E\) through bilinearity, then the resulting algebra \((\tilde{\medeprod}E,\eprodf)\) is also an exterior algebra over~\(E\).
+\end{exer}
+\begin{proof}
+Define \(f:\medeprod E\to\tilde{\medeprod}E\) by \(f(u)=p!u\) for \(u\in\medeprod^p E\). Then clearly \(f\)~is a linear isomorphism homogeneous of degree zero, and
+\[f(u\eprod v)=(p+q)!\,u\eprod v=\frac{(p+q)!}{p!q!}(p!u)\eprod(q!v)=f(u)\eprodf f(v)\]
+for \(u\in\medeprod^p E\) and \(v\in\medeprod^q E\), so \(f\)~is a graded algebra isomorphism. It follows that \((\tilde{\medeprod}E,\eprodf)\) satisfies the universal property of an exterior algebra over~\(E\).
 \end{proof}
 
 \subsection*{\S~8}
