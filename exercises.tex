@@ -56,6 +56,7 @@
 \newcommand{\eprodf}{\mathop{\tilde{\wedge}}}
 \newcommand{\bigeprod}{\bigwedge}
 \newcommand{\medeprod}{{\textstyle\bigeprod}}
+\newcommand{\medeprodf}{\tilde{\medeprod}}
 \newcommand{\fprod}{\bigcdot{0.5}}
 \newcommand{\tdot}{\bigcdot{0.75}}
 \newcommand{\adot}{\bigcdot{0.75}}
@@ -3622,15 +3623,15 @@ which is just~(1).
 \begin{exer}[6]
 Let \((\medeprod E,\eprod)\) be an exterior algebra over~\(E\). If we define
 \[u\eprodf v=\frac{(p+q)!}{p!q!}u\eprod v\qquad(u\in\medeprod^p E,v\in\medeprod^q E)\]
-and extend the definition to~\(\medeprod E\) through bilinearity, then the resulting algebra \((\tilde{\medeprod}E,\eprodf)\) is also an exterior algebra over~\(E\).
+and extend the definition to~\(\medeprod E\) through bilinearity, then the resulting algebra \((\medeprodf E,\eprodf)\) is also an exterior algebra over~\(E\).
 \end{exer}
 \begin{proof}
-Define \(f:\medeprod E\to\tilde{\medeprod}E\) by \(f(u)=p!u\) for \(u\in\medeprod^p E\). Then clearly \(f\)~is a linear isomorphism homogeneous of degree zero, and
+Define \(f:\medeprod E\to\medeprodf E\) by \(f(u)=p!u\) for \(u\in\medeprod^p E\). Then clearly \(f\)~is a linear isomorphism homogeneous of degree zero, and
 \[f(u\eprod v)=(p+q)!\,u\eprod v=\frac{(p+q)!}{p!q!}(p!u)\eprod(q!v)=f(u)\eprodf f(v)\]
-for \(u\in\medeprod^p E\) and \(v\in\medeprod^q E\), so \(f\)~is a graded algebra isomorphism. It follows that \((\tilde{\medeprod}E,\eprodf)\) satisfies the universal property of an exterior algebra over~\(E\).
+for \(u\in\medeprod^p E\) and \(v\in\medeprod^q E\), so \(f\)~is a graded algebra isomorphism. It follows that \((\medeprodf E,\eprodf)\) satisfies the universal property of an exterior algebra over~\(E\).
 \end{proof}
 \begin{rmk}
-If \(E,E^*\) are dual spaces, then \(\tilde{\medeprod}E,\tilde{\medeprod}E^*\) are dual graded algebras under the scalar product induced by~\(f\), which is just the scalar product in~(5.10) with \(\eprod\) replaced by~\(\eprodf\).
+If \(E,E^*\) are dual spaces, then \(\medeprodf E,\medeprodf E^*\) are dual graded algebras under the scalar product induced by~\(f\), which is just the scalar product in~(5.10) with \(\eprod\) replaced by~\(\eprodf\).
 \end{rmk}
 
 \subsection*{\S~8}
@@ -3742,6 +3743,28 @@ If \(p\) and~\(q\) are odd, then \(p+q\)~is even and \(pk\)~is odd, so
 \end{proof}
 \begin{rmk}
 It follows from Proposition~5.27.2 that every derivation of odd degree in~\(\medeprod E\) has this form.
+\end{rmk}
+
+\begin{exer}[6]
+Let \(\Omega\)~be an antiderivation of degree~\(-1\) in~\(\medeprod E\) (with respect to the canonical involution). If \(\widetilde{\Omega}\) is defined by \(\widetilde{\Omega}u=p^{-1}\mult\Omega u\) for \(u\in\medeprod^p E\) , where \(p^{-1}=0\) for \(p=0\), then \(\widetilde{\Omega}\)~is an antiderivation in~\(\medeprodf E\).\footnote{See problem~5.7.6 for the definition of~\(\medeprodf E\).}
+\end{exer}
+\begin{proof}
+Clearly \(\widetilde{\Omega}\)~is linear. We must prove
+\[\widetilde{\Omega}(u\eprodf v)=\widetilde{\Omega}u\eprodf v+(-1)^pu\eprodf\widetilde{\Omega}v\qquad(u\in\medeprod^p E,v\in\medeprod^q E)\]
+We have
+\begin{align*}
+\widetilde{\Omega}(u\eprodf v)&=\frac{1}{p+q}\Omega(u\eprodf v)\\
+	&=\frac{(p+q-1)!}{p!q!}\Omega(u\eprod v)\\
+	&=\frac{(p+q-1)!}{p!q!}\bigl(\Omega u\eprod v+(-1)^pu\eprod\Omega v\bigr)
+\end{align*}
+On the other hand
+\[\widetilde{\Omega}u\eprodf v=\frac{1}{p}\Omega u\eprodf v=\frac{(p+q-1)!}{p!q!}\Omega u\eprod v\]
+and
+\[u\eprodf\widetilde{\Omega}v=\frac{1}{q}u\eprodf\Omega v=\frac{(p+q-1)!}{p!q!}u\eprod\Omega v\]
+so the result follows.
+\end{proof}
+\begin{rmk}
+As an example, if \(E,E^*\) are dual spaces, then the insertion operator~\(i(h)\) on~\(\medeprod E^*\) with \(h\in E\) must be redefined as in this problem to be an antiderivation on~\(\medeprodf E^*\).\footnote{See subsection~5.14.}
 \end{rmk}
 
 \begin{exer}[8]
