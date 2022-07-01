@@ -4082,6 +4082,17 @@ The right-hand side is a nonzero graded subalgebra of~\(\medeprod E\) which has 
 \begin{rmk} The formula~(5.81) follows from~(4.11) and a diagram in \S~1 above.
 \end{rmk}
 
+\subsection*{\S~30}
+\begin{rmk}
+Why are there factorials in the definition of the Grassmann product? From problem~5.7.6, we know they are not needed algebraically, although they may be more natural geometrically in certain applications. Their presence has the following consequences:
+\begin{itemize}
+\item The substitution operator~\(i_A(h)\) must be rescaled in \S~32 (see below).
+\item The isomorphism \(\medtprod E^*\to T^{\tdot}(E)\) must be rescaled when it is restricted to obtain the isomorphism \(X(E^*)\to A^{\tdot}(E)\) in \S~33.
+\item The scalar product between \(T^p(E)\) and~\(T_p(E)\) must be rescaled to obtain the scalar product between \(A^p(E)\) and~\(A_p(E)\) in \S~34.
+\item The definitions and proofs are uglier, and do not generalize beyond fields of characteristic zero.
+\end{itemize}
+\end{rmk}
+
 \subsection*{\S~32}
 \begin{rmk}
 In this subsection, the substitution operator~\(i_A(h)\) should be redefined on~\(T^p(E)\) as
@@ -4096,7 +4107,7 @@ p\mult(i_A(h)\Phi)(x_1,\ldots,x_{p-1})&=\sum_{\nu=1}^p(-1)^{\nu-1}(i_{\nu}(h)\Ph
 \end{align*}
 so
 \[i_A(h)\Phi=i_1(h)\Phi\]
-as desired. This redefinition is required to make~\(i_A(h)\) an antiderivation in the algebra~\(A^{\adot}(E)\) of skew-symmetric multilinear functions (under the definition of Grassmann product in subsection~5.30),\footnote{See Proposition~5.32.1.} although under this redefinition \(i_A(h)\)~is not an antiderivation in the algebra~\(T^{\tdot}(E)\) of multilinear functions.\footnote{See subsection~3.19.}
+as desired. This redefinition is required to make~\(i_A(h)\) an antiderivation in the algebra~\(A^{\adot}(E)\) of skew-symmetric multilinear functions (under the definition of Grassmann product in subsection~5.30), although under this redefinition \(i_A(h)\)~is not an antiderivation in the algebra~\(T^{\tdot}(E)\) of multilinear functions.\footnote{See also the corrected version of problem~5.12.6 above.}
 \end{rmk}
 
 \subsection*{\S~33}
