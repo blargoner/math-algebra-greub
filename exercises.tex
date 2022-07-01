@@ -2827,16 +2827,17 @@ Every object in this category can be obtained from the tensor algebra~\(\medtpro
 
 \subsection*{\S~5}
 \begin{rmk}
+We have a functor from the category of vector spaces into the category of associative unital algebras, which sends vector spaces \(E\) and~\(F\) to the tensor algebras \(\medtprod E\) and~\(\medtprod F\), and which sends a linear map \(\varphi:E\to F\) to the unital algebra homomorphism \(\varphi_{\tprod}:\medtprod E\to\medtprod F\).
+\end{rmk}
+
+\begin{rmk}
 For a linear map \(\varphi:E\to F\), the following diagram commutes:
 \begin{diagram}
 E			&\rTo^{\varphi}			&F\\
 \dTo<i		&						&\dTo>j\\
 \medtprod E	&\rTo_{\varphi_{\tprod}}&\medtprod F
 \end{diagram}
-\end{rmk}
-
-\begin{rmk}
-We have a functor from the category of vector spaces into the category of associative unital algebras, which sends vector spaces \(E\) and~\(F\) to the tensor algebras \(\medtprod E\) and~\(\medtprod F\), and which sends a linear map \(\varphi:E\to F\) to the unital algebra homomorphism \(\varphi_{\tprod}:\medtprod E\to\medtprod F\).
+This shows that the canonical injection \(i:E\to\medtprod E\) is a natural transformation from the identity functor to the tensor algebra functor (in the category of vector spaces).
 \end{rmk}
 
 \begin{rmk}
@@ -3636,12 +3637,17 @@ If \(E,E^*\) are dual spaces, then \(\medeprodf E,\medeprodf E^*\) are dual grad
 
 \subsection*{\S~8}
 \begin{rmk}
+We have a functor from the category of vector spaces into the category of associative unital algebras, which sends vector spaces \(E\) and~\(F\) to the exterior algebras \(\medeprod E\) and~\(\medeprod F\), and which sends a linear map \(\varphi:E\to F\) to the unital algebra homomorphism \(\varphi_{\eprod}:\medeprod E\to\medeprod F\).
+\end{rmk}
+
+\begin{rmk}
 For a linear map \(\varphi:E\to F\), the following diagram commutes:
 \begin{diagram}
 \medtprod E	&\rTo^{\varphi_{\tprod}}&\medtprod F\\
 \dTo<{\pi_E}&						&\dTo>{\pi_F}\\
 \medeprod E	&\rTo_{\varphi_{\eprod}}&\medeprod F
 \end{diagram}
+This shows that the projection \(\pi_E:\medtprod E\to\medeprod E\) is a natural transformation from the tensor algebra functor to the exterior algebra functor.
 \end{rmk}
 
 \begin{rmk}
