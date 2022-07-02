@@ -2937,6 +2937,23 @@ By the remark after problem~1.15.1 above.
 
 \subsection*{\S~11}
 \begin{rmk}
+Define
+\[M^p_q(E^*,E)=\underbrace{E^*\times\cdots\times E^*}_p\times\underbrace{E\times\cdots\times E}_q\]
+Consider the \((p+q)\)-linear map \(\medtprod^p_q:M^p_q(E^*,E)\to\medtprod^p_q(E^*,E)\) defined by
+\[\medtprod^p_q(x^*_1,\ldots,x^*_p\,;\,x_1,\ldots,x_q)=(\tprods{x^*}{1}{p})\tprod(\tprods{x}{1}{q})\]
+It is easy to verify that \(\medtprod^p_q\)~satisfies the following universal property:
+\begin{quote}
+If \(\varphi:M^p_q(E^*,E)\to F\) is any \((p+q)\)-linear map, then there is a unique linear map \(f:\medtprod^p_q(E^*,E)\to F\) with \(f\after\medtprod^p_q=\varphi\):
+\begin{diagram}[nohug]
+M^p_q(E^*,E)		&\rTo^{\varphi}	&F\\
+\dTo<{\medtprod^p_q}&\ruTo>f		&\\
+\medtprod^p_q(E^*,E)&				&
+\end{diagram}
+\end{quote}
+By category theoretic abstract nonsense, this property characterizes \(\medtprod^p_q(E^*,E)\) uniquely up to isomorphism.
+\end{rmk}
+
+\begin{rmk}
 In the finite-dimensional case, the following are familiar types of mixed tensors in \(E^*,E\):
 \begin{center}
 \begin{tabular}{|c|l|}
