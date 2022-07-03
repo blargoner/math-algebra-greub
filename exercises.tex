@@ -4214,6 +4214,34 @@ The product on the left is the exterior product and the product on the right is 
 We see that the algebra isomorphisms \(\medeprod E^*\iso A^{\adot}(E)\) and \(\medeprod E\iso A_{\adot}(E)\) preserve scalar products.
 \end{rmk}
 
+\newpage
+\section*{Chapter~6}
+\subsection*{\S~1}
+\begin{rmk}
+Recall that
+\[M^p_q(E^*,E)=\underbrace{E^*\times\cdots\times E^*}_p\times\underbrace{E\times\cdots\times E}_q\]
+The map \(\varphi:M^p_q(E^*,E)\to(\medeprod^p E^*)\tprod(\medeprod^q E)\) defined by
+\[\varphi(x^*_1,\ldots,x^*_p\,;\,x_1,\ldots,x_q)=(\eprods{x^*}{1}{p})\tprod(\eprods{x}{1}{q})\]
+is skew-symmetric of type~\((p,q)\), and Proposition~6.1.1 shows that \(\varphi\)~is \emph{universal} with this property in that every skew-symmetric map of type~\((p,q)\) factors in a unique way through~\(\varphi\): if \(\psi:M^p_q(E^*,E)\to H\) is any such a map, then there is a unique linear map \(f:(\medeprod^p E^*)\tprod(\medeprod^q E)\to H\) with \(f\after\varphi=\psi\):
+\begin{diagram}[nohug]
+M^p_q(E^*,E)							&\rTo^{\psi}&H\\
+\dTo<{\varphi}							&\ruTo>f	&\\
+(\medeprod^p E^*)\tprod(\medeprod^q E)	&			&
+\end{diagram}
+In the proof in the book, observe that \(N^p(E^*)\subseteq N_1(\beta)\) and \(N^q(E)\subseteq N_2(\beta)\), so \(\beta\) induces~\(\gamma\) as in problem~1.3.5(a).
+
+As an alternative proof, for fixed covectors \(x^*_1,\ldots,x^*_p\in E^*\) observe that the map defined by
+\[(x_1,\ldots,x_q)\mapsto\psi(x^*_1,\ldots,x^*_p\,;\,x_1,\ldots,x_q)\]
+is skew-symmetric, so there is a linear map \(g_{x^*_1\cdots x^*_p}:\medeprod^q E\to H\) with
+\[g_{x^*_1\cdots x^*_p}(\eprods{x}{1}{q})=\psi(x^*_1,\ldots,x^*_p\,;\,x_1,\ldots,x_q)\]
+The map \((x^*_1,\ldots,x^*_p)\mapsto g_{x^*_1\cdots x^*_p}\) is also skew-symmetric, so there is a linear map \(\medeprod^p E^*\to L(\medeprod^q E,H)\) which corresponds to the bilinear map \(\gamma:\medeprod^p E^*\times\medeprod^q E\to H\) with
+\begin{align*}
+\gamma(\eprods{x^*}{1}{p}\,,\eprods{x}{1}{q})&=g_{x^*_1\cdots x^*_p}(\eprods{x}{1}{q})\\
+	&=\psi(x^*_1,\ldots,x^*_p\,;\,x_1,\ldots,x_q)
+\end{align*}
+The linear map \(f:(\medeprod^p E^*)\tprod(\medeprod^q E)\to H\) induced by~\(\gamma\) satisfies \(f\after\varphi=\psi\) and is unique with this property.
+\end{rmk}
+
 % References
 \newpage
 \begin{thebibliography}{0}
