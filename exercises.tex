@@ -2783,9 +2783,43 @@ This follows from \(\det(\varphi\tprod\psi)=(\det\varphi\mult\det\psi)^n\).\foot
 
 \newpage
 \section*{Chapter~2}
+\begin{rmk}
+In the sections of this chapter, the tensor product operation is seen to be a bifunctor in various subcategories of the category of vector spaces.
+\end{rmk}
+
 \subsection*{\S~2}
 \begin{rmk}
 The multiplication in the canonical tensor product \(A\tprod B\) of algebras \(A\) and~\(B\) is just the tensor product of the multiplications in \(A\) and~\(B\), as defined in subsection~1.21.
+\end{rmk}
+
+\begin{rmk}
+Let \(A\) and~\(B\) be nonzero associative unital algebras. There are injective unital algebra homomorphisms
+\begin{diagram}
+A&\rTo^{i_1}&A\tprod B&\lTo^{i_2}&B
+\end{diagram}
+given by \(i_1(a)=a\tprod 1\) and \(i_2(b)=1\tprod b\), whose images commute:
+\[i_1(a)i_2(b)=(a\tprod 1)(1\tprod b)=a\tprod b=(1\tprod b)(a\tprod 1)=i_2(b)i_1(a)\]
+Moreover, given any unital algebra homomorphisms \(f:A\to C\) and \(g:B\to C\) whose images commute in an associative unital algebra~\(C\), there is a unique unital algebra homomorphism \(h:A\tprod B\to C\) with \(h\after i_1=f\) and \(h\after i_2=g\):
+\begin{diagram}[nohug]
+A	&\rTo^{i_1}	&A\tprod B	&\lTo^{i_2}	&B\\
+	&\rdTo<f	&\dDashto<h	&\ldTo>g	&\\
+	&			&C			&			&
+\end{diagram}
+Indeed, if such an~\(h\) exists it must satisfy
+\[h(a\tprod b)=h((a\tprod 1)(1\tprod b))=h(a\tprod 1)h(1\tprod b)=f(a)g(b)\]
+and this uniquely determines it by linearity. On the other hand, the mapping \((a,b)\mapsto f(a)g(b)\) is bilinear, so induces a linear map~\(h\) with \(h(a\tprod b)=f(a)g(b)\). This map is a homomorphism since it is linear and
+\begin{align*}
+h((a_1\tprod b_1)(a_2\tprod b_2))&=h(a_1a_2\tprod b_1b_2)\\
+	&=f(a_1a_2)g(b_1b_2)\\
+	&=f(a_1)f(a_2)g(b_1)g(b_2)\\
+	&=f(a_1)g(b_1)f(a_2)g(b_2)\\
+	&=h(a_1\tprod b_1)h(a_2\tprod b_2)
+\end{align*}
+Moreover,
+\[h(a\tprod 1)=f(a)g(1)=f(a)\qquad\text{and}\qquad h(1\tprod b)=f(1)g(b)=g(b)\]
+since \(f\) and~\(g\) are unital, so the diagram above commutes and \(h\)~is also unital.
+
+This argument shows that \(A\tprod B\) is a universal (initial) object in the category of ``associative unital algebras with unital algebra homomorphisms of \(A\) and~\(B\) into them whose images commute''. By category theoretic abstract nonsense, \(A\tprod B\)~is therefore unique up to isomorphism. If \(A\) and~\(B\) are also \emph{commutative}, then \(A\tprod B\)~is just the coproduct of \(A\) and~\(B\) in the subcategory of algebras that are also commutative.
 \end{rmk}
 
 \subsection*{\S~3}
@@ -2980,6 +3014,10 @@ The mixed tensor algebra~\(\medtprod(E^*,E)\) can be constructed in two ways:
 An element of this algebra is a finite sum of decomposable homogeneous mixed tensors. As an example of multiplication, if \(x^*\tprod x\) and \(y^*\tprod y\) are (1,1)-tensors, then
 \[(x^*\tprod x)(y^*\tprod y)=x^*\tprod y^*\tprod x\tprod y\]
 is a (2,2)-tensor.
+\end{rmk}
+
+\begin{rmk}
+By a remark in \S~2 of chapter~2 above, \(\medtprod(E^*,E)\)~satisfies a universal property as an associative unital algebra and is unique up to isomorphism.
 \end{rmk}
 
 \begin{rmk}
