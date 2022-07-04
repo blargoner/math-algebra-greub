@@ -4220,13 +4220,13 @@ We see that the algebra isomorphisms \(\medeprod E^*\iso A^{\adot}(E)\) and \(\m
 \begin{rmk}
 Recall that
 \[M^p_q(E^*,E)=\underbrace{E^*\times\cdots\times E^*}_p\times\underbrace{E\times\cdots\times E}_q\]
-The map \(\varphi:M^p_q(E^*,E)\to(\medeprod^p E^*)\tprod(\medeprod^q E)\) defined by
+Let \(\medeprod^p_q(E^*,E)=\medeprod^p E^*\tprod\medeprod^q E\). The map \(\varphi:M^p_q(E^*,E)\to\medeprod^p_q(E^*,E)\) defined by
 \[\varphi(x^*_1,\ldots,x^*_p\,;\,x_1,\ldots,x_q)=(\eprods{x^*}{1}{p})\tprod(\eprods{x}{1}{q})\]
-is skew-symmetric of type~\((p,q)\), and Proposition~6.1.1 shows that \(\varphi\)~is \emph{universal} with this property in that every skew-symmetric map of type~\((p,q)\) factors in a unique way through~\(\varphi\): if \(\psi:M^p_q(E^*,E)\to H\) is any such a map, then there is a unique linear map \(f:(\medeprod^p E^*)\tprod(\medeprod^q E)\to H\) with \(f\after\varphi=\psi\):
+is skew-symmetric of type~\((p,q)\), and Proposition~6.1.1 shows that \(\varphi\)~is \emph{universal} with this property in that every skew-symmetric map of type~\((p,q)\) factors in a unique way through~\(\varphi\): if \(\psi:M^p_q(E^*,E)\to H\) is any such map, then there is a unique linear map \(f:\medeprod^p_q(E^*,E)\to H\) with \(f\after\varphi=\psi\):
 \begin{diagram}[nohug]
-M^p_q(E^*,E)							&\rTo^{\psi}&H\\
-\dTo<{\varphi}							&\ruTo>f	&\\
-(\medeprod^p E^*)\tprod(\medeprod^q E)	&			&
+M^p_q(E^*,E)		&\rTo^{\psi}&H\\
+\dTo<{\varphi}		&\ruTo>f	&\\
+\medeprod^p_q(E^*,E)&			&
 \end{diagram}
 In the proof in the book, observe that \(N^p(E^*)\subseteq N_1(\beta)\) and \(N^q(E)\subseteq N_2(\beta)\), so \(\beta\) induces~\(\gamma\) as in problem~1.3.5(a).
 
@@ -4239,7 +4239,20 @@ The map \((x^*_1,\ldots,x^*_p)\mapsto g_{x^*_1\cdots x^*_p}\) is also skew-symme
 \gamma(\eprods{x^*}{1}{p}\,,\eprods{x}{1}{q})&=g_{x^*_1\cdots x^*_p}(\eprods{x}{1}{q})\\
 	&=\psi(x^*_1,\ldots,x^*_p\,;\,x_1,\ldots,x_q)
 \end{align*}
-The linear map \(f:(\medeprod^p E^*)\tprod(\medeprod^q E)\to H\) induced by~\(\gamma\) satisfies \(f\after\varphi=\psi\) and is unique with this property.
+The linear map \(f:\medeprod^p_q(E^*,E)\to H\) induced by~\(\gamma\) satisfies \(f\after\varphi=\psi\) and is unique with this property.
+\end{rmk}
+
+\begin{rmk}
+Let \(\pi_1:\medtprod^p E^*\to\medeprod^p E^*\) and \(\pi_2:\medtprod^q E\to\medeprod^q E\) denote the canonical projections. The map
+\[\pi_1\tprod\pi_2:\medtprod^p_q(E^*,E)\to\medeprod^p_q(E^*,E)\]
+is surjective with
+\begin{align*}
+\ker(\pi_1\tprod\pi_2)&=\ker\pi_1\tprod\medtprod^q E+\medtprod^p E^*\tprod\ker\pi_2\\
+	&=N^p(E^*)\tprod\medtprod^q E+\medtprod^p E^*\tprod N^q(E)\\
+	&=T(N^p(E^*),N^q(E))
+\end{align*}
+so it induces the canonical isomorphism
+\[\frac{\medtprod^p_q(E^*,E)}{T(N^p(E^*),N^q(E))}\ \iso\ \medeprod^p_q(E^*,E)\]
 \end{rmk}
 
 % References
