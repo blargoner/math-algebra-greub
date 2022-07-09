@@ -4276,6 +4276,21 @@ and~(6.4).
 If \(z\in\medeprod^p_q(E^*,E)\) and \(w\in\medeprod^r_s(E^*,E)\), then \(\mu(z)w\in\medeprod^{p+r}_{q+s}(E^*,E)\), so \(\mu(z)\)~is homogeneous of bidegree~\((p,q)\). It follows from this that \(i(z)\)~is homogeneous of bidegree~\((-q,-p)\) (note the flip!).
 \end{rmk}
 
+\begin{rmk}
+If \(u^*\in\medeprod E^*\), \(u\in\medeprod E\), \(x^*\in E^*\), and \(x\in E\), then
+\[\sprod{x^*\tprod u}{u^*\tprod x}=\sprod{\mu(x^*)u^*}{\mu(x)u}+\sprod{i(x)u^*}{i(x^*)u}\]
+\end{rmk}
+\begin{proof}
+By Corollary~I to Proposition~5.14.1,
+\begin{align*}
+\sprod{x^*\tprod u}{u^*\tprod x}&=\sprod{x^*}{x}\sprod{u^*}{u}\\
+	&=\bigsprod{\sprod{x^*}{x}u^*}{u}\\
+	&=\bigsprod{i(x)\mu(x^*)u^*+\mu(x^*)i(x)u^*}{u}\\
+	&=\sprod{i(x)\mu(x^*)u^*}{u}+\sprod{\mu(x^*)i(x)u^*}{u}\\
+	&=\sprod{\mu(x^*)u^*}{\mu(x)u}+\sprod{i(x)u^*}{i(x^*)u}\qedhere
+\end{align*}
+\end{proof}
+
 \subsection*{\S~3}
 \begin{rmk}
 The \(p\)-ary box product is \(p\)-linear and symmetric, so factors through the \(p\)-th symmetric power of~\(L(E;E)\).
