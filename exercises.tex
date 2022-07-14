@@ -4310,6 +4310,21 @@ For this reason \(\Delta E\)~is a subalgebra under the composition product, alth
 In~(6.17), we see that the unit tensor of degree~\(p\) in~\(\medeprod^p_p(E^*,E)\) encodes all of the information about the scalar product between \(\medeprod^p E^*\) and~\(\medeprod^p E\), just like a metric tensor does for an inner product.\footnote{See the remarks in chapter~3, \S~17 above.}
 \end{rmk}
 
+\subsection*{\S~10}
+\begin{rmk}
+To prove Theorem~6.10.1(2), let
+\[w=u^*\tprod u\in\medeprod^p_q(E^*,E)\qquad\text{and}\qquad z=v^*\tprod v\in\medeprod^{n-p}_{n-q}(E^*,E)\]
+Then
+\begin{align*}
+\sprod{D_Ew}{z}&=\sprod{D_qu\tprod D^p u^*}{v^*\tprod v}\\
+	&=\sprod{D_qu}{v}\sprod{v^*}{D^pu^*}\\
+	&=(-1)^{p(n-p)+q(n-q)}\sprod{u}{D_{n-q}v}\sprod{D^{n-p}v^*}{u^*}\\
+	&=(-1)^{p(n-p)+q(n-q)}\sprod{u^*\tprod u}{D_{n-q}v\tprod D^{n-p}v^*}\\
+	&=\sprod{w}{\Omega_E(D_E z)}
+\end{align*}
+By multilinearity, it follows that \(D_E^*=\Omega_E\after D_E\).
+\end{rmk}
+
 % References
 \newpage
 \begin{thebibliography}{0}
