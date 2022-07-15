@@ -4291,6 +4291,12 @@ By Corollary~I to Proposition~5.14.1,
 \end{align*}
 \end{proof}
 
+\begin{rmk}
+The flip operator \(Q_E:\medeprod(E^*,E)\to\medeprod(E,E^*)\) restricts to an operator
+\[Q_E^{p,q}:\medeprod^p_q(E^*,E)\to\medeprod^q_p(E,E^*)\]
+It follows that \(Q_E^*=Q_{E^*}\) and \((Q_E^{p,q})^*=Q_{E^*}^{p,q}\).
+\end{rmk}
+
 \subsection*{\S~3}
 \begin{rmk}
 The \(p\)-ary box product is \(p\)-linear and symmetric, so factors through the \(p\)-th symmetric power of~\(L(E;E)\).
@@ -4310,19 +4316,30 @@ For this reason \(\Delta E\)~is a subalgebra under the composition product, alth
 In~(6.17), we see that the unit tensor of degree~\(p\) in~\(\medeprod^p_p(E^*,E)\) encodes all of the information about the scalar product between \(\medeprod^p E^*\) and~\(\medeprod^p E\), just like a metric tensor does for an inner product.\footnote{See the remarks in chapter~3, \S~17 above.}
 \end{rmk}
 
+\subsection*{\S~8}
+\begin{rmk}
+Since \(D_e=\sum_p D_p\), it follows from Theorem~6.8.1(2) that
+\[D_e^*=\sum_p D_p^*=\sum_p(-1)^{p(n-p)}D_{n-p}=\sum_p(-1)^{p(n-p)}D_p=\omega_{E^*}\after D_e\]
+where \(\omega_{E^*}(u^*)=(-1)^{p(n-p)}u^*\) for \(u^*\in\medeprod^p E^*\).
+\end{rmk}
+
 \subsection*{\S~10}
 \begin{rmk}
-To prove Theorem~6.10.1(2), let
-\[w=u^*\tprod u\in\medeprod^p_q(E^*,E)\qquad\text{and}\qquad z=v^*\tprod v\in\medeprod^{n-p}_{n-q}(E^*,E)\]
-Then
+By~(6.20),
+\[D_E(u^*\tprod u)=D_e u\tprod D^e u^*=Q_{E^*}(D^e u^*\tprod D_e u)=\bigl[Q_{E^*}\after(D^e\tprod D_e)\bigr](u^*\tprod u)\]
+so it follows that
+\[D_E=Q_{E^*}\after(D^e\tprod D_e)\]
+\end{rmk}
+
+\begin{rmk}
+For the proof of Theorem~6.10.1(2), we have by~(6.21) and results above
 \begin{align*}
-\sprod{D_Ew}{z}&=\sprod{D_qu\tprod D^p u^*}{v^*\tprod v}\\
-	&=\sprod{D_qu}{v}\sprod{v^*}{D^pu^*}\\
-	&=(-1)^{p(n-p)+q(n-q)}\sprod{u}{D_{n-q}v}\sprod{D^{n-p}v^*}{u^*}\\
-	&=(-1)^{p(n-p)+q(n-q)}\sprod{u^*\tprod u}{D_{n-q}v\tprod D^{n-p}v^*}\\
-	&=\sprod{w}{\Omega_E(D_E z)}
+D_E^*&=Q_E^*\after(D_e\tprod D^e)^*\\
+	&=Q_{E^*}\after\bigl[(\omega_E\after D^e)\tprod(\omega_{E^*}\after D_e)\bigr]\\
+	&=Q_{E^*}\after(\omega_E\tprod\omega_{E^*})\after(D^e\tprod D_e)\\
+	&=(\omega_{E^*}\tprod\omega_E)\after Q_{E^*}\after(D^e\tprod D_e)\\
+	&=\Omega_E\after D_E
 \end{align*}
-By multilinearity, it follows that \(D_E^*=\Omega_E\after D_E\).
 \end{rmk}
 
 % References
