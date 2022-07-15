@@ -4292,9 +4292,9 @@ By Corollary~I to Proposition~5.14.1,
 \end{proof}
 
 \begin{rmk}
-The flip operator \(Q_E:\medeprod(E^*,E)\to\medeprod(E,E^*)\) restricts to an operator
+The flip operator \(Q_E:\medeprod(E^*,E)\to\medeprod(E,E^*)\) restricts to operators
 \[Q_E^{p,q}:\medeprod^p_q(E^*,E)\to\medeprod^q_p(E,E^*)\]
-It follows that \(Q_E^*=Q_{E^*}\) and \((Q_E^{p,q})^*=Q_{E^*}^{p,q}\).
+In particular \(Q_E^{p,p}:\Delta_p E\to\Delta_p E^*\). It follows that \(Q_{E^*}^{q,p}\after Q_E^{p,q}=\iota\), so the operators are linear isomorphisms. They also preserve scalar products. Finally, \(Q_E^*=Q_{E^*}\) and \((Q_E^{p,q})^*=Q_{E^*}^{p,q}\).
 \end{rmk}
 
 \subsection*{\S~3}
@@ -4321,6 +4321,9 @@ In~(6.17), we see that the unit tensor of degree~\(p\) in~\(\medeprod^p_p(E^*,E)
 Since \(D_e=\sum_p D_p\), it follows from Theorem~6.8.1(2) that
 \[D_e^*=\sum_p D_p^*=\sum_p(-1)^{p(n-p)}D_{n-p}=\sum_p(-1)^{p(n-p)}D_p=\omega_{E^*}\after D_e\]
 where \(\omega_{E^*}(u^*)=(-1)^{p(n-p)}u^*\) for \(u^*\in\medeprod^p E^*\).
+
+It follows from Theorem~6.8.1(3) that
+\[D^e\after D_e=\sum_p(D^{n-p}\after D_p)=\sum_p(-1)^{p(n-p)}\iota=\omega_E\]
 \end{rmk}
 
 \subsection*{\S~10}
@@ -4340,6 +4343,12 @@ D_E^*&=Q_E^*\after(D_e\tprod D^e)^*\\
 	&=(\omega_{E^*}\tprod\omega_E)\after Q_{E^*}\after(D^e\tprod D_e)\\
 	&=\Omega_E\after D_E
 \end{align*}
+\end{rmk}
+
+\begin{rmk}
+The operator~\(D_E\) restricts to operators
+\[D_E^{p,q}:\medeprod^p_q(E^*,E)\to\medeprod^{n-q}_{n-p}(E^*,E)\]
+In particular \(D_E^{p,p}:\Delta_p E\to\Delta_{n-p}E\) and \(D_{\Delta}=\sum_p D_E^{p,p}\). The operators are linear isomorphisms and the scalar product, dual, and composition properties follow from Theorem~6.10.1.
 \end{rmk}
 
 % References
