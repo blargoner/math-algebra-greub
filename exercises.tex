@@ -4367,6 +4367,25 @@ The operator~\(D_E\) restricts to operators
 In particular \(D_E^{p,p}:\Delta_p E\to\Delta_{n-p}E\) and \(D_{\Delta}=\sum_p D_E^{p,p}\). The operators are linear isomorphisms and the scalar product, dual, and composition properties follow from Theorem~6.10.1.
 \end{rmk}
 
+\subsection*{\S~11}
+\begin{rmk}
+The diagram shows that \(D_E\)~is a natural isomorphism of the functor~\(\alpha\) from \S~2 above:
+\begin{diagram}
+\alpha(E)			&\rTo^{\alpha(\varphi)}_{\iso}	&\alpha(F)\\
+\dTo<{D_E}>{\iso}	&								&\dTo>{D_F}<{\iso}\\
+\alpha(E)			&\rTo_{\alpha(\varphi)}^{\iso}	&\alpha(F)
+\end{diagram}
+To see that the diagram actually commutes, let \(e\) and~\(e^*\) be dual basis vectors of \(\medeprod^n E\) and~\(\medeprod^n E^*\) and let \(f=\varphi_{\eprod}e\) and \(f^*=(\varphi^{\eprod})^{-1}e^*\) be the corresponding dual basis vectors of \(\medeprod^n F\) and \(\medeprod^n F^*\). Then
+\begin{align*}
+D_F\after\alpha_{\varphi}&=(D_f\tprod D^f)\after Q_F\after((\varphi^{\eprod})^{-1}\tprod\varphi_{\eprod})\\
+	&=(D_f\tprod D^f)\after(\varphi_{\eprod}\tprod(\varphi^{\eprod})^{-1})\after Q_E\\
+	&=\bigl[(D_f\after\varphi_{\eprod})\tprod(D^f\after(\varphi^{\eprod})^{-1})\bigr]\after Q_E\\
+	&=\bigl[((\varphi^{\eprod})^{-1}\after D_e)\tprod(\varphi_{\eprod}\after D^e)\bigr]\after Q_E\\
+	&=((\varphi^{\eprod})^{-1}\tprod\varphi_{\eprod})\after(D_e\tprod D^e)\after Q_E\\
+	&=\alpha_{\varphi}\after D_E
+\end{align*}
+\end{rmk}
+
 % References
 \newpage
 \begin{thebibliography}{0}
