@@ -82,6 +82,7 @@
 \newcommand{\fprods}[3]{\multi{\fprod}{#1}{#2}{#3}}
 \newcommand{\circled}[1]{\text{\tiny\textcircled{\textit{#1}}}}
 \newcommand{\sign}[1]{\varepsilon_{#1}}
+\newcommand{\cat}[1]{\mathbf{#1}}
 
 \newarrow{Dashto}{}{dash}{}{dash}>
 \newarrow{Equalto}{}={}={}
@@ -4295,6 +4296,21 @@ By Corollary~I to Proposition~5.14.1,
 The flip operator \(Q_E:\medeprod(E^*,E)\to\medeprod(E,E^*)\) restricts to operators
 \[Q_E^{p,q}:\medeprod^p_q(E^*,E)\to\medeprod^q_p(E,E^*)\]
 In particular \(Q_E^{p,p}:\Delta_p E\to\Delta_p E^*\). It follows that \(Q_{E^*}^{q,p}\after Q_E^{p,q}=\iota\), so the operators are linear isomorphisms. They also preserve scalar products. Finally, \(Q_E^*=Q_{E^*}\) and \((Q_E^{p,q})^*=Q_{E^*}^{p,q}\).
+\end{rmk}
+
+\begin{rmk}
+Let \(\cat{C}\)~denote the category of finite-dimensional vector spaces over~\(\Gamma\) and the linear isomorphisms between them. For an object \(E\in\cat{C}\), let
+\[\alpha(E)=\medeprod(L(E),E)\]
+and for an arrow \(\varphi:E\to F\) in~\(\cat{C}\), let
+\[\alpha(\varphi)=\alpha_{\varphi}=(\varphi^{\eprod})^{-1}\tprod\varphi_{\eprod}:\alpha(E)\to\alpha(F)\]
+Then \(\alpha:\cat{C}\to\cat{C}\) is a functor. Indeed, \(\alpha\)~maps objects to objects and arrows to arrows, respecting domains and codomains and identity arrows. If \(\psi:F\to G\) is another arrow in~\(\cat{C}\), then
+\begin{align*}
+\alpha(\psi\after\varphi)&=((\psi\after\varphi)^{\eprod})^{-1}\tprod(\psi\after\varphi)_{\eprod}\\
+	&=((\psi^{\eprod})^{-1}\after(\varphi^{\eprod})^{-1})\tprod(\psi_{\eprod}\after\varphi_{\eprod})\\
+	&=((\psi^{\eprod})^{-1}\tprod\psi_{\eprod})\after((\varphi^{\eprod})^{-1}\tprod\varphi_{\eprod})\\
+	&=\alpha(\psi)\after\alpha(\varphi)
+\end{align*}
+so \(\alpha\)~also respects composites.
 \end{rmk}
 
 \subsection*{\S~3}
