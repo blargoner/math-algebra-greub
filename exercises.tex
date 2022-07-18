@@ -4334,12 +4334,21 @@ In~(6.17), we see that the unit tensor of degree~\(p\) in~\(\medeprod^p_p(E^*,E)
 
 \subsection*{\S~8}
 \begin{rmk}
+It follows from Theorem~6.8.1 parts (2) and~(3) that
+\[D_p^{-1}=(D^p)^*\qquad\text{and}\qquad(D^p)^{-1}=D_p^*\]
+\end{rmk}
+
+\begin{rmk}
 Since \(D_e=\sum_p D_p\), it follows from Theorem~6.8.1(2) that
 \[D_e^*=\sum_p D_p^*=\sum_p(-1)^{p(n-p)}D_{n-p}=\sum_p(-1)^{p(n-p)}D_p=\omega_{E^*}\after D_e\]
-where \(\omega_{E^*}(u^*)=(-1)^{p(n-p)}u^*\) for \(u^*\in\medeprod^p E^*\).
+where \(\omega_{E^*}(u^*)=(-1)^{p(n-p)}u^*\) for \(u^*\in\medeprod^p E^*\). Similarly \((D^e)^*=\omega_E\after D^e\).
 
 It follows from Theorem~6.8.1(3) that
 \[D^e\after D_e=\sum_p(D^{n-p}\after D_p)=\sum_p(-1)^{p(n-p)}\iota=\omega_E\]
+Since \(\omega_E^2=\iota\), this implies
+\[D_e^{-1}=\omega_E\after D^e=(D^e)^*\]
+Similarly
+\[(D^e)^{-1}=\omega_{E^*}\after D_e=D_e^*\]
 \end{rmk}
 
 \subsection*{\S~10}
@@ -4384,6 +4393,27 @@ D_F\after\alpha_{\varphi}&=(D_f\tprod D^f)\after Q_F\after((\varphi^{\eprod})^{-
 	&=((\varphi^{\eprod})^{-1}\tprod\varphi_{\eprod})\after(D_e\tprod D^e)\after Q_E\\
 	&=\alpha_{\varphi}\after D_E
 \end{align*}
+\end{rmk}
+
+\subsection*{\S~12}
+\begin{rmk}
+The intersection product is associative since the wedge product is: if \(u,v,w\in\medeprod E\), then writing \(D=D^e\) we have
+\begin{align*}
+(u\sect v)\sect w&=D[D^{-1}(u\sect v)\eprod D^{-1}w]\\
+	&=D[(D^{-1}u\eprod D^{-1}v)\eprod D^{-1}w]\\
+	&=D[D^{-1}u\eprod(D^{-1}v\eprod D^{-1}w)]\\
+	&=D[D^{-1}u\eprod D^{-1}(v\sect w)]\\
+	&=u\sect(v\sect w)
+\end{align*}
+Therefore we may simply write \(u\sect v\sect w\).
+\end{rmk}
+
+\begin{rmk}
+Let \(u^*,v^*\in\medeprod E^*\). Taking \(u=D^e u^*\) and \(v=D^e v^*\) in the definition of the intersection product for~\(\medeprod E\), we obtain
+\[D^e(u^*\eprod v^*)=D^e u^*\sect D^e v^*\]
+so \(D^e\)~is an algebra isomorphism from the exterior algebra to the intersection algebra. Applying \(D_e^*=(D^e)^{-1}\) to both sides of the definition, we obtain
+\[D_e^*(u\sect v)=D_e^* u\eprod D_e^* v\]
+so \(D_e^*\)~is an algebra isomorphism from the intersection algebra to the exterior algebra. This all strongly suggests that \(D_e\)~should be an algebra isomorphism, which a computation involving sign factors verifies.
 \end{rmk}
 
 % References
