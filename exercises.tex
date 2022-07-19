@@ -4410,7 +4410,16 @@ Therefore we may simply write \(u\sect v\sect w\).
 
 \begin{rmk}
 We have
-\[u\sect v=i[(D^e)^{-1}v]u\]
+\[u\sect v=i[(D^e)^{-1}v]u=i(D_e^* v)u\]
+In particular if \(u\in\medeprod^p E\) and \(v\in\medeprod^{n-p}E\), then \(u\sect v\)~is a scalar and
+\begin{align*}
+u\sect v&=\sprod{u\sect v}{1}\\
+	&=\sprod{i(D_e^* v)u}{1}\\
+	&=\sprod{u}{D_e^* v}\\
+	&=\sprod{D_e u}{v}\\
+	&=\sprod{i(u)e^*}{v}\\
+	&=\sprod{e^*}{u\eprod v}
+\end{align*}
 \end{rmk}
 
 \begin{rmk}
