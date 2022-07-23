@@ -58,6 +58,7 @@
 \newcommand{\medeprod}{{\textstyle\bigeprod}}
 \newcommand{\medeprodf}{\tilde{\medeprod}}
 \newcommand{\fprod}{\bigcdot{0.5}}
+\newcommand{\mprod}{\bigcdot{0.5}}
 \newcommand{\tdot}{\bigcdot{0.75}}
 \newcommand{\adot}{\bigcdot{0.75}}
 
@@ -4463,6 +4464,37 @@ for each ordered \(p\)-tuple \(1\le\nu_1<\cdots<\nu_p\le n\). If \(\bar{e}_i=\va
 \end{proof}
 \begin{rmk}
 This result shows that unit tensors in the mixed exterior algebra are \emph{invariant} in that their descriptions do not depend upon the choice of basis.
+\end{rmk}
+
+\begin{exer}[3]
+\begin{align*}
+D_e i(v^*)u&=(-1)^{q(p-q)}v^*\eprod D_eu&&u\in\medeprod^p E,v^*\in\medeprod^q E^*\\
+D^e i(v)u^*&=(-1)^{p(q-p)}v\eprod D^e u^*&&v\in\medeprod^p E,u^*\in\medeprod^q E^*\\
+D_E i(z)w&=(-1)^{p(s-p)+q(r-q)}z\mprod D_Ew&&z\in\medeprod^p_q(E^*,E),w\in\medeprod^r_s(E^*,E)
+\end{align*}
+\end{exer}
+\begin{proof}
+For any \(w^*\in\medeprod^{p-q}E^*\),
+\begin{align*}
+\sprod{D_e i(v^*)u}{D^e w^*}&=\sprod{w^*}{i(v^*)u}\\
+	&=\sprod{v^*\eprod w^*}{u}\\
+	&=\sprod{D_e u}{D^e(v^*\eprod w^*)}\\
+	&=(-1)^{q(p-q)}\sprod{D_e u}{D^e(w^*\eprod v^*)}\\
+	&=(-1)^{q(p-q)}\sprod{D_e u}{i(v^*)D^e w^*}\\
+	&=\sprod{(-1)^{q(p-q)}v^*\eprod D_e u}{D^e w^*}
+\end{align*}
+The first formula follows since \(D^e\)~is an isomorphism, and the second formula follows from the first by symmetry of duality. Finally if \(z=v^*\tprod v\) and \(w=u^*\tprod u\), then
+\begin{align*}
+D_E i(z)w&=D_E[i(v)u^*\tprod i(v^*)u]\\
+	&=D_e i(v^*)u\tprod D^e i(v)u^*\\
+	&=(-1)^{p(s-p)+q(r-q)}(v^*\eprod D_e u)\tprod(v\eprod D^e u^*)\\
+	&=(-1)^{p(s-p)+q(r-q)}(v^*\tprod v)\mprod(D_e u\tprod D^e u^*)\\
+	&=(-1)^{p(s-p)+q(r-q)}z\mprod D_E w
+\end{align*}
+The third formula follows by multilinearity.
+\end{proof}
+\begin{rmk}
+This result shows that insertion is dual to multiplication under Poincar\'e duality.
 \end{rmk}
 
 % References
