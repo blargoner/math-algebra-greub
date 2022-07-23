@@ -4494,7 +4494,26 @@ D_E i(z)w&=D_E[i(v)u^*\tprod i(v^*)u]\\
 The third formula follows by multilinearity.
 \end{proof}
 \begin{rmk}
-This result shows that insertion is dual to multiplication under Poincar\'e duality.
+This result shows that multiplication is the dual of insertion under Poincar\'e duality.
+\end{rmk}
+
+\begin{exer}[4]
+\[D_{\Delta}\mu(z)=i(z)D_{\Delta}\qquad z\in\Delta E\]
+\end{exer}
+\begin{proof}
+For \(z=v^*\tprod v\) and \(w=u^*\tprod u\) in~\(\Delta E\),
+\begin{align*}
+D_{\Delta}\mu(z)w&=D_{\Delta}(w\mprod z)\\
+	&=D_{\Delta}[(u^*\eprod v^*)\tprod(u\eprod v)]\\
+	&=D_e(u\eprod v)\tprod D^e(u^*\eprod v^*)\\
+	&=[i(v)D_e u]\tprod[i(v^*)D^e u^*]\\
+	&=i(v^*\tprod v)(D_e u\tprod D^e u^*)\\
+	&=i(z)D_{\Delta}w
+\end{align*}
+The formula follows by multilinearity.
+\end{proof}
+\begin{rmk}
+This result shows that insertion is the dual of multiplication under Poincar\'e duality in the diagonal subalgebra.
 \end{rmk}
 
 % References
