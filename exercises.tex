@@ -4498,7 +4498,7 @@ This result shows that multiplication is the dual of insertion under Poincar\'e 
 \end{rmk}
 
 \begin{exer}[4]
-\[D_{\Delta}\mu(z)=i(z)D_{\Delta}\qquad z\in\Delta E\]
+\[D_{\Delta}\mu(z)=i(z)D_{\Delta}\qquad(z\in\Delta E)\]
 \end{exer}
 \begin{proof}
 For \(z=v^*\tprod v\) and \(w=u^*\tprod u\) in~\(\Delta E\),
@@ -4514,6 +4514,35 @@ The formula follows by multilinearity.
 \end{proof}
 \begin{rmk}
 This result shows that insertion is the dual of multiplication under Poincar\'e duality in the diagonal subalgebra.
+\end{rmk}
+
+\begin{exer}[7]
+Let \(E\)~be an oriented \(3\)-dimensional Euclidean space. Then
+\[x\cross y=D_e(x\eprod y)=[x,y]\qquad(x,y\in E)\]
+It follows that
+\[\iprod{x_1\cross y_1}{x_2\cross y_2}=\iprod{x_1}{x_2}\iprod{y_1}{y_2}-\iprod{x_1}{y_2}\iprod{x_2}{y_1}\]
+and
+\[(x\cross y)\cross z=\iprod{x}{z}y-\iprod{y}{z}x\]
+\end{exer}
+\begin{proof}
+Let \(\Delta\)~be the normed determinant function in~\(E\) which represents the orientation. Then for any \(z\in E\),
+\[\iprod{D_e(x\eprod y)}{z}=\iprod{[x,y]}{z}=\iprod{e}{x\eprod y\eprod z}=\Delta(x,y,z)=\iprod{x\cross y}{z}\]
+so the first equation follows by definiteness of the inner product. Now by the Lagrange identity,
+\begin{align*}
+\iprod{x_1\cross y_1}{x_2\cross y_2}&=\iprod{[x_1,y_1]}{[x_2,y_2]}\\
+	&=\begin{vmatrix}\iprod{x_1}{x_2}&\iprod{x_1}{y_2}\\\iprod{y_1}{x_2}&\iprod{y_1}{y_2}\end{vmatrix}\\
+	&=\iprod{x_1}{x_2}\iprod{y_1}{y_2}-\iprod{x_1}{y_2}\iprod{x_2}{y_1}
+\end{align*}
+Finally,
+\begin{align*}
+(x\cross y)\cross z&=D_e[D_e(x\eprod y)\eprod z]\\
+	&=i(z)D_e[D_e(x\eprod y)]\\
+	&=i(z)(x\eprod y)\\
+	&=\iprod{x}{z}y-\iprod{y}{z}x\qedhere
+\end{align*}
+\end{proof}
+\begin{rmk}
+This result shows that the cross product is dual to the wedge product under Poincar\'e duality, and is just a special case of the external product.
 \end{rmk}
 
 % References
