@@ -4437,6 +4437,28 @@ so \(D_e^*\)~is an algebra isomorphism from the intersection algebra to the exte
 
 \subsection*{\S~13}
 \begin{rmk}
+Let \(e_i,e^{*i}\) be dual bases in \(E,E^*\) with \(\eprods{e}{1}{n}=e\). Write
+\[e_{\mu_1\cdots\mu_q}=\eprods{e}{\mu_1}{\mu_q}\qquad\text{and}\qquad e^{\nu_1\cdots\nu_p}=e^{*\nu_1}\eprod\cdots\eprod e^{*\nu_p}\]
+for ordered tuples \(1\le\mu_1<\cdots<\mu_q\le n\) and \(1\le\nu_1<\cdots<\nu_p\le n\). Then
+\[e_{\mu_1\cdots\mu_q}^{\nu_1\cdots\nu_p}=e^{\nu_1\cdots\nu_p}\tprod e_{\mu_1\cdots\mu_q}\]
+form a basis of~\(\medeprod(E^*,E)\) and for \(z\in\medeprod(E^*,E)\) we write
+\[z=\sum_{<}(z)^{\mu_1\cdots\mu_q}_{\nu_1\cdots\nu_p}e_{\mu_1\cdots\mu_q}^{\nu_1\cdots\nu_p}\]
+Now
+\begin{align*}
+D_E(e_{\mu_1\cdots\mu_q}^{\nu_1\cdots\nu_p})&=D_e(e_{\mu_1\cdots\mu_q})\tprod D^e(e^{\nu_1\cdots\nu_p})\\
+	&=\bigl[(-1)^{\sum_{j=1}^q(\mu_j-j)}e^{\mu_{q+1}\cdots\mu_n}\bigr]\tprod\bigl[(-1)^{\sum_{i=1}^p(\nu_i-i)}e_{\nu_{p+1}\cdots\nu_n}\bigr]\\
+	&=(-1)^{\sum_{i=1}^p(\nu_i-i)+\sum_{j=1}^q(\mu_j-j)}e_{\nu_{p+1}\cdots\nu_n}^{\mu_{q+1}\cdots\mu_n}
+\end{align*}
+It follows that
+\begin{align*}
+D_E z&=\sum_{<}(z)^{\mu_1\cdots\mu_q}_{\nu_1\cdots\nu_p}D_E(e_{\mu_1\cdots\mu_q}^{\nu_1\cdots\nu_p})\\
+	&=\sum_{<}(-1)^{\sum_{i=1}^p(\nu_i-i)+\sum_{j=1}^q(\mu_j-j)}(z)^{\mu_1\cdots\mu_q}_{\nu_1\cdots\nu_p}e_{\nu_{p+1}\cdots\nu_n}^{\mu_{q+1}\cdots\mu_n}
+\end{align*}
+so\footnote{This is problem~10.}
+\[(D_E z)^{\nu_{p+1}\cdots\nu_n}_{\mu_{q+1}\cdots\mu_n}=(-1)^{\sum_{i=1}^p(\nu_i-i)+\sum_{j=1}^q(\mu_j-j)}(z)^{\mu_1\cdots\mu_q}_{\nu_1\cdots\nu_p}\]
+\end{rmk}
+
+\begin{rmk}
 If \(E\)~is \(n\)-dimensional, then every \(u\in\medeprod^{n-1}E\) is decomposable.
 \end{rmk}
 \begin{proof}
@@ -4453,9 +4475,7 @@ where \(\alpha_{\varphi}=(\varphi^{\eprod})^{-1}\tprod\varphi_{\eprod}\).
 \begin{proof}
 Let \(e_i,e^{*i}\) be a pair of dual bases in \(E,E^*\). Then
 \[\unit^p=\sum_{<}e^{\nu_1\cdots\nu_p}\tprod e_{\nu_1\cdots\nu_p}\]
-where
-\[e^{\nu_1\cdots\nu_p}=e^{*\nu_1}\eprod\cdots\eprod e^{*\nu_p}\qquad\text{and}\qquad e_{\nu_1\cdots\nu_p}=\eprods{e}{\nu_1}{\nu_p}\]
-for each ordered \(p\)-tuple \(1\le\nu_1<\cdots<\nu_p\le n\). If \(\bar{e}_i=\varphi e_i\) and \(\bar{e}^{*i}=(\varphi^*)^{-1}e^{*i}\), then \(\bar{e}_i,\bar{e}^{*i}\) is another pair of dual bases in \(E,E^*\) and
+If \(\bar{e}_i=\varphi e_i\) and \(\bar{e}^{*i}=(\varphi^*)^{-1}e^{*i}\), then \(\bar{e}_i,\bar{e}^{*i}\) is another pair of dual bases in \(E,E^*\) and
 \begin{align*}
 \alpha_{\varphi}\unit^p&=\sum_{<}\alpha_{\varphi}(e^{\nu_1\cdots\nu_p}\tprod e_{\nu_1\cdots\nu_p})\\
 	&=\sum_{<}\bar{e}^{\nu_1\cdots\nu_p}\tprod\bar{e}_{\nu_1\cdots\nu_p}\\
