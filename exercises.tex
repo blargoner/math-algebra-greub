@@ -4437,13 +4437,13 @@ so \(D_e^*\)~is an algebra isomorphism from the intersection algebra to the exte
 
 \subsection*{\S~13}
 \begin{rmk}
-Let \(e_i,e^{*i}\) be dual bases in \(E,E^*\) with \(\eprods{e}{1}{n}=e\). Write
+Let \(e_i,e^{*i}\) be a pair of dual bases in \(E,E^*\) with \(\eprods{e}{1}{n}=e\). Write
 \[e_{\mu_1\cdots\mu_q}=\eprods{e}{\mu_1}{\mu_q}\qquad\text{and}\qquad e^{\nu_1\cdots\nu_p}=e^{*\nu_1}\eprod\cdots\eprod e^{*\nu_p}\]
 for ordered tuples \(1\le\mu_1<\cdots<\mu_q\le n\) and \(1\le\nu_1<\cdots<\nu_p\le n\). Then
 \[e_{\mu_1\cdots\mu_q}^{\nu_1\cdots\nu_p}=e^{\nu_1\cdots\nu_p}\tprod e_{\mu_1\cdots\mu_q}\]
 form a basis of~\(\medeprod(E^*,E)\) and for \(z\in\medeprod(E^*,E)\) we write
 \[z=\sum_{<}(z)^{\mu_1\cdots\mu_q}_{\nu_1\cdots\nu_p}e_{\mu_1\cdots\mu_q}^{\nu_1\cdots\nu_p}\]
-Now
+By (6.20) and~(6.23),
 \begin{align*}
 D_E(e_{\mu_1\cdots\mu_q}^{\nu_1\cdots\nu_p})&=D_e(e_{\mu_1\cdots\mu_q})\tprod D^e(e^{\nu_1\cdots\nu_p})\\
 	&=\bigl[(-1)^{\sum_{j=1}^q(\mu_j-j)}e^{\mu_{q+1}\cdots\mu_n}\bigr]\tprod\bigl[(-1)^{\sum_{i=1}^p(\nu_i-i)}e_{\nu_{p+1}\cdots\nu_n}\bigr]\\
@@ -4454,12 +4454,12 @@ It follows that
 D_E z&=\sum_{<}(z)^{\mu_1\cdots\mu_q}_{\nu_1\cdots\nu_p}D_E(e_{\mu_1\cdots\mu_q}^{\nu_1\cdots\nu_p})\\
 	&=\sum_{<}(-1)^{\sum_{i=1}^p(\nu_i-i)+\sum_{j=1}^q(\mu_j-j)}(z)^{\mu_1\cdots\mu_q}_{\nu_1\cdots\nu_p}e_{\nu_{p+1}\cdots\nu_n}^{\mu_{q+1}\cdots\mu_n}
 \end{align*}
-so\footnote{This is problem~10.}
+so\footnote{This is problem~6.15.10.}
 \[(D_E z)^{\nu_{p+1}\cdots\nu_n}_{\mu_{q+1}\cdots\mu_n}=(-1)^{\sum_{i=1}^p(\nu_i-i)+\sum_{j=1}^q(\mu_j-j)}(z)^{\mu_1\cdots\mu_q}_{\nu_1\cdots\nu_p}\]
 \end{rmk}
 
 \begin{rmk}
-If \(E\)~is \(n\)-dimensional, then every \(u\in\medeprod^{n-1}E\) is decomposable.
+Every \(u\in\medeprod^{n-1}E\) is decomposable.
 \end{rmk}
 \begin{proof}
 If \(u=0\), the result is trivial, otherwise \(v^*_1=D_e u\) can be extended to a basis \(v^*_1,\ldots,v^*_n\) in~\(E^*\) with dual basis \(v_1,\ldots,v_n\) in~\(E\). Let \(v=\eprods{v}{1}{n}\). Then \(v=\lambda e\) for some \(\lambda\ne 0\) and \(D^v=\lambda D^e\). Now
@@ -4563,6 +4563,24 @@ Finally,
 \end{proof}
 \begin{rmk}
 This result shows that the cross product is dual to the wedge product under Poincar\'e duality, and is just a special case of the external product.
+\end{rmk}
+
+\begin{exer}[8]
+Let \(e_i,e^{*i}\) be a pair of dual bases in \(E,E^*\) with \(e_{1\cdots n}=e\). Then
+\[D_e(\eprods{x}{1}{p})=\sum_{<}(-1)^{\sum_{i=1}^p(\nu_i-i)}\det\sprod{e^{*\nu_j}}{x_i}e^{\nu_{p+1}\cdots\nu_n}\]
+where \((\nu_1,\ldots,\nu_p)\) and \((\nu_{p+1},\ldots,\nu_n)\) are complementary ordered tuples.
+\end{exer}
+\begin{proof}
+We know
+\[\eprods{x}{1}{p}=\sum_{<}\sprod{e^{\nu_1\cdots\nu_p}}{\eprods{x}{1}{p}}e_{\nu_1\cdots\nu_p}=\sum_{<}\det\sprod{e^{*\nu_j}}{x_i}e_{\nu_1\cdots\nu_p}\]
+so
+\begin{align*}
+D_e(\eprods{x}{1}{p})&=\sum_{<}\det\sprod{e^{*\nu_j}}{x_i}D_e(e_{\nu_1\cdots\nu_p})\\
+	&=\sum_{<}(-1)^{\sum_{i=1}^p(\nu_i-i)}\det\sprod{e^{*\nu_j}}{x_i}e^{\nu_{p+1}\cdots\nu_n}\qedhere
+\end{align*}
+\end{proof}
+\begin{rmk}
+This result generalizes~(6.23).
 \end{rmk}
 
 % References
