@@ -4583,6 +4583,30 @@ D_e(\eprods{x}{1}{p})&=\sum_{<}\det\sprod{e^{*\nu_j}}{x_i}D_e(e_{\nu_1\cdots\nu_
 This result generalizes~(6.23).
 \end{rmk}
 
+\begin{exer}[11]
+Let \(E,E^*\) be a pair of dual \(3\)-dimensional vector spaces with \(a\in E\) and \(b^*\in E^*\). If \(a\ne 0\), then there is \(x\in E\) with \([a,x]=b^*\) if and only if \(\sprod{b^*}{a}=0\). If \(x_0\in E\) is a particular solution, then the general solution is given by \(x=x_0+\lambda a\) for \(\lambda\in\Gamma\).
+\end{exer}
+\begin{proof}
+If \([a,x]=b^*\), then
+\[\sprod{b^*}{a}=\sprod{[a,x]}{a}=\sprod{e^*}{a\eprod x\eprod a}=0\]
+Conversely if \(\sprod{b^*}{a}=0\) and \(a^*\in E^*\) is chosen with \(\sprod{a^*}{a}=-1\), then the vector \(x=[a^*,b^*]\) satisfies
+\begin{align*}
+[a,x]&=D_e(a\eprod D^e(a^*\eprod b^*))\\
+	&=-D_e(D^e(i(a)(a^*\eprod b^*)))\\
+	&=-i(a)(a^*\eprod b^*)\\
+	&=\sprod{b^*}{a}a^*-\sprod{a^*}{a}b^*\\
+	&=b^*
+\end{align*}
+If \([a,x_0]=b^*\), then
+\[[a,x_0+\lambda a]=[a,x_0]+\lambda[a,a]=b^*\]
+If also \([a,x]=b^*\), then
+\[[a,x-x_0]=[a,x]-[a,x_0]=b^*-b^*=0\]
+so \(a\eprod(x-x_0)=0\), which implies \(x-x_0=\lambda a\).\footnote{See the Corollary to Proposition~5.26.1.}
+\end{proof}
+\begin{rmk}
+If \(E\)~is an oriented \(3\)-dimensional Euclidean space, this result shows that for \(a\ne 0\) there is \(x\) with \(a\cross x=b\) if and only if \(\iprod{a}{b}=0\).
+\end{rmk}
+
 % References
 \newpage
 \begin{thebibliography}{0}
