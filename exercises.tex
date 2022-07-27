@@ -4601,10 +4601,29 @@ If \([a,x_0]=b^*\), then
 \[[a,x_0+\lambda a]=[a,x_0]+\lambda[a,a]=b^*\]
 If also \([a,x]=b^*\), then
 \[[a,x-x_0]=[a,x]-[a,x_0]=b^*-b^*=0\]
-so \(a\eprod(x-x_0)=0\), which implies \(x-x_0=\lambda a\).\footnote{See the Corollary to Proposition~5.26.1.}
+so \(a\eprod(x-x_0)=0\), which implies \(x-x_0=\lambda a\) for some \(\lambda\in\Gamma\).\footnote{See the Corollary to Proposition~5.26.1.}
 \end{proof}
 \begin{rmk}
 If \(E\)~is an oriented \(3\)-dimensional Euclidean space, this result shows that for \(a\ne 0\) there is \(x\) with \(a\cross x=b\) if and only if \(\iprod{a}{b}=0\).
+\end{rmk}
+
+\begin{exer}[12]
+If \(\varphi:E^{n-1}\to F\) is an \((n-1)\)-linear skew-symmetric map, then there is a unique map \(\chi:E^*\to F\) with
+\[\varphi(x_1,\ldots,x_{n-1})=\chi[x_1,\ldots,x_{n-1}]\qquad(x_i\in E)\]
+\end{exer}
+\begin{proof}
+If there is such a~\(\chi\), then by definition of the external product
+\[\chi D_{n-1}(\eprods{x}{1}{n-1})=\varphi(x_1,\ldots,x_{n-1})\qquad(x_i\in E)\]
+so \(f=\chi\after D_{n-1}:\medeprod^{n-1}E\to F\) is the linear map induced by~\(\varphi\) on~\(\medeprod^{n-1} E\):
+\begin{diagram}[nohug]
+E^{n-1}					&\rTo^{\varphi}	&F\\
+\dTo<{\medeprod^{n-1}}	&\ruDashto>f	&\\
+\medeprod^{n-1}E		&				&
+\end{diagram}
+It follows that \(\chi=f\after D_{n-1}^{-1}\), so \(\chi\)~is uniquely determined. On the other hand, this map satisfies the property.
+\end{proof}
+\begin{rmk}
+This is the universal property of the external product, which is dual to the universal property of the wedge product under Poincar\'e duality.
 \end{rmk}
 
 % References
