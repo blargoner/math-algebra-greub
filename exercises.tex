@@ -4601,14 +4601,14 @@ If \([a,x_0]=b^*\), then
 \[[a,x_0+\lambda a]=[a,x_0]+\lambda[a,a]=b^*\]
 If also \([a,x]=b^*\), then
 \[[a,x-x_0]=[a,x]-[a,x_0]=b^*-b^*=0\]
-so \(a\eprod(x-x_0)=0\), which implies \(x-x_0=\lambda a\) for some \(\lambda\in\Gamma\).\footnote{See the Corollary to Proposition~5.26.1.}
+so \(a\eprod(x-x_0)=0\), which implies \(x-x_0=\lambda a\) for some \(\lambda\in\Gamma\).\footnote{See the corollary to Proposition~5.26.1.}
 \end{proof}
 \begin{rmk}
 If \(E\)~is an oriented \(3\)-dimensional Euclidean space, this result shows that for \(a\ne 0\) there is \(x\) with \(a\cross x=b\) if and only if \(\iprod{a}{b}=0\).
 \end{rmk}
 
 \begin{exer}[12]
-If \(\varphi:E^{n-1}\to F\) is an \((n-1)\)-linear skew-symmetric map, then there is a unique map \(\chi:E^*\to F\) with
+If \(\varphi:E^{n-1}\to F\) is an \((n-1)\)-linear skew-symmetric map, then there is a unique linear map \(\chi:E^*\to F\) with
 \[\varphi(x_1,\ldots,x_{n-1})=\chi[x_1,\ldots,x_{n-1}]\qquad(x_i\in E)\]
 \end{exer}
 \begin{proof}
@@ -4624,6 +4624,27 @@ It follows that \(\chi=f\after D_{n-1}^{-1}\), so \(\chi\)~is uniquely determine
 \end{proof}
 \begin{rmk}
 This is the universal property of the external product, which is dual to the universal property of the wedge product under Poincar\'e duality.
+\end{rmk}
+
+\begin{exer}[13]
+If \(\varphi:E\to E\) is an isomorphism, then
+\[[\varphi x_1,\ldots,\varphi x_{n-1}]=\det\varphi\mult(\varphi^{-1})^*[x_1,\ldots,x_{n-1}]\qquad(x_i\in E)\]
+\end{exer}
+\begin{proof}
+For any \(x_n\in E\),
+\begin{align*}
+\sprod{[\varphi x_1,\ldots,\varphi x_{n-1}]}{\varphi x_n}&=\sprod{e^*}{\eprods{\varphi x}{1}{n}}\\
+	&=\det\varphi\mult\sprod{e^*}{\eprods{x}{1}{n}}\\
+	&=\det\varphi\mult\sprod{[x_1,\ldots,x_{n-1}]}{\varphi^{-1}\varphi x_n}\\
+	&=\sprod{\det\varphi\mult(\varphi^{-1})^*[x_1,\ldots,x_{n-1}]}{\varphi x_n}
+\end{align*}
+The result follows by nondegeneracy of the scalar product.
+\end{proof}
+\begin{rmk}
+Substituting \((\varphi^{-1})^*\) for~\(\varphi\), we obtain
+\[\varphi[x^*_1,\ldots,x^*_{n-1}]=\det\varphi\mult[(\varphi^{-1})^*x^*_1,\ldots,(\varphi^{-1})^*x^*_{n-1}]\qquad(x^*_i\in E^*)\]
+In particular if \(E\)~is an oriented \(3\)-dimensional Euclidean space, we have\footnote{See the remarks in chapter~VIII, \S~4 of \cite{greub1} above.}
+\[\varphi x\cross\varphi y=\det\varphi\mult\adj{\varphi}^{-1}(x\cross y)\qquad\text{and}\qquad\varphi(x\cross y)=\det\varphi\mult(\adj{\varphi}^{-1}x\cross\adj{\varphi}^{-1}y)\]
 \end{rmk}
 
 % References
