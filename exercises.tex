@@ -4647,6 +4647,48 @@ In particular if \(E\)~is an oriented \(3\)-dimensional Euclidean space, we have
 \[\varphi x\cross\varphi y=\det\varphi\mult\adj{\varphi}^{-1}(x\cross y)\qquad\text{and}\qquad\varphi(x\cross y)=\det\varphi\mult(\adj{\varphi}^{-1}x\cross\adj{\varphi}^{-1}y)\]
 \end{rmk}
 
+\begin{exer}[14]
+Let \(e_i,e^{*i}\) be a pair of dual bases in \(E,E^*\) with \(e_{1\cdots n}=e\) and
+\[x_i=\sum_{\nu=1}^n\xi_i^{\nu}e_{\nu}\qquad(1\le i\le n-1,\ \xi_i^{\nu}\in\Gamma)\]
+Then
+\[[x_1,\ldots,x_{n-1}]=\sum_{\nu=1}^n\eta_{\nu}e^{*\nu}\]
+where
+\[\setlength\arraycolsep{1pt}
+\eta_{\nu}=(-1)^{n-\nu}\begin{vmatrix}
+\xi_1^1&\cdots&\delete{\xi}_1^{\nu}&\cdots&\xi_1^n\\
+\vdots&&&&\vdots\\
+\xi_{n-1}^1&\cdots&\delete{\xi}_{n-1}^{\nu}&\cdots&\xi_{n-1}^n
+\end{vmatrix}\]
+\end{exer}
+\begin{proof}
+By the corrected version of problem~8 above.
+\end{proof}
+
+\begin{exer}[15]
+\[\setlength\arraycolsep{1pt}
+\begin{vmatrix}
+\displaystyle\sum_{\nu=1}^n\xi_1^{\nu}\eta^1_{\nu}&\cdots&\displaystyle\sum_{\nu=1}^n\xi_1^{\nu}\eta^{n-1}_{\nu}\\
+\vdots&\ddots&\vdots\\
+\displaystyle\sum_{\nu=1}^n\xi_{n-1}^{\nu}\eta^1_{\nu}&\cdots&\displaystyle\sum_{\nu=1}^n\xi_{n-1}^{\nu}\eta^{n-1}_{\nu}
+\end{vmatrix}=\sum_{\nu=1}^n\begin{vmatrix}
+\xi_1^1&\cdots&\delete{\xi}_1^{\nu}&\cdots&\xi_1^n\\
+\vdots&&&&\vdots\\
+\xi_{n-1}^1&\cdots&\delete{\xi}_{n-1}^{\nu}&\cdots&\xi_{n-1}^n
+\end{vmatrix}\begin{vmatrix}
+\eta_1^1&\cdots&\delete{\eta}_1^{\nu}&\cdots&\eta_1^n\\
+\vdots&&&&\vdots\\
+\eta_{n-1}^1&\cdots&\delete{\eta}_{n-1}^{\nu}&\cdots&\eta_{n-1}^n
+\end{vmatrix}
+\]
+\end{exer}
+\begin{proof}
+Let \(e_i,e^{*i}\) be a pair of dual bases in \(E,E^*\) with \(e_{1\cdots n}=e\) and
+\[x_i=\sum_{\nu=1}^n\xi_i^{\nu}e_{\nu}\qquad x^{*j}=\sum_{\mu=1}^n\eta^j_{\mu}e^{*\mu}\qquad(1\le i,j\le n-1)\]
+By the Lagrange identity, the left-hand side of the equation is
+\[\det\sprod{x^{*j}}{x_i}=\sprod{[x_1,\ldots,x_{n-1}]}{[x^{*1},\ldots,x^{*n-1}]}\]
+which equals the right-hand side of the equation by problem~14.
+\end{proof}
+
 % References
 \newpage
 \begin{thebibliography}{0}
