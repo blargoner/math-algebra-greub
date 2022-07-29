@@ -4689,6 +4689,24 @@ By the Lagrange identity, the left-hand side of the equation is
 which equals the right-hand side of the equation by problem~14.
 \end{proof}
 
+\subsection*{\S~16}
+\begin{rmk}
+Let \(T_1:E^*\tprod E\to L(E;E)\) denote the isomorphism from subsection~1.26 (using the notation from subsection~6.4) given by
+\[T_1(b^*\tprod a)=\sprod{b^*}{-}a\qquad(a\in E,\ b^*\in E^*)\]
+Let \(e_i,e^{*i}\) be a pair of dual bases in \(E,E^*\). Then
+\begin{align*}
+T(T_1(b^*\tprod a))&=\bigl(\iota\tprod T_1(b^*\tprod a)\bigr)\bigl(\,\sum_{\nu}e^{*\nu}\tprod e_{\nu}\bigr)\\
+	&=\sum_{\nu}e^{*\nu}\tprod\sprod{b^*}{e_{\nu}}a\\
+	&=\bigl(\,\sum_{\nu}\sprod{b^*}{e_{\nu}}e^{*\nu}\bigr)\tprod a\\
+	&=b^*\tprod a
+\end{align*}
+It follows that \(T=T_1^{-1}\).
+\end{rmk}
+
+\begin{rmk}
+(6.28)~follows from~(6.16) with \(p=1\) and the fact that \(T=T_1^{-1}\).
+\end{rmk}
+
 % References
 \newpage
 \begin{thebibliography}{0}
