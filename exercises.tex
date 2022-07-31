@@ -2857,6 +2857,22 @@ If \(x\) and~\(y\) are distinct indeterminates, then
 is an isomorphism of graded algebras.
 \end{rmk}
 
+\subsection*{\S~8}
+\begin{rmk}
+Let \(A=\sum_p A_p\) and \(B=\sum_q B_q\) be skew graded algebras, so \(A\stprod B\)~is also a skew graded algebra. Define the skew flip operator \(\widehat{f}:A\stprod B\to B\stprod A\) by
+\[\widehat{f}(a\tprod b)=(-1)^{pq}b\tprod a\qquad(a\in A_p,\ b\in B_q)\]
+Then \(\widehat{f}\)~is an algebra isomorphism. Indeed, it is a linear isomorphism and if \(a_1\in A_p\), \(a_2\in A_q\), \(b_1\in B_r\), and \(b_2\in B_s\), then
+\begin{align*}
+\widehat{f}[(a_1\tprod b_1)(a_2\tprod b_2)]&=(-1)^{qr}\widehat{f}(a_1a_2\tprod b_1b_2)\\
+	&=(-1)^{qr+(p+q)(r+s)}b_1b_2\tprod a_1a_2\\
+	&=(-1)^{pr+qs}(b_1\tprod a_1)(b_2\tprod a_2)\\
+	&=\widehat{f}(a_1\tprod b_1)\widehat{f}(a_2\tprod b_2)
+\end{align*}
+The result now follows by multilinearity.
+
+Note the regular flip operator \(a\tprod b\mapsto b\tprod a\) is \emph{not} an algebra isomorphism from \(A\stprod B\) to \(B\stprod A\). This shows that \(\widehat{f}\)~is the appropriate flip operator to use when working with skew products of skew graded algebras.\footnote{See for example subsection~6.18.}
+\end{rmk}
+
 \newpage
 \section*{Chapter~3}
 In this chapter, we see three ways of defining a tensor:
