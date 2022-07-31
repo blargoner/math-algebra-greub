@@ -4033,7 +4033,7 @@ The result now follows by multilinearity.
 \end{rmk}
 
 \begin{rmk}
-We provide an alternative proof of~(5.51). For \(u=\eprods{x}{1}{p}\in\medeprod^p E\), \(v=\eprods{y}{1}{r}\in\medeprod^r F\), \(u^*=\eprods{x^*}{1}{q}\in\medeprod^q E^*\), and \(v^*=\eprods{y^*}{1}{s}\in\medeprod^s F^*\), let
+We provide an alternative proof of~(5.51).\footnote{This proof is similar to that of Proposition~6.18.1.} For \(u=\eprods{x}{1}{p}\in\medeprod^p E\), \(v=\eprods{y}{1}{r}\in\medeprod^r F\), \(u^*=\eprods{x^*}{1}{q}\in\medeprod^q E^*\), and \(v^*=\eprods{y^*}{1}{s}\in\medeprod^s F^*\), let
 \[z_i=\begin{cases}
 x_i&\text{for }1\le i\le p\\
 y_{i-p}&\text{for }p<i\le p+r
@@ -4735,6 +4735,17 @@ w_1\eprod w_2&=(u^*\tprod u)\eprod(v^*\tprod v)\\
 	&=(-1)^{qr+pr+qs+ps}(v^*\tprod v)\eprod(u^*\tprod u)\\
 	&=(-1)^{(p+q)(r+s)}w_2\eprod w_1
 \end{align*}
+\end{rmk}
+
+\subsection*{\S~18}
+\begin{rmk}
+The inner product \(\ssprod{-}{-}\) in \(\medeprod E^*\stprod\medeprod E\) is obtained from the scalar product between \(\medeprod E^*\stprod\medeprod E\) and \(\medeprod E\stprod\medeprod E^*\) using the \emph{skew} flip operator\footnote{See the remarks in subsection 2.8 above.}
+\[\widehat{f}:\medeprod E^*\stprod\medeprod E\to\medeprod E\stprod\medeprod E^*\]
+defined by
+\[\widehat{f}(u^*\tprod u)=(-1)^{pq}u\tprod u^*\qquad(u^*\in\medeprod^p E^*,\ u\in\medeprod^q E)\]
+This introduces the sign factors into the inner product, which are preserved by the canonical isomorphism
+\[f:\medeprod E^*\stprod\medeprod E\to\medeprod(E^*\dsum E)\]
+as seen in Proposition~6.18.1.
 \end{rmk}
 
 % References
