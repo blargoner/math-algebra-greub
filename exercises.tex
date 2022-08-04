@@ -59,6 +59,7 @@
 \newcommand{\medeprodf}{\tilde{\medeprod}}
 \newcommand{\fprod}{\bigcdot{0.5}}
 \newcommand{\mprod}{\bigcdot{0.5}}
+\newcommand{\bprod}{\mathop{\square}}
 \newcommand{\tdot}{\bigcdot{0.75}}
 \newcommand{\adot}{\bigcdot{0.75}}
 
@@ -2658,7 +2659,7 @@ This motivates the definition of the composition algebra. An alternative way to 
 \begin{rmk}
 If \(\dim E<\infty\), the fact that
 \[\sprod{T(x^*\tprod x)}{T(y^*\tprod y)}=\sprod{x^*\tprod x}{y^*\tprod y}\]
-follows from~(1.29) in \S~28.
+follows from~(1.29) in \S~28. This fact implies that \(T\)~is an isometry, so \(T^*=T^{-1}\).
 \end{rmk}
 
 \begin{exer}[1]
@@ -4348,6 +4349,11 @@ But \(w_p\after z_q=0\) if \(p\ne q\) by~(6.10), and \(w_p\after z_p\in\Delta_p 
 For this reason \(\Delta E\)~is a subalgebra under the composition product, although it is not commutative if \(\dim E>1\).
 \end{rmk}
 
+\subsection*{\S~6}
+\begin{rmk}
+It follows from~(6.12) that \(T_E\)~is an isometry, so \(T_E^*=T_E^{-1}\).
+\end{rmk}
+
 \subsection*{\S~7}
 \begin{rmk}
 In~(6.17), we see that the unit tensor of degree~\(p\) in~\(\medeprod^p_p(E^*,E)\) encodes all of the information about the scalar product between \(\medeprod^p E^*\) and~\(\medeprod^p E\), just like a metric tensor does for an inner product.\footnote{See the remarks in chapter~3, \S~17 above.}
@@ -4389,6 +4395,10 @@ D_E^*&=Q_E^*\after(D_e\tprod D^e)^*\\
 	&=(\omega_{E^*}\tprod\omega_E)\after Q_{E^*}\after(D^e\tprod D_e)\\
 	&=\Omega_E\after D_E
 \end{align*}
+\end{rmk}
+
+\begin{rmk}
+It follows from Theorem~6.10.1 that \(D_E^*=D_E^{-1}\).
 \end{rmk}
 
 \begin{rmk}
@@ -4716,7 +4726,7 @@ T(T_1(b^*\tprod a))&=\bigl(\iota\tprod T_1(b^*\tprod a)\bigr)\bigl(\,\sum_{\nu}e
 	&=\bigl(\,\sum_{\nu}\sprod{b^*}{e_{\nu}}e^{*\nu}\bigr)\tprod a\\
 	&=b^*\tprod a
 \end{align*}
-It follows that \(T=T_1^{-1}\).
+It follows that \(T=T_1^{-1}=T_1^*\).
 \end{rmk}
 
 \begin{rmk}
@@ -4735,6 +4745,13 @@ w_1\eprod w_2&=(u^*\tprod u)\eprod(v^*\tprod v)\\
 	&=(-1)^{qr+pr+qs+ps}(v^*\tprod v)\eprod(u^*\tprod u)\\
 	&=(-1)^{(p+q)(r+s)}w_2\eprod w_1
 \end{align*}
+\end{rmk}
+
+\begin{rmk}
+It follows from~(6.33) and Proposition~6.3.1 that
+\[T_E(\eprods{z}{1}{k})=(-1)^{k(k-1)/2}T_E(z_1)\bprod\cdots\bprod T_E(z_k)\qquad(z_i\in E^*\tprod E)\]
+In particular
+\[T_E(z^{\widehat{k}})=(-1)^{k(k-1)/2}\medeprod^k T_E(z)\qquad(z\in E^*\tprod E)\]
 \end{rmk}
 
 \subsection*{\S~18}
