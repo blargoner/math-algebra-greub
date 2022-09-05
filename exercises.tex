@@ -82,6 +82,7 @@
 \newcommand{\tprods}[3]{\multi{\tprod}{#1}{#2}{#3}}
 \newcommand{\eprods}[3]{\multi{\eprod}{#1}{#2}{#3}}
 \newcommand{\fprods}[3]{\multi{\fprod}{#1}{#2}{#3}}
+\newcommand{\mprods}[3]{\multi{\mprod}{#1}{#2}{#3}}
 \newcommand{\circled}[1]{\text{\tiny\textcircled{\textit{#1}}}}
 \newcommand{\sign}[1]{\varepsilon_{#1}}
 \newcommand{\cat}[1]{\mathbf{#1}}
@@ -3594,7 +3595,7 @@ This multiplication makes~\(\medeprod E\) into a \emph{graded algebra} where the
 
 \begin{rmk}
 The factor~\(1/k!\) in the definition of~\(u^k\) kills off coefficients arising in
-\[\underbrace{u\eprod\cdots\eprod u}_k\]
+\[\underbrace{\eprods{u}{}{}}_k\]
 For example if \(u=e_1\eprod e_2+e_3\eprod e_4\) where \(e_i\in E\), then
 \[u\eprod u=2e_1\eprod e_2\eprod e_3\eprod e_4\]
 so
@@ -3602,10 +3603,17 @@ so
 \end{rmk}
 
 \begin{rmk}
+If \(u\in\medeprod E\), then
+\[u^{p+q}=\frac{1}{(p+q)!}\underbrace{\eprods{u}{}{}}_p\eprod\underbrace{\eprods{u}{}{}}_q=\frac{p!\,q!}{(p+q)!}u^p\eprod u^q\qquad(p,q\ge 0)\]
+In particular,
+\[u\eprod u^k=u^k\eprod u=(k+1)u^{k+1}\qquad(k\ge 0)\]
+\end{rmk}
+
+\begin{rmk}
 If \(u\in\medeprod^p E\) and \(v\in\medeprod^q E\) with \(pq\)~even, then
 \begin{align*}
-(u+v)^k&=\frac{1}{k!}\underbrace{(u+v)\eprod\cdots\eprod(u+v)}_k\\
-	&=\frac{1}{k!}\sum_{i+j=k}\frac{k!}{i!j!}\underbrace{u\eprod\cdots\eprod u}_i\eprod\underbrace{v\eprod\cdots\eprod v}_j\\
+(u+v)^k&=\frac{1}{k!}\underbrace{\eprods{(u+v)}{}{}}_k\\
+	&=\frac{1}{k!}\sum_{i+j=k}\frac{k!}{i!j!}\underbrace{\eprods{u}{}{}}_i\eprod\underbrace{\eprods{v}{}{}}_j\\
 	&=\sum_{i+j=k}\frac{1}{i!j!}(i!\,u^i)\eprod(j!\,v^j)\\
 	&=\sum_{i+j=k}u^i\eprod v^j
 \end{align*}
@@ -4288,6 +4296,13 @@ There is a canonical isomorphism
 \end{rmk}
 
 \begin{rmk}
+If \(w\in\medeprod(E^*,E)\), then
+\[w^{p+q}=\frac{1}{(p+q)!}\underbrace{\mprods{w}{}{}}_p\mprod\underbrace{\mprods{w}{}{}}_q=\frac{p!\,q!}{(p+q)!}w^p\mprod w^q\qquad(p,q\ge 0)\]
+In particular,
+\[w\mprod w^k=w^k\mprod w=(k+1)w^{k+1}\qquad(k\ge 0)\]
+\end{rmk}
+
+\begin{rmk}
 The inner product in~(6.2), which is just a special case of~(1.25), is compatible with the bigradation in~\(\medeprod(E^*,E)\) and therefore restricts to a scalar product between \(\medeprod^p_q(E^*,E)\) and \(\medeprod^q_p(E^*,E)\). In particular it restricts to an inner product in~\(\medeprod^p_p(E^*,E)\).
 
 The flip isomorphism used in the definition of~(1.25) induces flips in many results in the mixed exterior algebra---for example, in various results related to the bigradation, and results like
@@ -4349,6 +4364,18 @@ But \(w_p\after z_q=0\) if \(p\ne q\) by~(6.10), and \(w_p\after z_p\in\Delta_p 
 For this reason \(\Delta E\)~is a subalgebra under the composition product, although it is not commutative if \(\dim E>1\).
 \end{rmk}
 
+\subsection*{\S~5}
+\begin{rmk}
+In the Corollary to Proposition~6.5.1,
+\begin{align*}
+p!\,i(z)(w^p)&=i(z)(\underbrace{\mprods{w}{}{}}_p)\\
+	&=\sum_{\nu}\sprod{z}{w}\underbrace{\mprods{w}{}{}}_{p-1}-\sum_{\nu<\mu}2(w\after z\after w)\underbrace{\mprods{w}{}{}}_{p-2}\\
+	&=p\mult(p-1)!\,\sprod{z}{w}w^{p-1}-\frac{p(p-1)}{2}\mult 2\mult(p-2)!\,(w\after z\after w)w^{p-2}\\
+	&=p!\,\bigl[\sprod{z}{w}w^{p-1}-(w\after z\after w)w^{p-2}\bigr]
+\end{align*}
+Dividing both sides by~\(p!\) yields the desired result.
+\end{rmk}
+
 \subsection*{\S~6}
 \begin{rmk}
 It follows from~(6.12) that \(T_E\)~is an isometry, so \(T_E^*=T_E^{-1}\).
@@ -4356,7 +4383,29 @@ It follows from~(6.12) that \(T_E\)~is an isometry, so \(T_E^*=T_E^{-1}\).
 
 \subsection*{\S~7}
 \begin{rmk}
-In~(6.17), we see that the unit tensor of degree~\(p\) in~\(\medeprod^p_p(E^*,E)\) encodes all of the information about the scalar product between \(\medeprod^p E^*\) and~\(\medeprod^p E\), just like a metric tensor does for an inner product.\footnote{See the remarks in chapter~3, \S~17 above.}
+It follows from~(6.14) and a remark in \S~2 above that
+\[\unit\mprod\unit_p=\unit_p\mprod\unit=(p+1)\unit_{p+1}\qquad(0\le p\le n-1)\]
+\end{rmk}
+
+\begin{rmk}
+In~(6.17), we see that the unit tensor~\(\unit_p\) in~\(\medeprod^p_p(E^*,E)\) encodes all of the information about the scalar product between \(\medeprod^p E^*\) and~\(\medeprod^p E\), just like a metric tensor does for an inner product.\footnote{See the remarks in chapter~3, \S~17 above.}
+\end{rmk}
+
+\begin{rmk}
+In the proof of Proposition~6.7.1, if (6.19)~holds for some~\(q\ge 1\), then for any \(p\ge q+1\) we have
+\begin{align*}
+(q+1)i(\unit_{q+1})\unit_p&=i(\unit_q\mprod\unit)\unit_p\\
+	&=i(\unit)(i(\unit_q)\unit_p)\\
+	&=\binom{n-p+q}{q}i(\unit)\unit_{p-q}\\
+	&=\binom{n-p+q}{q}(n-p+q+1)\unit_{p-(q+1)}
+\end{align*}
+Since
+\[\binom{n-p+q}{q}\frac{n-p}{q+1}=\binom{n-p+q}{q+1}\]
+and
+\[\binom{n-p+q}{q+1}+\binom{n-p+q}{q}=\binom{n-p+q+1}{q+1}\]
+it follows that
+\[i(\unit_{q+1})\unit_p=\binom{n-p+q+1}{q+1}\unit_{p-(q+1)}\]
+so (6.19)~holds for~\(q+1\).
 \end{rmk}
 
 \subsection*{\S~8}
