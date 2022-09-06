@@ -4335,21 +4335,6 @@ The flip operator \(Q_E:\medeprod(E^*,E)\to\medeprod(E,E^*)\) restricts to opera
 In particular \(Q_E^{p,p}:\Delta_p E\to\Delta_p E^*\). It follows that \(Q_{E^*}^{q,p}\after Q_E^{p,q}=\iota\), so the operators are linear isomorphisms. They also preserve scalar products. Finally, \(Q_E^*=Q_{E^*}\) and \((Q_E^{p,q})^*=Q_{E^*}^{p,q}\).
 \end{rmk}
 
-\begin{rmk}
-Let \(\cat{C}\)~denote the category of finite-dimensional vector spaces over~\(\Gamma\) and the linear isomorphisms between them. For an object \(E\in\cat{C}\), let
-\[\alpha(E)=\medeprod(L(E),E)\]
-and for an arrow \(\varphi:E\to F\) in~\(\cat{C}\), let
-\[\alpha(\varphi)=\alpha_{\varphi}=(\varphi^{\eprod})^{-1}\tprod\varphi_{\eprod}:\alpha(E)\to\alpha(F)\]
-Then \(\alpha:\cat{C}\to\cat{C}\) is a functor. Indeed, \(\alpha\)~maps objects to objects and arrows to arrows, respecting domains and codomains and identity arrows. If \(\psi:F\to G\) is another arrow in~\(\cat{C}\), then
-\begin{align*}
-\alpha(\psi\after\varphi)&=((\psi\after\varphi)^{\eprod})^{-1}\tprod(\psi\after\varphi)_{\eprod}\\
-	&=((\psi^{\eprod})^{-1}\after(\varphi^{\eprod})^{-1})\tprod(\psi_{\eprod}\after\varphi_{\eprod})\\
-	&=((\psi^{\eprod})^{-1}\tprod\psi_{\eprod})\after((\varphi^{\eprod})^{-1}\tprod\varphi_{\eprod})\\
-	&=\alpha(\psi)\after\alpha(\varphi)
-\end{align*}
-so \(\alpha\)~also respects composites.
-\end{rmk}
-
 \subsection*{\S~3}
 \begin{rmk}
 The \(p\)-ary box product is \(p\)-linear and symmetric, so factors through the \(p\)-th symmetric power of~\(L(E;E)\).
@@ -4458,7 +4443,20 @@ In particular \(D_E^{p,p}:\Delta_p E\to\Delta_{n-p}E\) and \(D_{\Delta}=\sum_p D
 
 \subsection*{\S~11}
 \begin{rmk}
-The diagram shows that \(D_E\)~is a natural isomorphism of the functor~\(\alpha\) from \S~2 above:
+Let \(\cat{C}\)~denote the category of finite-dimensional vector spaces over~\(\Gamma\) and the linear isomorphisms between them. For an object \(E\in\cat{C}\), let
+\[\alpha(E)=\medeprod(L(E),E)\]
+and for an arrow \(\varphi:E\to F\) in~\(\cat{C}\), let
+\[\alpha(\varphi)=\alpha_{\varphi}=(\varphi^{\eprod})^{-1}\tprod\varphi_{\eprod}:\alpha(E)\to\alpha(F)\]
+Then \(\alpha:\cat{C}\to\cat{C}\) is a functor. Indeed, \(\alpha\)~maps objects to objects and arrows to arrows, respecting domains and codomains and identity arrows. If \(\psi:F\to G\) is another arrow in~\(\cat{C}\), then
+\begin{align*}
+\alpha(\psi\after\varphi)&=((\psi\after\varphi)^{\eprod})^{-1}\tprod(\psi\after\varphi)_{\eprod}\\
+	&=((\psi^{\eprod})^{-1}\after(\varphi^{\eprod})^{-1})\tprod(\psi_{\eprod}\after\varphi_{\eprod})\\
+	&=((\psi^{\eprod})^{-1}\tprod\psi_{\eprod})\after((\varphi^{\eprod})^{-1}\tprod\varphi_{\eprod})\\
+	&=\alpha(\psi)\after\alpha(\varphi)
+\end{align*}
+so \(\alpha\)~also respects composites.
+
+The diagram in this section shows that \(D_E\)~is a natural isomorphism of the functor~\(\alpha\):
 \begin{diagram}
 \alpha(E)			&\rTo^{\alpha(\varphi)}_{\iso}	&\alpha(F)\\
 \dTo<{D_E}>{\iso}	&								&\dTo>{D_F}<{\iso}\\
