@@ -4558,13 +4558,9 @@ where \(\alpha_{\varphi}=(\varphi^{\eprod})^{-1}\tprod\varphi_{\eprod}\).
 \end{exer}
 \begin{proof}
 Let \(e_i,e^{*i}\) be a pair of dual bases in \(E,E^*\). Then
-\[\unit^p=\sum_{<}e^{\nu_1\cdots\nu_p}\tprod e_{\nu_1\cdots\nu_p}\]
+\[\unit^p=\sum_{<}e^{\nu_1\cdots\nu_p}_{\nu_1\cdots\nu_p}\]
 If \(\bar{e}_i=\varphi e_i\) and \(\bar{e}^{*i}=(\varphi^*)^{-1}e^{*i}\), then \(\bar{e}_i,\bar{e}^{*i}\) is another pair of dual bases in \(E,E^*\) and
-\begin{align*}
-\alpha_{\varphi}\unit^p&=\sum_{<}\alpha_{\varphi}(e^{\nu_1\cdots\nu_p}\tprod e_{\nu_1\cdots\nu_p})\\
-	&=\sum_{<}\bar{e}^{\nu_1\cdots\nu_p}\tprod\bar{e}_{\nu_1\cdots\nu_p}\\
-	&=\unit^p\qedhere
-\end{align*}
+\[\alpha_{\varphi}\unit^p=\sum_{<}\alpha_{\varphi}(e^{\nu_1\cdots\nu_p}_{\nu_1\cdots\nu_p})=\sum_{<}\bar{e}^{\nu_1\cdots\nu_p}_{\nu_1\cdots\nu_p}=\unit^p\qedhere\]
 \end{proof}
 \begin{rmk}
 This result shows that unit tensors in the mixed exterior algebra are \emph{invariant} in that their descriptions do not depend upon the choice of basis.
@@ -4607,7 +4603,8 @@ This result shows that multiplication is the dual of insertion under Poincar\'e 
 \begin{proof}
 For \(z=v^*\tprod v\) and \(w=u^*\tprod u\) in~\(\Delta E\),
 \begin{align*}
-D_{\Delta}\mu(z)w&=D_{\Delta}(w\mprod z)\\
+D_{\Delta}\mu(z)w&=D_{\Delta}(z\mprod w)\\
+	&=D_{\Delta}(w\mprod z)\\
 	&=D_{\Delta}[(u^*\eprod v^*)\tprod(u\eprod v)]\\
 	&=D_e(u\eprod v)\tprod D^e(u^*\eprod v^*)\\
 	&=[i(v)D_e u]\tprod[i(v^*)D^e u^*]\\
@@ -4651,7 +4648,7 @@ This result shows that the cross product is dual to the wedge product under Poin
 
 \begin{exer}[8]
 Let \(e_i,e^{*i}\) be a pair of dual bases in \(E,E^*\) with \(e_{1\cdots n}=e\). Then
-\[D_e(\eprods{x}{1}{p})=\sum_{<}(-1)^{\sum_{i=1}^p(\nu_i-i)}\det\sprod{e^{*\nu_j}}{x_i}e^{\nu_{p+1}\cdots\nu_n}\]
+\[D_e(\eprods{x}{1}{p})=\sum_{\nu_1<\cdots<\nu_p}(-1)^{\sum_{i=1}^p(\nu_i-i)}\det\sprod{e^{*\nu_j}}{x_i}e^{\nu_{p+1}\cdots\nu_n}\]
 where \((\nu_1,\ldots,\nu_p)\) and \((\nu_{p+1},\ldots,\nu_n)\) are complementary ordered tuples.
 \end{exer}
 \begin{proof}
@@ -4676,7 +4673,7 @@ If \([a,x]=b^*\), then
 Conversely if \(\sprod{b^*}{a}=0\) and \(a^*\in E^*\) is chosen with \(\sprod{a^*}{a}=-1\), then the vector \(x=[a^*,b^*]\) satisfies
 \begin{align*}
 [a,x]&=D_e(a\eprod D^e(a^*\eprod b^*))\\
-	&=-D_e(D^e(i(a)(a^*\eprod b^*)))\\
+	&=-i(a)(D_e(D^e(a^*\eprod b^*)))\\
 	&=-i(a)(a^*\eprod b^*)\\
 	&=\sprod{b^*}{a}a^*-\sprod{a^*}{a}b^*\\
 	&=b^*
