@@ -4772,6 +4772,10 @@ which equals the right-hand side of the equation by problem~14.
 
 \subsection*{\S~16}
 \begin{rmk}
+The material in this subsection really belongs in chapter~1, as none of it is specific to the mixed exterior algebra. Some of it is also redundant, as noted below.
+\end{rmk}
+
+\begin{rmk}
 Let \(T_1:E^*\tprod E\to L(E;E)\) denote the isomorphism from subsection~1.26 (using the notation from subsection~6.4) given by
 \[T_1(b^*\tprod a)=\sprod{b^*}{-}a\qquad(a\in E,\ b^*\in E^*)\]
 Let \(e_i,e^{*i}\) be a pair of dual bases in \(E,E^*\). Then
@@ -4785,7 +4789,17 @@ It follows that \(T=T_1^{-1}=T_1^*\).
 \end{rmk}
 
 \begin{rmk}
-(6.28)~follows from~(6.16) with \(p=1\) and the fact that \(T=T_1^{-1}\).
+(6.28)~follows from~(1.30), or from~(6.16) with \(p=1\), since \(T=T_1^{-1}\).
+\end{rmk}
+
+\begin{rmk}
+\(T\)~is an \emph{algebra} isomorphism since \(T_1\)~is, so
+\[T(\psi\varphi)=T(\psi)T(\varphi)=(\iota\tprod\psi)T(\varphi)\]
+This it the correct version of~(6.30).
+\end{rmk}
+
+\begin{rmk}
+We know that \(T\) and~\(\widetilde{T}\) are isometries since \(T_1\)~is. It is thus unnecessary to prove that they are linear isomorphisms with the aid of (6.28) and~(6.30), and also circular given how nondegeneracy of the trace form is established in subsection~1.28!
 \end{rmk}
 
 \subsection*{\S~17}
