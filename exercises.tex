@@ -4251,6 +4251,8 @@ We see that the algebra isomorphisms \(\medeprod E^*\iso A^{\adot}(E)\) and \(\m
 {\boldmath\textbf{In this chapter, \(E\) and~\(E^*\) are dual vector spaces over~\(\Gamma\). In \S6--16, they are \(n\)-dimensional.}}
 
 \subsection*{\S~1}
+% TODO: mixed skew-symmetric function implementation of mixed exterior algebra
+
 \begin{rmk}
 Recall that
 \[M^p_q(E^*,E)=\underbrace{E^*\times\cdots\times E^*}_p\times\underbrace{E\times\cdots\times E}_q\]
@@ -4337,7 +4339,7 @@ In particular \(Q_E^{p,p}:\Delta_p E\to\Delta_p E^*\). It follows that \(Q_{E^*}
 
 \subsection*{\S~3}
 \begin{rmk}
-The \(p\)-ary box product is \(p\)-linear and symmetric, so factors through the \(p\)-th symmetric power of~\(L(E;E)\).
+The \(p\)-ary box product, which is a generalization of the \(p\)-th exterior power, is \(p\)-linear and symmetric, so factors through the \(p\)-th symmetric power of~\(L(E;E)\).
 \end{rmk}
 
 \subsection*{\S~4}
@@ -4346,10 +4348,14 @@ The diagonal subspace \(\Delta E=\sum_p\Delta_p E\) is closed under the composit
 \[w\after z=\sum_{p,q}w_p\after z_q\]
 But \(w_p\after z_q=0\) if \(p\ne q\) by~(6.10), and \(w_p\after z_p\in\Delta_p E\) by~(6.11), so
 \[w\after z=\sum_p w_p\after z_p\in\Delta E\]
-For this reason \(\Delta E\)~is a subalgebra under the composition product, although it is not commutative if \(\dim E>1\).
+For this reason \(\Delta E\)~is a subalgebra under the composition product, although it is not commutative like it is under the mixed exterior product if \(\dim E>1\).
 \end{rmk}
 
 \subsection*{\S~5}
+\begin{rmk}
+Proposition~6.5.1 helps us convert problems in the \emph{non-commutative} composition algebra of~\(\Delta E\) into problems in the \emph{commutative} mixed exterior algebra of~\(\Delta E\). Because many of the results of classical linear algebra have to do with the composition product, this is an important and powerful technique.
+\end{rmk}
+
 \begin{rmk}
 In the Corollary to Proposition~6.5.1,
 \begin{align*}
@@ -4485,6 +4491,8 @@ D_F\after\alpha_{\varphi}&=(D_f\tprod D^f)\after Q_F\after((\varphi^{\eprod})^{-
 \end{rmk}
 
 \subsection*{\S~12}
+% TODO: geometric interpretation of intersection product
+
 \begin{rmk}
 The intersection product is associative since the wedge product is: if \(u,v,w\in\medeprod E\), then writing \(D=D^e\) we have
 \begin{align*}
@@ -4551,6 +4559,10 @@ If \(u=0\), the result is trivial, otherwise \(v^*_1=D_e u\) can be extended to 
 \end{proof}
 
 \subsection*{\S~15}
+\begin{rmk}
+In the case of a finite-dimensional oriented Euclidean space, Poincar\'e duality reduces to Hodge duality and the Poincar\'e map is just the Hodge star.
+\end{rmk}
+
 \begin{exer}[1]
 For an isomorphism \(\varphi:E\to E\),
 \[\alpha_{\varphi}\unit^p=\unit^p\qquad(0\le p\le n)\]
