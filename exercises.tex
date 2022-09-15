@@ -4458,6 +4458,23 @@ The operator~\(D_E\) restricts to operators
 In particular \(D_E^{p,p}:\Delta_p E\to\Delta_{n-p}E\) and \(D_{\Delta}=\sum_p D_E^{p,p}\). The operators are linear isomorphisms and the scalar product, dual, and composition properties follow from Theorem~6.10.1.
 \end{rmk}
 
+\begin{rmk}
+For \(w,z\in\medeprod(E^*,E)\),
+\[D_E(w\after z)=D_E(z)\after D_E(w)\]
+\end{rmk}
+\begin{proof}
+We may assume that \(w=u^*\tprod u\) and \(z=v^*\tprod v\), so by~(6.7)
+\[w\after z=\sprod{u^*}{v}v^*\tprod u\]
+and therefore by~(6.20) and Theorem~6.8.1(1),
+\begin{align*}
+D_E(w\after z)&=\sprod{u^*}{v}D_E(v^*\tprod u)\\
+	&=\sprod{D_e v}{D^e u^*}D_e u\tprod D^e v^*\\
+	&=(D_e v\tprod D^e v^*)\after(D_e u\tprod D^e u^*)\\
+	&=D_E(v^*\tprod v)\after D_E(u^*\tprod u)\\
+	&=D_E(z)\after D_E(w)\qedhere
+\end{align*}
+\end{proof}
+
 \subsection*{\S~11}
 \begin{rmk}
 Let \(\cat{C}\)~denote the category of finite-dimensional vector spaces over~\(\Gamma\) and the linear isomorphisms between them. For an object \(E\in\cat{C}\), define
@@ -4858,6 +4875,10 @@ The map \(D_L=T_E\after D_E\after T_E^{-1}\) is an isometry since it is a compos
 \[D_L^*=(T_E^{-1})^*\after D_E^*\after T_E^*=T_E\after\Omega_E\after D_E\after T_E^{-1}=\Omega_L\after D_L\]
 and
 \[D_L^2=T_E\after D_E^2\after T_E^{-1}=T_E\after\Omega_E\after T_E^{-1}=\Omega_L\]
+\end{rmk}
+
+\begin{rmk}
+In Proposition~7.1.1, (1)~is essentially the correlate of~(6.20) for~\(D_L\), and (2)~also follows from the corresponding result about~\(D_E\).\footnote{See the remark in chapter~6, \S~10 above.}
 \end{rmk}
 
 % References
