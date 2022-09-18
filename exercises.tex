@@ -323,6 +323,14 @@ where the bars denote induced maps and the parentheses denote pairing, and
 where the brackets denote copairing. It is easy to verify that \(f\after g=\iota\) and \(g\after f=\iota\), so \(f\) and~\(g\) are isomorphisms.
 \end{proof}
 
+\begin{rmk}
+If \(E=\bigdsum_{i=1}^n E_i\) and \(F=\bigdsum_{j=1}^m F_j\), then there is a natural isomorphism
+\[L(E;F)\iso\bigdsum_{i,j}L(E_i;F_j)\]
+given by the mapping
+\[\varphi\mapsto\sum_{i,j}\pi_j\after\varphi\after i_i\]
+where \(i_i:E_i\to E\) is the canonical injection and \(\pi_j:F\to F_j\) is the canonical projection.
+\end{rmk}
+
 \subsection*{\S~5}
 \begin{rmk}
 The definition of dual space is fundamentally \emph{symmetrical} between \(E\) and~\(E^*\), as is the definition of dual mapping between \(\varphi\) and~\(\varphi^*\). This symmetry often allows us to use bidirectional reasoning and derive two theorems from one proof. For example, (2.48) actually follows from~(2.47) by symmetry of \(\varphi\) and~\(\varphi^*\). The proof of Proposition~I in subsection~2.23 exploits symmetry, as do other proofs in the book.
@@ -4342,6 +4350,25 @@ In particular \(Q_E^{p,p}:\Delta_p E\to\Delta_p E^*\). It follows that \(Q_{E^*}
 The \(p\)-ary box product, which is a generalization of the \(p\)-th exterior power, is \(p\)-linear and symmetric, so factors through the \(p\)-th symmetric power of~\(L(E;E)\).
 \end{rmk}
 
+\begin{rmk}
+If \(E\)~is \emph{finite-dimensional}, we can generalize the definition of the box product. For linear transformations \(\varphi\) and~\(\psi\) of~\(\medeprod E\), define
+\[\varphi\bprod\psi=T_E(T_E^{-1}\varphi\mprod T_E^{-1}\psi)\]
+and similarly for more than two transformations. Then \(T_E\)~becomes an algebra isomorphism from the mixed exterior algebra \(\medeprod(E^*,E)\) to a box product algebra on~\(L(\medeprod E;\medeprod E)\). The box product is associative and unital, and is \emph{commutative} on the diagonal subalgebra of~\(L(\medeprod E;\medeprod E)\).
+
+By Proposition~6.3.1, this definition agrees with the one previously given for transformations of~\(E\) when \(L(\medeprod^p E;\medeprod^p E)\)~is viewed as a subspace of~\(L(\bigeprod E;\bigeprod E)\).\footnote{See the remark in chapter~II, \S~4 of~\cite{greub1} above.}
+
+For fixed~\(\varphi\), there is a left multiplication operator~\(\mu_{\bprod}(\varphi)\) given by
+\[\mu_{\bprod}(\varphi)\psi=\varphi\bprod\psi\]
+and a dual insertion operator \(i_{\bprod}(\varphi)\) satisfying
+\[\sprod{i_{\bprod}(\varphi)\chi}{\psi}=\sprod{\chi}{\varphi\bprod\psi}=\sprod{\chi}{\mu_{\bprod}(\varphi)\psi}\]
+For \(z\in\medeprod(E^*,E)\), the following diagrams commute:
+\begin{diagram}
+\medeprod(E^*,E)&\rTo^{T_E}_{\iso}	&L(\medeprod E;\medeprod E)	&&&\medeprod(E^*,E)	&\rTo^{T_E}_{\iso}	&L(\medeprod E;\medeprod E)\\
+\dTo<{\mu(z)}	&					&\dTo>{\mu_{\bprod}(T_E(z))}&&&\dTo<{i(z)}		&					&\dTo>{i_{\bprod}(T_E(z))}\\
+\medeprod(E^*,E)&\rTo_{T_E}^{\iso}	&L(\medeprod E;\medeprod E)	&&&\medeprod(E^*,E)	&\rTo_{T_E}^{\iso}	&L(\medeprod E;\medeprod E)
+\end{diagram}
+\end{rmk}
+
 \subsection*{\S~4}
 \begin{rmk}
 The diagonal subspace \(\Delta E=\sum_p\Delta_p E\) is closed under the composition product. In fact, if \(w=\sum_p w_p\) with \(w_p\in\Delta_p E\) and \(z=\sum_q z_q\) with \(z_q\in\Delta_q E\), then
@@ -4509,6 +4536,7 @@ D_F\after\alpha_{\varphi}&=(D_f\tprod D^f)\after Q_F\after((\varphi^{\eprod})^{-
 
 \subsection*{\S~12}
 % TODO: geometric interpretation of intersection product
+% TODO: mixed intersection algebra
 
 \begin{rmk}
 The intersection product is associative since the wedge product is: if \(u,v,w\in\medeprod E\), then writing \(D=D^e\) we have
