@@ -3667,6 +3667,16 @@ If \(E\)~is \(n\)-dimensional, then \(\medeprod^p E=0\) for \(p>n\). Geometrical
 \end{rmk}
 
 \begin{rmk}
+Let \(E,E^*\) be a pair of dual \(n\)-dimensional vector spaces with dual bases \(e_1,\ldots,e_n\) and \(e^{*1},\ldots,e^{*n}\). For \(p\le n\), write
+\[x_i=\sum_{\nu=1}^n\xi_i^{\nu}e_{\nu}\qquad(i=1,\ldots,p)\]
+and
+\[\eprods{x}{1}{p}=\sum_{<}\xi^{\nu_1\cdots\nu_p}\eprods{e}{\nu_1}{\nu_p}\]
+By~(5.13),
+\[\xi^{\nu_1\cdots\nu_p}=\sprod{e^{*\nu_1}\eprod\cdots\eprod e^{*\nu_p}}{\eprods{x}{1}{p}}=\det\sprod{e^{*\nu_j}}{x_i}=\det(\xi_i^{\nu_j})\]
+This shows that the components of a decomposable \(p\)-vector are  just the \(p\times p\) minor determinants of the matrix of components of the \(p\) factors.
+\end{rmk}
+
+\begin{rmk}
 If \(E\)~is a Euclidean space and \(x_1,\ldots,x_p\in E\), then
 \[\norm{\eprods{x}{1}{p}}=\sqrt{\det\iprod{x_i}{x_j}}\]
 is the volume of the \(p\)-dimensional parallelepiped determined by \(x_1,\ldots,x_p\).
@@ -3769,10 +3779,20 @@ Let \(E\)~be an \(n\)-dimensional space and \(\Delta\)~a determinant function in
 	&=\Delta_{\eprod}\after(\det\varphi\mult\iota)(\eprods{x}{1}{n})
 \end{align*}
 for all \(x_1,\ldots,x_n\in E\). Since \(\Delta_{\eprod}\)~is injective, it follows that
-\[\varphi_{\eprod}^{(n)}=\det\varphi\mult\iota\]
-where \(\varphi_{\eprod}^{(n)}\)~is the restriction of~\(\varphi_{\eprod}\) to~\(\medeprod^n E\). Equivalently
-\[\tr\varphi_{\eprod}^{(n)}=\det\varphi\]
+\[\medeprod^n\varphi=\det\varphi\mult\iota\]
+where \(\medeprod^n\varphi\)~is the restriction of~\(\varphi_{\eprod}\) to~\(\medeprod^n E\). Equivalently
+\[\tr(\medeprod^n\varphi)=\det\varphi\]
 This provides another natural (coordinate-free) definition of the determinant of a linear map.
+\end{rmk}
+
+\begin{rmk}
+Let \(E,E^*\) be a pair of dual \(n\)-dimensional spaces with dual bases \(e_i,e^{*i}\) and \(\varphi:E\to E\) linear. For \(0\le p\le n\), if the induced basis of~\(\medeprod^p E\) is ordered lexically, then for
+\[1\le\nu_1<\cdots<\nu_p\le n\qquad\text{and}\qquad 1\le\mu_1<\cdots<\mu_p\le n\]
+the \((\nu,\mu)\) entry of the \(\binom{n}{p}\times\binom{n}{p}\) matrix of~\(\medeprod^p\varphi\) with respect to the basis is
+\[\sprod{e^{*\mu_1}\eprod\cdots\eprod e^{*\mu_p}}{\eprods{\varphi e}{\nu_1}{\nu_p}}=\det\sprod{e^{*\mu_j}}{\varphi e_{\nu_i}}\]
+Since \(\sprod{e^{*\mu_j}}{\varphi e_{\nu_i}}\) is the \((\nu_i,\mu_j)\) entry of the matrix of~\(\varphi\) with respect to the~\(e_i\), this shows that the matrix of~\(\medeprod^p\varphi\) consists of the \(p\times p\) minor determinants of the matrix of~\(\varphi\). In particular the \(1\times 1\) matrix of~\(\medeprod^n\varphi\) consists of the single element~\(\det\varphi\), consistent with the previous remark.
+
+It follows from the determinantal characterization of the rank of a linear map\footnote{See subsection~4.16 of~\cite{greub1}.} that the rank of~\(\varphi\) is the largest~\(r\) for which \(\medeprod^r\varphi\ne 0\). Intuitively, the rank is the highest-dimensional volume that \(\varphi\) ``preserves'' in the sense of mapping to another volume of the same dimension and not lower dimension.
 \end{rmk}
 
 \subsection*{\S~10}
