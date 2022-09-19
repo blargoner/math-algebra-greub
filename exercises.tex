@@ -4636,6 +4636,29 @@ If \(u=0\), the result is trivial, otherwise \(v^*_1=D_e u\) can be extended to 
 \[u=\pm D^e(D_e u)=\pm\lambda^{-1}D^v v^*_1=\pm\lambda^{-1}\eprods{v}{2}{n}\qedhere\]
 \end{proof}
 
+\subsection*{\S~14}
+\begin{rmk}
+The external product on~\(E\) makes the following diagram commute:
+\begin{diagram}[nohug]
+E^{n-1}					&\rTo^{[-]}		&E^*\\
+\dTo<{\medeprod^{n-1}}	&\ruTo>{D_{n-1}}&\\
+\medeprod^{n-1}E		&				&
+\end{diagram}
+\end{rmk}
+
+\begin{rmk}
+We define the \emph{mixed external product} \(M^{n-1}_{n-1}(E^*,E)\to E^*\tprod E\) by
+\[[x^*_1,\ldots,x^*_{n-1},x_1,\ldots,x_{n-1}]=D_E[(x^*_1\tprod x_1)\mprod\cdots\mprod(x^*_{n-1}\tprod x_{n-1})]\]
+This product is skew-symmetric of type \((n-1,n-1)\). We have
+\begin{align*}
+[x^*_1,\ldots,x^*_{n-1},x_1,\ldots,x_{n-1}]&=D_E[(\eprods{x^*}{1}{n-1})\tprod(\eprods{x}{1}{n-1})]\\
+	&=D_e(\eprods{x}{1}{n-1})\tprod D^e(\eprods{x^*}{1}{n-1})\\
+	&=[x_1,\ldots,x_{n-1}]\tprod[x^*_1,\ldots,x^*_{n-1}]
+\end{align*}
+It follows that
+\[\sprod{[x^*_1,\ldots,x^*_{n-1},x_1,\ldots,x_{n-1}]}{[x^*_1,\ldots,x^*_{n-1},x_1,\ldots,x_{n-1}]}=\bigl(\det\sprod{x^*_j}{x_i}\bigr)^2\]
+\end{rmk}
+
 \subsection*{\S~15}
 \begin{rmk}
 In the case of a finite-dimensional oriented Euclidean space, Poincar\'e duality reduces to Hodge duality and the Poincar\'e map is just the Hodge star.
