@@ -4476,7 +4476,8 @@ D_E^*&=Q_E^*\after(D_e\tprod D^e)^*\\
 \end{rmk}
 
 \begin{rmk}
-It follows from Theorem~6.10.1 that \(D_E^*=D_E^{-1}\).
+It follows from Theorem~6.10.1 that \(D_E^*=D_E^{-1}\). We have
+\[D_E^{-1}=[(D^e)^{-1}\tprod(D_e)^{-1}]\after Q_E=Q_{E^*}\after[(D_e)^{-1}\tprod(D^e)^{-1}]\]
 \end{rmk}
 
 \begin{rmk}
@@ -4487,7 +4488,7 @@ In particular \(D_E^{p,p}:\Delta_p E\to\Delta_{n-p}E\) and \(D_{\Delta}=\sum_p D
 
 \begin{rmk}
 For \(w,z\in\medeprod(E^*,E)\),
-\[D_E(w\after z)=D_E(z)\after D_E(w)\]
+\[D_E(w\after z)=D_Ez\after D_Ew\]
 \end{rmk}
 \begin{proof}
 We may assume that \(w=u^*\tprod u\) and \(z=v^*\tprod v\), so by~(6.7)
@@ -4498,7 +4499,7 @@ D_E(w\after z)&=\sprod{u^*}{v}D_E(v^*\tprod u)\\
 	&=\sprod{D_e v}{D^e u^*}D_e u\tprod D^e v^*\\
 	&=(D_e v\tprod D^e v^*)\after(D_e u\tprod D^e u^*)\\
 	&=D_E(v^*\tprod v)\after D_E(u^*\tprod u)\\
-	&=D_E(z)\after D_E(w)\qedhere
+	&=D_Ez\after D_Ew\qedhere
 \end{align*}
 \end{proof}
 
@@ -4536,7 +4537,6 @@ D_F\after\alpha_{\varphi}&=(D_f\tprod D^f)\after Q_F\after((\varphi^{\eprod})^{-
 
 \subsection*{\S~12}
 % TODO: geometric interpretation of intersection product
-% TODO: mixed intersection algebra
 
 \begin{rmk}
 The intersection product is associative since the wedge product is: if \(u,v,w\in\medeprod E\), then writing \(D=D^e\) we have
@@ -4570,6 +4570,39 @@ Let \(u^*,v^*\in\medeprod E^*\). Taking \(u=D^e u^*\) and \(v=D^e v^*\) in the d
 so \(D^e\)~is an algebra isomorphism from the exterior algebra to the intersection algebra. Applying \(D_e^*=(D^e)^{-1}\) to both sides of the definition, we obtain
 \[D_e^*(u\sect v)=D_e^* u\eprod D_e^* v\]
 so \(D_e^*\)~is an algebra isomorphism from the intersection algebra to the exterior algebra. This all strongly suggests that \(D_e\)~should be an algebra isomorphism, which a computation involving sign factors verifies.
+\end{rmk}
+
+\begin{rmk}
+The intersection product in~\(\medeprod E^*\) is given by
+\[u^*\sect v^*=D_e[(D_e)^{-1}u^*\eprod(D_e)^{-1}v^*]\qquad(u^*,v^*\in\medeprod E^*)\]
+\end{rmk}
+
+\begin{rmk}
+For \(w,z\in\medeprod(E^*,E)\), we define the \emph{mixed intersection product} by
+\[w\sect z=D_E(D_E^{-1}w\mprod D_E^{-1}z)\]
+If \(w\in\medeprod^p_q(E^*,E)\) and \(z\in\medeprod^r_s(E^*,E)\), then \(w\sect z\in\medeprod^{p+r-n}_{q+s-n}(E^*,E)\).
+
+This definition makes \(\medeprod(E^*,E)\) into an algebra called the \emph{mixed intersection algebra} which is associative, unital (with unit \(\unit_n\)), and anticommutative. It is immediate from the definition that
+\[D_E(w\mprod z)=D_Ew\sect D_Ez\]
+so \(D_E\)~is an \emph{algebra} isomorphism from the mixed exterior algebra to the mixed intersection algebra.
+
+For \(u,v\in\medeprod E\) and \(u^*,v^*\in\medeprod E^*\), we have
+\begin{align*}
+(u^*\tprod u)\sect(v^*\tprod v)&=D_E\bigl[\bigl((D^e)^{-1}u\tprod(D_e)^{-1} u^*\bigr)\mprod\bigl((D^e)^{-1}v\tprod(D_e)^{-1}v^*\bigr)\bigr]\\
+	&=D_E\bigl[\bigl((D^e)^{-1}u\eprod(D^e)^{-1}v\bigr)\tprod\bigl((D_e)^{-1}u^*\eprod(D_e)^{-1}v^*\bigr)\bigr]\\
+	&=D_e[(D_e)^{-1}u^*\eprod(D_e)^{-1}v^*]\tprod D^e[(D^e)^{-1}u\eprod(D^e)^{-1}v]\\
+	&=(u^*\sect v^*)\tprod(u\sect v)
+\end{align*}
+It follows that
+\begin{align*}
+D_E[(u^*\tprod u)\sect(v^*\tprod v)]&=D_e(u\sect v)\tprod D^e(u^*\sect v^*)\\
+	&=(D_eu\eprod D_ev)\tprod(D^eu^*\eprod D^ev^*)\\
+	&=(D_eu\tprod D^e u^*)\mprod(D_ev\tprod D^ev^*)\\
+	&=D_E(u^*\tprod u)\mprod D_E(v^*\tprod v)
+\end{align*}
+By multilinearity, it follows that
+\[D_E(w\sect z)=D_E(w)\mprod D_E(z)\]
+for all \(w,z\in\medeprod(E^*,E)\), so \(D_E\)~is also an algebra isomorphism from the mixed intersection algebra to the mixed exterior algebra.
 \end{rmk}
 
 \subsection*{\S~13}
