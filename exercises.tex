@@ -39,6 +39,7 @@
 
 \newcommand{\union}{\cup}
 \newcommand{\sect}{\cap}
+\newcommand{\ssect}{\mathop{\widehat{\cap}}}
 \newcommand{\bigsect}{\bigcap}
 \newcommand{\after}{\circ}
 \newcommand{\join}{\vee}
@@ -60,6 +61,7 @@
 \newcommand{\fprod}{\bigcdot{0.5}}
 \newcommand{\mprod}{\bigcdot{0.5}}
 \newcommand{\bprod}{\mathop{\square}}
+\newcommand{\sbprod}{\mathop{\widehat{\square}}}
 \newcommand{\tdot}{\bigcdot{0.75}}
 \newcommand{\adot}{\bigcdot{0.75}}
 
@@ -4954,6 +4956,15 @@ It follows from~(6.33) and Proposition~6.3.1 that
 \[T_E(\eprods{z}{1}{k})=(-1)^{k(k-1)/2}T_E(z_1)\bprod\cdots\bprod T_E(z_k)\qquad(z_i\in E^*\tprod E)\]
 In particular
 \[T_E(z^{\widehat{k}})=(-1)^{k(k-1)/2}\medeprod^k T_E(z)\qquad(z\in E^*\tprod E)\]
+\end{rmk}
+
+\begin{rmk}
+If \(E\)~is \emph{finite-dimensional}, we can define the \emph{skew box product} of linear transformations \(\varphi\) and~\(\psi\) of~\(\medeprod E\) by
+\[\varphi\sbprod\psi=T_E(T_E^{-1}\varphi\eprod T_E^{-1}\psi)\]
+so \(T_E\)~becomes an \emph{algebra} isomorphism from the skew mixed exterior algebra to a skew box product algebra.
+
+We can also define the \emph{skew mixed intersection product} by
+\[w\ssect z=D_E(D_E^{-1}w\eprod D_E^{-1}z)\]
 \end{rmk}
 
 \subsection*{\S~18}
