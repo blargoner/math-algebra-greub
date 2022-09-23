@@ -2661,9 +2661,7 @@ Let \(f:(E^*\tprod E^*)\tprod(E\tprod E)\to\Gamma\tprod(E^*\tprod E)\) be the li
 \end{rmk}
 
 \begin{rmk}
-If \(e_1,\ldots,e_n\) is a basis in~\(E\) and \(f_1,\ldots,f_n\) is its dual basis in~\(L(E)\), then the basis transformation~\(\varphi_{ij}\) in~\(L(E;E)\) with \(\varphi_{ij}(e_k)=\delta_{ik}e_j\) is given by \(x\mapsto f_i(x)e_j\). Therefore it is natural to consider the isomorphism \(T:L(E)\tprod E\to L(E;E)\) with \(T(f_i\tprod e_j)=\varphi_{ij}\). In the algebra induced by~\(T^{-1}\) in \(L(E)\tprod E\),
-\[(f_i\tprod e_j)\after(f_k\tprod e_l)=T^{-1}(\varphi_{ij}\after\varphi_{kl})=T^{-1}(\delta_{il}\varphi_{kj})=f_i(e_l)(f_k\tprod e_j)\]
-This motivates the definition of the composition algebra. An alternative way to discover the isomorphism is (see \S~28)
+If \(\dim E<\infty\), one way to discover the composition algebra is (see \S~28)
 \[L(E;E)\iso L(E\tprod\Gamma;\Gamma\tprod E)\iso L(E;\Gamma)\tprod L(\Gamma;E)\iso L(E)\tprod E\]
 \end{rmk}
 
@@ -2731,6 +2729,16 @@ so \((\varphi\tprod\varphi^*)^*=\varphi\tprod\varphi^*\).
 
 \subsection*{\S~28}
 \textbf{In this subsection, all vector spaces are finite-dimensional.}
+
+\begin{rmk}
+Let \(E,E^*\) and \(F,F^*\) be pairs of dual spaces with dual bases \(e_i,e^{*i}\) and \(f_j,f^{*j}\). If \(z\in E^*\tprod F\) and \(\varphi=T(z)\), write
+\[z=\sum_{\mu,\nu}(z)^{\mu}_{\nu}e^{*\nu}\tprod f_{\mu}\]
+Then
+\[\varphi(e_{\lambda})=\sum_{\mu,\nu}(z)^{\mu}_{\nu}\sprod{e^{*\nu}}{e_{\lambda}}f_{\mu}=\sum_{\mu}(z)^{\mu}_{\lambda}f_{\mu}\]
+so
+\[(z)^{\kappa}_{\lambda}=\sprod{f^{*\kappa}}{\varphi(e_{\lambda})}\]
+This shows that the components of the tensor~\(z\) are precisely the matrix entries of its corresponding linear map~\(\varphi\), with respect to the chosen bases.
+\end{rmk}
 
 \begin{rmk}
 By~(1.30), if we view \(a^*\tprod a\) as a linear transformation, then its trace is just \(\sprod{a^*}{a}\). This extends by linearity to a natural (coordinate-free) definition of the trace which yields a slick proof that \(\tr(\varphi\tprod\psi)=\tr\varphi\mult\tr\psi\). Indeed, if \(\varphi=a^*\tprod a\) and \(\psi=b^*\tprod b\), then we can write \(\varphi\tprod\psi=(a^*\tprod b^*)\tprod(a\tprod b)\) since
@@ -4405,7 +4413,7 @@ and a dual insertion operator \(i_{\bprod}(\varphi)\) satisfying
 For \(z\in\medeprod(E^*,E)\), the following diagrams commute:
 \begin{diagram}
 \medeprod(E^*,E)&\rTo^{T_E}_{\iso}	&L(\medeprod E;\medeprod E)	&&&\medeprod(E^*,E)	&\rTo^{T_E}_{\iso}	&L(\medeprod E;\medeprod E)\\
-\dTo<{\mu(z)}	&					&\dTo>{\mu_{\bprod}(T_E(z))}&&&\dTo<{i(z)}		&					&\dTo>{i_{\bprod}(T_E(z))}\\
+\dTo<{\mu(z)}	&					&\dTo>{\mu_{\bprod}(T_Ez)}	&&&\dTo<{i(z)}		&					&\dTo>{i_{\bprod}(T_Ez)}\\
 \medeprod(E^*,E)&\rTo_{T_E}^{\iso}	&L(\medeprod E;\medeprod E)	&&&\medeprod(E^*,E)	&\rTo_{T_E}^{\iso}	&L(\medeprod E;\medeprod E)
 \end{diagram}
 \end{rmk}
@@ -4654,19 +4662,22 @@ for ordered tuples \(1\le\mu_1<\cdots<\mu_q\le n\) and \(1\le\nu_1<\cdots<\nu_p\
 \[e_{\mu_1\cdots\mu_q}^{\nu_1\cdots\nu_p}=e^{\nu_1\cdots\nu_p}\tprod e_{\mu_1\cdots\mu_q}\]
 form a basis of~\(\medeprod(E^*,E)\) and for \(z\in\medeprod(E^*,E)\) we write
 \[z=\sum_{<}(z)^{\mu_1\cdots\mu_q}_{\nu_1\cdots\nu_p}e_{\mu_1\cdots\mu_q}^{\nu_1\cdots\nu_p}\]
+The components \((z)^{\mu_1\cdots\mu_q}_{\nu_1\cdots\nu_p}\) are also the matrix entries of~\(T_Ez\) with respect to the lexically ordered basis \(e_{\nu_1\cdots\nu_p}\) of~\(\medeprod E\).\footnote{See the remark in chapter~1, \S~28 above.} In particular if \(z\in E^*\tprod E\), then \((z^p)^{\mu_1\cdots\mu_p}_{\nu_1\cdots\nu_p}\) is the \((\nu,\mu)\) entry of the matrix of~\(\medeprod^p T_Ez\), which is the \(p\times p\) minor determinant of the matrix of~\(T_Ez\) with rows \(\nu_1,\ldots,\nu_p\) and columns \(\mu_1,\ldots,\mu_p\).\footnote{See the remark in chapter~5, \S~8 above.}
+
 By (6.20) and~(6.23),
 \begin{align*}
 D_E(e_{\mu_1\cdots\mu_q}^{\nu_1\cdots\nu_p})&=D_e(e_{\mu_1\cdots\mu_q})\tprod D^e(e^{\nu_1\cdots\nu_p})\\
 	&=\bigl[(-1)^{\sum_{j=1}^q(\mu_j-j)}e^{\mu_{q+1}\cdots\mu_n}\bigr]\tprod\bigl[(-1)^{\sum_{i=1}^p(\nu_i-i)}e_{\nu_{p+1}\cdots\nu_n}\bigr]\\
 	&=(-1)^{\sum_{i=1}^p(\nu_i-i)+\sum_{j=1}^q(\mu_j-j)}e_{\nu_{p+1}\cdots\nu_n}^{\mu_{q+1}\cdots\mu_n}
 \end{align*}
-It follows that
+For \(z\in\medeprod(E^*,E)\), it follows that
 \begin{align*}
 D_E z&=\sum_{<}(z)^{\mu_1\cdots\mu_q}_{\nu_1\cdots\nu_p}D_E(e_{\mu_1\cdots\mu_q}^{\nu_1\cdots\nu_p})\\
 	&=\sum_{<}(-1)^{\sum_{i=1}^p(\nu_i-i)+\sum_{j=1}^q(\mu_j-j)}(z)^{\mu_1\cdots\mu_q}_{\nu_1\cdots\nu_p}e_{\nu_{p+1}\cdots\nu_n}^{\mu_{q+1}\cdots\mu_n}
 \end{align*}
 so\footnote{This is problem~6.15.10.}
 \[(D_E z)^{\nu_{p+1}\cdots\nu_n}_{\mu_{q+1}\cdots\mu_n}=(-1)^{\sum_{i=1}^p(\nu_i-i)+\sum_{j=1}^q(\mu_j-j)}(z)^{\mu_1\cdots\mu_q}_{\nu_1\cdots\nu_p}\]
+In particular if \(z\in E^*\tprod E\), then \((D_E z^{n-p})^{\nu_1\cdots\nu_p}_{\mu_1\cdots\mu_p}\) is the signed \((n-p)\times(n-p)\) minor determinant of the matrix of~\(T_Ez\) with rows complementary to \(\nu_1,\ldots,\nu_p\) and columns complementary to \(\mu_1,\ldots,\mu_p\).
 \end{rmk}
 
 \begin{rmk}
