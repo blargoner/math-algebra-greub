@@ -4394,6 +4394,14 @@ The flip operator \(Q_E:\medeprod(E^*,E)\to\medeprod(E,E^*)\) restricts to opera
 In particular \(Q_E^{p,p}:\Delta_p E\to\Delta_p E^*\). It follows that \(Q_{E^*}^{q,p}\after Q_E^{p,q}=\iota\), so the operators are linear isomorphisms. They also preserve scalar products. Finally, \(Q_E^*=Q_{E^*}\) and \((Q_E^{p,q})^*=Q_{E^*}^{p,q}\).
 \end{rmk}
 
+\begin{rmk}
+Interchanging the roles of \(E\) and~\(E^*\), we obtain the map
+\[T_{E^*}:\medeprod(E,E^*)\to L(\medeprod E^*;\medeprod E^*)\]
+given by
+\[T_{E^*}(b\tprod a^*)v^*=\sprod{v^*}{b}a^*\qquad(v^*\in\medeprod E^*)\]
+Note \(T_{E^*}(b\tprod a^*)\) is dual to \(T_E(a^*\tprod b)\).
+\end{rmk}
+
 \subsection*{\S~3}
 \begin{rmk}
 The \(p\)-ary box product, which is a generalization of the \(p\)-th exterior power, is \(p\)-linear and symmetric, so factors through the \(p\)-th symmetric power of~\(L(E;E)\).
@@ -4551,6 +4559,13 @@ D_E(w\after z)&=\sprod{u^*}{v}D_E(v^*\tprod u)\\
 	&=D_Ez\after D_Ew\qedhere
 \end{align*}
 \end{proof}
+
+\begin{rmk}
+Interchanging the roles of \(E\) and~\(E^*\), we obtain the map
+\[D_{E^*}:\medeprod(E,E^*)\to\medeprod(E,E^*)\]
+satisfying
+\[D_{E^*}=(D^e\tprod D_e)\after Q_{E^*}=Q_E\after(D_e\tprod D^e)\]
+\end{rmk}
 
 \subsection*{\S~11}
 \begin{rmk}
@@ -5033,6 +5048,20 @@ If \(z\in E^*\tprod E\), \(\varphi=T_Ez\), and \(\Phi=\iota\tprod\varphi_{\eprod
 \[\Phi(z^p)=z^p\after z^p=\Phi^*(z^p)\]
 In particular if \(p=1\), then
 \[\Phi(z)=z\after z=\Phi^*(z)\]
+\end{rmk}
+
+\begin{rmk}
+Interchanging the roles of \(E\) and~\(E^*\), we obtain the map
+\[D_{L^*}:L(\medeprod E^*;\medeprod E^*)\to L(\medeprod E^*;\medeprod E^*)\]
+given by\footnote{See the remarks in chapter~6, \S~2,10 above.}
+\[D_{L^*}=T_{E^*}\after D_{E^*}\after T_{E^*}^{-1}\]
+\end{rmk}
+
+\begin{rmk}
+If \(\alpha:\medeprod E\to\medeprod E\) is linear, then by Proposition~7.1.1(1),
+\[(D_L\alpha)^*={(D^e)^{-1}}^*\after\alpha\after(D^e)^*=D_e\after\alpha\after D_e^{-1}=D_{L^*}\alpha^*\]
+In particular if \(\varphi:E\to E\) is linear, then
+\[(D_L(\medeprod^p\varphi))^*=D_{L^*}(\medeprod^p\varphi^*)\]
 \end{rmk}
 
 \subsection*{\S~2}
