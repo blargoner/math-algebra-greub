@@ -5110,6 +5110,22 @@ This provides an alternative approach to the classical adjoint.
 \end{rmk}
 
 \begin{rmk}
+It follows from Proposition~7.2.2(1) that for \(z\in E^*\tprod E\),
+\[i(\ad z)z^{n-p}=(p+1)\det(T_Ez)z^{n-(p+1)}\qquad(0\le p\le n)\]
+\end{rmk}
+
+\begin{rmk}
+We provide an alternative inductive proof of the Jacobi identity~(7.6). The identity is certainly true for \(p=1\), and if it is true for~\(p\) then by the previous remark
+\begin{align*}
+(p+1)D_E[(\ad z)^{p+1}]&=D_E[(\ad z)^p\mprod\ad z]\\
+	&=i(\ad z)D_E[(\ad z)^p]\\
+	&=(\det T_Ez)^{p-1}i(\ad z)z^{n-p}\\
+	&=(p+1)(\det T_Ez)^pz^{n-(p+1)}
+\end{align*}
+Dividing both sides by~\(p+1\) shows that the identity holds for~\(p+1\).
+\end{rmk}
+
+\begin{rmk}
 Applying \(D_E\) to both sides of the Jacobi identity~(7.6) yields
 \[(\ad z)^p=(\det T_Ez)^{p-1}D_E(z^{n-p})\]
 Applying \(T_E\) to both sides of this with \(\varphi=T_Ez\) yields
