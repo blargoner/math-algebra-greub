@@ -16,6 +16,7 @@
 
 \DeclareMathOperator{\im}{Im}
 \DeclareMathOperator{\ad}{ad}
+\DeclareMathOperator{\Ad}{Ad}
 \DeclareMathOperator{\cof}{cof}
 \DeclareMathOperator{\tr}{tr}
 
@@ -85,6 +86,7 @@
 \newcommand{\eprods}[3]{\multi{\eprod}{#1}{#2}{#3}}
 \newcommand{\fprods}[3]{\multi{\fprod}{#1}{#2}{#3}}
 \newcommand{\mprods}[3]{\multi{\mprod}{#1}{#2}{#3}}
+\newcommand{\bprods}[3]{\multi{\bprod}{#1}{#2}{#3}}
 \newcommand{\circled}[1]{\text{\tiny\textcircled{\textit{#1}}}}
 \newcommand{\sign}[1]{\varepsilon_{#1}}
 \newcommand{\cat}[1]{\mathbf{#1}}
@@ -4998,7 +5000,7 @@ w_1\eprod w_2&=(u^*\tprod u)\eprod(v^*\tprod v)\\
 
 \begin{rmk}
 It follows from~(6.33) and Proposition~6.3.1 that
-\[T_E(\eprods{z}{1}{k})=(-1)^{k(k-1)/2}T_Ez_1\bprod\cdots\bprod T_Ez_k\qquad(z_i\in E^*\tprod E)\]
+\[T_E(\eprods{z}{1}{k})=(-1)^{k(k-1)/2}\bprods{T_Ez}{1}{k}\qquad(z_i\in E^*\tprod E)\]
 In particular
 \[T_E(z^{\widehat{k}})=(-1)^{k(k-1)/2}\medeprod^k T_Ez\qquad(z\in E^*\tprod E)\]
 \end{rmk}
@@ -5084,6 +5086,35 @@ It follows from Proposition~7.2.2 that\footnote{See the remark in chapter~6, \S~
 \[i_{\bprod}(D_L(\medeprod^p\varphi))(\medeprod^q\varphi)=\binom{2n-p-q}{n-p}\det\varphi\mult\medeprod^{p+q-n}\varphi\tag{1}\]
 and
 \[D_L(\medeprod^p\varphi)\bprod D_L(\medeprod^q\varphi)=\binom{2n-p-q}{n-p}\det\varphi\mult D_L(\medeprod^{p+q-n}\varphi)\tag{2}\]
+\end{rmk}
+
+\subsection*{\S~3}
+\begin{rmk}
+For linear transformations \(\varphi_1,\ldots,\varphi_{n-1}\) of~\(E\), it is possible to \emph{define}
+\[\Ad(\varphi_1,\ldots,\varphi_{n-1})=T_E\Ad(T_E^{-1}\varphi_1,\cdots,T_E^{-1}\varphi_{n-1})\]
+Then
+\begin{align*}
+\Ad(\varphi_1,\ldots,\varphi_{n-1})&=T_ED_E(\mprods{T_E^{-1}\varphi}{1}{n-1})\\
+	&=D_LT_E(\mprods{T_E^{-1}\varphi}{1}{n-1})\\
+	&=D_L(\bprods{\varphi}{1}{n-1})
+\end{align*}
+For a linear transformation \(\varphi\) of~\(E\), it is also possible to \emph{define}
+\[\ad\varphi=\frac{1}{(n-1)!}\Ad(\varphi,\ldots,\varphi)\]
+Then
+\[(n-1)!\,\ad\varphi=D_L(\bprods{\varphi}{}{})=(n-1)!\,D_L(\medeprod^{n-1}\varphi)\]
+so
+\[\ad\varphi=D_L(\medeprod^{n-1}\varphi)\]
+It follows from the Laplace formula that
+\[\varphi\after\ad(\varphi)=\ad(\varphi)\after\varphi=\det\varphi\mult\iota\]
+This provides an alternative approach to the classical adjoint.
+\end{rmk}
+
+\begin{rmk}
+Applying \(D_E\) to both sides of the Jacobi identity~(7.6) yields
+\[(\ad z)^p=(\det T_Ez)^{p-1}D_E(z^{n-p})\]
+Applying \(T_E\) to both sides of this with \(\varphi=T_Ez\) yields
+\[\medeprod^p(\ad\varphi)=(\det\varphi)^{p-1}D_L(\medeprod^{n-p}\varphi)\]
+In terms of matrices, this identity relates the minors of a matrix to the minors of its adjoint matrix.\footnote{See problem~2.9.11.}
 \end{rmk}
 
 % References
