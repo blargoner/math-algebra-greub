@@ -5133,6 +5133,36 @@ Applying \(T_E\) to both sides of this with \(\varphi=T_Ez\) yields
 In terms of matrices, this identity relates the minors of a matrix to the minors of its adjoint matrix.\footnote{See problem~2.9.11.}
 \end{rmk}
 
+\subsection*{\S~4}
+\begin{rmk}
+To see that \(\Omega_{\Delta}\)~is skew-symmetric, observe that it is multilinear and for \(\tau\in S_n\)
+\begin{align*}
+(\tau\Omega_{\Delta})(x_1,\ldots,x_n)h&=\Omega_{\Delta}(x_{\tau(1)},\ldots,x_{\tau(n)})h\\
+	&=\sum_{\sigma}\sign{\sigma}\Delta(\varphi_1x_{\tau\sigma(1)},\ldots,\varphi_{n-1}x_{\tau\sigma(n-1)},h)x_{\tau\sigma(n)}\\
+	&=\sign{\tau}\sum_{\sigma}\sign{\tau\sigma}\Delta(\varphi_1x_{\tau\sigma(1)},\ldots,\varphi_{n-1}x_{\tau\sigma(n-1)},h)x_{\tau\sigma(n)}\\
+	&=\sign{\tau}\Omega_{\Delta}(x_1,\ldots,x_n)h
+\end{align*}
+It follows that \(\tau\Omega_{\Delta}=\sign{\tau}\Omega_{\Delta}\).
+\end{rmk}
+
+\begin{rmk}
+\(\Ad(\varphi_1,\ldots,\varphi_{n-1})\) does not depend upon the choice of~\(\Delta\), and therefore only depends upon \(\varphi_1,\ldots,\varphi_{n-1}\).
+\end{rmk}
+
+\begin{rmk}
+We have\footnote{Compare with subsection~6.3.}
+\[\Omega_{\Delta}(x_1,\ldots,x_n)h=\sum_{\sigma}\Delta(\varphi_{\sigma^{-1}(1)}x_1,\ldots,h,\ldots,\varphi_{\sigma^{-1}(n)}x_n)x_{\sigma(n)}\]
+where \(h\)~is in the \(\sigma(n)\)-th position of~\(\Delta\). For \(\varphi_1=\cdots=\varphi_{n-1}=\varphi\) this simplifies to
+\begin{align*}
+\Omega_{\Delta}(x_1,\ldots,x_n)h&=\sum_{\sigma}\Delta(\varphi x_1,\ldots,h,\ldots,\varphi x_n)x_{\sigma(n)}\\
+	&=(n-1)!\sum_{i=1}^n\Delta(\varphi x_1,\ldots,h,\ldots,\varphi x_n)x_i\\
+	&=(n-1)!\sum_{i=1}^n(-1)^{i-1}\Delta(h,\varphi x_1,\ldots,\delete{\varphi x_i},\ldots,\varphi x_n)x_i
+\end{align*}
+Therefore
+\[\Delta(x_1,\ldots,x_n)\ad(\varphi)h=\sum_{i=1}^n(-1)^{i-1}\Delta(h,\varphi x_1,\ldots,\delete{\varphi x_i},\ldots,\varphi x_n)x_i\]
+which agrees with~(4.12) in~\cite{greub1}.
+\end{rmk}
+
 % References
 \newpage
 \begin{thebibliography}{0}
