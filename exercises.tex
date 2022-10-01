@@ -42,6 +42,7 @@
 \newcommand{\sect}{\cap}
 \newcommand{\ssect}{\mathop{\widehat{\cap}}}
 \newcommand{\bigsect}{\bigcap}
+\newcommand{\medsect}{{\textstyle\bigsect}}
 \newcommand{\after}{\circ}
 \newcommand{\join}{\vee}
 \newcommand{\meet}{\wedge}
@@ -81,6 +82,7 @@
 \newcommand{\conj}[1]{\overline{#1}}
 \newcommand{\proj}[1]{\overline{#1}}
 \newcommand{\multi}[4]{#2_{#3}#1\cdots#1#2_{#4}}
+\newcommand{\sects}[3]{\multi{\sect}{#1}{#2}{#3}}
 \newcommand{\timess}[3]{\multi{\cross}{#1}{#2}{#3}}
 \newcommand{\tprods}[3]{\multi{\tprod}{#1}{#2}{#3}}
 \newcommand{\eprods}[3]{\multi{\eprod}{#1}{#2}{#3}}
@@ -4298,6 +4300,7 @@ We see that the algebra isomorphisms \(\medeprod E^*\iso A^{\adot}(E)\) and \(\m
 \textbf{Map}&\textbf{Source product}&\textbf{Target product}\\
 \hline
 \(T_E\)&[Skew] mixed exterior&[Skew] box\\
+	&[Skew] mixed intersection&[Skew] intersection\\
 	&Composition&Composition\\
 	&Inner&Inner\\
 \hline
@@ -4410,11 +4413,11 @@ The \(p\)-ary box product, which is a generalization of the \(p\)-th exterior po
 \end{rmk}
 
 \begin{rmk}
-If \(E\)~is \emph{finite-dimensional}, we can generalize the definition of the box product. For linear transformations \(\varphi\) and~\(\psi\) of~\(\medeprod E\), define
+If \(E\)~is \emph{finite-dimensional}, we can generalize the definition of the box product. For linear transformations \(\varphi\) and~\(\psi\) of~\(\medeprod E\), we define
 \[\varphi\bprod\psi=T_E(T_E^{-1}\varphi\mprod T_E^{-1}\psi)\]
-and similarly for more than two transformations. Then \(T_E\)~becomes an algebra isomorphism from the mixed exterior algebra \(\medeprod(E^*,E)\) to a box product algebra in~\(L(\medeprod E;\medeprod E)\). The box product is associative and unital, and is \emph{commutative} on the diagonal subalgebra in~\(L(\medeprod E;\medeprod E)\).
-
-By Proposition~6.3.1, this definition agrees with the one previously given for transformations of~\(E\) when \(L(\medeprod^p E;\medeprod^p E)\)~is viewed as a subspace of~\(L(\bigeprod E;\bigeprod E)\).\footnote{See the remark in chapter~II, \S~4 of~\cite{greub1} above.}
+and similarly for more than two transformations. Then \(T_E\)~becomes an algebra isomorphism from the mixed exterior algebra \(\medeprod(E^*,E)\) to a box product algebra in~\(L(\medeprod E;\medeprod E)\). The box product is associative and unital, and is \emph{commutative} on the diagonal subalgebra in~\(L(\medeprod E;\medeprod E)\). We also define
+\[\medeprod^p\varphi=\frac{1}{p!}\underbrace{\bprods{\varphi}{}{}}_p\]
+when it is understood to be a linear transformation of~\(\medeprod E\). By Proposition~6.3.1, these definitions agree with the ones previously given for transformations of~\(E\) when \(L(\medeprod^p E;\medeprod^p E)\)~is viewed as a subspace of~\(L(\bigeprod E;\bigeprod E)\).\footnote{See the remark in chapter~II, \S~4 of~\cite{greub1} above.}
 
 For fixed~\(\varphi\), there is a left multiplication operator~\(\mu_{\bprod}(\varphi)\) given by
 \[\mu_{\bprod}(\varphi)\psi=\varphi\bprod\psi\]
@@ -5046,10 +5049,25 @@ In Proposition~7.1.1, (1)~is essentially the correlate of~(6.20) for~\(D_L\), an
 \end{rmk}
 
 \begin{rmk}
-If \(z\in E^*\tprod E\), \(\varphi=T_Ez\), and \(\Phi=\iota\tprod\varphi_{\eprod}\), it follows from~(7.4) that
-\[\Phi(z^p)=z^p\after z^p=\Phi^*(z^p)\]
-In particular if \(p=1\), then
-\[\Phi(z)=z\after z=\Phi^*(z)\]
+For linear transformations \(\alpha\) and~\(\beta\) of~\(\medeprod E\), we define the \emph{intersection product} in terms of the generalized box product\footnote{See the remark in chapter~6, \S~3 above.} by
+\[\alpha\sect\beta=D_L(D_L^{-1}\alpha\bprod D_L^{-1}\beta)\]
+This definition makes \(L(\medeprod E;\medeprod E)\) into an algebra called the \emph{intersection algebra}, and makes \(T_E\)~an \emph{algebra} isomorphism from the mixed intersection algebra\footnote{See the remark in chapter~6, \S~12 above.} since for \(w,z\in\medeprod(E^*,E)\),
+\begin{align*}
+T_E(w\sect z)&=T_ED_E(D_E^{-1}w\mprod D_E^{-1}z)\\
+	&=D_L(T_ED_E^{-1}w\bprod T_ED_E^{-1}z)\\
+	&=D_L(D_L^{-1}T_Ew\bprod D_L^{-1}T_Ez)\\
+	&=T_Ew\sect T_Ez
+\end{align*}
+It follows that the intersection algebra is associative, unital (with unit \(\iota_{\eprod^n E}\)), and anticommutative. It also follows that \(D_L\)~is an \emph{algebra} isomorphism from the box product algebra to the intersection algebra \emph{and vice versa} since
+\begin{align*}
+D_L(\alpha\sect\beta)&=D_LT_E(T_E^{-1}\alpha\sect T_E^{-1}\beta)\\
+	&=T_E(D_ET_E^{-1}\alpha\mprod D_ET_E^{-1}\beta)\\
+	&=D_L\alpha\bprod D_L\beta
+\end{align*}
+For a linear transformation \(\varphi\) of~\(E\), viewed as a linear transformation of~\(\medeprod E\), we define
+\[\medsect^p\varphi=\frac{1}{p!}\underbrace{\sects{\varphi}{}{}}_p\]
+so
+\[D_L(\medeprod^p\varphi)=\medsect^p D_L\varphi\qquad\text{and}\qquad D_L(\medsect^p\varphi)=\medeprod^p D_L\varphi\]
 \end{rmk}
 
 \begin{rmk}
@@ -5095,15 +5113,13 @@ For linear transformations \(\varphi_1,\ldots,\varphi_{n-1}\) of~\(E\), it is po
 Then
 \begin{align*}
 \Ad(\varphi_1,\ldots,\varphi_{n-1})&=T_ED_E(\mprods{T_E^{-1}\varphi}{1}{n-1})\\
-	&=D_LT_E(\mprods{T_E^{-1}\varphi}{1}{n-1})\\
-	&=D_L(\bprods{\varphi}{1}{n-1})
+	&=D_L(\bprods{\varphi}{1}{n-1})\\
+	&=\sects{D_L\varphi}{1}{n-1}
 \end{align*}
 For a linear transformation \(\varphi\) of~\(E\), it is also possible to \emph{define}
 \[\ad\varphi=\frac{1}{(n-1)!}\Ad(\varphi,\ldots,\varphi)\]
 Then
-\[(n-1)!\,\ad\varphi=D_L(\bprods{\varphi}{}{})=(n-1)!\,D_L(\medeprod^{n-1}\varphi)\]
-so
-\[\ad\varphi=D_L(\medeprod^{n-1}\varphi)\]
+\[\ad\varphi=\medsect^{n-1}D_L\varphi=D_L(\medeprod^{n-1}\varphi)\]
 It follows from the Laplace formula that
 \[\varphi\after\ad(\varphi)=\ad(\varphi)\after\varphi=\det\varphi\mult\iota\]
 This provides an alternative approach to the classical adjoint.
