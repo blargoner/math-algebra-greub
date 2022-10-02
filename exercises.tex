@@ -4448,6 +4448,8 @@ For \(z\in\medeprod(E^*,E)\), the following diagrams commute:
 \dTo<{\mu(z)}	&					&\dTo>{\mu_{\bprod}(T_Ez)}	&&&\dTo<{i(z)}		&					&\dTo>{i_{\bprod}(T_Ez)}\\
 \medeprod(E^*,E)&\rTo_{T_E}^{\iso}	&L(\medeprod E;\medeprod E)	&&&\medeprod(E^*,E)	&\rTo_{T_E}^{\iso}	&L(\medeprod E;\medeprod E)
 \end{diagram}
+An argument similar to that given in the previous remark shows that
+\[(\varphi\bprod\psi)^*=\varphi^*\bprod\psi^*\]
 \end{rmk}
 
 \subsection*{\S~4}
@@ -5064,7 +5066,8 @@ and
 \end{rmk}
 
 \begin{rmk}
-In Proposition~7.1.1, (1)~is essentially the correlate of~(6.20) for~\(D_L\), and (2)~also follows from the corresponding result about~\(D_E\).\footnote{See the remark in chapter~6, \S~10 above.}
+In Proposition~7.1.1, (1)~is essentially the correlate of~(6.20) for~\(D_L\), and (2)~also follows from the corresponding result about~\(D_E\).\footnote{See the remark in chapter~6, \S~10 above.} We also have
+\[D_L^{-1}\alpha=D_e^{-1}\after\alpha^*\after D_e\]
 \end{rmk}
 
 \begin{rmk}
@@ -5097,10 +5100,16 @@ given by\footnote{See the remarks in chapter~6, \S~2,10 above.}
 \end{rmk}
 
 \begin{rmk}
-If \(\alpha:\medeprod E\to\medeprod E\) is linear, then by Proposition~7.1.1(1),
+If \(\alpha\)~is a linear transformation of~\(\medeprod E\), then by Proposition~7.1.1(1),
 \[(D_L\alpha)^*={(D^e)^{-1}}^*\after\alpha\after(D^e)^*=D_e\after\alpha\after D_e^{-1}=D_{L^*}\alpha^*\]
-In particular if \(\varphi:E\to E\) is linear, then
+and by a remark above
+\[(D_L^{-1}\alpha)^*=D_{L^*}^{-1}\alpha^*\]
+In particular if \(\varphi_1,\ldots,\varphi_p,\varphi\) are linear transformations of~\(E\), then
+\[(D_L(\bprods{\varphi}{1}{p}))^*=D_{L^*}(\bprods{\varphi^*}{1}{p})\]
+and
 \[(D_L(\medeprod^p\varphi))^*=D_{L^*}(\medeprod^p\varphi^*)\]
+If \(\beta\)~is also a linear transformation of~\(\medeprod E\), then
+\[(\alpha\sect\beta)^*=\alpha^*\sect\beta^*\]
 \end{rmk}
 
 \subsection*{\S~2}
@@ -5196,6 +5205,17 @@ where \(h\)~is in the \(\sigma(n)\)-th position of~\(\Delta\). For \(\varphi_1=\
 Therefore
 \[\Delta(x_1,\ldots,x_n)\ad(\varphi)h=\sum_{i=1}^n(-1)^{i-1}\Delta(h,\varphi x_1,\ldots,\delete{\varphi x_i},\ldots,\varphi x_n)x_i\]
 which agrees with~(4.12) in~\cite{greub1}.
+\end{rmk}
+
+\begin{rmk}
+We have
+\begin{align*}
+\Ad(\varphi_1,\ldots,\varphi_{n-1})^*&=D_L(\bprods{\varphi}{1}{n-1})^*\\
+	&=D_{L^*}(\bprods{\varphi^*}{1}{n-1})\\
+	&=\Ad(\varphi_1^*,\ldots,\varphi_{n-1}^*)
+\end{align*}
+In particular
+\[\ad(\varphi)^*=\ad(\varphi^*)\]
 \end{rmk}
 
 % References
