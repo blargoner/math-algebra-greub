@@ -19,6 +19,7 @@
 \DeclareMathOperator{\Ad}{Ad}
 \DeclareMathOperator{\cof}{cof}
 \DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\Det}{Det}
 
 % much ado about dots
 \makeatletter
@@ -5220,6 +5221,19 @@ We have
 \end{align*}
 In particular
 \[\ad(\varphi)^*=\ad(\varphi^*)\]
+\end{rmk}
+
+\subsection*{\S~5}
+\begin{rmk}
+If \(\varphi\) and~\(\psi\) are linear transformations of~\(E\), then we have the binomial formula
+\[\medeprod^n(\varphi+\psi)=\sum_{p+q=n}\medeprod^p\varphi\bprod\medeprod^q\psi\tag{1}\]
+Taking the trace of both sides yields
+\[\det(\varphi+\psi)=\sum_{p+q=n}\tr(\medeprod^p\varphi\bprod\medeprod^q\psi)\tag{2}\]
+or equivalently
+\[\det(\varphi+\psi)=\sum_{p+q=n}\frac{1}{p!q!}\Det(\underbrace{\varphi,\ldots,\varphi}_p,\underbrace{\psi,\ldots,\psi}_q)\]
+which is the correct version of the formula in the book.
+
+Taking \(\psi=\lambda\iota\) in~(2) yields Proposition~7.5.1.
 \end{rmk}
 
 % References
