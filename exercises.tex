@@ -2736,13 +2736,29 @@ so \((\varphi\tprod\varphi^*)^*=\varphi\tprod\varphi^*\).
 \textbf{In this subsection, all vector spaces are finite-dimensional.}
 
 \begin{rmk}
-Let \(E,E^*\) and \(F,F^*\) be pairs of dual spaces with dual bases \(e_i,e^{*i}\) and \(f_j,f^{*j}\). If \(z\in E^*\tprod F\) and \(\varphi=T(z)\), write
+If \(\varphi:E\to F\) is linear, then \(T^{-1}(\varphi)\) is decomposable if and only if \(\varphi\)~has rank at most~\(1\).
+\end{rmk}
+\begin{proof}
+If \(T^{-1}(\varphi)=a^*\tprod b\), then \(\im\varphi=\gen{b}\). Conversely if \(\im\varphi=\gen{b}\), there is a linear function \(f\in L(E)\) with \(\varphi(x)=f(x)b\) for all \(x\in E\). If \(a^*\in E^*\) corresponds to~\(f\), then \(T^{-1}(\varphi)=a^*\tprod b\).
+\end{proof}
+
+\begin{rmk}
+If \(\varphi:E\to F\) is linear and
+\[T^{-1}(\varphi)=\sum_{i=1}^r a^{*i}\tprod b_i\qquad(a^{*i}\in E^*,b_i\in F)\]
+where the~\(a^{*i}\) and the~\(b_i\) are linearly independent, then \(\varphi\)~has rank~\(r\). Thus the rank of~\(\varphi\) is equal to the tensor rank of~\(T^{-1}(\varphi)\).
+\end{rmk}
+\begin{proof}
+It is sufficient to prove that \(\im\varphi=\gen{b_i}\). Clearly \(\im\varphi\subseteq\gen{b_i}\). Conversely if \(y=\sum_{i=1}^r\beta_ib_i\) and \(a_j\in E\) with \(\sprod{a^{*i}}{a_j}=\delta_{ij}\) for all \(1\le i,j\le r\), then for the vector \(x=\sum_{j=1}^r\beta_j a_j\) we have \(\varphi(x)=y\).
+\end{proof}
+
+\begin{rmk}
+Fix dual bases \(e_i,e^{*i}\) and \(f_j,f^{*j}\) of \(E,E^*\) and \(F,F^*\). If \(z\in E^*\tprod F\) and \(\varphi=T(z)\), write
 \[z=\sum_{\mu,\nu}(z)^{\mu}_{\nu}e^{*\nu}\tprod f_{\mu}\]
 Then
 \[\varphi(e_{\lambda})=\sum_{\mu,\nu}(z)^{\mu}_{\nu}\sprod{e^{*\nu}}{e_{\lambda}}f_{\mu}=\sum_{\mu}(z)^{\mu}_{\lambda}f_{\mu}\]
 so
 \[(z)^{\kappa}_{\lambda}=\sprod{f^{*\kappa}}{\varphi(e_{\lambda})}\]
-This shows that the components of the tensor~\(z\) are precisely the matrix entries of its corresponding linear map~\(\varphi\), with respect to the chosen bases.
+This shows that the components of the tensor~\(z\) are precisely the matrix entries of the map~\(\varphi\), with respect to the chosen bases.
 \end{rmk}
 
 \begin{rmk}
@@ -5257,6 +5273,7 @@ so
 and therefore
 \[A_p(\varphi)=D_L(\medeprod^p\varphi)\sect\medeprod^{p+1}\iota\qquad(0\le p\le n-1)\]
 \end{rmk}
+
 
 % References
 \newpage
