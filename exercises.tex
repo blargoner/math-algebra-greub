@@ -5291,7 +5291,7 @@ By the Jacobi identity~(7.6) and Proposition~7.2.2,
 \end{align*}
 \end{proof}
 
-\begin{exer}[5]
+\begin{exer}[5 - Cauchy]
 If \(\varphi:E\to E\) is linear, then
 \[\det(\medeprod^p\varphi)\mult\det(\medeprod^{n-p}\varphi)=\det(\varphi)^{\binom{n}{p}}\qquad(0\le p\le n)\]
 \end{exer}
@@ -5305,7 +5305,16 @@ Let \(A\)~be an \(n\times n\) matrix. The coefficient of~\(\lambda^{n-p}\) in \(
 \begin{proof}
 Write \(A=M(\varphi)\), so \(\det(A-\lambda I)=\det(\varphi-\lambda\iota)\). By Proposition~7.5.1, the coefficient of~\(\lambda^{n-p}\) in this determinant is
 \[(-1)^{n-p}C_p(\varphi)=(-1)^{n-p}\tr(\medeprod^p\varphi)\]
-which is just the sum of the principal \(p\times p\) minors of~\(A\).\footnote{See the remark in chapter~5, \S~8 above.}
+which is just the sum of the principal \(p\times p\) minors of~\(A\) by a remark in chapter~5, \S~8 above.
+\end{proof}
+
+\begin{exer}[9 - Laplace]
+Let \(A\)~be an \(n\times n\) matrix. For any \(1\le\lambda_1<\cdots<\lambda_p\le n\),
+\[\det A=\sum_{\nu_1<\cdots<\nu_p}(-1)^{\sum_{i=1}^p\lambda_i+\nu_i}\det A_{\lambda_1\cdots\lambda_p}^{\nu_1\cdots\nu_p}\mult\det A_{\lambda_{p+1}\cdots\lambda_n}^{\nu_{p+1}\cdots\nu_n}\]
+where \((\lambda_{p+1},\ldots,\lambda_n)\) is the ordered \((n-p)\)-tuple complementary to \((\lambda_1,\ldots,\lambda_p)\) and \((\nu_{p+1},\ldots,\nu_n)\) is the ordered \((n-p)\)-tuple complementary to \((\nu_1,\ldots,\nu_p)\).
+\end{exer}
+\begin{proof}
+By a remark in \S~2 above.
 \end{proof}
 
 % References
