@@ -5332,6 +5332,20 @@ and we also know from a remark in chapter~5, \S~7 above that
 The result follows from (1), (2), and~(3).
 \end{proof}
 
+\begin{exer}[10]
+If \(n\ge 2\), the rank of the adjoint transformation is given by
+\[r(\ad\varphi)=\begin{cases}
+n&\text{if }r(\varphi)=n\\
+1&\text{if }r(\varphi)=n-1\\
+0&\text{if }r(\varphi)\le n-2
+\end{cases}\]
+\end{exer}
+\begin{proof}
+By the Jacobi identity~(7.6),
+\[\medeprod^p(\ad\varphi)=(\det\varphi)^{p-1}D_L(\medeprod^{n-p}\varphi)\]
+The result now follows from the fact that the rank of a transformation~\(\psi\) is the largest~\(r\) for which \(\medeprod^r\psi\ne0\).
+\end{proof}
+
 % References
 \newpage
 \begin{thebibliography}{0}
