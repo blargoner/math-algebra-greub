@@ -498,7 +498,7 @@ We provide an alternative proof of Proposition~IV, which says \(\ad\iota=\iota\)
 \[(-1)^{j-1}\Delta(x,x_1,\ldots,\delete{x_j},\ldots,x_n)=\Delta(x_1,\ldots,x,\ldots,x_n)\]
 where \(x\)~is in the \(j\)-th position on the right.\footnote{\(\delete{x_j}\)~denotes deletion of \(x_j\)~from the sequence on the left.} Therefore
 \[\sum_{j=1}^n(-1)^{j-1}\Delta(x,x_1,\ldots,\delete{x_j},\ldots,x_n)x_j=\Delta(x,x_2,\ldots,x_n)x_1+\cdots+\Delta(x_1,\ldots,x_{n-1},x)x_n\]
-Viewing this as a function of \(x_1,\ldots,x_n\) (that is, a set map from \(E^n\to L(E;E)\)), it is obviously multilinear and skew symmetric (by Proposition~I(ii)). Therefore if \(x_1,\ldots,x_n\) are linearly dependent, it is zero (by Proposition~I(iii)). If \(x_1,\ldots,x_n\) are linearly independent (and hence a basis), then viewing it as a function of~\(x\), its value at~\(x_i\) is just \(\Delta(x_1,\ldots,x_n)x_i\) (by Proposition~I(ii)), so it agrees on a basis with \(\Delta(x_1,\ldots,x_n)x\) and hence is equal to it.
+Viewing this as a function of \(x_1,\ldots,x_n\) (that is, a set map from \(E^n\to L(E;E)\)), it is obviously multilinear and skew symmetric (by Proposition~I(ii)). Therefore if \(x_1,\ldots,x_n\) are linearly dependent, it is zero and hence equal to \(\Delta(x_1,\ldots,x_n)x\) (by Proposition~I(iii)). On the other hand if \(x_1,\ldots,x_n\) are linearly independent (and hence a basis), then viewing it as a function of~\(x\), its value at~\(x_i\) is just \(\Delta(x_1,\ldots,x_n)x_i\) (by Proposition~I(ii)), so it agrees on a basis with \(\Delta(x_1,\ldots,x_n)x\) and hence is equal to it.\footnote{See also the remark in chapter~5, \S~7 of~\cite{greub2} below.}
 \end{rmk}
 
 \begin{rmk}
@@ -549,7 +549,7 @@ for all vectors \(x_1,\ldots,x_n\). It follows from~(1) that \(\psi:E\to E\) is 
 \begin{rmk}
 In subsection~4.7, observe that
 \[\Delta(x_1,\ldots,x_p,y_1,\ldots,y_q)\]
-induces a determinant function on~\(E_2\) when \(x_1,\ldots,x_p\in E\) are fixed, and induces a determinant function on~\(E_1\) when \(y_1,\ldots,y_q\in E\) are fixed. Now let \(a_1,\ldots,a_p\) be a basis of~\(E_1\), so \(a_1,\ldots,a_p,b_1,\ldots,b_q\) is a basis of~\(E\). Then by~(4.8),
+induces a determinant function in~\(E_2\) when \(x_1,\ldots,x_p\in E\) are fixed, and induces a determinant function in~\(E_1\) when \(y_1,\ldots,y_q\in E\) are fixed. Now let \(a_1,\ldots,a_p\) be a basis of~\(E_1\), so \(a_1,\ldots,a_p,b_1,\ldots,b_q\) is a basis of~\(E\). Then by~(4.8),
 \begin{align*}
 \det\varphi\mult\Delta(a_1,\ldots,a_p,b_1,\ldots,b_q)&=\Delta(\varphi_1 a_1,\ldots,\varphi_1 a_p,\varphi_2 b_1,\ldots,\varphi_2 b_q)\\
 	&=\det\varphi_1\mult\Delta(a_1,\ldots,a_p,\varphi_2 b_1,\ldots,\varphi_2 b_q)\\
@@ -3705,6 +3705,20 @@ and
 By~(5.13),
 \[\xi^{\nu_1\cdots\nu_p}=\sprod{e^{*\nu_1}\eprod\cdots\eprod e^{*\nu_p}}{\eprods{x}{1}{p}}=\det\sprod{e^{*\nu_j}}{x_i}=\det(\xi_i^{\nu_j})\]
 This shows that the components of a decomposable \(p\)-vector are  just the \(p\times p\) minor determinants of the matrix of components of the \(p\) factors.
+\end{rmk}
+
+\begin{rmk}
+Let \(E,E^*\) be a pair of dual \(n\)-dimensional vector spaces and \(e^*\)~a basis vector of~\(\medeprod^n E^*\). Let \(\Delta\)~be the determinant function in~\(E\) corresponding to~\(e^*\),\footnote{See subsection~5.33.} so that
+\[\Delta(x_1,\ldots,x_n)=\sprod{e^*}{\eprods{x}{1}{n}}\]
+By a Laplace expansion~(5.11), for any \(x^*\in E^*\) and \(x\in E\) we have
+\begin{align*}
+0&=\sprod{x^*\eprod e^*}{x\eprod\eprods{x}{1}{n}}\\
+	&=\sprod{x^*}{x}\sprod{e^*}{\eprods{x}{1}{n}}-\sum_{i=1}^n(-1)^{i-1}\sprod{x^*}{x_i}\sprod{e^*}{x\eprod x_1\eprod\cdots\eprod\delete{x_i}\eprod\cdots\eprod x_n}
+\end{align*}
+so
+\[\sprod{x^*}{\Delta(x_1,\ldots,x_n)x}=\sprod{x^*}{\sum_{i=1}^n(-1)^{i-1}\Delta(x,x_1,\ldots,\delete{x_i},\ldots,x_n)x_i}\]
+By nondegeneracy of the scalar product, it follows that\footnote{This is~(4.6) in~\cite{greub1}. See also the remark in chapter~IV, \S~1 of~\cite{greub1} above.}
+\[\Delta(x_1,\ldots,x_n)x=\sum_{i=1}^n(-1)^{i-1}\Delta(x,x_1,\ldots,\delete{x_i},\ldots,x_n)x_i\]
 \end{rmk}
 
 \begin{rmk}
