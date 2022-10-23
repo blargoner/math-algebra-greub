@@ -4571,6 +4571,20 @@ Similarly
 \[(D^e)^{-1}=\omega_{E^*}\after D_e=D_e^*\]
 \end{rmk}
 
+\begin{rmk}
+Let \(\Delta,\Delta^*\ne 0\) be determinant functions in \(E,E^*\) and let \(e^*,e\) be the corresponding (not necessarily dual) vectors in \(\medeprod^n E^*,\medeprod^n E\) with \(\alpha=\sprod{e^*}{e}\ne 0\). Then
+\[\Delta^*(x^*_1,\ldots,x^*_n)=\sprod{\eprods{x^*}{1}{n}}{e}=i(\eprods{x^*}{1}{n})e=D^e(\eprods{x^*}{1}{n})\]
+and
+\[\Delta(x_1,\ldots,x_n)=\sprod{e^*}{\eprods{x}{1}{n}}=i(\eprods{x}{1}{n})e^*=\alpha D_e(\eprods{x}{1}{n})\]
+By Theorem~6.8.1(1),
+\begin{align*}
+\Delta^*(x^*_1,\ldots,x^*_n)\,\Delta(x_1,\ldots,x_n)&=\alpha\sprod{D_e(\eprods{x}{1}{n})}{D^e(\eprods{x^*}{1}{n})}\\
+	&=\alpha\sprod{\eprods{x^*}{1}{n}}{\eprods{x}{1}{n}}\\
+	&=\alpha\det\sprod{x^*_j}{x_i}
+\end{align*}
+This is~(4.21) in~\cite{greub1}, which was proved there using the equivalent of the universal property of~\(\medeprod^n_n(E^*,E)\). This shows that \(\Delta,\Delta^*\) are dual if and only if \(e^*,e\) are dual. Turning the argument around yields an alternative proof of Theorem~6.8.1(1).
+\end{rmk}
+
 \subsection*{\S~9}
 \begin{rmk}
 Let \(\cat{V}\)~denote the category of vector spaces and linear maps over~\(\Gamma\). Let \(\cat{C}\)~denote the category of objects \((E,e)\) where \(E\)~is an \(n\)-dimensional vector space over~\(\Gamma\) and \(e\)~is a basis vector of~\(\medeprod^n E\), and arrows \(\varphi:(E,e)\to(F,f)\) where \(\varphi:E\to F\) is a linear isomorphism with \(\varphi_{\eprod}e=f\).
