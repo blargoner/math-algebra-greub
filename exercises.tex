@@ -498,7 +498,23 @@ We provide an alternative proof of Proposition~IV. First note
 \[(-1)^{j-1}\Delta(x,x_1,\ldots,\delete{x_j},\ldots,x_n)=\Delta(x_1,\ldots,x,\ldots,x_n)\]
 where \(x\)~is in the \(j\)-th position on the right.\footnote{\(\delete{x_j}\)~denotes deletion of \(x_j\)~from the sequence on the left.} Therefore
 \[\sum_{j=1}^n(-1)^{j-1}\Delta(x,x_1,\ldots,\delete{x_j},\ldots,x_n)x_j=\Delta(x,x_2,\ldots,x_n)x_1+\cdots+\Delta(x_1,\ldots,x_{n-1},x)x_n\]
-Viewing this as a function of \(x_1,\ldots,x_n\) (that is, a set map from \(E^n\to L(E;E)\)), it is obviously multilinear and skew symmetric (by Proposition~I(ii)). Therefore if \(x_1,\ldots,x_n\) are linearly dependent, it is zero and hence equal to \(\Delta(x_1,\ldots,x_n)x\) (by Proposition~I(iii)). On the other hand if \(x_1,\ldots,x_n\) are linearly independent (and hence a basis), then viewing it as a function of~\(x\), its value at~\(x_i\) is just \(\Delta(x_1,\ldots,x_n)x_i\) (by Proposition~I(ii)), so it agrees on a basis with \(\Delta(x_1,\ldots,x_n)x\) and hence is equal to it.\footnote{See also the remark in chapter~5, \S~7 of~\cite{greub2} below.} Note this result shows that \(\ad\iota=\iota\).
+Viewing this as a function of \(x_1,\ldots,x_n\) (that is, a set map from \(E^n\to L(E;E)\)), it is obviously multilinear and skew symmetric (by Proposition~I(ii)). Therefore if \(x_1,\ldots,x_n\) are linearly dependent, it is zero and hence equal to \(\Delta(x_1,\ldots,x_n)x\) (by Proposition~I(iii)). On the other hand if \(x_1,\ldots,x_n\) are linearly independent (and hence a basis), then viewing it as a function of~\(x\), its value at~\(x_i\) is just \(\Delta(x_1,\ldots,x_n)x_i\) (by Proposition~I(ii)), so it agrees on a basis with \(\Delta(x_1,\ldots,x_n)x\) and hence is equal to it. Note this result shows that \(\ad\iota=\iota\).
+\end{rmk}
+
+\begin{rmk}
+Consider the ``bordered'' determinant
+\[\begin{vmatrix}
+x&a&b\\
+x&a&b\\
+y&c&d
+\end{vmatrix}\]
+It must be zero since the first two rows are equal. Expanding along the first row, we obtain
+\[\begin{vmatrix}a&b\\c&d\end{vmatrix}x=\begin{vmatrix}x&b\\y&d\end{vmatrix}a+\begin{vmatrix}a&x\\c&y\end{vmatrix}b\]
+A similar argument shows
+\[\begin{vmatrix}a&b\\c&d\end{vmatrix}y=\begin{vmatrix}x&b\\y&d\end{vmatrix}c+\begin{vmatrix}a&x\\c&y\end{vmatrix}d\]
+In vector form, we have
+\[\begin{vmatrix}a&b\\c&d\end{vmatrix}\begin{bmatrix}x\\y\end{bmatrix}=\begin{vmatrix}x&b\\y&d\end{vmatrix}\begin{bmatrix}a\\c\end{bmatrix}+\begin{vmatrix}a&x\\c&y\end{vmatrix}\begin{bmatrix}b\\d\end{bmatrix}\]
+This is a more classical \(2\times 2\) version of Proposition~IV.\footnote{See also the remark in chapter~5, \S~7 of~\cite{greub2} below.}
 \end{rmk}
 
 \begin{rmk}
