@@ -559,7 +559,7 @@ By a remark above, there is a unique vector~\(x'\) with
 \[\Phi(x_1,\ldots,x_{n-1})=\Delta(x_1,\ldots,x_{n-1},x')\]
 for all vectors \(x_1,\ldots,x_{n-1}\). Writing \(x'=\psi x\), we obtain
 \[\Delta(\varphi x_1,\ldots,\varphi x_{n-1},x_n)=\Delta(x_1,\ldots, x_{n-1},\psi x_n)\tag{1}\]
-for all vectors \(x_1,\ldots,x_n\). It follows from~(1) that \(\psi:E\to E\) is linear and uniquely determined by~\(\varphi\). It is easy to verify that \(\psi=\ad\varphi\).
+for all vectors \(x_1,\ldots,x_n\). It follows from~(1) that \(\psi:E\to E\) is linear and uniquely determined by~\(\varphi\). It is easy to verify that \(\psi=\ad\varphi\).\footnote{See also the remark in chapter~7, \S~4 of~\cite{greub2} below.}
 \end{rmk}
 
 \begin{rmk}
@@ -5003,7 +5003,7 @@ The result follows by nondegeneracy of the scalar product.
 \begin{rmk}
 Substituting \((\varphi^{-1})^*\) for~\(\varphi\), we obtain
 \[\varphi[x^*_1,\ldots,x^*_{n-1}]=\det\varphi\mult[(\varphi^{-1})^*x^*_1,\ldots,(\varphi^{-1})^*x^*_{n-1}]\qquad(x^*_i\in E^*)\]
-In particular if \(E\)~is an oriented \(3\)-dimensional Euclidean space, we have\footnote{See the remarks in chapter~VIII, \S~4 of \cite{greub1} above.}
+In particular if \(E\)~is an oriented \(3\)-dimensional Euclidean space, we have\footnote{See the remark in chapter~VIII, \S~4 of \cite{greub1} above.}
 \[\varphi x\cross\varphi y=\det\varphi\mult\adj{\varphi}^{-1}(x\cross y)\qquad\text{and}\qquad\varphi(x\cross y)=\det\varphi\mult(\adj{\varphi}^{-1}x\cross\adj{\varphi}^{-1}y)\]
 \end{rmk}
 
@@ -5113,7 +5113,7 @@ We can also define the \emph{skew mixed intersection product} by
 
 \subsection*{\S~18}
 \begin{rmk}
-The inner product \(\ssprod{-}{-}\) in \(\medeprod E^*\stprod\medeprod E\) is obtained from the scalar product between \(\medeprod E^*\stprod\medeprod E\) and \(\medeprod E\stprod\medeprod E^*\) using the \emph{skew} flip operator\footnote{See the remarks in subsection 2.8 above.}
+The inner product \(\ssprod{-}{-}\) in \(\medeprod E^*\stprod\medeprod E\) is obtained from the scalar product between \(\medeprod E^*\stprod\medeprod E\) and \(\medeprod E\stprod\medeprod E^*\) using the \emph{skew} flip operator\footnote{See the remark in chapter~2, \S~8 above.}
 \[\widehat{f}:\medeprod E^*\stprod\medeprod E\to\medeprod E\stprod\medeprod E^*\]
 defined by
 \[\widehat{f}(u^*\tprod u)=(-1)^{pq}u\tprod u^*\qquad(u^*\in\medeprod^p E^*,\ u\in\medeprod^q E)\]
@@ -5290,6 +5290,20 @@ where \(h\)~is in the \(\sigma(n)\)-th position of~\(\Delta\). For \(\varphi_1=\
 Therefore
 \[\Delta(x_1,\ldots,x_n)\ad(\varphi)h=\sum_{i=1}^n(-1)^{i-1}\Delta(h,\varphi x_1,\ldots,\delete{\varphi x_i},\ldots,\varphi x_n)x_i\]
 which agrees with~(4.12) in~\cite{greub1}.
+\end{rmk}
+
+\begin{rmk}
+Let \(e^*\in\medeprod^n E^*\) correspond to~\(\Delta\). By Proposition~7.4.1(2),
+\begin{align*}
+\Delta(h,\varphi x_1,\ldots,\varphi x_{n-1})&=\sprod{e^*}{h\eprod\eprods{\varphi x}{1}{n-1}}\\
+	&=\sprod{D_e h}{\medeprod^{n-1}\varphi(\eprods{x}{1}{n-1})}\\
+	&=\sprod{(D_e^{-1}\after\medeprod^{n-1}\varphi^*\after D_e)h}{(D^e)^{-1}(\eprods{x}{1}{n-1})}\\
+	&=\sprod{\ad(\varphi)h}{D_e^*(\eprods{x}{1}{n-1})}\\
+	&=\sprod{D_e\ad(\varphi)h}{\eprods{x}{1}{n-1}}\\
+	&=\sprod{e^*}{\ad(\varphi)h\eprod\eprods{x}{1}{n-1}}\\
+	&=\Delta(\ad(\varphi)h,x_1,\ldots,x_{n-1})
+\end{align*}
+This identity characterizes~\(\ad(\varphi)\).\footnote{See also the remark in chapter~IV, \S~2 of~\cite{greub1} above.}
 \end{rmk}
 
 \begin{rmk}
