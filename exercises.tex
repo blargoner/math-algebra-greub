@@ -5293,17 +5293,11 @@ which agrees with~(4.12) in~\cite{greub1}.
 \end{rmk}
 
 \begin{rmk}
-Let \(e^*\in\medeprod^n E^*\) correspond to~\(\Delta\). By Proposition~7.4.1(2),
-\begin{align*}
-\Delta(h,\varphi x_1,\ldots,\varphi x_{n-1})&=\sprod{e^*}{h\eprod\eprods{\varphi x}{1}{n-1}}\\
-	&=\sprod{D_e h}{\medeprod^{n-1}\varphi(\eprods{x}{1}{n-1})}\\
-	&=\sprod{(D_e^{-1}\after\medeprod^{n-1}\varphi^*\after D_e)h}{(D^e)^{-1}(\eprods{x}{1}{n-1})}\\
-	&=\sprod{\ad(\varphi)h}{D_e^*(\eprods{x}{1}{n-1})}\\
-	&=\sprod{D_e\ad(\varphi)h}{\eprods{x}{1}{n-1}}\\
-	&=\sprod{e^*}{\ad(\varphi)h\eprod\eprods{x}{1}{n-1}}\\
-	&=\Delta(\ad(\varphi)h,x_1,\ldots,x_{n-1})
-\end{align*}
-This identity characterizes~\(\ad(\varphi)\).\footnote{See also the remark in chapter~IV, \S~2 of~\cite{greub1} above.}
+Let \(e,e^*\) be dual basis vectors in \(\medeprod^n E,\medeprod^n E^*\). By Proposition~7.4.1(2),
+\[\medeprod^{n-1}\varphi^*D_eh=D_e[D_e^{-1}\medeprod^{n-1}\varphi^*D_eh]=D_e[\ad(\varphi)h]\]
+It follows that
+\[\Delta(h,\varphi x_1,\ldots,\varphi x_{n-1})=\Delta(\ad(\varphi)h,x_1,\ldots,x_{n-1})\]
+for all \(h,x_i\in E\). This identity characterizes~\(\ad(\varphi)\).\footnote{See also the remark in chapter~IV, \S~2 of~\cite{greub1} above.}
 \end{rmk}
 
 \begin{rmk}
