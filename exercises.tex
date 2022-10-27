@@ -5240,7 +5240,7 @@ This provides an alternative approach to the classical adjoint.\footnote{Compare
 
 \begin{rmk}
 It follows from Proposition~7.2.2(1) that for \(z\in E^*\tprod E\),
-\[i(\ad z)z^{n-p}=(p+1)\det(T_Ez)z^{n-(p+1)}\qquad(0\le p\le n)\]
+\[i(\ad z)z^{n-p}=(p+1)\det(T_Ez)z^{n-(p+1)}\qquad(0\le p\le n-1)\]
 \end{rmk}
 
 \begin{rmk}
@@ -5293,15 +5293,14 @@ which agrees with~(4.12) in~\cite{greub1}.
 \end{rmk}
 
 \begin{rmk}
-Let \(e,e^*\) be dual basis vectors in \(\medeprod^n E,\medeprod^n E^*\). By Proposition~7.4.1(2),
-\[\medeprod^{n-1}\varphi^*D_eh=D_e[D_e^{-1}\medeprod^{n-1}\varphi^*D_eh]=D_e[\ad(\varphi)h]\]
-It follows that
-\[\Delta(h,\varphi x_1,\ldots,\varphi x_{n-1})=\Delta(\ad(\varphi)h,x_1,\ldots,x_{n-1})\]
-for all \(h,x_i\in E\). This identity characterizes~\(\ad(\varphi)\).\footnote{See also the remark in chapter~IV, \S~2 of~\cite{greub1} above.}
+By Proposition~7.4.1,
+\[T_E\Ad(z_1,\ldots,z_{n-1})=\Ad(T_E(z_1),\ldots,T_E(z_{n-1}))\]
+In particular
+\[T_E\ad(z)=\ad(T_Ez)\]
 \end{rmk}
 
 \begin{rmk}
-We have
+By Proposition~7.4.1 and remarks above,
 \begin{align*}
 \Ad(\varphi_1,\ldots,\varphi_{n-1})^*&=D_L(\bprods{\varphi}{1}{n-1})^*\\
 	&=D_{L^*}(\bprods{\varphi^*}{1}{n-1})\\
@@ -5309,6 +5308,14 @@ We have
 \end{align*}
 In particular
 \[\ad(\varphi)^*=\ad(\varphi^*)\]
+\end{rmk}
+
+\begin{rmk}
+Let \(e,e^*\) be dual basis vectors in \(\medeprod^n E,\medeprod^n E^*\). By Proposition~7.4.1(2),
+\[\medeprod^{n-1}\varphi^*D_eh=D_e[D_e^{-1}\medeprod^{n-1}\varphi^*D_eh]=D_e[\ad(\varphi)h]\]
+It follows that
+\[\Delta(h,\varphi x_1,\ldots,\varphi x_{n-1})=\Delta(\ad(\varphi)h,x_1,\ldots,x_{n-1})\]
+for all \(h,x_i\in E\). This identity characterizes~\(\ad(\varphi)\).\footnote{See also the remark in chapter~IV, \S~2 of~\cite{greub1} above.}
 \end{rmk}
 
 \subsection*{\S~5}
