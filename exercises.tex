@@ -19,6 +19,7 @@
 \DeclareMathOperator{\Ad}{Ad}
 \DeclareMathOperator{\cof}{cof}
 \DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\Tr}{Tr}
 \DeclareMathOperator{\Det}{Det}
 
 % much ado about dots
@@ -5331,7 +5332,7 @@ for all \(h,x_i\in E\). This identity characterizes~\(\ad(\varphi)\).\footnote{S
 
 \subsection*{\S~5}
 \begin{rmk}
-Since the function \(C_p\)~is \(p\)-linear and symmetric, it factors through the \(p\)-th symmetric power of~\(L(E;E)\).
+Since the function~\(C_p\) is \(p\)-linear and symmetric, it factors through the \(p\)-th symmetric power of~\(L(E;E)\).
 \end{rmk}
 
 \begin{rmk}
@@ -5367,6 +5368,28 @@ so
 and therefore
 \[A_p(\varphi)=D_L(\medeprod^p\varphi)\sect\medeprod^{p+1}\iota=i_{\bprod}(\medeprod^p\varphi)\iota_{\eprod^{p+1}E}\qquad(0\le p\le n-1)\]
 This is equivalent to Proposition~7.3.1.
+\end{rmk}
+
+\subsection*{\S~7}
+\begin{rmk}
+Since the function~\(\Tr_p\) is \(p\)-linear and symmetric, it factors through the \(p\)-th symmetric power of~\(L(E;E)\).
+\end{rmk}
+
+\begin{rmk}
+It would be more consistent with other definitions in this chapter to define
+\[\Tr_p(\varphi_1,\ldots,\varphi_p)=\sum_{\sigma}\tr(\varphi_{\sigma(1)}\after\cdots\after\varphi_{\sigma(p)})\]
+and
+\[\Tr_p(\varphi)=\frac{1}{p!}\Tr_p(\varphi,\ldots,\varphi)\]
+\end{rmk}
+
+\begin{rmk}
+Since
+\[C_p(\varphi)=\tr(\medeprod^p\varphi)\qquad\text{and}\qquad\Tr_p(\varphi)=\tr(\varphi^p)\]
+Proposition~7.7.1 establishes a relationship between the exterior powers and the composition powers of a linear transformation. This is a relationship between the box product and the composition product in the diagonal subspace of~\(L(\medeprod E;\medeprod E)\), and equivalently between the mixed exterior product and the composition product in~\(\Delta E\).\footnote{See the remark in chapter~6, \S~5 above.}
+\end{rmk}
+
+\begin{rmk}
+A natural question is: what is the relationship between \(C_p(\varphi_1,\ldots,\varphi_p)\) and \(\Tr_p(\varphi_1,\ldots,\varphi_p)\)?
 \end{rmk}
 
 \subsection*{\S~9}
