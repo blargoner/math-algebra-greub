@@ -4745,7 +4745,11 @@ For \(w,z\in\medeprod(E^*,E)\), we define the \emph{mixed intersection product} 
 \[w\sect z=D_E(D_E^{-1}w\mprod D_E^{-1}z)\]
 If \(w\in\medeprod^p_q(E^*,E)\) and \(z\in\medeprod^r_s(E^*,E)\), then \(w\sect z\in\medeprod^{p+r-n}_{q+s-n}(E^*,E)\).
 
-This definition makes \(\medeprod(E^*,E)\) into an algebra called the \emph{mixed intersection algebra} which is associative, unital (with unit \(\unit_n\)), and anticommutative. It is immediate from the definition that
+This definition makes \(\medeprod(E^*,E)\) into an algebra called the \emph{mixed intersection algebra} which is associative, unital (with unit \(\unit_n\)), and anticommutative. It also makes \(\Delta E\) a \emph{commutative} subalgebra. We have
+\[w\sect z=i(D_E^{-1}z)w\]
+If \(w,z\in\Delta E\), then
+\[w\sect z=z\sect w=i(D_{\Delta}^{-1}w)z=i(D_{\Delta}w)z\]
+It is immediate from the definition that
 \[D_E(w\mprod z)=D_Ew\sect D_Ez\]
 so \(D_E\)~is an \emph{algebra} isomorphism from the mixed exterior algebra to the mixed intersection algebra.
 
@@ -5161,10 +5165,14 @@ D_L(\alpha\sect\beta)&=D_LT_E(T_E^{-1}\alpha\sect T_E^{-1}\beta)\\
 	&=T_E(D_ET_E^{-1}\alpha\mprod D_ET_E^{-1}\beta)\\
 	&=D_L\alpha\bprod D_L\beta
 \end{align*}
+The diagonal subspace \(\sum_{p=0}^nL(\medeprod^p E;\medeprod^p E)\) forms a \emph{commutative} subalgebra, and for \(\alpha,\beta\) in this subalgebra we have
+\[\alpha\sect\beta=i_{\bprod}(D_L^{\Delta}\alpha)\beta\]
 For a linear transformation \(\varphi\) of~\(E\), viewed as a linear transformation of~\(\medeprod E\), we define
 \[\medsect^p\varphi=\frac{1}{p!}\underbrace{\sects{\varphi}{}{}}_p\]
 so
 \[D_L(\medeprod^p\varphi)=\medsect^p D_L\varphi\qquad\text{and}\qquad D_L(\medsect^p\varphi)=\medeprod^p D_L\varphi\]
+If \(\psi\)~is another linear transformation of~\(E\), then
+\[\medeprod^p\varphi\sect\medeprod^q\psi=i_{\bprod}(D_L(\medeprod^p\varphi))(\medeprod^q\psi)\]
 \end{rmk}
 
 \begin{rmk}
@@ -5207,10 +5215,12 @@ It follows from Proposition~7.2.2 that\footnote{See the remark in chapter~6, \S~
 \[i_{\bprod}(D_L(\medeprod^p\varphi))(\medeprod^q\varphi)=\binom{2n-p-q}{n-p}\det\varphi\mult\medeprod^{p+q-n}\varphi\tag{1}\]
 and
 \[D_L(\medeprod^p\varphi)\bprod D_L(\medeprod^q\varphi)=\binom{2n-p-q}{n-p}\det\varphi\mult D_L(\medeprod^{p+q-n}\varphi)\tag{2}\]
-Applying \(D_L\)~to both sides of~(2) yields
+Therefore
 \[\medeprod^p\varphi\sect\medeprod^q\varphi=\binom{2n-p-q}{n-p}\det\varphi\mult\medeprod^{p+q-n}\varphi\]
 and dually
 \[\medsect^p\varphi\bprod\medsect^q\varphi=\binom{2n-p-q}{n-p}\det\varphi\mult\medsect^{p+q-n}\varphi\]
+In particular
+\[\varphi\sect\medeprod^{n-1}\varphi=\medeprod^{n-1}\varphi\sect\varphi=n\mult\det\varphi\mult\iota_{\eprod^0 E}\]
 \end{rmk}
 
 \subsection*{\S~3}
@@ -5255,11 +5265,12 @@ Dividing both sides by~\(p+1\) shows that the identity holds for~\(p+1\).
 \end{rmk}
 
 \begin{rmk}
-Applying \(D_E\) to both sides of the Jacobi identity~(7.6) yields
-\[(\ad z)^p=(\det T_Ez)^{p-1}D_E(z^{n-p})\]
-Applying \(T_E\) to both sides of this with \(\varphi=T_Ez\) yields
-\[\medeprod^p(\ad\varphi)=(\det\varphi)^{p-1}D_L(\medeprod^{n-p}\varphi)\]
-In terms of matrices, this identity relates the minors of a matrix to the minors of its adjoint matrix.\footnote{See problem~7.9.11.}
+Applying \(T_E\) to both sides of the Jacobi identity~(7.6) with \(\varphi=T_Ez\) yields
+\[D_L(\medeprod^p\ad\varphi)=(\det\varphi)^{p-1}\medeprod^{n-p}\varphi\]
+or equivalently, by applying \(D_L\) to both sides of this,
+\[\medeprod^p\ad\varphi=(\det\varphi)^{p-1}D_L(\medeprod^{n-p}\varphi)\]
+In terms of matrices, this identity relates the minors of a matrix to the minors of its adjoint matrix.\footnote{See problem~7.9.11.} An alternative proof of this identity uses the intersection product and a remark in \S~2 above to show that
+\[D_L(\medeprod^p\ad\varphi)=\medsect^p D_L(\ad\varphi)=\medsect^p\medeprod^{n-1}\varphi=(\det\varphi)^{p-1}\medeprod^{n-p}\varphi\]
 \end{rmk}
 
 \subsection*{\S~4}
@@ -5350,7 +5361,8 @@ so
 	&=\sum_{p=0}^{n-1}D_L(\medeprod^p\varphi)\sect\medeprod^{p+1}\iota\mult\lambda^{n-p-1}
 \end{align*}
 and therefore
-\[A_p(\varphi)=D_L(\medeprod^p\varphi)\sect\medeprod^{p+1}\iota\qquad(0\le p\le n-1)\]
+\[A_p(\varphi)=D_L(\medeprod^p\varphi)\sect\medeprod^{p+1}\iota=i_{\bprod}(\medeprod^p\varphi)\iota_{\eprod^{p+1}E}\qquad(0\le p\le n-1)\]
+This is equivalent to Proposition~7.3.1.
 \end{rmk}
 
 \subsection*{\S~9}
