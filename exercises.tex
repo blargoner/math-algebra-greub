@@ -5393,6 +5393,30 @@ A natural question is: what is the relationship between \(C_p(\varphi_1,\ldots,\
 \end{rmk}
 
 \subsection*{\S~9}
+\begin{rmk}
+Throughout this subsection, the definition of~\(\Delta\) should be
+\[\Delta=\frac{i^n}{2^n}\Delta_E\eprod\conj{\Delta}_E\]
+where the product on the right-hand side is a generalization of the Grassmann product\footnote{See subsection~5.30.} for \(\C\)-valued skew-symmetric \(\R\)-multilinear functions. This gives
+\[\Delta(x_1,\ldots,x_{n+n})=\frac{i^n}{2^n(n!)^2}\sum_{\rho\in S_{n+n}}\sign{\rho}\Delta_E(x_{\rho(1)},\ldots,x_{\rho(n)})\,\conj{\Delta}_E(x_{\rho(n+1)},\ldots,x_{\rho(n+n)})\tag{1}\]
+Taking \(x_k=a_k\) and \(x_{n+k}=ia_k\) for \(1\le k\le n\), what are the nonzero terms in the sum on the right-hand side of~(1)? In such a term the subscripts associated with the \(a\)'s and~\(ia\)'s (not the~\(x\)'s) occurring within~\(\Delta_E\) must be distinct, lest there be a linear dependence relation over~\(\C\) which causes~\(\Delta_E\), and hence the term, to be zero. Similarly for~\(\conj{\Delta}_E\).
+
+If the subscripts within each of \(\Delta_E\) and \(\conj{\Delta}_E\) are strictly increasing (we call this an \emph{increasing term}), then the term is nonzero and for each \(1\le k\le n\) we must have either
+\[\rho(k)=k\quad\text{and}\quad\rho(n+k)=n+k\tag{2}\]
+or
+\[\rho(k)=n+k\quad\text{and}\quad\rho(n+k)=k\tag{3}\]
+Note there are \(2^n\)~such permutations~\(\rho\), and \(\sign{\rho}=(-1)^p\) where \(p\)~is the number of~\(k\)'s for which (3)~holds, which is just the number of~\(i\)'s occurring within~\(\Delta_E\). These~\(i\)'s can be moved over to~\(\conj{\Delta}_E\) by multiplying by \((-1)^p=\sign{\rho}\), since \(\Delta_E\)~is \(\C\)-multilinear and \(\conj{\Delta}_E\)~is conjugate \(\C\)-multilinear.
+
+Now every nonzero term can be obtained from a unique increasing term by applying unique signed permutations \(\sigma,\tau\in S_n\) to~\(\Delta_E\) and~\(\conj{\Delta}_E\), respectively. So we obtain
+\begin{align*}
+\Delta(a_1,\ldots,a_n,&ia_1,\ldots,ia_n)\\
+&=\frac{i^n}{2^n(n!)^2}\mult2^n\mult\sum_{\sigma,\tau\in S_n}\sign{\sigma}\sign{\tau}\Delta_E(a_{\sigma(1)},\ldots,a_{\sigma(n)})\,\conj{\Delta}_E(ia_{\tau(1)},\ldots,ia_{\tau(n)})\\
+&=\frac{i^n}{(n!)^2}\mult(n!)^2\mult\Delta_E(a_1,\ldots,a_n)\,\conj{\Delta}_E(ia_1,\ldots,ia_n)\\
+&=\Delta_E(a_1,\ldots,a_n)\,\conj{\Delta}_E(a_1,\ldots,a_n)\\
+&=\abs{\Delta_E(a_1,\ldots,a_n)}^2>0
+\end{align*}
+If \(\Delta_E\)~is replaced by \(\lambda\Delta_E\), \(\Delta\)~still becomes \(\abs{\lambda}^2\Delta\), so \(E_{\R}\)~has a natural orientation. It is possible to give a more abstract proof of this result which avoids the tedious combinatorics.\footnote{See \url{https://math.stackexchange.com/q/4565568}.}
+\end{rmk}
+
 \begin{exer}[4]
 If \(z\in E^*\tprod E\) and \(\varphi=T_Ez\), then
 \[\sprod{z^p}{(\ad z)^p}=\binom{n}{p}\det(\varphi)^p\qquad(1\le p\le n)\]
