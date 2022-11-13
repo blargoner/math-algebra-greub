@@ -5223,13 +5223,19 @@ In particular \(\widetilde{D}_L\) and~\(\widetilde{D}_{L^*}\) are isometries. Fi
 \end{rmk}
 
 \subsection*{\S~2}
-\begin{rmk}
-In the corollary to Proposition~7.2.1, taking duals on both sides of~(1) yields
-\[D_{L^*}(\medeprod^{n-p}\varphi^*)\after\medeprod^p\varphi^*=\det\varphi^*\mult\iota_{\eprod^p E^*}\]
-Substituting \(E\) for~\(E^*\), \(\varphi\) for~\(\varphi^*\), and \(n-p\) for~\(p\) yields~(2). Similarly taking duals and making substitutions in~(2) yields~(1).
+\begin{rmk}[Laplace]
+In the corollary to Proposition~7.2.1, summing over~\(p\) on both sides of~(1) yields
+\[\medeprod\varphi\after D_L(\medeprod\varphi)=\det\varphi\mult\iota_{\eprod E}\tag{1'}\]
+Conversely, restricting to~\(\medeprod^p E\) in~(1') yields~(1), so this is an equivalent form of the Laplace formula~(1).
+
+Taking duals on both sides of~(1') yields
+\[D_{L^*}(\medeprod\varphi^*)\after\medeprod\varphi^*=\det\varphi^*\mult\iota_{\eprod E^*}\]
+Substituting \(E\) for~\(E^*\) and \(\varphi\) for~\(\varphi^*\) yields
+\[D_L(\medeprod\varphi)\after\medeprod\varphi=\det\varphi\mult\iota_{\eprod E}\tag{2'}\]
+which is equivalent to~(2). Conversely, taking duals and making substitutions in~(2') yields~(1').
 \end{rmk}
 
-\begin{rmk}
+\begin{rmk}[Laplace]
 Let \(z\in E^*\tprod E\), \(\varphi=T_Ez\), and \(M=M(\varphi)\) the matrix of~\(\varphi\) with respect to some basis of~\(E\). The matrix \(M(\medeprod^p\varphi)\) with respect to the induced basis of~\(\medeprod^p E\) consists of the \(p\times p\) minors of~\(M\).\footnote{See the remark in chapter~5, \S~8 above.} On the other hand, since
 \[D_L(\medeprod^{n-p}\varphi)=D_LT_Ez^{n-p}=T_ED_Ez^{n-p}\]
 the matrix \(M(D_L(\medeprod^{n-p}\varphi))\) consists of the components of~\(D_Ez^{n-p}\), so is the transpose of the matrix of signed \((n-p)\times(n-p)\) minors of~\(M\) complementary to the minors in~\(M(\medeprod^p\varphi)\).\footnote{See the remark in chapter~6, \S~13 above.} By part~(1) of the corollary to Proposition~7.2.1,
