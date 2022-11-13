@@ -5151,6 +5151,12 @@ We also have
 \end{rmk}
 
 \begin{rmk}
+When \(L(\medeprod^p E;\medeprod^q E)\)~is viewed as a subspace of~\(L(\bigeprod E;\bigeprod E)\),\footnote{See the remark in chapter~II, \S~4 of~\cite{greub1} above.} then the diagonal subalgebra of~\(L(\bigeprod E;\bigeprod E)\) is
+\[H(\medeprod E;\medeprod E)=\sum_{p=0}^nL(\medeprod^p E;\medeprod^p E)\]
+where \(H(\medeprod E;\medeprod E)\)~consists of the transformations homogeneous of degree zero.\footnote{See problem~7.9.13.}
+\end{rmk}
+
+\begin{rmk}
 For linear transformations \(\alpha\) and~\(\beta\) of~\(\medeprod E\), we define the \emph{intersection product} in terms of the generalized box product\footnote{See the remark in chapter~6, \S~3 above.} by
 \[\alpha\sect\beta=D_L(D_L^{-1}\alpha\bprod D_L^{-1}\beta)\]
 This definition makes \(L(\medeprod E;\medeprod E)\) into an algebra called the \emph{intersection algebra}, and makes \(T_E\)~an \emph{algebra} isomorphism from the mixed intersection algebra\footnote{See the remark in chapter~6, \S~12 above.} since for \(w,z\in\medeprod(E^*,E)\),
@@ -5166,7 +5172,7 @@ D_L(\alpha\sect\beta)&=D_LT_E(T_E^{-1}\alpha\sect T_E^{-1}\beta)\\
 	&=T_E(D_ET_E^{-1}\alpha\mprod D_ET_E^{-1}\beta)\\
 	&=D_L\alpha\bprod D_L\beta
 \end{align*}
-The diagonal subspace \(\sum_{p=0}^nL(\medeprod^p E;\medeprod^p E)\) forms a \emph{commutative} subalgebra, and for \(\alpha,\beta\) in this subalgebra we have
+The diagonal subspace \(H(\medeprod E;\medeprod E)\) forms a \emph{commutative} subalgebra, and for \(\alpha,\beta\) in this subalgebra we have
 \[\alpha\sect\beta=i_{\bprod}(D_L^{\Delta}\alpha)\beta\]
 For a linear transformation \(\varphi\) of~\(E\), viewed as a linear transformation of~\(\medeprod E\), we define
 \[\medsect^p\varphi=\frac{1}{p!}\underbrace{\sects{\varphi}{}{}}_p\]
@@ -5194,6 +5200,26 @@ and
 \[(D_L(\medeprod^p\varphi))^*=D_{L^*}(\medeprod^p\varphi^*)\]
 If \(\beta\)~is also a linear transformation of~\(\medeprod E\), then
 \[(\alpha\sect\beta)^*=\alpha^*\sect\beta^*\]
+\end{rmk}
+
+\begin{rmk}
+The map
+\[\widetilde{D}_L:L(\medeprod E;\medeprod E)\to L(\medeprod E^*;\medeprod E^*)\]
+defined by
+\[\widetilde{D}_L\alpha=D_{L^*}\alpha^*\]
+is an algebra isomorphism making the following diagram commute:\footnote{See subsection~6.16.}
+\begin{diagram}
+L(\medeprod E;\medeprod E)&\rTo^T&\medeprod(E^*,E)\\
+\dTo<{\widetilde{D}_L}&&\dTo>{D_E}\\
+L(\medeprod E^*;\medeprod E^*)&\rTo_{\widetilde{T}}&\medeprod(E^*,E)
+\end{diagram}
+Interchanging the roles of \(E\) and~\(E^*\), we obtain the map
+\[\widetilde{D}_{L^*}:L(\medeprod E^*;\medeprod E^*)\to L(\medeprod E;\medeprod E)\]
+defined by
+\[\widetilde{D}_{L^*}\alpha^*=D_L\alpha\]
+It follows that
+\[\widetilde{D}_L^{-1}=\widetilde{D}_L^{*}=\Omega_L\after\widetilde{D}_{L^*}\qquad\text{and}\qquad\widetilde{D}_{L^*}^{-1}=\widetilde{D}_{L^*}^*=\Omega_{L^*}\after\widetilde{D}_L\]
+In particular \(\widetilde{D}_L\) and~\(\widetilde{D}_{L^*}\) are isometries. Finally, \(\widetilde{D}_L\) and~\(\widetilde{D}_{L^*}\) interchange box and intersection products.
 \end{rmk}
 
 \subsection*{\S~2}
