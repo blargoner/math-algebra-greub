@@ -4093,7 +4093,10 @@ where
 \begin{rmk}
 The elements of~\(\medeprod(E\dsum F)\) are sums of wedge products with factors from~\(E\dsum F\), which by bilinearity of the wedge product expand to sums of wedge products with factors from \(E\) and~\(F\). By anticommutativity of the wedge product, the factors from~\(E\) in any product can be moved to the left of the factors from~\(F\) with at most a change in sign, resulting in a wedge product with a factor from~\(\medeprod E\) and a factor from~\(\medeprod F\). This leads to the natural isomorphism
 \[\medeprod(E\dsum F)\iso\medeprod E\stprod\medeprod F\]
-The anticommutative tensor product ensures it is an algebra isomorphism, in fact a \emph{graded algebra} isomorphism.
+The anticommutative tensor product ensures it is an algebra isomorphism, in fact a \emph{graded algebra} isomorphism. It follows that
+\[\medeprod^k(E\dsum F)\iso\sum_{p+q=k}\medeprod^p E\tprod\medeprod^q F\]
+In particular if \(\dim E=n\) and \(\dim F=m\), then
+\[\medeprod^{n+m}(E\dsum F)\iso\medeprod^n E\tprod\medeprod^m F\]
 \end{rmk}
 
 \begin{rmk}
@@ -4116,6 +4119,18 @@ For \(x\in E\) and \(y\in F\),
 	&=((\varphi_{\eprod}\tprod\psi_{\eprod})\after h)(x+y)
 \end{align*}
 It follows that the diagram commutes since \(\medeprod(E\dsum F)\) is generated as an algebra by the elements of \(E\dsum F\) and the scalar~\(1\).
+\end{rmk}
+
+\begin{rmk}
+If \(\varphi:E\to E\) and \(\psi:F\to F\) are linear transformations with \(\dim E=n\) and \(\dim F=m\), then by a remark above
+\[\medeprod^{n+m}(\varphi\dsum\psi)=\medeprod^n\varphi\tprod\medeprod^m\psi\]
+It follows that
+\begin{align*}
+\det(\varphi\dsum\psi)&=\tr(\medeprod^{n+m}(\varphi\dsum\psi))\\
+	&=\tr(\medeprod^n\varphi\tprod\medeprod^m\psi)\\
+	&=\tr(\medeprod^n\varphi)\tr(\medeprod^m\psi)\\
+	&=\det(\varphi)\det(\psi)
+\end{align*}
 \end{rmk}
 
 \subsection*{\S~18}
