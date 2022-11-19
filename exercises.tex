@@ -85,6 +85,7 @@
 \newcommand{\proj}[1]{\overline{#1}}
 \newcommand{\multi}[4]{#2_{#3}#1\cdots#1#2_{#4}}
 \newcommand{\sects}[3]{\multi{\sect}{#1}{#2}{#3}}
+\newcommand{\dsums}[3]{\multi{\dsum}{#1}{#2}{#3}}
 \newcommand{\timess}[3]{\multi{\cross}{#1}{#2}{#3}}
 \newcommand{\tprods}[3]{\multi{\tprod}{#1}{#2}{#3}}
 \newcommand{\eprods}[3]{\multi{\eprod}{#1}{#2}{#3}}
@@ -843,7 +844,7 @@ Let \(E\) and~\(F\) be \(G\)-graded vector spaces. If \(\varphi:E\to F\) is line
 If \(E\)~is a finite-dimensional \(G\)-graded vector space and \(\varphi:E\to E\) is linear and homogeneous with \(\deg\varphi\ne 0\), then \(\tr\varphi=0\).
 \end{rmk}
 \begin{proof}
-Write \(E=E_{k_1}\dsum\cdots\dsum E_{k_n}\) with \(k_i\in G\) and \(d_i=\dim E_{k_i}<\infty\). Let \((e_{ij})\)~be a basis of~\(E\) such that for each \(1\le i\le n\), \((e_{ij})\)~is a basis of~\(E_{k_i}\) for \(1\le j\le d_i\). Let \(\Delta\)~be a determinant function in~\(E\) with \(\Delta(e_{ij})=1\). Then
+Write \(E=\dsums{E}{k_1}{k_n}\) with \(k_i\in G\) and \(d_i=\dim E_{k_i}<\infty\). Let \((e_{ij})\)~be a basis of~\(E\) such that for each \(1\le i\le n\), \((e_{ij})\)~is a basis of~\(E_{k_i}\) for \(1\le j\le d_i\). Let \(\Delta\)~be a determinant function in~\(E\) with \(\Delta(e_{ij})=1\). Then
 \[\tr\varphi=\sum_{i,j}\Delta(e_{11},\ldots,e_{1d_1},\ldots,\varphi(e_{ij}),\ldots,e_{n1},\ldots,e_{n\,d_n})\]
 By assumption, \(\varphi(e_{ij})\in E_{k_l}\) for some \(l\ne i\), so each term in this sum is zero, and hence \(\tr\varphi=0\).
 \end{proof}
@@ -1175,7 +1176,7 @@ In subsection~8.16, the proof of the normal form~(8.35) is incorrect because it 
 where \(e_i\)~is the \(i\)-th standard basis vector, then \(\psi\)~is skew and \(\varphi=\psi^2=-\iota\) is diagonalized by the standard basis. If we follow the proof for this example, we get \(a_1=e_1\), \(a_2=\psi e_1=e_2\), \(a_3=e_2\), and \(a_4=\psi e_2=-e_1\), so the~\(a_n\) do not form a basis of~\(\R^4\).
 
 To prove the result, let \(\lambda_1,\ldots,\lambda_r\) be the distinct eigenvalues of \(\varphi=\psi^2\) and write the orthogonal decomposition~(8.21)
-\[E=E_1\dsum\cdots\dsum E_r\]
+\[E=\dsums{E}{1}{r}\]
 where \(E_i\)~is the eigenspace of~\(\varphi\) corresponding to~\(\lambda_i\). Observe that \(E_i\)~is stable under~\(\psi\), for if \(x\in E_i\) then
 \[\varphi(\psi x)=\psi(\varphi x)=\psi(\lambda_i x)=\lambda_i(\psi x)\]
 so \(\psi x\in E_i\). As in the book, the~\(\lambda_i\) are negative or zero. If \(\lambda_i<0\), construct a basis for \(F=E_i\) in the following way: let \(a_1\)~be an arbitrary unit vector in~\(F\) and \(a_2=\kappa_i^{-1}\psi a_1\) where \(\kappa_i=\sqrt{-\lambda_i}\). It is immediate that \(a_2\)~is a unit vector in~\(F\) orthogonal to~\(a_1\) and \(H=\gen{a_1,a_2}\) is stable under~\(\psi\). Let \(\oc{H}\)~be the orthogonal complement of~\(H\) in~\(F\). If \(\oc{H}=0\), take the basis \(a_1,a_2\). Otherwise, adjoin to \(a_1,a_2\) the result of applying this procedure recursively to \(F=\oc{H}\) (recall that \(\oc{H}\)~is stable under~\(\psi\) by the remark above). If \(\lambda_i=0\), assume that \(i=r\) and choose any orthonormal basis of~\(E_r\), noting that \(\psi\)~is zero on~\(E_r\) since
@@ -1747,7 +1748,7 @@ Evaluating both sides of~(1) at~\(\varphi\) yields \(\varphi f(\varphi)=\iota\) 
 If the minimum polynomial of \(\varphi:E\to E\) has the prime decomposition
 \[\mu=f_1^{k_1}\cdots f_r^{k_r}\]
 and \(E\)~has the generalized eigenspace decomposition
-\[E=E_1\dsum\cdots\dsum E_r\]
+\[E=\dsums{E}{1}{r}\]
 define
 \[g_i=f_1^{k_1}\cdots\delete{f_i^{k_i}}\cdots f_r^{k_r}\]
 and
@@ -1952,7 +1953,7 @@ If \(\varphi=\varphi_1\dsum\varphi_2\) with \(\mu_2=\mu_{\varphi_2}\), then \(\p
 \end{rmk}
 
 \begin{exer}[6]
-Let \(E=F_1\dsum\cdots\dsum F_s\) and \(\varphi=\varphi_1\dsum\cdots\dsum\varphi_s\) where \(\varphi_j:F_j\to F_j\) with \(\mu=\mu_{\varphi}\) and \(\mu_j=\mu_{\varphi_j}\).
+Let \(E=\dsums{F}{1}{s}\) and \(\varphi=\dsums{\varphi}{1}{s}\) where \(\varphi_j:F_j\to F_j\) with \(\mu=\mu_{\varphi}\) and \(\mu_j=\mu_{\varphi_j}\).
 \begin{enumerate}
 \item[(a)] \(E\)~is cyclic if and only if each~\(F_j\) is cyclic and the~\(\mu_j\) are relatively prime.
 \item[(b)] If \(E\)~is cyclic, then each \(F_j\)~is a sum of generalized eigenspaces for~\(\varphi\).
@@ -2038,7 +2039,7 @@ by the cyclic case of the Cayley-Hamilton theorem (Lemma~II). It follows that th
 If \(\varphi:E\to E\), let
 \[\chi=f_1^{m_1}\cdots f_r^{m_r}\qquad\text{and}\qquad\mu=f_1^{k_1}\cdots f_r^{k_r}\quad(k_i\le m_i)\]
 be the prime decompositions of the characteristic and minimum polynomials, by the Cayley-Hamilton theorem. If
-\[E=E_1\dsum\cdots\dsum E_r\]
+\[E=\dsums{E}{1}{r}\]
 is the generalized eigenspace decomposition of~\(E\) and \(\varphi_i:E_i\to E_i\) the induced restriction of~\(\varphi\) with minimum polynomial \(\mu_i\) and characteristic polynomial \(\chi_i\), then
 \[\chi_i=f_i^{m_i}\qquad\text{and}\qquad\mu_i=f_i^{k_i}\]
 \end{rmk}
@@ -2245,7 +2246,7 @@ If \(E\)~is an inner product space, then \(\varphi:E\to E\) is normal if and onl
 \end{exer}
 \begin{proof}
 If \(\adj{\varphi}=f(\varphi)\), then \(\adj{\varphi}\varphi=\varphi\adj{\varphi}\), so \(\varphi\)~is normal. Conversely, if \(\varphi\)~is normal let
-\[E=E_1\dsum\cdots\dsum E_r\tag{1}\]
+\[E=\dsums{E}{1}{r}\tag{1}\]
 be the orthogonal generalized eigenspace decomposition of~\(E\) and \(\varphi_i:E_i\to E_i\) the induced homothetic restriction (Theorem~I). Write \(\varphi_i=\lambda_i\tau_i\) where \(\lambda_i\in\R\) and \(\tau_i\)~is a rotation. We know \(\tau_i^{-1}=f_i(\tau_i)\) for some \(f_i\in\R[t]\).\footnote{See problem~12 in \S~1 above.} By subsection~8.5, we have the direct sum
 \[\adj{\varphi}=\sum\adj{\varphi_i}=\sum\lambda_i\adj{\tau_i}=\sum\lambda_i\tau_i^{-1}=\sum\lambda_i f_i(\tau_i)\tag{2}\]
 Define \(g_i\in\R[t]\) by
@@ -3028,12 +3029,12 @@ E			&\rTo^{\varphi}					&E\\
 \begin{rmk}
 There is a connection between the derivation and the trace of a linear transformation. If \(E\)~is an \(n\)-dimensional vector space and \(\varphi:E\to E\) is linear, let \(\Delta:E^n\to\Gamma\) be a nonzero determinant function in~\(E\). Recall
 \[\tr\varphi\mult\Delta(x_1,\ldots,x_n)=\sum_{i=1}^n\Delta(x_1,\ldots,\varphi x_i,\ldots,x_n)\]
-By the universal property of the tensor product~\(\medtprod^n E\), there is an induced linear function \(\Delta_{\tprod}:\medtprod^n E\to\Gamma\) with \(\Delta_{\tprod}(x_1\tprod\cdots\tprod x_n)=\Delta(x_1,\ldots,x_n)\).
+By the universal property of the tensor product~\(\medtprod^n E\), there is an induced linear function \(\Delta_{\tprod}:\medtprod^n E\to\Gamma\) with \(\Delta_{\tprod}(\tprods{x}{1}{n})=\Delta(x_1,\ldots,x_n)\).
 Now
 \begin{align*}
-\tr\varphi\mult\Delta_{\tprod}(x_1\tprod\cdots\tprod x_n)&=\sum_{i=1}^n \Delta_{\tprod}(x_1\tprod\cdots\tprod\varphi x_i\tprod\cdots\tprod x_n)\\
+\tr\varphi\mult\Delta_{\tprod}(\tprods{x}{1}{n})&=\sum_{i=1}^n \Delta_{\tprod}(x_1\tprod\cdots\tprod\varphi x_i\tprod\cdots\tprod x_n)\\
 	&=\Delta_{\tprod}(\sum_{i=1}^n x_1\tprod\cdots\tprod\varphi x_i\tprod\cdots\tprod x_n)\\
-	&=\Delta_{\tprod}(\theta_{\circled{n}}(\varphi)(x_1\tprod\cdots\tprod x_n))
+	&=\Delta_{\tprod}(\theta_{\circled{n}}(\varphi)(\tprods{x}{1}{n}))
 \end{align*}
 It follows that
 \[\Delta_{\tprod}\after(\tr\varphi\mult\iota)=\tr\varphi\mult\Delta_{\tprod}=\Delta_{\tprod}\after\theta_{\circled{n}}(\varphi)\]
@@ -3053,7 +3054,7 @@ By the remark after problem~1.15.1 above.
 \subsection*{\S~11}
 \begin{rmk}
 Define
-\[M^p_q(E^*,E)=\underbrace{E^*\times\cdots\times E^*}_p\times\underbrace{E\times\cdots\times E}_q\]
+\[M^p_q(E^*,E)=\underbrace{\timess{E^*}{}{}}_p\times\underbrace{\timess{E}{}{}}_q\]
 Consider the \((p+q)\)-linear map \(\medtprod^p_q:M^p_q(E^*,E)\to\medtprod^p_q(E^*,E)\) defined by
 \[\medtprod^p_q(x^*_1,\ldots,x^*_p\,;\,x_1,\ldots,x_q)=(\tprods{x^*}{1}{p})\tprod(\tprods{x}{1}{q})\]
 It is easy to verify that \(\medtprod^p_q\)~satisfies the following universal property:
@@ -3263,7 +3264,7 @@ The metric tensors encode all of the information required to compute inner produ
 
 \begin{rmk}
 Since \(E\)~and the orthonormal basis \(e_{\nu}\) are self-dual under the inner product, the metric tensor \(g=\sum_{\nu}e_{\nu}\tprod e_{\nu}\) is just the unit tensor in~\(E\tprod E\). It follows that \(g\tprod g\) is the unit tensor in \((E\tprod E)\tprod(E\tprod E)\), and hence is the metric tensor in~\(E\tprod E\), and more generally
-\[\underbrace{g\tprod\cdots\tprod g}_p\]
+\[\underbrace{\tprods{g}{}{}}_p\]
 is the metric tensor in~\(\medtprod^p E\).\footnote{See problem~2(b) for another proof.}
 \end{rmk}
 
@@ -3284,7 +3285,7 @@ so \(\tau_{\tprod}^{-1}(g^*)=g\). This yields
 Let \(E,E^*\) be a pair of dual finite-dimensional Euclidean spaces with metric tensors \(g\in E\tprod E\) and \(g^*\in E^*\tprod E^*\).
 \begin{enumerate}
 \item[(a)] \(C^1_2(g^*\tprod g)\) is the unit tensor in~\(E^*\tprod E\).
-\item[(b)] \(\underbrace{g\tprod\cdots\tprod g}_p\) is the metric tensor of~\(\medtprod^p E\).
+\item[(b)] \(\underbrace{\tprods{g}{}{}}_p\) is the metric tensor of~\(\medtprod^p E\).
 \end{enumerate}
 \end{exer}
 \begin{proof}
@@ -3298,7 +3299,7 @@ which is the unit tensor in~\(E^*\tprod E\).
 
 Writing \(\medtprod^p(E\tprod E)=(\medtprod^p E)\tprod(\medtprod^p E)\), we have
 \begin{align*}
-\underbrace{g\tprod\cdots\tprod g}_p&=\bigl(\sum_{\nu_1}e_{\nu_1}\tprod e_{\nu_1}\bigr)\tprod\cdots\tprod\bigl(\sum_{\nu_p}e_{\nu_p}\tprod e_{\nu_p}\bigr)\\
+\underbrace{\tprods{g}{}{}}_p&=\bigl(\sum_{\nu_1}e_{\nu_1}\tprod e_{\nu_1}\bigr)\tprod\cdots\tprod\bigl(\sum_{\nu_p}e_{\nu_p}\tprod e_{\nu_p}\bigr)\\
 	&=\sum_{(\nu)}(\tprods{e}{\nu_1}{\nu_p})\tprod(\tprods{e}{\nu_1}{\nu_p})
 \end{align*}
 which is the metric tensor of~\(\medtprod^p E\) since \(\tprods{e}{\nu_1}{\nu_p}\) is an orthonormal basis in~\(\medtprod^p E\).
@@ -4380,7 +4381,7 @@ We see that the algebra isomorphisms \(\medeprod E^*\iso A^{\adot}(E)\) and \(\m
 
 \begin{rmk}
 Recall that
-\[M^p_q(E^*,E)=\underbrace{E^*\times\cdots\times E^*}_p\times\underbrace{E\times\cdots\times E}_q\]
+\[M^p_q(E^*,E)=\underbrace{\timess{E^*}{}{}}_p\times\underbrace{\timess{E}{}{}}_q\]
 Let \(\medeprod^p_q(E^*,E)=\medeprod^p E^*\tprod\medeprod^q E\). The map \(\varphi:M^p_q(E^*,E)\to\medeprod^p_q(E^*,E)\) defined by
 \[\varphi(x^*_1,\ldots,x^*_p\,;\,x_1,\ldots,x_q)=(\eprods{x^*}{1}{p})\tprod(\eprods{x}{1}{q})\]
 is skew-symmetric of type~\((p,q)\), and Proposition~6.1.1 shows that \(\varphi\)~is \emph{universal} with this property in that every skew-symmetric map of type~\((p,q)\) factors in a unique way through~\(\varphi\): if \(\psi:M^p_q(E^*,E)\to H\) is any such map, then there is a unique linear map \(f:\medeprod^p_q(E^*,E)\to H\) with \(f\after\varphi=\psi\):
