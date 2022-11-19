@@ -88,6 +88,7 @@
 \newcommand{\dsums}[3]{\multi{\dsum}{#1}{#2}{#3}}
 \newcommand{\timess}[3]{\multi{\cross}{#1}{#2}{#3}}
 \newcommand{\tprods}[3]{\multi{\tprod}{#1}{#2}{#3}}
+\newcommand{\stprods}[3]{\multi{\stprod}{#1}{#2}{#3}}
 \newcommand{\eprods}[3]{\multi{\eprod}{#1}{#2}{#3}}
 \newcommand{\fprods}[3]{\multi{\fprod}{#1}{#2}{#3}}
 \newcommand{\mprods}[3]{\multi{\mprod}{#1}{#2}{#3}}
@@ -4098,6 +4099,12 @@ The anticommutative tensor product ensures it is an algebra isomorphism, in fact
 \[\medeprod^k(E\dsum F)\iso\sum_{p+q=k}\medeprod^p E\tprod\medeprod^q F\]
 In particular if \(\dim E=n\) and \(\dim F=m\), then
 \[\medeprod^{n+m}(E\dsum F)\iso\medeprod^n E\tprod\medeprod^m F\]
+since \(\medeprod^p E=0\) for \(p>n\) and \(\medeprod^q F=0\) for \(q>m\).
+
+More generally
+\[\medeprod(\dsums{E}{1}{r})\iso\stprods{\medeprod E}{1}{r}\]
+and if \(d_i=\dim E_i<\infty\) for \(1\le i\le r\) and \(d=d_1+\cdots+d_r\), then
+\[\medeprod^d(\dsums{E}{1}{r})\iso\medeprod^{d_1}E_1\stprod\cdots\stprod\medeprod^{d_r}E_r\]
 \end{rmk}
 
 \begin{rmk}
