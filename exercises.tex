@@ -4429,8 +4429,6 @@ We see that the algebra isomorphisms \(\medeprod E^*\iso A^{\adot}(E)\) and \(\m
 \end{center}
 
 \subsection*{\S~1}
-% TODO: mixed skew-symmetric function implementation of mixed exterior algebra
-
 \begin{rmk}
 Recall that
 \[M^p_q(E^*,E)=\underbrace{\timess{E^*}{}{}}_p\times\underbrace{\timess{E}{}{}}_q\]
@@ -4467,6 +4465,10 @@ is surjective with
 \end{align*}
 so it induces the canonical isomorphism
 \[\frac{\medtprod^p_q(E^*,E)}{T(N^p(E^*),N^q(E))}\ \iso\ \medeprod^p_q(E^*,E)\]
+\end{rmk}
+
+\begin{rmk}
+If \(E,E^*\) are finite-dimensional, then the space~\(\medeprod^p_q(E^*,E)\) is isomorphic to the space of skew-symmetric functions of type~\((p,q)\) on~\(E,E^*\).
 \end{rmk}
 
 \subsection*{\S~2}
@@ -4521,6 +4523,18 @@ Interchanging the roles of \(E\) and~\(E^*\), we obtain the map
 given by
 \[T_{E^*}(b\tprod a^*)v^*=\sprod{v^*}{b}a^*\qquad(v^*\in\medeprod E^*)\]
 Note \(T_{E^*}(b\tprod a^*)\) is dual to \(T_E(a^*\tprod b)\).
+\end{rmk}
+
+\begin{rmk}
+If \(\Phi\)~is a skew-symmetric function of type~\((p,q)\) on~\(E,E^*\) and \(\Psi\)~is a skew-symmetric function of type~\((r,s)\) on~\(E,E^*\), then the \emph{mixed Grassmann product} of \(\Phi\) and~\(\Psi\) is the skew-symmetric function of type \((p+r,q+s)\) on~\(E,E^*\) defined by
+\begin{multline*}
+(\Phi\mprod\Psi)(x_1,\ldots,x_{p+r};x^*_1,\ldots,x^*_{q+s})\\
+	=\varepsilon_{pr}\varepsilon_{qs}\sum_{\sigma,\tau}\sign{\sigma}\sign{\tau}\Phi(x_{\sigma(1)},\ldots,x_{\sigma(p)};x^*_{\tau(1)},\ldots,x^*_{\tau(q)})\\
+		\Psi(x_{\sigma(p+1)},\ldots,x_{\sigma(p+r)};x^*_{\tau(q+1)},\ldots,x^*_{\tau(q+s)})
+\end{multline*}
+where
+\[\varepsilon_{pr}=\frac{(p+r)!}{p!\,r!}\qquad\text{and}\qquad\varepsilon_{qs}=\frac{(q+s)!}{q!\,s!}\]
+If \(E,E^*\) are finite-dimensional, then the mixed exterior algebra~\(\medeprod(E^*,E)\) is isomorphic to the algebra of skew-symmetric functions on~\(E,E^*\) under the mixed Grassmann product, which is called the \emph{mixed Grassmann algebra} on~\(E,E^*\).\footnote{See subsection~8.14 of~\cite{greub3}.} It is therefore possible to develop mixed exterior algebra using function spaces (at least in the finite-dimensional case), although it is messier.
 \end{rmk}
 
 \subsection*{\S~3}
