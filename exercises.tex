@@ -4768,7 +4768,11 @@ D_F\after\alpha_{\varphi}&=(D_f\tprod D^f)\after Q_F\after((\varphi^{\eprod})^{-
 \end{rmk}
 
 \subsection*{\S~12}
-% TODO: geometric interpretation of intersection product
+\begin{rmk}
+If \(u,v\ne 0\) are decomposable elements of~\(\medeprod E\), then the intersection product \(u\sect v\)~is also decomposable and \(u\sect v\ne 0\) if and only if the annihilated subspaces \(E_u\) and~\(E_v\) are in general position (\(E=E_u+E_v\)), in which case
+\[E_{u\sect v}=E_u\sect E_v\]
+This is why \(u\sect v\)~is called the ``intersection product''.\footnote{See the remarks in chapter~5, \S~26 above and \S~13 below, as well as subsection~6.30 of~\cite{greub3}.}
+\end{rmk}
 
 \begin{rmk}
 The intersection product is associative since the wedge product is: if \(u,v,w\in\medeprod E\), then writing \(D=D^e\) we have
@@ -4874,7 +4878,7 @@ Every \(u\in\medeprod^{n-1}E\) is decomposable.
 If \(u=0\), the result is trivial, otherwise \(v^*_1=(D^e)^{-1}u\) can be extended to a basis \(v^*_1,\ldots,v^*_n\) in~\(E^*\) with dual basis \(v_1,\ldots,v_n\) in~\(E\). Let \(v=\eprods{v}{1}{n}\). Then \(v=\lambda e\) for some \(\lambda\ne 0\) and \(D^v=\lambda D^e\). Now
 \[u=D^e(D^e)^{-1}u=\lambda^{-1}D^v v^*_1=\pm\lambda^{-1}\eprods{v}{2}{n}\qedhere\]
 \end{proof}
-\noindent In fact the Poincar\'e isomorphisms \(D_e\) and~\(D^e\) are anti-isomorphisms between the lattices of decomposable elements of \(\medeprod E\) and~\(\medeprod E^*\) under divisibility,\footnote{See subsection~6.30 of~\cite{greub3}.} so this result follows from surjectivity of \(D^1:E^*\to\medeprod^{n-1}E\).
+\noindent In fact the Poincar\'e isomorphisms \(D_e\) and~\(D^e\) are anti-isomorphisms between the lattices of nonzero decomposable elements of \(\medeprod E\) and~\(\medeprod E^*\) under divisibility,\footnote{See subsection~6.30 of~\cite{greub3}.} so this result follows from surjectivity of \(D^1:E^*\to\medeprod^{n-1}E\).
 
 If \(u\in\medeprod E\) and \(u^*\in\medeprod E^*\) are nonzero decomposable elements, then we have the following relations between annihilated subspaces of \(E\) and~\(E^*\):\footnote{See the remark in chapter~5, \S~26 above and subsection~6.30 of~\cite{greub3}.}
 \[E^*_{D_e u}=\oc{E_u}\qquad\text{and}\qquad\oc{E_{D^e u^*}}=E^*_{u^*}\]
