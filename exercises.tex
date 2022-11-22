@@ -4308,7 +4308,7 @@ For a homogeneous element \(u\in\medeprod E\), define the \emph{annihilated subs
 \[E_u=E\sect N(u)=\{\,x\in E\mid u\eprod x=0\,\}\]
 Then \(E_0=E\), and if \(u=\eprods{x}{1}{p}\ne 0\), then \(E_u=\gen{x_1,\ldots,x_p}\). In fact, the mapping \(u\mapsto E_u\) is an isomorphism from the lattice of nonzero decomposable elements of~\(\medeprod E\) under divisibility to the lattice of finite-dimensional subspaces of~\(E\) under inclusion. This means \(E_u\subseteq E_v\) if and only if \(u\)~divides \(v\) and
 \[E_{(u,v)}=E_u\sect E_v\qquad\text{and}\qquad E_{[u,v]}=E_u+E_v\]
-where \((u,v)\)~denotes the greatest common divisor of \(u\) and~\(v\), and \([u,v]\)~denotes the least common multiple of \(u\) and~\(v\).\footnote{See subsections 6.27 and~6.28 of~\cite{greub3}.}
+where \((u,v)\)~denotes the greatest common divisor of \(u\) and~\(v\), and \([u,v]\)~denotes the least common multiple of \(u\) and~\(v\).\footnote{See subsections 6.27 and~6.28 of~\cite{greub3}.} This isomorphism establishes a bridge between algebraic facts in~\(\medeprod E\) and geometric facts in~\(E\).
 \end{rmk}
 
 \begin{rmk}
@@ -4871,9 +4871,13 @@ In particular if \(z\in E^*\tprod E\), then \((D_E z^{n-p})^{\nu_1\cdots\nu_p}_{
 Every \(u\in\medeprod^{n-1}E\) is decomposable.
 \end{rmk}
 \begin{proof}
-If \(u=0\), the result is trivial, otherwise \(v^*_1=D_e u\) can be extended to a basis \(v^*_1,\ldots,v^*_n\) in~\(E^*\) with dual basis \(v_1,\ldots,v_n\) in~\(E\). Let \(v=\eprods{v}{1}{n}\). Then \(v=\lambda e\) for some \(\lambda\ne 0\) and \(D^v=\lambda D^e\). Now
-\[u=\pm D^e(D_e u)=\pm\lambda^{-1}D^v v^*_1=\pm\lambda^{-1}\eprods{v}{2}{n}\qedhere\]
+If \(u=0\), the result is trivial, otherwise \(v^*_1=(D^e)^{-1}u\) can be extended to a basis \(v^*_1,\ldots,v^*_n\) in~\(E^*\) with dual basis \(v_1,\ldots,v_n\) in~\(E\). Let \(v=\eprods{v}{1}{n}\). Then \(v=\lambda e\) for some \(\lambda\ne 0\) and \(D^v=\lambda D^e\). Now
+\[u=D^e(D^e)^{-1}u=\lambda^{-1}D^v v^*_1=\pm\lambda^{-1}\eprods{v}{2}{n}\qedhere\]
 \end{proof}
+\noindent In fact the Poincar\'e isomorphisms \(D_e\) and~\(D^e\) are anti-isomorphisms between the lattices of decomposable elements of \(\medeprod E\) and~\(\medeprod E^*\) under divisibility,\footnote{See subsection~6.30 of~\cite{greub3}.} so this result follows from surjectivity of \(D^1:E^*\to\medeprod^{n-1}E\).
+
+If \(u\in\medeprod E\) and \(u^*\in\medeprod E^*\) are nonzero decomposable elements, then we have the following relations between annihilated subspaces of \(E\) and~\(E^*\):\footnote{See the remark in chapter~5, \S~26 above and subsection~6.30 of~\cite{greub3}.}
+\[E^*_{D_e u}=\oc{E_u}\qquad\text{and}\qquad\oc{E_{D^e u^*}}=E^*_{u^*}\]
 
 \subsection*{\S~14}
 \begin{rmk}
