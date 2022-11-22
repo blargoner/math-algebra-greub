@@ -4273,6 +4273,51 @@ I_{\bigeprod^{n+1}E}&\subseteq	&I_{\bigeprod^n E}	&\subseteq	&\cdots	&\subseteq	
 In the corollary to Proposition~5.26.1, note that \(N(y)=I_y\), so it follows that \(u\)~is divisible by~\(y\) if and only if \(y\eprod u=0\) for \emph{any} \(u\in\medeprod E\).
 \end{rmk}
 
+\begin{rmk}
+If \(X,Y\) are finite-dimensional subspaces of~\(E\), then \(N(X)\subseteq N(Y)\) if and only if \(Y\subseteq X\).
+\end{rmk}
+\begin{proof}
+If \(Y\subseteq X\), then clearly \(N(X)\subseteq N(Y)\). Conversely if \(N(X)\subseteq N(Y)\), let
+\[u=\eprods{x}{1}{p}\qquad\text{and}\qquad v=\eprods{y}{1}{q}\]
+where \(x_1,\ldots,x_p\) is a basis of~\(X\) and \(y_1,\ldots,y_q\) is a basis of~\(Y\). By the corollary to Proposition~5.26.1,
+\[I_u=N(X)\subseteq N(Y)=I_v\]
+so \(v\)~divides \(u\), which by the same corollary implies
+\[I_Y=N(v)\subseteq N(u)=I_X\]
+so
+\[Y=I_Y\sect E\subseteq I_X\sect E=X\qedhere\]
+\end{proof}
+
+\begin{rmk}
+For vectors \(x_1,\ldots,x_p\) and \(y_1,\ldots,y_p\) in~\(E\),
+\[\eprods{x}{1}{p}=\eprods{y}{1}{p}\ne 0\tag{1}\]
+if and only if \(x_1,\ldots,x_p\) are linearly independent and
+\[y_j=\sum_{i=1}^p\alpha_j^i x_i\qquad(1\le j\le p)\tag{2}\]
+where \(\det(\alpha_j^i)=1\).
+\end{rmk}
+\begin{proof}
+If \(x_1,\ldots,x_p\) are linearly independent and (2)~holds, then
+\[\eprods{y}{1}{p}=\det(\alpha_j^i)\,\eprods{x}{1}{p}=\eprods{x}{1}{p}\ne 0\tag{3}\]
+so (1)~holds. Conversely if (1)~holds, let \(X\)~be the span of \(x_1,\ldots,x_p\) and \(Y\)~be the span of \(y_1,\ldots,y_p\). By the corollary to Proposition~5.26.1,
+\[N(X)=I_{\eprods{x}{1}{p}}=I_{\eprods{y}{1}{p}}=N(Y)\]
+so \(X=Y\) by the previous remark. It follows that (2)~holds for some scalars~\(\alpha_j^i\), and \(\det(\alpha_j^i)=1\) by~(3).
+\end{proof}
+\noindent Geometrically, this result shows that (1)~holds if and only if the \(p\)-dimensional parallelepipeds determined by \(x_1,\ldots,x_p\) and \(y_1,\ldots,y_p\) have the same oriented (signed) volume.
+
+\begin{rmk}
+For a homogeneous element \(u\in\medeprod E\), define the \emph{annihilated subspace}
+\[E_u=E\sect N(u)=\{\,x\in E\mid u\eprod x=0\,\}\]
+Then \(E_0=E\), and if \(u=\eprods{x}{1}{p}\ne 0\), then \(E_u=\gen{x_1,\ldots,x_p}\). In fact, the mapping \(u\mapsto E_u\) is an isomorphism from the lattice of nonzero decomposable elements of~\(\medeprod E\) under divisibility to the lattice of finite-dimensional subspaces of~\(E\) under inclusion. This means \(E_u\subseteq E_v\) if and only if \(u\)~divides \(v\) and
+\[E_{(u,v)}=E_u\sect E_v\qquad\text{and}\qquad E_{[u,v]}=E_u+E_v\]
+where \((u,v)\)~denotes the greatest common divisor of \(u\) and~\(v\), and \([u,v]\)~denotes the least common multiple of \(u\) and~\(v\).\footnote{See subsections 6.27 and~6.28 of~\cite{greub3}.}
+\end{rmk}
+
+\begin{rmk}
+If \(u,v\ne 0\) are decomposable elements of~\(\medeprod E\), then \(u\eprod v\ne 0\) if and only if \((u,v)=1\) (that is, \(u\) and~\(v\) are relatively prime), which is true if and only if \([u,v]=u\eprod v\).
+\end{rmk}
+\begin{proof}
+By the previous remark.
+\end{proof}
+
 \subsection*{\S~27}
 \begin{rmk}
 If \(\varphi:E\to\medeprod E\) is linear and \(F\)~is a finite-dimensional subspace of~\(E\) such that
@@ -5556,6 +5601,7 @@ The result now follows from the fact that the rank of a transformation~\(\psi\) 
 \newpage
 \begin{thebibliography}{0}
 \bibitem{greub1} Greub, W. \textit{Linear Algebra}, 4th~ed. Springer, 1975.
-\bibitem{greub2} Greub,W. \textit{Multilinear Algebra}, 2nd~ed. Springer, 1978.
+\bibitem{greub2} Greub, W. \textit{Multilinear Algebra}, 2nd~ed. Springer, 1978.
+\bibitem{greub3} Greub, W. \textit{Multilinear Algebra}, 1st~ed. Springer, 1967.
 \end{thebibliography}
 \end{document}
