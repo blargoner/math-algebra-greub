@@ -4609,6 +4609,22 @@ But \(w_p\after z_q=0\) if \(p\ne q\) by~(6.10), and \(w_p\after z_p\in\Delta_p 
 For this reason \(\Delta E\)~is a subalgebra under the composition product, although it is not commutative like it is under the mixed exterior product if \(\dim E>1\).
 \end{rmk}
 
+\begin{rmk}
+If \(u,v,w\in\medeprod(E^*,E)\), then
+\[\sprod{u\after v}{w}=\sprod{u}{v\after w}\]
+In other words, left composition is dual to right composition.\footnote{This is equation~(7') in~\cite{greub4}.}
+\end{rmk}
+\begin{proof}
+By multilinearity, we may assume without loss of generality that
+\[u=a^*\tprod a\qquad v=b^*\tprod b\qquad w=c^*\tprod c\]
+Then
+\[u\after v=\sprod{a^*}{b}b^*\tprod a\]
+and
+\[v\after w=\sprod{b^*}{c}c^*\tprod b\]
+so
+\[\sprod{u\after v}{w}=\sprod{a^*}{b}\sprod{b^*}{c}\sprod{c^*}{a}=\sprod{u}{v\after w}\qedhere\]
+\end{proof}
+
 \subsection*{\S~5}
 \begin{rmk}
 Proposition~6.5.1 helps us convert problems in the \emph{non-commutative} composition algebra in~\(\Delta E\) into problems in the \emph{commutative} mixed exterior algebra in~\(\Delta E\). Because many of the results of classical linear algebra have to do with the composition product, this is an important and powerful technique.
@@ -5633,5 +5649,6 @@ The result now follows from the fact that the rank of a transformation~\(\psi\) 
 \bibitem{greub1} Greub, W. \textit{Linear Algebra}, 4th~ed. Springer, 1975.
 \bibitem{greub2} Greub, W. \textit{Multilinear Algebra}, 2nd~ed. Springer, 1978.
 \bibitem{greub3} Greub, W. \textit{Multilinear Algebra}, 1st~ed. Springer, 1967.
+\bibitem{greub4} Greub, W. and Vanstone, J. ``A Basic Identity in Mixed Exterior Algebra.'' \textit{Linear and Multilinear Algebra}. Gordon and Breach, 1987.
 \end{thebibliography}
 \end{document}
