@@ -4626,9 +4626,26 @@ so
 \end{proof}
 
 \subsection*{\S~5}
-\begin{rmk}
-Proposition~6.5.1 helps us convert problems in the \emph{non-commutative} composition algebra in~\(\Delta E\) into problems in the \emph{commutative} mixed exterior algebra in~\(\Delta E\). Because many of the results of classical linear algebra have to do with the composition product, this is an important and powerful technique.
+\begin{rmk}[Greub-Vanstone\footnote{This is the theorem in~\cite{greub4}.}]
+If \(h_1,\ldots,h_p,k_1,\ldots,k_p\in E^*\tprod E\), then
+\begin{align*}
+(\mprods{h}{1}{p})\after(\mprods{k}{1}{p})&=\sum_{\sigma\in S_p}(h_{\sigma(1)}\after k_1)\mprod\cdots\mprod(h_{\sigma(p)}\after k_p)\\
+	&=\sum_{\tau\in S_p}(h_1\after k_{\tau(1)})\mprod\cdots\mprod(h_p\after k_{\tau(p)})\\
+	&=\frac{1}{p!}\sum_{\sigma,\tau\in S_p}(h_{\sigma(1)}\after k_{\tau(1)})\mprod\cdots\mprod(h_{\sigma(p)}\after k_{\tau(p)})
+\end{align*}
 \end{rmk}
+\begin{proof}
+It is sufficient to prove the first equality, since the others then follow by commutativity of the mixed exterior product in the diagonal subalgebra. By multilinearity, we may assume without loss of generality that
+\[h_i=x^*_i\tprod x_i\quad\text{and}\quad k_i=y^*_i\tprod y_i\qquad (x^*_i,y^*_i\in E^*,\quad x_i,y_i\in E)\]
+Then
+\begin{align*}
+(\mprods{h}{1}{p})\after(\mprods{k}{1}{p})&=\det\sprod{x^*_i}{y_j}\,\eprods{y^*}{1}{p}\tprod\eprods{x}{1}{p}\\
+	&=\sum_{\sigma\in S_p}\sprod{x^*_{\sigma(1)}}{y_1}\cdots\sprod{x^*_{\sigma(p)}}{y_p}\\
+		&\qquad\qquad\eprods{y^*}{1}{p}\tprod\eprods{x}{\sigma(1)}{\sigma(p)}\\
+	&=\sum_{\sigma\in S_p}(h_{\sigma(1)}\after k_1)\mprod\cdots\mprod(h_{\sigma(p)}\after k_p)\qedhere
+\end{align*}
+\end{proof}
+\noindent This fundamental identity helps us convert problems in the \emph{non-commutative} composition algebra in~\(\Delta E\) into problems in the \emph{commutative} mixed exterior algebra in~\(\Delta E\). Because many of the results of classical linear algebra have to do with the composition product, this is an important and powerful technique. Proposition~6.5.1 follows from this identity.\footnote{See equation~(23) in~\cite{greub4}.}
 
 \begin{rmk}
 In the Corollary to Proposition~6.5.1,
