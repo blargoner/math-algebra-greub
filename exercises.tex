@@ -5514,13 +5514,29 @@ Since the function~\(C_p\) is \(p\)-linear and symmetric, it factors through the
 \end{rmk}
 
 \begin{rmk}
-By a remark above,
-\begin{align*}
-\Det(\varphi_1,\ldots,\varphi_n)\iota&=\sum_{i=1}^n\varphi_i\after\Ad(\varphi_1,\ldots,\delete{\varphi_i},\ldots,\varphi_n)\\
-	&=\sum_{i=1}^n\Ad(\varphi_1,\ldots,\delete{\varphi_i},\ldots,\varphi_n)\after\varphi_i
-\end{align*}
-This generalizes Corollary~I to Proposition~7.4.1.
+If \(\varphi\)~is a linear transformation of~\(E\), then
+\[C_p(\varphi)=\frac{1}{p!\,(n-p)!}C_n(\underbrace{\varphi,\ldots,\varphi}_p,\underbrace{\iota,\ldots,\iota}_{n-p})\]
 \end{rmk}
+\begin{proof}
+By (7.9) and~(7.10), for \(z=T_E^{-1}\varphi\) we have
+\begin{align*}
+C_p(\varphi)&=\sprod{z^p}{\unit^p}\\
+	&=\sprod{z^p}{i(\unit^{n-p})\unit^n}\\
+	&=\sprod{z^p\mprod\unit^{n-p}}{\unit^n}\\
+	&=\frac{1}{p!\,(n-p)!}\sprod{\underbrace{\mprods{z}{}{}}_p\mprod\underbrace{\mprods{\unit}{}{}}_{n-p}}{\unit^n}\\
+	&=\frac{1}{p!\,(n-p)!}C_n(\underbrace{\varphi,\ldots,\varphi}_p,\underbrace{\iota,\ldots,\iota}_{n-p})\qedhere
+\end{align*}
+\end{proof}
+
+\begin{rmk}
+If \(\varphi\)~is a linear transformation of~\(E\), then
+\[C_p(\varphi)\,\eprods{x}{1}{n}=\sum_{\nu_1<\cdots<\nu_p}x_1\eprod\cdots\eprod\varphi x_{\nu_1}\eprod\cdots\eprod\varphi x_{\nu_p}\eprod\cdots\eprod x_n\]
+where \(\varphi x_{\nu_i}\)~is in the \(i\)-th position on the right for all \(1\le i\le p\).
+\end{rmk}
+\begin{proof}
+By the previous remark and the action of the transformation
+\[\underbrace{\bprods{\varphi}{}{}}_p\bprod\underbrace{\bprods{\iota}{}{}}_{n-p}\qedhere\]
+\end{proof}
 
 \begin{rmk}
 If \(\varphi\) and~\(\psi\) are linear transformations of~\(E\), then we have the binomial formula
@@ -5532,6 +5548,15 @@ or equivalently
 which is the correct version of the formula in the book.
 
 Taking \(\psi=\lambda\iota\) in~(2) yields Proposition~7.5.1.
+\end{rmk}
+
+\begin{rmk}
+By a remark above,
+\begin{align*}
+\Det(\varphi_1,\ldots,\varphi_n)\iota&=\sum_{i=1}^n\varphi_i\after\Ad(\varphi_1,\ldots,\delete{\varphi_i},\ldots,\varphi_n)\\
+	&=\sum_{i=1}^n\Ad(\varphi_1,\ldots,\delete{\varphi_i},\ldots,\varphi_n)\after\varphi_i
+\end{align*}
+This generalizes Corollary~I to Proposition~7.4.1.
 \end{rmk}
 
 \subsection*{\S~6}
