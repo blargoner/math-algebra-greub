@@ -5505,7 +5505,9 @@ Let \(e,e^*\) be dual basis vectors in \(\medeprod^n E,\medeprod^n E^*\). By Pro
 \[\medeprod^{n-1}\varphi^*D_eh=D_e[D_e^{-1}\medeprod^{n-1}\varphi^*D_eh]=D_e[\ad(\varphi)h]\]
 It follows that
 \[\Delta(h,\varphi x_1,\ldots,\varphi x_{n-1})=\Delta(\ad(\varphi)h,x_1,\ldots,x_{n-1})\]
-for all \(h,x_i\in E\). This identity characterizes~\(\ad(\varphi)\).\footnote{See also the remark in chapter~IV, \S~2 of~\cite{greub1} above.}
+for all \(h,x_i\in E\). This identity characterizes~\(\ad(\varphi)\).\footnote{See also the remark in chapter~IV, \S~2 of~\cite{greub1} above.} More generally,
+\[\sum_{\tau\in S_{n-1}}\!\Delta\bigl(\,h\,,\varphi_{\tau(1)}x_1\,,\ldots,\varphi_{\tau(n-1)}x_{n-1}\,\bigr)\\=\Delta\bigl(\,\Ad(\varphi_1,\ldots,\varphi_{n-1})h\,,x_1\,,\ldots,x_{n-1}\,\bigr)\]
+for all \(h,x_i\in E\), and this identity characterizes \(\Ad(\varphi_1,\ldots,\varphi_{n-1})\).
 \end{rmk}
 
 \subsection*{\S~5}
@@ -5548,6 +5550,12 @@ or equivalently
 which is the correct version of the formula in the book.
 
 Taking \(\psi=\lambda\iota\) in~(2) yields Proposition~7.5.1.
+\end{rmk}
+
+\begin{rmk}
+Let \(\Delta\)~be a determinant function in~\(E\). By definition of the box product,
+\[\Det(\varphi_1,\ldots,\varphi_n)\mult\Delta(x_1,\ldots,x_n)=\sum_{\sigma\in S_n}\Delta(\varphi_{\sigma(1)}x_1,\ldots,\varphi_{\sigma(n)}x_n)\]
+for all \(x_i\in E\).
 \end{rmk}
 
 \begin{rmk}
