@@ -5,7 +5,7 @@ Errata for the books are [here](https://github.com/blargoner/math-algebra-greub-
 
 Like these books? You might also like these videos inspired by them:
 
-- [Mixed Determinants and Adjoints][https://youtu.be/wqOkuUxw0VQ]
+- [Mixed Determinants and Adjoints](https://youtu.be/wqOkuUxw0VQ)
 - [The Box Product](https://youtu.be/bb0nYuRABwc)
 - [The Cross Product](https://youtu.be/z2g5Mfyi48c)
 - [The Magic of the Gramian](https://youtu.be/IOrqUQscNOQ)
