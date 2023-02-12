@@ -5546,7 +5546,7 @@ If \(\varphi\) and~\(\psi\) are linear transformations of~\(E\), then we have th
 Taking the trace of both sides yields
 \[\det(\varphi+\psi)=\sum_{p+q=n}\tr(\medeprod^p\varphi\bprod\medeprod^q\psi)\tag{2}\]
 or equivalently
-\[\det(\varphi+\psi)=\sum_{p+q=n}\frac{1}{p!q!}\Det(\underbrace{\varphi,\ldots,\varphi}_p,\underbrace{\psi,\ldots,\psi}_q)\]
+\[\det(\varphi+\psi)=\sum_{p+q=n}\frac{1}{p!\,q!}\Det(\underbrace{\varphi,\ldots,\varphi}_p,\underbrace{\psi,\ldots,\psi}_q)\]
 which is the correct version of the formula in the book.
 
 Taking \(\psi=\lambda\iota\) in~(2) yields Proposition~7.5.1.
@@ -5599,6 +5599,42 @@ or equivalently
 \[C_p(\varphi)=\det\varphi\mult C_{n-p}(\varphi^{-1})\qquad(0\le p\le n)\]
 In particular if \(n=2m\), then\footnote{See also problem~7.9.8(c).}
 \[C_m(\varphi)=\det\varphi\mult C_m(\varphi^{-1})\]
+\end{rmk}
+
+\begin{rmk}
+Let \(\varphi_1,\ldots,\varphi_n\) be \emph{commuting} linear transformations of~\(E\). Define
+\[\chi^+_{\varphi_1\cdots\varphi_n}(\lambda_1,\ldots,\lambda_n)=\Det(\varphi_1+\lambda_1\iota,\ldots,\varphi_n+\lambda_n\iota)\qquad(\lambda_i\in\Gamma)\]
+Then
+\[\chi^+_{\varphi_1\cdots\varphi_n}(\lambda_1,\ldots,\lambda_n)=\sum_{p\in 2^n}C_{p_1\cdots p_n}(\varphi_1,\ldots,\varphi_n)\lambda_1^{p_1}\cdots\lambda_n^{p_n}\tag{1}\]
+where
+\[C_{p_1\cdots p_n}(\varphi_1,\ldots,\varphi_n)=\Det(\varphi_1^{1-p_1},\ldots,\varphi_n^{1-p_n})\]
+Similarly
+\begin{multline*}
+\Ad(\varphi_1+\lambda_1\iota,\ldots,\delete{\varphi_i+\lambda_i\iota},\ldots,\varphi_n+\lambda_n\iota)=\\
+\sum_{\delete{p}\in 2^{n-1}}A_{p_1\cdots\delete{p_i}\cdots p_n}(\varphi_1,\ldots,\delete{\varphi_i},\ldots,\varphi_n)\lambda_1^{p_1}\cdots\delete{\lambda_i^{p_i}}\cdots\lambda_n^{p_n}\tag{2}
+\end{multline*}
+where \(\delete{p}=(p_1,\ldots,\delete{p_i},\ldots,p_n)\) and
+\[A_{p_1\cdots\delete{p_i}\cdots p_n}(\varphi_1,\ldots,\delete{\varphi_i},\ldots,\varphi_n)=\Ad(\varphi_1^{1-p_1},\ldots,\delete{\varphi_i^{1-p_i}},\ldots,\varphi_n^{1-p_n})\]
+By a remark above,
+\begin{align*}
+C_{p_1\cdots p_n}(\varphi_1,\ldots,\varphi_n)\iota&=\sum_{i=1}^n\varphi_i^{1-p_i}\after A_{p_1\cdots\delete{p_i}\cdots p_n}(\varphi_1,\ldots,\delete{\varphi_i},\ldots,\varphi_n)\\
+	&=\sum_{i=1}^n A_{p_1\cdots\delete{p_i}\cdots p_n}(\varphi_1,\ldots,\delete{\varphi_i},\ldots,\varphi_n)\after\varphi_i^{1-p_i}\tag{3}
+\end{align*}
+The \emph{mixed characteristic polynomial} of \(\varphi_1,\ldots,\varphi_n\) is defined by
+\[\chi_{\varphi_1\cdots\varphi_n}(\lambda_1,\ldots,\lambda_n)=\chi^+_{\varphi_1\cdots\varphi_n}(-\lambda_1,\ldots,-\lambda_n)\]
+It follows from (1) and~(3) that
+\begin{align*}
+\chi_{\varphi_1\cdots\varphi_n}(\lambda_1,\ldots,\lambda_n)\iota&=\sum_{p\in 2^n}\sum_{i=1}^n(-1)^{\sum_{j=1}^n p_j}\varphi_i^{1-p_i}\after A_{p_1\cdots\delete{p_i}\cdots p_n}(\varphi_1,\ldots,\delete{\varphi_i},\ldots,\varphi_n)\lambda_1^{p_1}\cdots\lambda_n^{p_n}\\
+	&=\sum_{p\in 2^n}\sum_{i=1}^n(-1)^{\sum_{j=1}^n p_j}A_{p_1\cdots\delete{p_i}\cdots p_n}(\varphi_1,\ldots,\delete{\varphi_i},\ldots,\varphi_n)\after\varphi_i^{1-p_i}\lambda_1^{p_1}\cdots\lambda_n^{p_n}
+\end{align*}
+Substituting \(\varphi_1,\ldots,\varphi_n\) for \(\lambda_1,\ldots,\lambda_n\) we obtain
+\begin{align*}
+\chi_{\varphi_1\cdots\varphi_n}(\varphi_1,\ldots,\varphi_n)&=\sum_{i=1}^n\sum_{p\in 2^n}(-1)^{\sum_{j=1}^n p_j}A_{p_1\cdots\delete{p_i}\cdots p_n}(\varphi_1,\ldots,\delete{\varphi_i},\ldots,\varphi_n)\varphi_1^{p_1}\cdots\varphi_i\cdots\varphi_n^{p_n}\\
+	&=\sum_{i=1}^n\sum_{\delete{p}\in 2^{n-1}}(-1)^{\sum_{j\ne i}p_j}\Biggl(A_{p_1\cdots\delete{p_i}\cdots p_n}(\varphi_1,\ldots,\delete{\varphi_i},\ldots,\varphi_n)\varphi_1^{p_1}\cdots\varphi_i\cdots\varphi_n^{p_n}\\
+	&\qquad\qquad\qquad-A_{p_1\cdots\delete{p_i}\cdots p_n}(\varphi_1,\ldots,\delete{\varphi_i},\ldots,\varphi_n)\varphi_1^{p_1}\cdots\varphi_i\cdots\varphi_n^{p_n}\Biggr)\\
+	&=0
+\end{align*}
+This is the mixed Cayley-Hamilton theorem for commuting transformations, which reduces to the classical Cayley-Hamilton theorem when \(\varphi_1=\cdots=\varphi_n\).
 \end{rmk}
 
 \subsection*{\S~7}
