@@ -3468,7 +3468,7 @@ The results in this subsection show that it is possible to develop tensor algebr
 \section*{Chapter~4}
 \subsection*{\S~2}
 \begin{rmk}
-The factor~\(1/p!\) in the definition of the alternator~\(\pi_A\) on~\(\medtprod^p E\) ensures that \(\pi_A\)~is a projection operator (\(\pi_A^2=\pi_A\)). This factor creeps into the scalar product between dual spaces of skew-symmetric tensors in~(4.8).
+The factor~\(1/p!\) in the definition of the alternator~\(\pi_A\) on~\(\medtprod^p E\) ensures that \(\pi_A\)~is a projection operator (\(\pi_A^2=\pi_A\)), which is necessary to establish the ``associativity'' property~(4.11). This factor also creeps into the scalar product between dual spaces of skew-symmetric tensors in~(4.8).
 \end{rmk}
 
 \begin{rmk}
@@ -3588,7 +3588,7 @@ If \(E\)~is finite-dimensional, it follows that these diagrams commute:
 \dTo<{\iso}		&				&\dTo>{\iso}	&&\dTo<{\iso}		&				&\dTo>{\iso}\\
 T^p(E)			&\rTo_{\sigma}	&T^p(E)			&&T^p(E)			&\rTo_A			&T^p(E)
 \end{diagram}
-As with~\(\pi_A\), the factor~\(1/p!\) in the definition of~\(A\) on~\(T^p(E)\) ensures that \(A\)~is a projection operator (\(A^2=A\)).
+As with~\(\pi_A\), the factor~\(1/p!\) in the definition of~\(A\) on~\(T^p(E)\) ensures that \(A\)~is a projection operator (\(A^2=A\)), which is necessary to establish the ``associativity'' property~(5.81).
 \end{rmk}
 
 \begin{exer}[1]
@@ -4372,7 +4372,9 @@ The right-hand side is a nonzero graded subalgebra of~\(\medeprod E\) which has 
 
 \subsection*{\S~30}
 \begin{rmk}
-Why are there factorials in the definition of the Grassmann product? From problem~5.7.6, we know they are not needed algebraically, although they may be more natural geometrically in certain applications. Their presence has the following consequences:
+Why is the factor~\(\frac{(p+q)!}{p!\,q!}\) in the definition of the Grassmann product? From problem~5.7.6, we know it is not needed algebraically, although it may be more natural geometrically in certain applications. However, the factorial in the definition of the alternator \emph{is} needed for associativity of the Grassmann product.\footnote{See (5.81)~and the proof of Proposition~5.30.1(B).}
+
+The presence of the factorials has the following consequences:
 \begin{itemize}
 \item The substitution operator~\(i_A(h)\) must be rescaled in \S~32 (see below).
 \item The isomorphism \(\medtprod E^*\to T^{\tdot}(E)\) must be rescaled when it is restricted to obtain the isomorphism \(X(E^*)\to A^{\tdot}(E)\) in \S~33.
