@@ -86,7 +86,7 @@
 \newcommand{\multi}[4]{#2_{#3}#1\cdots#1#2_{#4}}
 \newcommand{\sects}[3]{\multi{\sect}{#1}{#2}{#3}}
 \newcommand{\dsums}[3]{\multi{\dsum}{#1}{#2}{#3}}
-\newcommand{\timess}[3]{\multi{\cross}{#1}{#2}{#3}}
+\newcommand{\timess}[3]{\multi{\times}{#1}{#2}{#3}}
 \newcommand{\tprods}[3]{\multi{\tprod}{#1}{#2}{#3}}
 \newcommand{\stprods}[3]{\multi{\stprod}{#1}{#2}{#3}}
 \newcommand{\eprods}[3]{\multi{\eprod}{#1}{#2}{#3}}
@@ -3542,11 +3542,11 @@ To see how (4.16)~follows from~(4.13), write \(u=\pi(a)\) and \(v=\pi(b)\) with 
 \end{rmk}
 
 \begin{rmk}
-The inverse of~\(\rho\) is the induced isomorphism \(\overline{\pi_X}:\medtprod E/N(E)\iso X(E)\):
+The inverse of~\(\rho\) is the induced isomorphism \(\proj{\pi_X}:\medtprod E/N(E)\iso X(E)\):
 \begin{diagram}[nohug]
-\medtprod E			&\rTo^{\pi_X}						&X(E)\\
-\dTo<{\pi}			&\ruTo>{\rho^{-1}=\overline{\pi_X}}	&\\
-\medtprod E/N(E)	&									&
+\medtprod E			&\rTo^{\pi_X}					&X(E)\\
+\dTo<{\pi}			&\ruTo>{\rho^{-1}=\proj{\pi_X}}	&\\
+\medtprod E/N(E)	&								&
 \end{diagram}
 This diagram generalizes the diagram in \S~2 above.
 \end{rmk}
