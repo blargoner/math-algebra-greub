@@ -2943,6 +2943,13 @@ In this chapter, we see three ways of defining a tensor:
 \end{itemize}
 The first way is the most elegant but perhaps the hardest to learn; the second, easier to get started with but messier in the long run; the third, quick and dirty.
 
+\subsection*{\S~2}
+\begin{rmk}
+In this section, the underlying vector space of the tensor algebra~\(\medtprod E\) is constructed bottom up as a direct sum
+\[\medtprod E=\sum_{p=0}^{\infty}\medtprod^p E\]
+from tensorial powers~\(\medtprod^p E\), each of which is constructed as quotient space. The multiplication operation is then defined in~\(\medtprod E\) to make it an algebra.
+\end{rmk}
+
 \subsection*{\S~3}
 \begin{rmk}
 The tensor algebra~\(\medtprod E\) is a universal (initial) object in the category of ``associative unital algebras with linear maps of~\(E\) into them''. In this category, the objects are linear maps \(E\to A\), for associative unital algebras~\(A\), and the arrows are unital algebra homomorphisms \(A\to B\) which preserve the units and respect the linear maps from~\(E\):
@@ -3090,7 +3097,7 @@ In the finite-dimensional case, the following are familiar types of mixed tensor
 \begin{rmk}
 The mixed tensor algebra~\(\medtprod(E^*,E)\) can be constructed in two ways:
 \begin{itemize}
-\item Top down, as \(\medtprod(E^*,E)=(\medtprod E^*)\tprod(\medtprod E)\).
+\item Top down, as \(\medtprod(E^*,E)=(\medtprod E^*)\tprod(\medtprod E)\) --- as in this section.
 \item Bottom up, as
 \[\medtprod(E^*,E)=\sum_{p,q}\medtprod^p_q(E^*,E)\]
 \end{itemize}
@@ -3478,7 +3485,7 @@ By (4.4) and~(4.5), we have the following commutative diagram:
 \dTo<{\pi}			&\ruTo>{\iso}	&\\
 \medtprod^p E/N^p(E)&				&
 \end{diagram}
-Therefore \(\medtprod^p E/N^p(E)\)~can be viewed as a ``top down'' construction of the space of skew-symmetric tensors of degree~\(p\), where we start with tensors of degree~\(p\) and kill off tensors with equal factors. This is the tensor equivalent of the result that a \(p\)-linear function is skew-symmetric if and only if it is alternating. In fact, the proof of (4.4) (including the proof of lemma~(4.1)) is just like the proof of the latter result.\footnote{See Proposition~I in chapter~IV, \S~1 of \cite{greub1} and chapter~5, \S~1 of~\cite{greub2}.}
+Therefore \(\medtprod^p E/N^p(E)\)~can be viewed as a top down construction of the space of skew-symmetric tensors of degree~\(p\), where we start with tensors of degree~\(p\) and kill off tensors with equal factors. This is the tensor equivalent of the result that a \(p\)-linear function is skew-symmetric if and only if it is alternating. In fact, the proof of (4.4) (including the proof of lemma~(4.1)) is just like the proof of the latter result.\footnote{See Proposition~I in chapter~IV, \S~1 of \cite{greub1} and chapter~5, \S~1 of~\cite{greub2}.}
 \end{rmk}
 
 \subsection*{\S~3}
@@ -3517,10 +3524,10 @@ so \(C^1_{j+1}\after\mu(t)=\sigma\).
 \begin{rmk}
 In the following subsections, an algebra of skew-symmetric tensors is constructed in two ways:
 \begin{itemize}
-\item Top down, starting with the tensor algebra~\(\medtprod E\) and killing off tensors with equal factors in~\(N(E)\) to form \(\medtprod E/N(E)\).
-\item Bottom up, by collecting skew-symmetric tensors in~\(\medtprod E\) to form~\(X(E)\).
+\item Top down, starting with the tensor algebra~\(\medtprod E\) and killing off tensors in~\(N(E)\) to form~\(\medtprod E/N(E)\). The multiplication in~\(\medtprod E/N(E)\) is induced from that in~\(\medtprod E\).
+\item Bottom up, by collecting skew-symmetric tensors in~\(\medtprod E\) to form~\(X(E)\). The multiplication in~\(X(E)\) is defined using the alternator as in problem~1 of \S~8 below.
 \end{itemize}
-The two constructions are essentially equivalent by~(4.17), although the scalar product between dual algebras is defined slightly differently in~\S~8---specifically, the factor~\(1/p!\) in~(4.8) is killed off in~(4.18) to obtain~(4.20).
+The two constructions are essentially equivalent by~(4.17), although the scalar product between dual algebras is defined slightly differently in~\S~8---specifically, the product for the top down construction is induced by that for the bottom up construction, but the factor~\(1/p!\) in~(4.8) is killed off in~(4.18) to obtain~(4.20).
 \end{rmk}
 
 \subsection*{\S~6}
@@ -3538,7 +3545,7 @@ To see how (4.16)~follows from~(4.13), write \(u=\pi(a)\) and \(v=\pi(b)\) with 
 
 \subsection*{\S~7}
 \begin{rmk}
-\(X(E)\)~is not a subalgebra of~\(\medtprod E\), but can be made into an algebra (see problem~1 of \S~8 below).
+\(X(E)\)~is not a subalgebra of~\(\medtprod E\), but can be made into an algebra as in problem~1 of \S~8 below.
 \end{rmk}
 
 \begin{rmk}
@@ -3567,6 +3574,11 @@ for all \(u,v\in\medtprod E\).
 \end{proof}
 \begin{rmk}
 The proof also shows that the product is uniquely determined by the requirement that \(\rho\)~be an algebra isomorphism.
+\end{rmk}
+
+\subsection*{\S~9}
+\begin{rmk}
+Remarks analogous to those made above for skew-symmetry can be made for symmetry.
 \end{rmk}
 
 \newpage
@@ -3700,6 +3712,7 @@ The exterior algebra~\(\medeprod E\) can be constructed in two ways:
 \item Top down, as \(\medeprod E=\medtprod E/N(E)\).
 \item Bottom up, as \(\medeprod E=\sum_p\medeprod^p E\), where \(\medeprod^p E\)~is constructed either top down or bottom up as remarked above.
 \end{itemize}
+In \S~4, both methods are used---in fact, the underlying vector space of~\(\medeprod E\) is initially constructed bottom up while the multiplication and scalar product are induced from the top down.
 \end{rmk}
 
 \begin{rmk}
