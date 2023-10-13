@@ -62,6 +62,9 @@
 \newcommand{\bigeprod}{\bigwedge}
 \newcommand{\medeprod}{{\textstyle\bigeprod}}
 \newcommand{\medeprodf}{\tilde{\medeprod}}
+\newcommand{\smprod}{\vee}
+\newcommand{\bigsmprod}{\bigvee}
+\newcommand{\medsmprod}{{\textstyle\bigsmprod}}
 \newcommand{\fprod}{\bigcdot{0.5}}
 \newcommand{\mprod}{\bigcdot{0.5}}
 \newcommand{\bprod}{\mathbin{\square}}
@@ -90,6 +93,7 @@
 \newcommand{\tprods}[3]{\multi{\tprod}{#1}{#2}{#3}}
 \newcommand{\stprods}[3]{\multi{\stprod}{#1}{#2}{#3}}
 \newcommand{\eprods}[3]{\multi{\eprod}{#1}{#2}{#3}}
+\newcommand{\smprods}[3]{\multi{\smprod}{#1}{#2}{#3}}
 \newcommand{\fprods}[3]{\multi{\fprod}{#1}{#2}{#3}}
 \newcommand{\mprods}[3]{\multi{\mprod}{#1}{#2}{#3}}
 \newcommand{\bprods}[3]{\multi{\bprod}{#1}{#2}{#3}}
@@ -5767,6 +5771,34 @@ By the Jacobi identity~(7.6),
 \[\medeprod^p(\ad\varphi)=(\det\varphi)^{p-1}D_L(\medeprod^{n-p}\varphi)\]
 The result now follows from the fact that the rank of a transformation~\(\psi\) is the largest~\(r\) for which \(\medeprod^r\psi\ne0\).
 \end{proof}
+
+\newpage
+\section*{Chapter~9}
+\begin{rmk}
+Remarks analogous to many of those made above for exterior algebra can also be made for symmetric algebra. We highlight some differences.
+\end{rmk}
+
+\subsection*{\S~3}
+\begin{rmk}
+The symmetric algebra \(\medsmprod E\) is a universal (initial) object in the category of ``associative unital algebras with linear maps of~\(E\) into them whose image elements commute''. In this category, the objects are linear maps \(\varphi:E\to A\) for associative unital algebras~\(A\) with \(\varphi x\mult\varphi y=\varphi y\mult\varphi x\), and the arrows are unital algebra homomorphisms \(A\to B\) which preserve the units and respect the linear maps:
+\begin{diagram}
+E	&\rTo	&B\\
+\dTo&\ruTo	&\\
+A	&		&
+\end{diagram}
+Every object in this category can be obtained from the symmetric algebra \(\medsmprod E\) in a unique way. This is why \(\medsmprod E\)~is said to satisfy the ``universal property''. This is only possible because the elements of~\(\medsmprod E\) satisfy only those properties that are required to make \(\medsmprod E\) into an associative, unital, and \emph{commutative} algebra containing~\(E\). By abstract nonsense, \(\medsmprod E\)~is unique up to isomorphism.
+\end{rmk}
+
+\subsection*{\S~6}
+\begin{rmk}
+The multiplication map \(\mu:\medsmprod E\to L(\medsmprod E;\medsmprod E)\) is linear, and is an algebra homomorphism by~(9.9). Dually, the insertion map \(i:\medsmprod E\to L(\medsmprod E^*;\medsmprod E^*)\) is also an algebra homomorphism by \emph{commutativity}!
+\end{rmk}
+
+\begin{rmk}
+For \(h,k\in E\), by the binomial formula for composition of commuting transformations,
+\[i(h+k)^p=[i(h)+i(k)]^p=\sum_{r+s=p}\frac{p!}{r!\,s!}\,i(h)^r\after i(k)^s\]
+This can also be proved using the binomial formula~(9.3) and the dual of~(9.9).
+\end{rmk}
 
 % References
 \newpage
