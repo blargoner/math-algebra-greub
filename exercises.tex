@@ -5804,9 +5804,21 @@ This can also be proved using the binomial formula~(9.3) and the dual of~(9.9).
 \begin{rmk}
 Informally, the lemma to Proposition~9.7.1 says that if an element in the symmetric algebra is always zero when ``measured'' by repeatedly inserting a single vector, then the element is zero. Since insertion of a single vector is a \emph{derivation}, this is a powerful criterion.
 
-In the proof by induction, given \(p>1\) and \(u^*\in I_p\) satisfying \(i(h)^p u^*=0\) for all \(h\in E\), it is natural to fix \(k\in E\) and consider \(i(k)u^*\in I_{p-1}\). In order to leverage the induction hypothesis, we need \(i(h)^{p-1}i(k)u^*=0\) for all \(h\in E\). Since \(i(h)\) and~\(i(k)\) commute, we know we will find terms of the form \(i(h)^ri(k)^su^*\) in the expansion of~\(i(h+k)^pu^*\).\footnote{See the remark in \S~6 above.} To ensure that all of them are zero, we introduce a scalar parameter~\(\lambda\) and consider the \emph{polynomial function}
+In the proof by induction, given \(p>1\) and \(u^*\in I_p\) satisfying \(i(h)^p u^*=0\) for all \(h\in E\), it is natural to fix \(k\in E\) and consider \(i(k)u^*\in I_{p-1}\). In order to leverage the induction hypothesis, we need \(i(h)^{p-1}i(k)u^*=0\) for all \(h\in E\). Since \(i(h)\) and~\(i(k)\) commute, we know we will find terms of the form \(i(h)^ri(k)^su^*\) in the expansion of~\(i(h+k)^pu^*\).\footnote{See the remark in \S~6 above.} To ensure that all of them are zero, we introduce a scalar parameter~\(\lambda\) and consider the polynomial function
 \[f(\lambda)=i(\lambda h+k)^pu^*=\sum_{r+s=p}\frac{p!}{r!\,s!}\,\lambda^r\,i(h)^ri(k)^su^*\]
 with coefficients in the symmetric algebra. By assumption \(f(\lambda)=0\) for all~\(\lambda\), so (since there are infinitely many~\(\lambda\)) the coefficients of~\(f\) must be zero, which implies \(i(h)^ri(k)^su^*=0\) for all \(r,s\) with \(r+s=p\), in particular \(r=p-1\) and \(s=1\). By induction \(i(k)u^*=0\), and since \(k\)~was arbitrary it follows that \(u^*=0\).
+\end{rmk}
+
+\subsection*{\S~12}
+\begin{rmk}
+To see that \(H(E)=\sum_p H^p(E)\) is a \emph{direct} sum, suppose that \(0=\sum_{p=0}^r h_p\) for \(h_p\in H^p(E)\). Substituting \(\lambda x\) on both sides we obtain
+\[0=\sum_{p=0}^r \lambda^p h_p(x)\]
+Viewing this as a polynomial function in the scalar~\(\lambda\) with coefficients \(h_p(x)\), it follows (since there are infinitely many~\(\lambda\)) that \(h_p(x)=0\) for all \(0\le p\le r\), and since \(x\)~was arbitrary \(h_p=0\) for all \(0\le p\le r\). Therefore the zero function is uniquely represented in~\(H(E)\), and \(H(E)\)~is a direct sum.
+\end{rmk}
+
+\begin{rmk}
+The function~\(h_{\Phi}\) should be redefined on~\(S^p(E)\) as
+\[h_{\Phi}(x)=\frac{1}{p!}\Phi(x,\ldots,x)\]
 \end{rmk}
 
 % References
