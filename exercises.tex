@@ -5800,6 +5800,15 @@ For \(h,k\in E\), by the binomial formula for composition of commuting transform
 This can also be proved using the binomial formula~(9.3) and the dual of~(9.9).
 \end{rmk}
 
+\subsection*{\S~7}
+\begin{rmk}
+Informally, the lemma to Proposition~9.7.1 says that if an element in the symmetric algebra is always zero when ``measured'' by repeatedly inserting a single vector, then the element is zero. Since insertion of a single vector is a \emph{derivation}, this is a powerful criterion.
+
+In the proof by induction, given \(p>1\) and \(u^*\in I_p\) satisfying \(i(h)^p u^*=0\) for all \(h\in E\), it is natural to fix \(k\in E\) and consider \(i(k)u^*\in I_{p-1}\). In order to leverage the induction hypothesis, we need \(i(h)^{p-1}i(k)u^*=0\) for all \(h\in E\). Since \(i(h)\) and~\(i(k)\) commute, we know we will find terms of the form \(i(h)^ri(k)^su^*\) in the expansion of~\(i(h+k)^pu^*\).\footnote{See the remark in \S~6 above.} To ensure that all of them are zero, we introduce a scalar parameter~\(\lambda\) and consider the \emph{polynomial function}
+\[f(\lambda)=i(\lambda h+k)^pu^*=\sum_{r+s=p}\frac{p!}{r!\,s!}\,\lambda^r\,i(h)^ri(k)^su^*\]
+with coefficients in the symmetric algebra. By assumption \(f(\lambda)=0\) for all~\(\lambda\), so (since there are infinitely many~\(\lambda\)) the coefficients of~\(f\) must be zero, which implies \(i(h)^ri(k)^su^*=0\) for all \(r,s\) with \(r+s=p\), in particular \(r=p-1\) and \(s=1\). By induction \(i(k)u^*=0\), and since \(k\)~was arbitrary it follows that \(u^*=0\).
+\end{rmk}
+
 % References
 \newpage
 \begin{thebibliography}{0}
