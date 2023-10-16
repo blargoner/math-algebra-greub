@@ -71,6 +71,7 @@
 \newcommand{\sbprod}{\mathbin{\widehat{\square}}}
 \newcommand{\tdot}{\bigcdot{0.75}}
 \newcommand{\adot}{\bigcdot{0.75}}
+\newcommand{\sdot}{\bigcdot{0.75}}
 
 \newcommand{\delete}{\widehat}
 \newcommand{\gen}[1]{\langle#1\rangle}
@@ -5774,9 +5775,7 @@ The result now follows from the fact that the rank of a transformation~\(\psi\) 
 
 \newpage
 \section*{Chapter~9}
-\begin{rmk}
-Remarks analogous to many of those made above for exterior algebra can also be made for symmetric algebra. We highlight some differences.
-\end{rmk}
+\textbf{Remarks analogous to many of those made above for exterior algebra can also be made for symmetric algebra. We highlight some differences.}
 
 \subsection*{\S~3}
 \begin{rmk}
@@ -5817,8 +5816,40 @@ Viewing this as a polynomial function in the scalar~\(\lambda\) with coefficient
 \end{rmk}
 
 \begin{rmk}
+\(H(E)\)~is a \emph{graded algebra} where the elements of~\(H^p(E)\) are (in the sense of gradation) homogeneous of degree~\(p\), and \(\tau:S^{\sdot}(E)\to H(E)\) is homogeneous of degree zero.
+\end{rmk}
+
+\begin{rmk}
 The function~\(h_{\Phi}\) should be redefined on~\(S^p(E)\) as
 \[h_{\Phi}(x)=\frac{1}{p!}\Phi(x,\ldots,x)\]
+\end{rmk}
+
+\subsection*{\S~13}
+\begin{rmk}
+\(\Gamma_n\)~is a \emph{graded algebra} where the elements of~\(\Gamma_n^p\) are (in the sense of gradation) homogeneous of degree~\(p\), and the (non-natural) isomorphisms to the symmetric algebra of an \(n\)-dimensional vector space are homogeneous of degree zero.
+\end{rmk}
+
+\subsection*{\S~15}
+\begin{rmk}
+\(S^{\sdot}(E)\)~is a \emph{graded algebra} where the elements of~\(S^p(E)\) are (in the sense of gradation) homogeneous of degree~\(p\), and dually for \(S_{\sdot}(E)\) and~\(S_p(E)\).
+\end{rmk}
+
+\subsection*{\S~16}
+\begin{rmk}
+In this subsection, the substitution operator~\(i_S(h)\) should be redefined on~\(T^p(E)\) as
+\[i_S(h)=\frac{1}{p}\sum_{\nu=1}^p i_{\nu}(h)\]
+Then for \(\Phi\in S^p(E)\),
+\[i_S(h)\Phi=i_1(h)\Phi\]
+as desired. This redefinition is required to make~\(i_S(h)\) a derivation in~\(S^{\adot}(E)\) (for the definition of symmetric product in subsection~9.15), although under this redefinition \(i_S(h)\)~is not a derivation in~\(T^{\tdot}(E)\).
+
+If \(h_{\Phi}\)~is also redefined as in the remark in \S~12 above, then
+\[h_{\Phi}(x)=i_S(x)^p\Phi\]
+as desired.
+\end{rmk}
+
+\subsection*{\S~18}
+\begin{rmk}
+The (non-natural) isomorphisms \(\Gamma_n\iso S^{\sdot}(E)\) where \(n=\dim E\) do \emph{not} show that all polynomial functions are symmetric! Under these isomorphisms, polynomial variables correspond to dual basis functions on~\(E\).
 \end{rmk}
 
 % References
