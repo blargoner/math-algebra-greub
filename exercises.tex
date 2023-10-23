@@ -3858,6 +3858,21 @@ This shows that the projection \(\pi_E:\medtprod E\to\medeprod E\) is a natural 
 \end{rmk}
 
 \begin{rmk}
+For a linear map \(\varphi:E\to F\), the following diagram commutes:
+\begin{diagram}
+\medtprod E	&\rTo^{\varphi_{\tprod}}&\medtprod F\\
+\dTo<{\pi_A}&						&\dTo>{\pi_A}\\
+\medtprod E	&\rTo_{\varphi_{\tprod}}&\medtprod F
+\end{diagram}
+This shows that \(\varphi_{\tprod}\)~restricts to \(X(E),X(F)\) and in fact this diagram commutes:\footnote{See subsection~5.4 for the isomorphism.}
+\begin{diagram}
+\medeprod E	&\rTo^{\varphi_{\eprod}}&\medeprod F\\
+\dTo<{\iso}	&						&\dTo>{\iso}\\
+X(E)		&\rTo_{\varphi_{\tprod}}&X(F)
+\end{diagram}
+\end{rmk}
+
+\begin{rmk}
 Let \(E\)~be an \(n\)-dimensional space and \(\Delta\)~a determinant function in~\(E\). If \(\varphi:E\to E\) is linear, then
 \begin{align*}
 \Delta_{\eprod}\after\varphi_{\eprod}(\eprods{x}{1}{n})&=\Delta_{\eprod}(\eprods{\varphi x}{1}{n})\\
