@@ -5610,6 +5610,21 @@ By a remark above,
 This generalizes Corollary~I to Proposition~7.4.1.
 \end{rmk}
 
+\begin{rmk}[Weinstein-Aronszajn]
+If \(\varphi:E\to F\) and \(\psi:F\to E\) are linear, then
+\[\det(\varphi\psi+\iota)=\det(\psi\varphi+\iota)\]
+\end{rmk}
+\begin{proof}
+Let \(n=\dim E\) and \(m=\dim F\), and assume \(m\ge n\). By remarks above,
+\begin{align*}
+\det(\varphi\psi+\iota)&=\sum_{p=0}^m\tr(\medeprod^p\varphi\psi\bprod\medeprod^{m-p}\iota)\\
+	&=\sum_{p=0}^m\tr(\medeprod^p\varphi\psi)\\
+	&=\sum_{p=0}^n\tr(\medeprod^p\psi\varphi)\\
+	&=\sum_{p=0}^n\tr(\medeprod^p\psi\varphi\bprod\medeprod^{n-p}\iota)\\
+	&=\det(\psi\varphi+\iota)\qedhere
+\end{align*}
+\end{proof}
+
 \subsection*{\S~6}
 \begin{rmk}
 In the proof of Proposition~7.6.1, (7.11)~is obtained by induction on~\(p\). For \(p=0\) the result is certainly true, and if it is true for \(p-1<n\), then it is also true for~\(p\) since
