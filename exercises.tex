@@ -41,6 +41,7 @@
 \makeatother
 
 \newcommand{\union}{\cup}
+\newcommand{\bigunion}{\bigcup}
 \newcommand{\sect}{\cap}
 \newcommand{\ssect}{\mathbin{\widehat{\cap}}}
 \newcommand{\bigsect}{\bigcap}
@@ -368,6 +369,13 @@ Now \(M\)~is \emph{dual} to~\(N\) if there is a nondegenerate bilinear map \(\sp
 \begin{rmk}
 The results in subsection~2.23 show that quotient spaces are dual to subspaces.
 \end{rmk}
+
+\begin{rmk}
+Let \(E,E^*\) be a pair of dual vector spaces. If \(x_1,\ldots,x_m\in E\) and \(x_i\ne 0\) for all \(1\le i\le m\), then there is \(x^*\in E^*\) with \(\sprod{x^*}{x_i}\ne 0\) for all \(1\le i\le m\).
+\end{rmk}
+\begin{proof}
+Since \(x_i\ne 0\), \(\oc{\gen{x_i}}\)~is a proper subspace of~\(E^*\), so \(\bigunion_i\oc{\gen{x_i}}\ne E^*\).\footnote{See problem~12 in chapter~I, \S~4.} Choose \(x^*\in E^*-\bigunion_i\oc{\gen{x_i}}\).
+\end{proof}
 
 \begin{rmk}
 If \(E,E^*\) and \(F,F^*\) are pairs of dual spaces and \(\varphi:E\to F\) is linear, then \(\varphi^*:E^*\from F^*\) is dual to~\(\varphi\) if and only if the following diagram commutes:
@@ -812,7 +820,7 @@ If we induce the canonical complex structure on~\(\R^2\), then the matrix of~\(\
 \[M_{\C}(\varphi)=\begin{pmatrix}i\end{pmatrix}\]
 The characteristic polynomial of~\(\varphi\) and~\(M_{\C}(\varphi)\) over~\(\C\) is \(\chi_{\varphi}^{\C}=-\lambda+i\). By contrast, the characteristic polynomial of \(M_{\R}(\varphi)\) viewed as a matrix over~\(\C\) (representing a transformation \(\C^2\to\C^2\)) is again \(\lambda^2+1\).
 
-This example shows that the characteristic polynomial of a \emph{transformation} is not in general preserved under field extension, although the characteristic polynomial of a \emph{matrix} is. The same is true of the minimum polynomial.\footnote{See Chapter~XIII. In this example, \(\mu_{\varphi}^{\R}=t^2+1\) while \(\mu_{\varphi}^{\C}=t-i\).}
+This example shows that the characteristic polynomial of a \emph{transformation} is not in general preserved under field extension, although the characteristic polynomial of a \emph{matrix} is. The same is true of the minimum polynomial.\footnote{See chapter~XIII. In this example, \(\mu_{\varphi}^{\R}=t^2+1\) while \(\mu_{\varphi}^{\C}=t-i\).}
 \end{rmk}
 
 \begin{rmk}
