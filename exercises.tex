@@ -2589,7 +2589,7 @@ It is more natural to do this problem using the composition algebra (see \S~26).
 	&=\beta^*x^*\tprod\alpha y\\
 	&=(\beta^*\tprod\alpha)\sigma
 \end{align*}
-so \(\Phi=\beta^*\tprod\alpha\). Here \(\beta^*=d\tprod c^*\).\footnote{See problem~1.30.1.} The general case follows by multilinearity. Alternately, we could use the isomorphism~\(\Omega\) from Proposition~1.29.1.
+so \(\Phi=\beta^*\tprod\alpha\), the tensor product of the maps \(\beta^*\) and~\(\alpha\), where \(\beta^*=d\tprod c^*\).\footnote{See problem~1.30.1.} The general case follows by multilinearity. Alternately, we could make use of the isomorphism~\(\Omega\) from Proposition~1.29.1.
 \end{rmk}
 
 \subsection*{\S~20}
@@ -2814,7 +2814,19 @@ In the proof of Proposition~1.29.1, note that if \(\alpha=a^*\tprod b\) and \(\b
 \[F(\alpha\tprod\beta)(x^*\tprod y)=\sprod{a^*\tprod b}{x^*\tprod y}(c^*\tprod d)=\sprod{x^*}{b}\sprod{a^*}{y}(c^*\tprod d)\]
 Comparing with the calculation after problem~1.19.3 above, we immediately see that \(Q\), which swaps \(b\) and~\(d\), satisfies
 \[F(Q(\alpha\tprod\beta))=\beta^*\tprod\alpha=\Omega(\alpha\tprod\beta)\]
-These results show that we can view \(L(A;A)\) as a tensor product in multiple ways.
+where \(\beta^*\tprod\alpha\)~is the tensor product of the maps \(\beta^*\) and~\(\alpha\). These results show that we can view \(L(A;A)\) as a tensor product in multiple ways.
+\end{rmk}
+
+\begin{rmk}
+Let \(E,E^*\) be dual spaces. The algebras \(A=A(E;E)\) and \(A^*=A(E^*;E^*)\) are dual under the scalar product
+\[\sprod{\psi}{\varphi}=\tr(\psi^*\after\varphi)\qquad(\psi\in A^*,\varphi\in A)\]
+The isomorphism \(T:A^*\tprod A\to L(A;A)\) satisfies
+\[T(\alpha^*\tprod\beta)\varphi=\sprod{\alpha^*}{\varphi}\beta=\tr(\alpha\after\varphi)\beta\]
+Let \(S:A^*\tprod A\to A^*\tprod A\) be the isomorphism
+\[(b\tprod a^*)\tprod(c^*\tprod d)\mapsto(b\tprod c^*)\tprod(a^*\tprod d)\]
+Then
+\[TS(\alpha^*\tprod\beta)=\alpha^*\tprod\beta\]
+where the right-hand side is the tensor product of the maps \(\alpha^*\) and~\(\beta\). Since \(S\)~is not the identity map, we must be careful when using the notation \(\alpha^*\tprod\beta\) to denote an element of~\(L(A;A)\).
 \end{rmk}
 
 \subsection*{\S~30}
