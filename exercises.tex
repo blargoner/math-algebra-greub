@@ -3790,6 +3790,17 @@ If \(E\)~is a Euclidean space and \(x_1,\ldots,x_p\in E\), then
 is the volume of the \(p\)-dimensional parallelepiped determined by \(x_1,\ldots,x_p\).
 \end{rmk}
 
+\begin{rmk}[Cartan]
+Let \(E\)~be a vector space with basis \(e_1,\ldots,e_n\). If \(x_1,\ldots,x_p\in E\) with \(p\le n\) and
+\[\sum_{i=1}^p x_i\eprod e_i=0\]
+then we can write \(x_i=\sum_{j=1}^p\xi_i^je_j\) where \(\xi_i^j=\xi_j^i\) for all \(i,j=1,\ldots,p\).
+\end{rmk}
+\begin{proof}
+Write \(x_i=\sum_{j=1}^n\xi_i^je_j\) for \(i=1,\ldots,p\). Then by hypothesis
+\[0=\sum_{i=1}^p x_i\eprod e_i=\sum_{1\le i<j\le p}(\xi_i^j-\xi_j^i)e_i\eprod e_j\ +\sum_{1\le i\le p<j\le n}\xi_i^j e_i\eprod e_j\]
+The result follows since the~\(e_i\eprod e_j\) are basis vectors of~\(\medeprod^2 E\).
+\end{proof}
+
 \begin{exer}[1]
 Let \(E,E^*\) be a pair of finite-dimensional dual vector spaces and \(A\subseteq L(E^*;E)\) be the subspace of linear maps \(\varphi:E^*\to E\) for which \(\varphi^*=-\varphi\). If \(\varphi:E\times E\to A\) is the bilinear map defined by
 \[\varphi_{a,b}(x^*)=\sprod{x^*}{a}b-\sprod{x^*}{b}a\]
