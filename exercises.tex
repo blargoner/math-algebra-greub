@@ -4079,6 +4079,18 @@ The fact that \(i(h)^2=0\) is equivalent to the fact that skew-symmetric functio
 \end{rmk}
 
 \begin{rmk}
+The operator~\(i(h)\) preserves decomposability.
+\end{rmk}
+\begin{proof}
+Let
+\[u^*=\eprods{x^*}{1}{p}\qquad(x^*_i\in E^*)\]
+If \(u^*=0\) or \(x^*_1,\ldots,x^*_p\in\oc{\gen{h}}\), then \(i(h)u^*=0\) is decomposable. Otherwise, there exist \(y^*_1,\ldots,y^*_{p-1}\in\oc{\gen{h}}\) and \(y^*_p\in E^*\) with\footnote{See the remarks in \S~26 below.}
+\[u^*=(\eprods{y^*}{1}{p-1})\eprod y^*_p\]
+By Corollary~III to Proposition~5.14.1 with \(F=\gen{h}\) and \(a=h\),
+\[i(h)u^*=(-1)^{p-1}\eprods{y^*}{1}{p-1}\eprod i(h)y^*_p=\pm\sprod{y^*_p}{h}\eprods{y^*}{1}{p-1}\qedhere\]
+\end{proof}
+
+\begin{rmk}
 Let \(E,E^*\) be a pair of dual \(n\)-dimensional vector spaces. If \(v^*\in\bigeprod^n E^*\) and \(v^*\ne 0\), then for any \(u^*\in\bigeprod^{n-1}E^*\) there is a unique vector \(h\in E\) with
 \[i(h)v^*=u^*\]
 \end{rmk}
@@ -4089,7 +4101,7 @@ Fix \(h^*\in E^*\) with \(v^*=h^*\eprod u^*\). Let \(F^*\)~be the span of \(x^*_
 \[i(h)h^*=\sprod{h^*}{h}=1\]
 Since \(i(h)\)~is an antiderivation with respect to the canonical involution in~\(\bigeprod E^*\), it follows that
 \[i(h)v^*=i(h)(h^*\eprod u^*)=i(h)h^*\eprod u^*-h^*\eprod i(h)u^*=u^*\]
-The uniqueness of $h$ is clear.
+The uniqueness of~\(h\) is clear.
 \end{proof}
 \begin{rmk}
 This result is equivalent to the result in problem~5.1.2(b), which is also covered in the remarks on chapter~IV, \S~1 of~\cite{greub1} above, by the isomorphism \(\medeprod E^*\iso A^{\adot}(E)\) of \S~33 below.
