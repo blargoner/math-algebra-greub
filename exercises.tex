@@ -4625,7 +4625,15 @@ If \(E,E^*\) are finite-dimensional, then the mixed exterior algebra~\(\medeprod
 
 \subsection*{\S~3}
 \begin{rmk}
-The \(p\)-ary box product, which is a generalization of the \(p\)-th exterior power, is \(p\)-linear and symmetric, so factors through the \(p\)-th symmetric power of~\(L(E;E)\).
+The \(p\)-ary box product, which generalizes the \(p\)-th exterior power to more than one linear transformation, is \(p\)-linear and symmetric, so factors through the \(p\)-th symmetric power of~\(L(E;E)\):
+\begin{diagram}[nohug]
+L(E;E)^p&\rTo^{\bprod^p}&L(\medeprod^p E;\medeprod^p E)\\
+\dTo<{\smprod^p}&\ruTo&\\
+\medsmprod^p L(E;E)&&
+\end{diagram}
+If \(E\)~is finite-dimensional, then the induced linear map is \emph{surjective}. In fact, since \(\medsmprod^p L(E;E)\)~is spanned by elements of the form \(\smprods{\varphi}{}{}\),\footnote{See the remark in chapter~9, \S~10 below.} it follows that \(L(\medeprod^p E;\medeprod^p E)\)~is spanned by transformations of the form
+\[\underbrace{\bprods{\varphi}{}{}}_p=p!\,\medeprod^p\varphi\]
+In this sense, the \(p\)-th exterior power is fully general, and the \(p\)-ary box product is no more general.
 \end{rmk}
 
 \begin{rmk}
