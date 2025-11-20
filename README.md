@@ -5,6 +5,8 @@ Errata for the books are [here](https://github.com/blargoner/math-algebra-greub-
 
 Like these books? You might also like these videos inspired by them:
 
+- [The Characteristic Matrix](https://youtu.be/DFIAMiTIx6o)
+- [The Cayley-Hamilton Theorem](https://youtu.be/AYDKtrNZaZ8)
 - [Poincare Duality and the Intersection Product](https://youtu.be/PUVqZbrpFlM)
 - [Mixed Determinants and Adjoints](https://youtu.be/wqOkuUxw0VQ)
 - [The Box Product](https://youtu.be/bb0nYuRABwc)
