@@ -5,6 +5,11 @@ Errata for the books are [here](https://github.com/blargoner/math-algebra-greub-
 
 Like these books? You might also like these videos inspired by them:
 
+- [The Skolem-Noether Theorem](https://youtu.be/RZpqh5ZopDs)
+- [The Tensor Product Construction](https://youtu.be/6jWtOObCiZw)
+- [The Tensor Product](https://youtu.be/zWSgR0aT71E)
+- [The Free Vector Space](https://youtu.be/AGtfU8OEKHE)
+- [The Quotient Vector Space](https://youtu.be/184tA_MeboE)
 - [The Characteristic Matrix](https://youtu.be/DFIAMiTIx6o)
 - [The Cayley-Hamilton Theorem](https://youtu.be/AYDKtrNZaZ8)
 - [Poincare Duality and the Intersection Product](https://youtu.be/PUVqZbrpFlM)
