@@ -21,6 +21,7 @@
 \DeclareMathOperator{\tr}{tr}
 \DeclareMathOperator{\Tr}{Tr}
 \DeclareMathOperator{\Det}{Det}
+\DeclareMathOperator{\Sk}{Sk}
 
 % much ado about dots
 \makeatletter
@@ -2811,9 +2812,9 @@ Let \(E\)~be an inner product space\footnote{See subsection~1.25.} and let \(\si
 \[Q(a^*\tprod a)=\sigma a\tprod\sigma^{-1}a^*\]
 If \(\varphi:E\to E\) is linear, then \(\adj{\varphi}=TQT^{-1}\varphi\):
 \begin{diagram}
-E^*\tprod E&\rTo^T_{\iso}&L(E;E)\\
-\dTo<Q&&\dTo>{\adj{(-)}}\\
-E^*\tprod E&\rTo_T^{\iso}&L(E;E)
+E^*\tprod E	&\rTo^T_{\iso}	&L(E;E)\\
+\dTo<Q		&				&\dTo>{\adj{(-)}}\\
+E^*\tprod E	&\rTo_T^{\iso}	&L(E;E)
 \end{diagram}
 \end{rmk}
 \begin{proof}
@@ -5878,6 +5879,39 @@ By the Jacobi identity~(7.6),
 \[\medeprod^p(\ad\varphi)=(\det\varphi)^{p-1}D_L(\medeprod^{n-p}\varphi)\]
 The result now follows from the fact that the rank of a transformation~\(\psi\) is the largest~\(r\) for which \(\medeprod^r\psi\ne0\).
 \end{proof}
+
+\newpage
+\section*{Chapter~8}
+{\boldmath\textbf{In this chapter, \(E\)~is an \(n\)-dimensional vector space over~\(\Gamma\).}}
+
+\subsection*{\S~4}
+\begin{rmk}
+In the proof of Proposition~8.4.1, we see that the following diagram commutes for an isometry \(\tau\):
+\begin{diagram}
+\Sk(E)										&\rTo^{\Psi_E}_{\iso}	&\medeprod^2 E\\
+\dTo<{\tau\after(-)\after\tau^{-1}}>{\iso}	&						&\dTo>{\tau_{\eprod}}<{\iso}\\
+\Sk(E)										&\rTo_{\Psi_E}^{\iso}	&\medeprod^2 E
+\end{diagram}
+This shows that \(\tau_{\eprod}\) performs conjugation by~\(\tau\) for tensor representations of skew transformations.
+\end{rmk}
+
+\subsection*{\S~5}
+\begin{rmk}
+We see that the following diagrams commute:
+\begin{diagram}
+\Sk(E)							&\rTo^{\Psi_E}_{\iso}			&\medeprod^2 E			&&&\Sk(F)							&\rTo^{\Psi_F}_{\iso}			&\medeprod^2 F\\
+\dTo<{i_E\after(-)\after\pi_E}	&								&\dTo>{(i_E)_{\eprod}}	&&&\dTo<{i_F\after(-)\after\pi_F}	&								&\dTo>{(i_F)_{\eprod}}\\
+\Sk(E\dsum F)					&\rTo_{\Psi_{E\dsum F}}^{\iso}	&\medeprod^2(E\dsum F)	&&&\Sk(E\dsum F)					&\rTo_{\Psi_{E\dsum F}}^{\iso}	&\medeprod^2(E\dsum F)
+\end{diagram}
+These show that \((i_E)_{\eprod}\) and~\((i_F)_{\eprod}\) perform injection into direct sums for tensor representations of skew transformations.
+
+In~(8.14), we then see that \emph{the tensor representation of a (direct) sum of skew transformations is the sum of the tensor representations of the transformations}:
+\begin{diagram}
+\Sk(E)\times\Sk(F)	&\rTo^{\Psi_E\times\Psi_F}	&\medeprod^2 E\times\medeprod^2 F	&\rTo^{(i_E)_{\eprod}\times(i_F)_{\eprod}}	&\medeprod^2(E\dsum F)\times\medeprod^2(E\dsum F)\\
+\dTo<{\dsum}		&							&									&											&\dTo>+\\
+\Sk(E\dsum F)		&							&\rTo_{\Psi_{E\dsum F}}^{\iso}		&											&\medeprod^2(E\dsum F)
+\end{diagram}
+\end{rmk}
 
 \newpage
 \section*{Chapter~9}
