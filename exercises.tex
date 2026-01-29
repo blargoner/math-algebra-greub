@@ -2806,6 +2806,23 @@ Therefore
 The general case follows by multilinearity.
 \end{rmk}
 
+\begin{rmk}
+Let \(E\)~be an inner product space\footnote{See subsection~1.25.} and let \(\sigma:E\to E^*\) be the Riesz isomorphism. Define the isomorphism \(Q:E^*\tprod E\to E^*\tprod E\) by
+\[Q(a^*\tprod a)=\sigma a\tprod\sigma^{-1}a^*\]
+If \(\varphi:E\to E\) is linear, then \(\adj{\varphi}=TQT^{-1}\varphi\):
+\begin{diagram}
+E^*\tprod E&\rTo^T_{\iso}&L(E;E)\\
+\dTo<Q&&\dTo>{\adj{(-)}}\\
+E^*\tprod E&\rTo_T^{\iso}&L(E;E)
+\end{diagram}
+\end{rmk}
+\begin{proof}
+If \(T^{-1}(\varphi)=a^*\tprod a\), then
+\[\iprod{\varphi x}{y}=\sprod{a^*}{x}\iprod{a}{y}=\iprod{\sigma^{-1}a^*}{x}\sprod{\sigma a}{y}=\iprod{x}{TQT^{-1}(\varphi)y}\]
+The general case follows by multilinearity.
+\end{proof}
+\noindent This shows that \(Q\)~computes the adjoint tensor, so can be used to study things like symmetry and skew-symmetry.\footnote{See subsection~8.3.}
+
 \subsection*{\S~29}
 \textbf{In this subsection, all vector spaces are finite-dimensional.}
 
