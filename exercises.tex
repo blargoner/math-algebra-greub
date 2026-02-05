@@ -14,6 +14,7 @@
 \newcommand{\orth}{\perp}
 \newcommand{\divides}{\mid}
 
+\DeclareMathOperator{\codim}{codim}
 \DeclareMathOperator{\im}{Im}
 \DeclareMathOperator{\ad}{ad}
 \DeclareMathOperator{\Ad}{Ad}
@@ -257,6 +258,22 @@ so \(x_1-x_2\in E_{12}\), which implies that \(x_1=(x_1-x_2)+x_2\in E_{12}\), so
 \end{proof}
 
 \subsection*{\S~4}
+\begin{exer}[9]
+Let \(E\)~be a vector space and \(E_1,F_1\) subspaces of finite codimension in decompositions
+\[E_1\dsum E_2=E=F_1\dsum F_2\]
+There is a decomposition \(E=H_1\dsum H_2\) with \(H_1\subseteq E_1\sect F_1\) of finite codimension and \(H_2\supseteq E_2+F_2\). Moreover
+\[(H_2\sect E_1)\dsum E_2=H_2=(H_2\sect F_1)\dsum F_2\]
+\end{exer}
+\begin{proof}
+Let \(K=E_1\sect F_1\) and \(L=E_2+F_2\). Then there is \(H_1\subseteq K\) with \(K=(K\sect L)\dsum H_1\) and
+\begin{align*}
+\codim H_1&=\codim K+\dim(K\sect L)\\
+	&\le\codim K+\dim L\\
+	&\le 2(\codim E_1+\codim F_1)<\infty
+\end{align*}
+Since \(H_1\sect L=0\), there is \(H_2\supseteq L\) with \(E=H_1\dsum H_2\). The rest is immediate.
+\end{proof}
+
 \begin{exer}[11]
 Let \(E\)~be a real vector space and \(E_1\)~a vector hyperplane in~\(E\) (that is, a subspace of codimension~\(1\)). Define an equivalence relation on \(E^1=E-E_1\) as follows: for \(x,y\in E^1\), \(x\equiv y\) if the segment
 \[x(t)=(1-t)x+ty\qquad(0\le t\le 1)\]
