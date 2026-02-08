@@ -5949,11 +5949,25 @@ In~(8.14), we then see that \emph{the tensor representation of a (direct) sum of
 
 \subsection*{\S~7}
 \begin{rmk}
-If \(E\)~is complex with Hermitian inner product \(\iprod{-}{-}_H:E\times E\to\C\), and \(E_{\R}\)~is the underlying real space with inner product \(\iprod{-}{-}:E_{\R}\times E_{\R}\to\R\) given by
+If \(E\)~is complex with Hermitian inner product \(\iprod{-}{-}_H:E\times E\to\C\) (that is, a unitary space), and \(E_{\R}\)~is the underlying real space with inner product \(\iprod{-}{-}:E_{\R}\times E_{\R}\to\R\) given by
 \[\iprod{x}{y}=\Re\iprod{x}{y}_H\qquad(x,y\in E_{\R})\]
-then if \(\varphi:E\to E\) is skew-Hermitian, the underlying map \(\varphi_{\R}:E_{\R}\to E_{\R}\) is skew-symmetric since
+then if \(\varphi:E\to E\) is skew-Hermitian, the underlying real map \(\varphi_{\R}:E_{\R}\to E_{\R}\) is skew-symmetric since
 \[\iprod{\varphi_{\R}x}{y}=\Re\iprod{\varphi x}{y}_H=\Re\iprod{x}{-\varphi y}_H=\iprod{x}{-\varphi_{\R}y}\qquad(x,y\in E_{\R})\]
 Therefore it makes sense to talk about \(\Psi_{E_{\R}}(\varphi)=\Psi_{E_{\R}}(\varphi_{\R})\in\bigwedge^2 E_{\R}\)---which in the book is confusingly denoted~\(\Psi_E(\varphi)\).
+\end{rmk}
+
+\begin{rmk}
+If \(E\)~is again a unitary space, recall that there is a \emph{conjugate-linear} Riesz isomorphism \(\sigma_H:E\to E^*\) with
+\[\sprod{\sigma_H x}{y}=\conj{\iprod{x}{y}_H}\qquad(x,y\in E)\]
+where \(\sprod{-}{-}:E^*\times E\to\C\) is the scalar product. For \(x,y\in E_{\R}\),
+\[\conj{\iprod{x}{y}_H}=\Re\iprod{x}{y}_H-i\Im\iprod{x}{y}_H=\iprod{x}{y}-i\Im\iprod{x}{y}_H\]
+and
+\[\iprod{x}{iy}_H=-i\iprod{x}{y}_H=\Im\iprod{x}{y}_H-i\Re\iprod{x}{y}_H\]
+so that
+\[\iprod{x}{i_{\R}y}=\Re\iprod{x}{iy}_H=\Im\iprod{x}{y}_H\]
+and hence
+\[\sprod{\sigma_H x}{y}=\iprod{x}{y}-i\iprod{x}{i_{\R}y}\]
+This shows that the map \(\sigma: E_{\R}\to E^*\) in the book is given by \(\sigma=\iota_{\R,\C}\after(\sigma_H)_{\R}\), where \((\sigma_H)_{\R}:E_{\R}\to(E^*)_{\R}\) is the underlying real map of the Riesz isomorphism and \(\iota_{\R,\C}:(E^*)_{\R}\to E^*\) is the identity map.  Note (8.16)~follows from conjugate-linearity of~\(\sigma_H\).
 \end{rmk}
 
 \newpage
