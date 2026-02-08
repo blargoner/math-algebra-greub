@@ -24,6 +24,10 @@
 \DeclareMathOperator{\Det}{Det}
 \DeclareMathOperator{\Sk}{Sk}
 \DeclareMathOperator{\Pf}{Pf}
+\let\Re\undefined
+\DeclareMathOperator{\Re}{Re}
+\let\Im\undefined
+\DeclareMathOperator{\Im}{Im}
 
 % much ado about dots
 \makeatletter
@@ -5941,6 +5945,15 @@ In~(8.14), we then see that \emph{the tensor representation of a (direct) sum of
 \dTo<{\dsum}		&							&									&											&\dTo>+\\
 \Sk(E\dsum F)		&							&\rTo_{\Psi_{E\dsum F}}^{\iso}		&											&\medeprod^2(E\dsum F)
 \end{diagram}
+\end{rmk}
+
+\subsection*{\S~7}
+\begin{rmk}
+If \(E\)~is complex with Hermitian inner product \(\iprod{-}{-}_H:E\times E\to\C\), and \(E_{\R}\)~is the underlying real space with inner product \(\iprod{-}{-}:E_{\R}\times E_{\R}\to\R\) given by
+\[\iprod{x}{y}=\Re\iprod{x}{y}_H\qquad(x,y\in E_{\R})\]
+then if \(\varphi:E\to E\) is skew-Hermitian, the underlying map \(\varphi_{\R}:E_{\R}\to E_{\R}\) is skew-symmetric since
+\[\iprod{\varphi_{\R}x}{y}=\Re\iprod{\varphi x}{y}_H=\Re\iprod{x}{-\varphi y}_H=\iprod{x}{-\varphi_{\R}y}\qquad(x,y\in E_{\R})\]
+Therefore it makes sense to talk about \(\Psi_{E_{\R}}(\varphi)=\Psi_{E_{\R}}(\varphi_{\R})\in\bigwedge^2 E_{\R}\)---which in the book is confusingly denoted~\(\Psi_E(\varphi)\).
 \end{rmk}
 
 \newpage
