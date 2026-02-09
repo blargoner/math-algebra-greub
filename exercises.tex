@@ -111,6 +111,8 @@
 \newcommand{\cat}[1]{\mathbf{#1}}
 \newcommand{\stroked}[1]{\mathrlap{\text{\kern0.05em-}}#1}
 \newcommand{\unit}{\stroked{t}}
+\newcommand{\comm}[2]{[#1,#2]}
+\newcommand{\acomm}[2]{\{#1,#2\}}
 
 \newarrow{Dashto}{}{dash}{}{dash}>
 \newarrow{Equalto}{}={}={}
@@ -5948,6 +5950,18 @@ In~(8.14), we then see that \emph{the tensor representation of a (direct) sum of
 \end{rmk}
 
 \subsection*{\S~7}
+\begin{rmk}
+If \(E\)~is complex and \(\varphi:E_{\R}\to E_{\R}\) is \(\R\)-linear, then the anticommutator \(\acomm{i_{\R}}{\varphi}:E\to E\) defined by
+\[\acomm{i_{\R}}{\varphi}=i_{\R}\after\varphi+\varphi\after i_{\R}\]
+is \(\C\)-linear since it is \(\R\)-linear and
+\[\acomm{i_{\R}}{\varphi}\after i_{\R}=i_{\R}\after\varphi\after i_{\R}-\varphi=i_{\R}\after\acomm{i_{\R}}{\varphi}\]
+Note
+\[\varphi=-\tfrac{i}{2}\bigl(\,\acomm{i_{\R}}{\varphi}+\comm{i_{\R}}{\varphi}\,\bigr)\]
+where
+\[\comm{i_{\R}}{\varphi}=i_{\R}\after\varphi-\varphi\after i_{\R}\]
+is the commutator, which is conjugate \(\C\)-linear on~\(E\).
+\end{rmk}
+
 \begin{rmk}
 If \(E\)~is complex with Hermitian inner product \(\iprod{-}{-}_H:E\times E\to\C\) (that is, a unitary space), and \(E_{\R}\)~is the underlying real space with inner product \(\iprod{-}{-}:E_{\R}\times E_{\R}\to\R\) given by
 \[\iprod{x}{y}=\Re\iprod{x}{y}_H\qquad(x,y\in E_{\R})\]
