@@ -113,6 +113,8 @@
 \newcommand{\unit}{\stroked{t}}
 \newcommand{\comm}[2]{[#1,#2]}
 \newcommand{\acomm}[2]{\{#1,#2\}}
+\newcommand{\ur}[1]{#1_{\R}}
+\newcommand{\ir}{\ur{i}}
 
 \newarrow{Dashto}{}{dash}{}{dash}>
 \newarrow{Equalto}{}={}={}
@@ -5827,7 +5829,7 @@ Now every nonzero term can be obtained from a unique increasing term by applying
 &=\Delta_E(a_1,\ldots,a_n)\,\conj{\Delta}_E(a_1,\ldots,a_n)\\
 &=\abs{\Delta_E(a_1,\ldots,a_n)}^2>0
 \end{align*}
-If \(\Delta_E\)~is replaced by \(\lambda\Delta_E\), \(\Delta\)~still becomes \(\abs{\lambda}^2\Delta\), so \(E_{\R}\)~has a natural orientation. It is possible to give a more abstract proof of this result which avoids the tedious combinatorics.\footnote{See \url{https://math.stackexchange.com/q/4565568}.}
+If \(\Delta_E\)~is replaced by \(\lambda\Delta_E\), \(\Delta\)~still becomes \(\abs{\lambda}^2\Delta\), so \(\ur{E}\)~has a natural orientation. It is possible to give a more abstract proof of this result which avoids the tedious combinatorics.\footnote{See \url{https://math.stackexchange.com/q/4565568}.}
 \end{rmk}
 
 \begin{exer}[4]
@@ -5951,54 +5953,54 @@ In~(8.14), we then see that \emph{the tensor representation of a (direct) sum of
 
 \subsection*{\S~7}
 \begin{rmk}
-If \(E\)~is complex and \(\varphi:E_{\R}\to E_{\R}\) is \(\R\)-linear, then the anticommutator \(\acomm{i_{\R}}{\varphi}:E\to E\) defined by
-\[\acomm{i_{\R}}{\varphi}=i_{\R}\after\varphi+\varphi\after i_{\R}\]
+If \(E\)~is complex and \(\varphi:\ur{E}\to\ur{E}\) is \(\R\)-linear, then the anticommutator \(\acomm{\ir}{\varphi}:E\to E\) defined by
+\[\acomm{\ir}{\varphi}=\ir\after\varphi+\varphi\after\ir\]
 is \(\C\)-linear since it is \(\R\)-linear and
-\[\acomm{i_{\R}}{\varphi}\after i_{\R}=i_{\R}\after\acomm{i_{\R}}{\varphi}\]
-The commutator \(\comm{i_{\R}}{\varphi}:E\to E\) defined by
-\[\comm{i_{\R}}{\varphi}=i_{\R}\after\varphi-\varphi\after i_{\R}\]
+\[\acomm{\ir}{\varphi}\after\ir=\ir\after\acomm{\ir}{\varphi}\]
+The commutator \(\comm{\ir}{\varphi}:E\to E\) defined by
+\[\comm{\ir}{\varphi}=\ir\after\varphi-\varphi\after\ir\]
 is conjugate \(\C\)-linear. Note
-\[\varphi=\tfrac{1}{2i}\bigl(\,\acomm{i_{\R}}{\varphi}+\comm{i_{\R}}{\varphi}\,\bigr)\]
+\[\varphi=\tfrac{1}{2i}\bigl(\,\acomm{\ir}{\varphi}+\comm{\ir}{\varphi}\,\bigr)\]
 \end{rmk}
 
 \begin{rmk}
-If \(E,E^*\) are complex dual spaces with scalar product \(\sprod{-}{-}:E^*\times E\to\C\), then \(E_{\R},(E^*)_{\R}\) are dual with scalar product \(\sprod{-}{-}_{\R}:(E^*)_{\R}\times E_{\R}\to\R\) given by
-\[\sprod{x^*}{x}_{\R}=\Re\sprod{x^*}{x}\qquad(x^*\in(E^*)_{\R},\ x\in E_{\R})\]
-Indeed, clearly \(\sprod{-}{-}_{\R}\) is well-defined and \(\R\)-bilinear. If \(\sprod{x^*}{-}_{\R}=0\), then for any \(x\in E_{\R}\),
+If \(E,E^*\) are complex dual spaces with scalar product \(\sprod{-}{-}:E^*\times E\to\C\), then \(\ur{E},\ur{(E^*)}\) are dual with scalar product \(\sprod{-}{-}_{\R}:\ur{(E^*)}\times\ur{E}\to\R\) given by
+\[\sprod{x^*}{x}_{\R}=\Re\sprod{x^*}{x}\qquad(x^*\in\ur{(E^*)},\ x\in\ur{E})\]
+Indeed, clearly \(\sprod{-}{-}_{\R}\) is well-defined and \(\R\)-bilinear. If \(\sprod{x^*}{-}_{\R}=0\), then for any \(x\in\ur{E}\),
 \[\Re\sprod{x^*}{x}=\sprod{x^*}{x}_{\R}=0\]
 and also
-\[\Im\sprod{x^*}{x}=-\sprod{x^*}{i_{\R}x}_{\R}=0\]
+\[\Im\sprod{x^*}{x}=-\sprod{x^*}{\ir x}_{\R}=0\]
 so \(\sprod{x^*}{x}=0\). Hence \(\sprod{x^*}{-}=0\) and \(x^*=0\). By symmetry, if \(\sprod{-}{x}_{\R}=0\) then \(x=0\). Therefore \(\sprod{-}{-}_{\R}\) is nondegenerate. We write
-\[E_{\R}^*=(E_{\R})^*=(E^*)_{\R}\]
+\[\ur{E}^*=(\ur{E})^*=\ur{(E^*)}\]
 \end{rmk}
 
 \begin{rmk}
-If \(E,E^*\) and \(F,F^*\) are pairs of complex dual spaces and \(\varphi:E\to F\) and \(\varphi^*:E^*\from F^*\) are complex dual maps, then the underlying real maps \(\varphi_{\R}:E_{\R}\to F_{\R}\) and \((\varphi^*)_{\R}:E_{\R}^*\from F_{\R}^*\) are dual since
-\[\sprod{(\varphi^*)_{\R}y^*}{x}_{\R}=\Re\sprod{\varphi^*y^*}{x}=\Re\sprod{y^*}{\varphi x}=\sprod{y^*}{\varphi_{\R}x}_{\R}\qquad(y^*\in F_{\R}^*,\ x\in E_{\R})\]
+If \(E,E^*\) and \(F,F^*\) are pairs of complex dual spaces and \(\varphi:E\to F\) and \(\varphi^*:E^*\from F^*\) are complex dual maps, then the underlying real maps \(\ur{\varphi}:\ur{E}\to\ur{F}\) and \(\ur{(\varphi^*)}:\ur{E}^*\from\ur{F}^*\) are dual since
+\[\sprod{\ur{(\varphi^*)}y^*}{x}_{\R}=\Re\sprod{\varphi^*y^*}{x}=\Re\sprod{y^*}{\varphi x}=\sprod{y^*}{\ur{\varphi}x}_{\R}\qquad(y^*\in\ur{F}^*,\ x\in\ur{E})\]
 We write
-\[\varphi_{\R}^*=(\varphi_{\R})^*=(\varphi^*)_{\R}\]
+\[\ur{\varphi}^*=(\ur{\varphi})^*=\ur{(\varphi^*)}\]
 \end{rmk}
 
 \begin{rmk}
-If \(E\)~is complex with Hermitian inner product \(\iprod{-}{-}_H:E\times E\to\C\) (that is, a unitary space), and \(E_{\R}\)~has the inner product \(\iprod{-}{-}:E_{\R}\times E_{\R}\to\R\) given by
-\[\iprod{x}{y}=\Re\iprod{x}{y}_H\qquad(x,y\in E_{\R})\]
-then if \(\varphi:E\to E\) is skew-Hermitian, the underlying real map \(\varphi_{\R}:E_{\R}\to E_{\R}\) is skew-symmetric since
-\[\adj{\varphi_{\R}}=\adj{\varphi}_{\R}=(-\varphi)_{\R}=-\varphi_{\R}\]
-Therefore it makes sense to talk about \(\Psi_{E_{\R}}(\varphi_{\R})\in\bigwedge^2 E_{\R}\)---which in the book is confusingly denoted~\(\Psi_E(\varphi)\).
+If \(E\)~is complex with Hermitian inner product \(\iprod{-}{-}_H:E\times E\to\C\) (that is, a unitary space), and \(\ur{E}\)~has the inner product \(\iprod{-}{-}:\ur{E}\times\ur{E}\to\R\) given by
+\[\iprod{x}{y}=\Re\iprod{x}{y}_H\qquad(x,y\in\ur{E})\]
+then if \(\varphi:E\to E\) is skew-Hermitian, the underlying real map \(\ur{\varphi}:\ur{E}\to\ur{E}\) is skew-symmetric since
+\[\adj{\ur{\varphi}}=\ur{\adj{\varphi}}=\ur{(-\varphi)}=-(\ur{\varphi})\]
+Therefore it makes sense to talk about \(\Psi_{\ur{E}}(\ur{\varphi})\in\bigwedge^2\ur{E}\)---which in the book is confusingly denoted~\(\Psi_E(\varphi)\).
 \end{rmk}
 
 \begin{rmk}
 If \(E\)~is again a unitary space, recall that there is a \emph{conjugate-linear} Riesz isomorphism \(\sigma_H:E\to E^*\) with
 \[\sprod{\sigma_H x}{y}=\conj{\iprod{x}{y}_H}\qquad(x,y\in E)\]
-For \(x,y\in E_{\R}\),
+For \(x,y\in\ur{E}\),
 \[\conj{\iprod{x}{y}_H}=\Re\iprod{x}{y}_H-i\Im\iprod{x}{y}_H=\iprod{x}{y}-i\Im\iprod{x}{y}_H\]
 and
 \[\iprod{x}{iy}_H=-i\iprod{x}{y}_H=\Im\iprod{x}{y}_H-i\Re\iprod{x}{y}_H\]
 so that
-\[\iprod{x}{i_{\R}y}=\Re\iprod{x}{iy}_H=\Im\iprod{x}{y}_H\]
+\[\iprod{x}{\ir y}=\Re\iprod{x}{iy}_H=\Im\iprod{x}{y}_H\]
 and hence
-\[\sprod{\sigma_H x}{y}=\iprod{x}{y}-i\iprod{x}{i_{\R}y}\]
-This shows that the map \(\sigma: E_{\R}\to E^*\) in the book is given by \(\sigma=\iota_{\R,\C}\after(\sigma_H)_{\R}\), where \((\sigma_H)_{\R}:E_{\R}\to(E^*)_{\R}\) is the underlying real map of the Riesz isomorphism and \(\iota_{\R,\C}:(E^*)_{\R}\to E^*\) is the identity map.  Note (8.16)~follows from conjugate-linearity of~\(\sigma_H\).
+\[\sprod{\sigma_H x}{y}=\iprod{x}{y}-i\iprod{x}{\ir y}\]
+This shows that the map \(\sigma:\ur{E}\to E^*\) in the book is given by \(\sigma=\iota_{\R,\C}\after\ur{(\sigma_H)}\), where \(\ur{(\sigma_H)}:\ur{E}\to\ur{E^*}\) is the underlying real map of the Riesz isomorphism and \(\iota_{\R,\C}:\ur{E^*}\to E^*\) is the identity map.  Note (8.16)~follows from conjugate-linearity of~\(\sigma_H\).
 \end{rmk}
 
 \newpage
