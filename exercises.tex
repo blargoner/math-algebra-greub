@@ -6005,6 +6005,20 @@ This shows that the map \(\sigma:\ur{E}\to E^*\) in the book is given by \(\sigm
 so \(\ur{(\sigma_H)}\)~is also the Riesz isomorphism for the underlying real spaces. Finally, note (8.16)~follows from conjugate-linearity of~\(\sigma_H\).
 \end{rmk}
 
+\begin{rmk}
+If \(E\)~is again a unitary space and \(\varphi:E\to E\) is skew-Hermitian, then for \(z=\Psi_{\ur{E}}(\ur{\varphi})\) and \(J=\Psi_{\ur{E}}(\ir)\) and \(0\le r\le n\),
+\begin{align*}
+\iprod{z^r}{z^r}&=C_{2r}(\ur{\varphi})&&\text{by Theorem 8.3.1}\\
+	&=\sum_{p+q=2r}C_p(\varphi)\conj{C_q(\varphi)}&&\text{by Proposition 7.9.1}\\
+	&=\sum_{p+q=2r}i^p\iprod{z^p}{J^p}\conj{i^q\iprod{z^q}{J^q}}&&\text{by Theorem 8.7.1}\\
+	&=(-1)^r\sum_{p+q=2r}\iprod{z^p}{J^p}\iprod{z^q}{(-J)^q}&&
+\end{align*}
+In particular for \(r=n\),
+\[\iprod{z^n}{z^n}=\iprod{z^n}{J^n}^2\]
+Since \(\det(\ur{\varphi})=\iprod{z^n}{z^n}\), and \(\Pf(\ur{\varphi})=\iprod{z^n}{J^n}\) by the corollary to Theorem~8.7.1, this is consistent with
+\[\det(\ur{\varphi})=\Pf(\ur{\varphi})^2=(-1)^n\det(\varphi)^2\]
+\end{rmk}
+
 \newpage
 \section*{Chapter~9}
 \textbf{Remarks analogous to many of those made above for exterior algebra can also be made for symmetric algebra. We highlight some differences.}
