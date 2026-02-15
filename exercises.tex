@@ -28,6 +28,8 @@
 \DeclareMathOperator{\Re}{Re}
 \let\Im\undefined
 \DeclareMathOperator{\Im}{Im}
+\DeclareMathOperator{\Graph}{Graph}
+\DeclareMathOperator{\Cayley}{Cayley}
 
 % much ado about dots
 \makeatletter
@@ -115,6 +117,7 @@
 \newcommand{\acomm}[2]{\{#1,#2\}}
 \newcommand{\ur}[1]{#1_{\R}}
 \newcommand{\ir}{\ur{i}}
+\newcommand{\curry}{\widetilde}
 
 \newarrow{Dashto}{}{dash}{}{dash}>
 \newarrow{Equalto}{}={}={}
@@ -5912,6 +5915,32 @@ The result now follows from the fact that the rank of a transformation~\(\psi\) 
 {\boldmath\textbf{In this chapter, \(E\)~is an \(n\)-dimensional vector space over~\(\Gamma\).}}
 
 \subsection*{\S~3}
+\begin{rmk}
+Recall that a skew transformation \(\varphi:E\to E\) naturally corresponds to a skew \emph{bilinear form} \(\Phi:E\times E\to\Gamma\) given by
+\[\Phi(x,y)=\iprod{x}{\varphi y}\tag{1}\]
+If we ``curry''~\(\Phi\), we obtain the corresponding linear map \(\curry{\Phi}:E\to E^*\) given by
+\[\sprod{\curry{\Phi}x}{y}=\Phi(x,y)\tag{2}\]
+The graph of~\(\varphi\), when \(\varphi\)~is viewed as a form in this way, is naturally represented as a \emph{subspace} of \(E^*\dsum E\):
+\[\Graph(\varphi)=\{\,\curry{\Phi}x\dsum x\mid x\in E\,\}\tag{3}\]
+Now by (1) and~(2), skew-symmetry of~\(\varphi\), and the definition~\(\sigma\),
+\[\sprod{\curry{\Phi}x}{y}=\iprod{x}{\varphi y}=\iprod{-\varphi x}{y}=\sprod{-\sigma\varphi x}{y}\tag{4}\]
+By non-degeneracy of the scalar product, (4)~implies
+\[\curry{\Phi}=-\sigma\varphi\qquad\text{and}\qquad\varphi=-\sigma^{-1}\curry{\Phi}\tag{5}\]
+By the definition of~\(\tau\), and~(5),
+\begin{align*}
+\tau(\curry{\Phi}x\dsum x)&=(\sigma x+\curry{\Phi}x)\dsum(x-\sigma^{-1}\curry{\Phi}x)\\
+	&=(\sigma x-\sigma\varphi x)\dsum(x+\varphi x)\\
+	&=\sigma(\iota-\varphi)x\dsum(\iota+\varphi)x\tag{6}
+\end{align*}
+Since \(\varphi\)~is skew, \(\iota+\varphi\) is invertible, and writing \(v=(\iota-\varphi)x\) and \(u=(\iota+\varphi)x\), we have
+\[v=(\iota-\varphi)(\iota+\varphi)^{-1}u=\Cayley(\varphi)u\tag{7}\]
+where \(\Cayley(\varphi)\)~denotes the \emph{Cayley transform} of~\(\varphi\). If we define
+\[\Graph(\Cayley(\varphi))=\{\,\sigma(\Cayley(\varphi)u)\dsum u\mid u\in E\,\}\tag{8}\]
+then it follows from (3) and (6)--(8) that
+\[\boxed{\tau(\Graph(\varphi))=\Graph(\Cayley(\varphi))}\tag{9}\]
+So \(\tau\)~is an intrinsic, coordinate-free, geometric version of the Cayley transform operating on graphs in the space \(E^*\dsum E\), which carries a natural geometric structure.
+\end{rmk}
+
 \begin{rmk}
 For a skew transformation \(\varphi:E\to E\), the map~\(\tau_{\eprod}\) provides a ``bridge'' between the tensor representations of~\(\varphi\) in \(E^*\tprod E\) and~\(\bigwedge^2 E\).
 
