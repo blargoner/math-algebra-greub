@@ -568,20 +568,20 @@ This is a more classical \(2\times 2\) version of Proposition~IV.\footnote{See a
 Let \(E\)~be a vector space with \(\dim E=n>1\) and \(E_1\)~a subspace with \(\dim E_1=1\). Let \(\Delta\)~be a determinant function in~\(E\) with \(\Delta(e_1,\ldots,e_n)=1\) where \(e_1\in E_1\). Then \(\Delta\)~induces a determinant function~\(\Delta_1\) in~\(E/E_1\) by
 \[\Delta_1(\,\proj{x_2},\ldots,\proj{x_n}\,)=\Delta(e_1,x_2,\ldots,x_n)\]
 with \(\Delta_1(\,\proj{e_2},\ldots,\proj{e_n}\,)=1\). Define \(D:E^n\to\Gamma\) by
-\[D(x_1,\ldots,x_n)=\sum_{j=1}^n (-1)^{j-1}\Delta_1(\,\proj{x_1},\ldots,\widehat{\proj{x_j}},\ldots,\proj{x_n}\,)\mult\pi_1(x_j)\]
+\[D(x_1,\ldots,x_n)=\sum_{j=1}^n (-1)^{j-1}\Delta_1(\,\proj{x_1},\ldots,\delete{\proj{x_j}},\ldots,\proj{x_n}\,)\mult\pi_1(x_j)\]
 where \(\pi_1:E\to\Gamma\) is the coordinate function for~\(e_1\). Then \(D\)~is skew symmetric and \(n\)-linear with \(D(e_1,\ldots,e_n)=1\), so \(D=\Delta\) by uniqueness (Proposition~III). Therefore
-\[\boxed{\Delta(x_1,\ldots,x_n)=\sum_{j=1}^n (-1)^{j-1}\Delta_1(\,\proj{x_1},\ldots,\widehat{\proj{x_j}},\ldots,\proj{x_n}\,)\mult\pi_1(x_j)}\]
+\[\boxed{\Delta(x_1,\ldots,x_n)=\sum_{j=1}^n (-1)^{j-1}\Delta_1(\,\proj{x_1},\ldots,\delete{\proj{x_j}},\ldots,\proj{x_n}\,)\mult\pi_1(x_j)}\]
 This result, which can also be obtained by applying~\(\pi_1\) to both sides of~(4.6) with \(x=e_1\), expresses a fundamental relationship between an \(n\)-dimensional determinant function and an \((n-1)\)-dimensional one. The cofactor expansion formulas for the determinant (subsection 4.15) follow immediately.
 
 Note that this relationship can also be exploited in reverse to \emph{define} an \(n\)-dimensional determinant function in terms of an \((n-1)\)-dimensional one. In fact, if \(\Phi:E^{n-1}\to\Gamma\) is a skew symmetric \((n-1)\)-linear function in~\(E\), then there is a vector \(a\in E\) such that
 \[\Phi(x_1,\ldots,x_{n-1})=\Delta(x_1,\ldots,x_{n-1},a)\tag{1}\]
 To see this, define \(\varphi:E^n\to E\) by
-\[\varphi(x_1,\ldots,x_n)=\sum_{j=1}^n (-1)^{n-j}\Phi(x_1,\ldots,\widehat{x_j},\ldots,x_n)\mult x_j\]
+\[\varphi(x_1,\ldots,x_n)=\sum_{j=1}^n (-1)^{n-j}\Phi(x_1,\ldots,\delete{x_j},\ldots,x_n)\mult x_j\]
 Then \(\varphi\)~is skew symmetric and \(n\)-linear, so \(\varphi=\Delta a\) where \(a=\varphi(e_1,\ldots,e_n)\). This means
-\[\Delta(x_1,\ldots,x_n)a=\sum_{j=1}^n (-1)^{n-j}\Phi(x_1,\ldots,\widehat{x_j},\ldots,x_n)\mult x_j\tag{2}\]
+\[\Delta(x_1,\ldots,x_n)a=\sum_{j=1}^n (-1)^{n-j}\Phi(x_1,\ldots,\delete{x_j},\ldots,x_n)\mult x_j\tag{2}\]
 If \(x_1,\ldots,x_{n-1}\) are linearly dependent, then (1)~holds trivially, so we may assume that they are linearly independent. If \(a\)~is not in their span, then (1)~follows from~(2) with \(x_n=a\); if \(a\)~is in the span, then (1)~follows from~(2) with \(x_n\) chosen so that \(\Delta(x_1,\ldots,x_n)=1\).
 
-Geometrically, this result expresses a relationship between \(n\)-dimensional volume and \((n-1)\)-dimensional volume. We also see from~(1) that the latter is just the former measured \emph{relative to a fixed vector}. The fact that the volume of an \(n\)-dimensional parallelepiped is equal to the product of the volume of any \((n-1)\)-dimensional ``base'' and the corresponding ``height'' (subsection 7.15) is a special case.
+Geometrically, this result expresses a relationship between \(n\)-dimensional oriented volume and \((n-1)\)-dimensional oriented volume. We also see from~(1) that the latter is just the former measured \emph{relative to a fixed vector}. The fact that the volume of an \(n\)-dimensional parallelepiped is equal to the product of the volume of any \((n-1)\)-dimensional ``base'' and the corresponding ``height'' (subsection 7.15) is a special case.
 \end{rmk}
 
 \subsection*{\S~2}
@@ -1292,7 +1292,7 @@ Then \(\Phi\)~is clearly trilinear and skew symmetric. By the universal property
 \begin{rmk}
 The definition of~\(\Phi\) in~(iii) is motivated by the fundamental relationship between \(n\)-dimensional and \((n-1)\)-dimensional determinant functions discussed in \S~1 of chapter~IV above. If \(\varphi\)~is skew, then its dual bilinear function \(\Delta_1(x,y)=\iprod{\varphi x}{y}\) is a determinant function in any plane in~\(E\). If \(\varphi=\varphi_a\), then
 \[\Delta_1(x,y)=\iprod{a\cross x}{y}=\Delta(a,x,y)\]
-where \(\Delta\)~is the normed determinant function representing the orientation in~\(E\). In other words, \(\Delta_1\)~is just the 2-dimensional area function induced by the 3-dimensional volume function~\(\Delta\) and the vector~\(a\). Therefore if we \emph{define} a 3-dimensional volume map~\(\Phi\) in terms of~\(\Delta_1\), we should expect that \(\Phi=\Delta a\).
+where \(\Delta\)~is the normed determinant function representing the orientation in~\(E\). In other words, \(\Delta_1\)~is just the 2-dimensional oriented area function induced by the 3-dimensional oriented volume function~\(\Delta\) and the vector~\(a\). Therefore if we \emph{define} a 3-dimensional oriented volume map~\(\Phi\) in terms of~\(\Delta_1\), we should expect that \(\Phi=\Delta a\).
 
 This result, which shows that any skew linear \emph{transformation} of the space can be represented by a unique vector under the \emph{cross} product, is analogous to the Riesz representation theorem, which shows that any linear \emph{function} of the space can be represented by a unique vector under the \emph{inner} product.
 \end{rmk}
@@ -1332,7 +1332,7 @@ By problem~2, the skew transformation~\(\varphi\) dual to~\(\Phi\) can be writte
 Uniqueness is obvious.
 \end{proof}
 \begin{rmk}
-This result shows that any function measuring 2-dimensional area in planes in 3-space actually measures 3-dimensional volume relative to some fixed vector in the space.
+This result shows that any function measuring 2-dimensional oriented area in planes in 3-space actually measures 3-dimensional oriented volume relative to some fixed vector in the space.
 \end{rmk}
 
 \subsection*{\S~5}
