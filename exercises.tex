@@ -29,7 +29,7 @@
 \let\Im\undefined
 \DeclareMathOperator{\Im}{Im}
 \DeclareMathOperator{\Graph}{Graph}
-\DeclareMathOperator{\Cayley}{Cayley}
+\DeclareMathOperator{\Cayley}{Cay}
 
 % much ado about dots
 \makeatletter
@@ -88,6 +88,7 @@
 \newcommand{\sprod}[2]{\langle#1,#2\rangle}
 \newcommand{\bigsprod}[2]{\big\langle#1,#2\big\rangle}
 \newcommand{\ssprod}[2]{\langle\!\langle#1,#2\rangle\!\rangle}
+\newcommand{\sssprod}[2]{\langle\!\langle\!\langle#1,#2\rangle\!\rangle\!\rangle}
 \newcommand{\oc}[1]{#1^{\perp}}
 \newcommand{\occ}[1]{#1^{\perp\perp}}
 \newcommand{\opp}[1]{#1^{\mathrm{opp}}}
@@ -5939,6 +5940,29 @@ where \(\Cayley(\varphi)\)~denotes the \emph{Cayley transform} of~\(\varphi\). I
 then it follows from (3) and (6)--(8) that
 \[\boxed{\tau(\Graph(\varphi))=\Graph(\Cayley(\varphi))}\tag{9}\]
 So \(\tau\)~is an intrinsic, coordinate-free, geometric version of the Cayley transform operating on graphs in the space \(E^*\dsum E\), which carries a natural geometric structure.
+\end{rmk}
+
+\begin{rmk}
+There is another inner product\footnote{See subsection~1.25.} in \(E^*\dsum E\) which is induced by the inner product in~\(E\):
+\[\sssprod{x^*\dsum x}{y^*\dsum y}=\iprod{x}{y}-\iprod{x^*}{y^*}\]
+We have
+\begin{align*}
+\ssprod{\tau(x^*\dsum x)}{\tau(y^*\dsum y)}&=\ssprod{\tau^2(x^*\dsum x)}{y^*\dsum y}\\
+	&=2\ssprod{\sigma x\dsum-\sigma^{-1}x^*}{y^*\dsum y}\\
+	&=2\bigl[\sprod{\sigma x}{y}-\sprod{y^*}{\sigma^{-1}x^*}\bigr]\\
+	&=2\bigl[\iprod{x}{y}-\iprod{x^*}{y^*}\bigr]\\
+	&=2\sssprod{x^*\dsum x}{y^*\dsum y}
+\end{align*}
+Therefore \(\tau\)~is (up to the constant factor) an \emph{isometry} between the natural and induced inner products in \(E^*\dsum E\).
+
+If \(\varphi:E\to E\) is skew, then \(\Graph(\varphi\))~is \emph{totally isotropic} under the natural inner product since
+\[\ssprod{\curry{\Phi}x\dsum x}{\curry{\Phi}x\dsum x}=2\sprod{\curry{\Phi}x}{x}=2\iprod{\varphi x}{x}=0\]
+Since \(\tau\)~is an isometry, it follows that \(\Graph(\Cayley(\varphi))\) is totally isotropic under the induced inner product, so
+\begin{align*}
+0&=\sssprod{\sigma(\Cayley(\varphi)u)\dsum u}{\sigma(\Cayley(\varphi)u)\dsum u}\\
+	&=\iprod{u}{u}-\iprod{\Cayley(\varphi)u}{\Cayley(\varphi)u}
+\end{align*}
+This shows that \(\Cayley(\varphi)\)~is orthogonal, as expected.
 \end{rmk}
 
 \begin{rmk}
