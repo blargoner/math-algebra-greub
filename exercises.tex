@@ -118,7 +118,7 @@
 \newcommand{\acomm}[2]{\{#1,#2\}}
 \newcommand{\ur}[1]{#1_{\R}}
 \newcommand{\ir}{\ur{i}}
-\newcommand{\curry}{\widetilde}
+\newcommand{\curry}{\widehat}
 
 \newarrow{Dashto}{}{dash}{}{dash}>
 \newarrow{Equalto}{}={}={}
@@ -5925,7 +5925,7 @@ The graph of~\(\varphi\), when \(\varphi\)~is viewed as a form in this way, is n
 \[\Graph(\varphi)=\{\,\curry{\Phi}x\dsum x\mid x\in E\,\}\tag{3}\]
 Now by (1) and~(2), skew-symmetry of~\(\varphi\), and the definition~\(\sigma\),
 \[\sprod{\curry{\Phi}x}{y}=\iprod{x}{\varphi y}=\iprod{-\varphi x}{y}=\sprod{-\sigma\varphi x}{y}\tag{4}\]
-By non-degeneracy of the scalar product, (4)~implies
+By nondegeneracy of the scalar product, (4)~implies
 \[\curry{\Phi}=-\sigma\varphi\qquad\text{and}\qquad\varphi=-\sigma^{-1}\curry{\Phi}\tag{5}\]
 By the definition of~\(\tau\), and~(5),
 \begin{align*}
@@ -5935,15 +5935,15 @@ By the definition of~\(\tau\), and~(5),
 \end{align*}
 Since \(\varphi\)~is skew, \(\iota+\varphi\) is invertible, and writing \(v=(\iota-\varphi)x\) and \(u=(\iota+\varphi)x\), we have
 \[v=(\iota-\varphi)(\iota+\varphi)^{-1}u=\Cayley(\varphi)u\tag{7}\]
-where \(\Cayley(\varphi)\)~denotes the \emph{Cayley transform} of~\(\varphi\). If we define
+where \(\Cayley(\varphi):E\to E\) is the \emph{Cayley transform} of~\(\varphi\). If we define
 \[\Graph(\Cayley(\varphi))=\{\,\sigma(\Cayley(\varphi)u)\dsum u\mid u\in E\,\}\tag{8}\]
 then it follows from (3) and (6)--(8) that
 \[\boxed{\tau(\Graph(\varphi))=\Graph(\Cayley(\varphi))}\tag{9}\]
-So \(\tau\)~is an intrinsic, coordinate-free, geometric version of the Cayley transform operating on graphs in the space \(E^*\dsum E\), which carries a natural geometric structure.
+So \(\tau\)~is an intrinsic, coordinate-free, geometric version of the Cayley transform operating on graphs in the space \(E^*\dsum E\).
 \end{rmk}
 
 \begin{rmk}
-There is another inner product\footnote{See subsection~1.25.} in \(E^*\dsum E\) which is induced by the inner product in~\(E\):
+In addition to the natural inner product in \(E^*\dsum E\), there is another inner product which is induced by the inner product in~\(E\):\footnote{See subsection~1.25 for the definition of \emph{inner product}.}
 \[\sssprod{x^*\dsum x}{y^*\dsum y}=\iprod{x}{y}-\iprod{x^*}{y^*}\]
 We have
 \begin{align*}
